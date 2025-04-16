@@ -119,17 +119,28 @@ def load_dataset(dataset, nsamples):
             data_file = f'./data/{dataset}/dev{arg}.json'
         else:
             data_file = f'./data/{dataset}/dev.json'
-        with open(data_file, 'r') as fin:
+        with open(data_file, 'r', encoding='utf-8') as fin:
             items = json.load(fin)
         random.shuffle(items)
         return items[:nsamples] if nsamples > 0 else items
 
-def extract_answer(output, item, dataset):
+def extract_answer(output, item, dataset, interfere_mode=0):
+    # print("output: ", output)
+    # print("item: ", item)
+    # print("datasetL: ", dataset)
+    # print("interfere_mode: ", interfere_mode)
     try:
         dataset = dataset.split(':')[0]
         if dataset in ['Addition', 'Product', 'GSM8K']:
             gold = item['answer']
+            # Handle interfere_mode 1
+            if interfere_mode == 1:
+                output = output.split("</think>")[0].split(".")[0]
+            elif interfere_mode == 2:
+                output = output.split(".")[0]
             output = output.split('\n')
+            # tmp_output0 = output[1]
+            # print('output', output)
             output = [line for line in output if len(re.findall('\d+', line)) > 0][-1]
             answer = output.replace(',', '')  # remove middle ',' from numbers like '1,234'
             answer = re.findall('\d+', answer)
@@ -148,9 +159,13 @@ def extract_answer(output, item, dataset):
     except Exception as ex:
         # LLMs may constantly generate wrong output, let's skip the retry and give it a None result.
         print('extract_answer:', ex)
-        return str(None)
+        raise NotImplemented
+    # except Exception as ex:
+    #     # LLMs may constantly generate wrong output, let's skip the retry and give it a None result.
+    #     print('extract_answer:', ex)
+    #     return str(None)
 
-    raise NotImplemented
+    # raise NotImplemented
 
 
 
@@ -176,26 +191,43 @@ def api_run(args):
             print(f'Output to: {output_file}')
         # split dataset into chunks
         dataset_chunks = [data[i:i + args.batch_size] for i in range(0, len(data), args.batch_size)]
+        cnt_total = 0
         for chunk in tqdm(dataset_chunks):
             messages = [format_prompt(full_prompt, item) for item in chunk]
+            # print(messages)
+            cnt_exp = 0
             while True:
+                if(cnt_exp > 3):
+                    preds = ["" for sample, output in zip(chunk, batch_outputs)]
+                    break
                 try:
                     if len(messages) >= 2:
                         batch_outputs = openai_api.batch_generate(messages)
                     else:
                         batch_outputs = [openai_api.generate(message) for message in messages]
+                        # print(batch_outputs)
                     # extract the answer and regenerate if the output format is out of expectation
-                    preds = [extract_answer(output, sample, args.dataset) for sample, output in zip(chunk, batch_outputs)]
+                    if(args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1']):
+                        preds = [extract_answer(output[0], sample, args.dataset) for sample, output in zip(chunk, batch_outputs)]
+                    else:
+                        preds = [extract_answer(output, sample, args.dataset) for sample, output in zip(chunk, batch_outputs)]
+                    print("success id: ", cnt_total)
+                    cnt_total += 1
                     break
                 except Exception as ex:
                     print(ex)
                     print('Sleep 10 seconds before retry ...')
                     time.sleep(10)
+                    cnt_exp += 1
             for sample, output, message, pred in zip(chunk, batch_outputs, messages, preds):
                 answer = sample[f'answer']
                 record_item = sample.copy()
                 record_item[f'{prompt}_input'] = message
-                record_item[f'{prompt}_output'] = output
+                if(args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1']):
+                    record_item[f'{prompt}_output'] = output[0]
+                    record_item[f'{prompt}_thinking'] = output[1]
+                else:
+                    record_item[f'{prompt}_output'] = output
                 record_item[f'{prompt}_answer'] = pred
                 record_item[f'{prompt}_result'] = (pred == answer)
                 accs[prompt].append(pred == answer)
@@ -205,7 +237,12 @@ def api_run(args):
         print(f'acc_{prompt}:', np.mean(accs[prompt]), f'({np.sum(accs[prompt])}/{len(accs[prompt])})')
 
     for prompt, full_prompt in full_prompts:
-        output_file = f'{args.outdir}/output.{args.dataset}.{prompt}.{args.model_name}.json'
+        tmp_model = None
+        if('/' not in args.model_name):
+            tmp_model = args.model_name
+        else:
+            tmp_model = args.model_name.replace('/', '-')
+        output_file = f'{args.outdir}/output.{args.dataset}.{prompt}.{tmp_model}.json'
         output_file = output_file.replace(' ', '_').replace(':', '_')
         with open(output_file, 'w') as fout:
             json.dump(outputs[prompt], fout, indent=2)
@@ -216,19 +253,32 @@ if __name__ == '__main__':
     '''
     parser = argparse.ArgumentParser()
     parser.add_argument('--outdir', type=str, default='./exp_test/output')
+    parser.add_argument('--api_base_num', type=int, default=1)
     parser.add_argument('--api_base', type=str, default='https://api.openai.com/v1')
     parser.add_argument('--api_key', type=str, required=True)
     parser.add_argument('--model_name', type=str, default='gpt-3.5-turbo')  # gpt-3.5-turbo, text-davinci-003
     parser.add_argument('--stop_words', type=str, default='####')
-    parser.add_argument('--max_new_tokens', type=int, default=1024)
+    parser.add_argument('--max_new_tokens', type=int, default=2048)
     parser.add_argument('--dataset', type=str, default='GSM8K')
     parser.add_argument('--prompts', type=str, default='cot0shot')
     parser.add_argument('--role', type=str, default='math teacher')
     parser.add_argument('--batch_size', type=int, default=1)
     parser.add_argument('--nsamples', type=int, default=10)
     parser.add_argument('--seed', type=int, default=1)
+
     args = parser.parse_args()
 
+    if args.api_base_num == 2:  
+        args.api_base = 'https://dashscope.aliyuncs.com/compatible-mode/v1'  
+    elif args.api_base_num == 3:
+        args.api_base = "https://api.deepseek.com/beta"
+    elif args.api_base_num == 4:
+        args.api_base = "https://api.siliconflow.cn/v1"
+    else:
+        args.api_base = 'https://api.chatanywhere.tech/v1' 
+        # args.api_base = 'https://api.openai.com/v1'
+    print(args.api_base)
+    print(args.api_key)
     random.seed(args.seed)
     np.random.seed(args.seed)
 

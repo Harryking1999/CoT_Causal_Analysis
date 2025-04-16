@@ -32,17 +32,28 @@ async def dispatch_openai_chat_requests(
     Returns:
         List of responses from OpenAI API.
     """
-    async_responses = [
-        openai.ChatCompletion.acreate(
-            model=model,
-            messages=x,
-            temperature=temperature,
-            max_tokens=max_tokens,
-            top_p=top_p,
-            stop = stop_words
-        )
-        for x in messages_list
-    ]
+    if model in ['o1', 'o1-mini', 'o3', 'deepseek-r1']:
+        async_responses = [
+            openai.ChatCompletion.acreate(
+                model=model,
+                messages=x,
+                max_completion_tokens=max_tokens,
+                stop = stop_words
+            )
+            for x in messages_list
+        ]
+    else:
+        async_responses = [
+            openai.ChatCompletion.acreate(
+                model=model,
+                messages=x,
+                temperature=temperature,
+                max_tokens=max_tokens,
+                top_p=top_p,
+                stop = stop_words
+            )
+            for x in messages_list
+        ]
     return await asyncio.gather(*async_responses)
 
 async def dispatch_openai_prompt_requests(
@@ -77,20 +88,53 @@ class OpenAIModel:
         self.stop_words = stop_words
         print(f'OpenAI API with {API_BASE}, {model_name}, {stop_words}, {max_new_tokens}')
 
-    # used for chat-gpt and gpt-4
-    def chat_generate(self, input_string, temperature = 0.0):
-        response = chat_completions_with_backoff(
-                model = self.model_name,
-                messages=[
-                        {"role": "user", "content": input_string}
-                    ],
-                max_tokens = self.max_new_tokens,
-                temperature = temperature,
-                top_p = 1.0,
-                stop = self.stop_words
-        )
-        generated_text = response['choices'][0]['message']['content'].strip()
-        return generated_text
+    # used for chat-gpt and gpt-4 and o1
+    def chat_generate(self, input_string, temperature = 1.0):
+        response = None
+        if(self.model_name in ['o1-mini', 'o1', 'deepseek-reasoner', 'deepseek-r1','Pro/deepseek-ai/DeepSeek-R1']):
+            # Handle list messages for deepseek-reasoner
+            if isinstance(input_string, list) and self.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1']:
+                messages = [
+                    {"role": "user", "content": input_string[0]},
+                    {"role": "assistant", "content": input_string[1], "prefix": True}
+                ]
+            else:
+                messages = [{"role": "user", "content": input_string}]
+                
+            response = chat_completions_with_backoff(
+                    model = self.model_name,
+                    messages=messages,
+                    max_completion_tokens = self.max_new_tokens,
+                    top_p = 1.0,
+                    stop = self.stop_words,
+                    temperature=temperature
+            )
+            print('response: ', response)
+            # print('messages: ', messages)
+        else:
+            response = chat_completions_with_backoff(
+                    model = self.model_name,
+                    messages=[
+                            {"role": "user", "content": input_string}
+                        ],
+                    max_tokens = self.max_new_tokens,
+                    temperature = temperature,
+                    top_p = 1.0,
+                    stop = self.stop_words
+            )
+        if(self.model_name not in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1']):
+            generated_text = response['choices'][0]['message']['content'].strip()
+            return generated_text
+        else:
+            if(response['choices'][0]['message']['content'] is not None):
+                generated_text = response['choices'][0]['message']['content'].strip()
+            else:
+                generated_text = ""
+            if(response['choices'][0]['message']['reasoning_content'] is not None):
+                generated_thinking = response['choices'][0]['message']['reasoning_content'].strip()
+            else:
+                generated_thinking = ""
+            return [generated_text, generated_thinking]
     
     # used for text/code-davinci
     def prompt_generate(self, input_string, temperature = 0.0):
@@ -111,7 +155,7 @@ class OpenAIModel:
         if self.model_name in ['text-davinci-002', 'code-davinci-002', 'text-davinci-003', 'gpt-3.5-turbo-instruct']:
             return self.prompt_generate(input_string, temperature)
         elif self.model_name in ['gpt-4', 'gpt-3.5-turbo','gpt-4-turbo-preview','gpt-4-0125-preview','gpt-4-1106-preview',
-                                 'llama2-70b-chat', 'llama2-7b-chat', 'mistral-base', 'mistral-sft', 'mistral-dpo']:
+                                 'llama2-70b-chat', 'llama2-7b-chat', 'mistral-base', 'mistral-sft', 'mistral-dpo', 'o1-mini', 'o1']:
             return self.chat_generate(input_string, temperature)
         else:
             return self.chat_generate(input_string, temperature)

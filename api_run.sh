@@ -17,9 +17,10 @@ fi
 model_name=$1 # gpt-3.5-turbo, gpt-4, etc.
 dataset=$2  # Addition, Product, ProofWriter, etc.
 prompts=$3  # cot0shot, direct
-nsamples=$4
+api_base_num=$4  # 1=openai api，2=bailian api
+nsamples=$5
 
-if [ $# == '3' ]; then
+if [ $# == '4' ]; then
     nsamples=-1
     if [[ "$dataset" == *"ProofWriter"* ]] || [ "$dataset" == "LOGIQA" ] || [[ "$dataset" == "FOLIO"* ]]; then
         echo "Dataset is $dataset. Ignore the nsamples argument."
@@ -32,4 +33,4 @@ mkdir -p $outdir
 
 echo `date`, Evaluating ${nsamples} samples from ${dataset} using prompts ${prompts} ...
 python scripts/api_run.py --dataset $dataset --nsamples $nsamples --prompts $prompts --outdir $outdir \
-                          --api_key $api_key --model_name $model_name
+                          --api_key $api_key --model_name $model_name --api_base_num $api_base_num 
