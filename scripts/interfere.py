@@ -54,9 +54,9 @@ def format_interfere_prompt(args, prompt, full_prompt, item, outputs):
                 if args.interfere_mode == 0:
                     reason = extract_reason(item[f'{default_prompt}_output'])
                 elif args.interfere_mode == 1:
-                    reason = "<think>\n" + item[f'{default_prompt}_thinking_CoT'] + " .So, let me directly conclude the answer. The answer is "
+                    reason = "<think>\n" + item[f'{default_prompt}_thinking_CoT'] + " So, let me directly conclude the answer. The answer is "
                 elif args.interfere_mode == 2:
-                    reason = "<think>\n" + item[f'{default_prompt}_thinking'] + "</think>\n\nTherefore, the final computed sum is "
+                    reason = "<think>\n" + item[f'{default_prompt}_thinking_CoT'] + "</think>"
             else:
                 reason = extract_reason(item[f'{default_prompt}_output'])
         elif interfere == 'goldreason':  # use the golden reasoning steps
@@ -72,7 +72,7 @@ def format_interfere_prompt(args, prompt, full_prompt, item, outputs):
                     elif args.interfere_mode == 1:
                         reason = "<think>\n" + item[f'{default_prompt}_thinking_CoT'] + " So, let me directly conclude the answer and finish thinking. The answer is "
                     elif args.interfere_mode == 2:
-                        reason = "<think>\n" + item[f'{default_prompt}_thinking'] + "</think>\n\nTherefore, the final answer is "
+                        reason = "<think>\n" + item[f'{default_prompt}_thinking_CoT'] + "</think>"
                 else:
                     reason = extract_reason(item[f'{default_prompt}_output'])
                 reason = random_new_numbers(reason)
@@ -197,7 +197,16 @@ def add_random_reason(args,data):
     random_reason_data = json.load(open(random_reason_path))
     for d in data:
         d_id = d['id']
-        d['random_reason'] = [r['random_reason'] for r in random_reason_data if r.get('id') == d_id][0]
+        random_reason_item = next((r for r in random_reason_data if r.get('id') == d_id), None)
+        if random_reason_item:
+            if args.interfere_mode == 1:
+                d['random_reason'] = random_reason_item.get('random_reason_thinking_CoT', '')
+            # elif args.interfere_mode == 2:
+            #     d['random_reason'] = random_reason_item.get('random_reason_thinking', '')
+            elif args.interfere_mode == 2:##still use thinking_CoT,but a close <thinking>
+                d['random_reason'] = random_reason_item.get('random_reason_thinking_CoT', '')
+            else:
+                d['random_reason'] = random_reason_item.get('random_reason', '')
     return data
 
 
@@ -227,7 +236,7 @@ def intervene(args):
     accs = []
     dataset_chunks = [data[i:i + args.batch_size] for i in range(0, len(data), args.batch_size)]
     cnt_total = 0
-    for chunk in tqdm(dataset_chunks):
+    for chunk in tqdm(dataset_chunks[0:10]):
         messages = [format_interfere_prompt(args, prompt, full_prompt, item, data) for item in chunk]
         cnt_exp = 0
         # print('messages: ', messages)
@@ -262,7 +271,6 @@ def intervene(args):
             answer = sample[f'answer']
             if(args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1']):
                 if args.interfere_mode > 0:
-                    # print("output: ", output)
                     pred = extract_answer(output[0], sample, args.dataset, args.interfere_mode)
                 else:
                     pred = extract_answer(output[0], sample, args.dataset)

@@ -105,12 +105,29 @@ class OpenAIModel:
                     model = self.model_name,
                     messages=messages,
                     max_completion_tokens = self.max_new_tokens,
-                    top_p = 1.0,
                     stop = self.stop_words,
                     temperature=temperature
             )
             print('response: ', response)
             # print('messages: ', messages)
+        elif self.model_name in ['DeepSeekR1-Qwen-1.5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B']:
+            # Special handling for local API
+            if isinstance(input_string, list):
+                question = input_string[0]
+                answer_prefix = input_string[1]
+                prompt = f"<｜User｜>{question}<｜Assistant｜>{answer_prefix}"
+            else:
+                question = input_string
+                prompt = f"<｜User｜>{question}<｜Assistant｜>"
+            
+            response = completions_with_backoff(
+                model=self.model_name,
+                prompt=prompt,
+                max_tokens=self.max_new_tokens,
+                temperature=temperature,
+                stop=self.stop_words
+            )
+            print('response: ', response)
         else:
             response = chat_completions_with_backoff(
                     model = self.model_name,
@@ -122,18 +139,23 @@ class OpenAIModel:
                     top_p = 1.0,
                     stop = self.stop_words
             )
-        if(self.model_name not in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1']):
+        if(self.model_name not in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B']):
             generated_text = response['choices'][0]['message']['content'].strip()
             return generated_text
         else:
-            if(response['choices'][0]['message']['content'] is not None):
-                generated_text = response['choices'][0]['message']['content'].strip()
+            if(self.model_name in ['DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B']):
+                generated_content = response['choices'][0]['text'].strip()
+                generated_thinking = generated_content.split("</think>")[0].split("<think>")[1]
+                generated_text = generated_content.split("</think>")[1]
             else:
-                generated_text = ""
-            if(response['choices'][0]['message']['reasoning_content'] is not None):
-                generated_thinking = response['choices'][0]['message']['reasoning_content'].strip()
-            else:
-                generated_thinking = ""
+                if(response['choices'][0]['message']['content'] is not None):
+                    generated_text = response['choices'][0]['message']['content'].strip()
+                else:
+                    generated_text = ""
+                if(response['choices'][0]['message']['reasoning_content'] is not None):
+                    generated_thinking = response['choices'][0]['message']['reasoning_content'].strip()
+                else:
+                    generated_thinking = ""
             return [generated_text, generated_thinking]
     
     # used for text/code-davinci

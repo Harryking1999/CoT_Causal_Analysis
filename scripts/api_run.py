@@ -129,20 +129,20 @@ def extract_answer(output, item, dataset, interfere_mode=0):
     # print("item: ", item)
     # print("datasetL: ", dataset)
     # print("interfere_mode: ", interfere_mode)
+    if interfere_mode == 1:
+        output = output.split("</think>")[0].split(".")[0]
+    elif interfere_mode == 2:
+        output = output.split(".")[0]
     try:
         dataset = dataset.split(':')[0]
         if dataset in ['Addition', 'Product', 'GSM8K']:
             gold = item['answer']
             # Handle interfere_mode 1
-            if interfere_mode == 1:
-                output = output.split("</think>")[0].split(".")[0]
-            elif interfere_mode == 2:
-                output = output.split(".")[0]
             output = output.split('\n')
             # tmp_output0 = output[1]
             # print('output', output)
             output = [line for line in output if len(re.findall('\d+', line)) > 0][-1]
-            answer = output.replace(',', '')  # remove middle ',' from numbers like '1,234'
+            answer = output.replace(',', '').replace('\\!', '').replace('\\', '')  # remove middle ',' from numbers like '1,234'
             answer = re.findall('\d+', answer)
             answer = gold if gold in answer else answer[-1]
             answer = answer.strip()
@@ -207,7 +207,7 @@ def api_run(args):
                         batch_outputs = [openai_api.generate(message) for message in messages]
                         # print(batch_outputs)
                     # extract the answer and regenerate if the output format is out of expectation
-                    if(args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1']):
+                    if(args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'DeepSeekR1-Qwen-1.5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B']):
                         preds = [extract_answer(output[0], sample, args.dataset) for sample, output in zip(chunk, batch_outputs)]
                     else:
                         preds = [extract_answer(output, sample, args.dataset) for sample, output in zip(chunk, batch_outputs)]
@@ -223,7 +223,7 @@ def api_run(args):
                 answer = sample[f'answer']
                 record_item = sample.copy()
                 record_item[f'{prompt}_input'] = message
-                if(args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1']):
+                if(args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'DeepSeekR1-Qwen-1.5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B']):
                     record_item[f'{prompt}_output'] = output[0]
                     record_item[f'{prompt}_thinking'] = output[1]
                 else:
@@ -258,7 +258,7 @@ if __name__ == '__main__':
     parser.add_argument('--api_key', type=str, required=True)
     parser.add_argument('--model_name', type=str, default='gpt-3.5-turbo')  # gpt-3.5-turbo, text-davinci-003
     parser.add_argument('--stop_words', type=str, default='####')
-    parser.add_argument('--max_new_tokens', type=int, default=2048)
+    parser.add_argument('--max_new_tokens', type=int, default=4096)
     parser.add_argument('--dataset', type=str, default='GSM8K')
     parser.add_argument('--prompts', type=str, default='cot0shot')
     parser.add_argument('--role', type=str, default='math teacher')
@@ -274,6 +274,8 @@ if __name__ == '__main__':
         args.api_base = "https://api.deepseek.com/beta"
     elif args.api_base_num == 4:
         args.api_base = "https://api.siliconflow.cn/v1"
+    elif args.api_base_num == 5:
+        args.api_base = "http://localhost:8080/v1"
     else:
         args.api_base = 'https://api.chatanywhere.tech/v1' 
         # args.api_base = 'https://api.openai.com/v1'

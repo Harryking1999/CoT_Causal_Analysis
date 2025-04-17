@@ -32,4 +32,4 @@ if [ ! -f "$input_path" ]; then
 fi
 
 echo `date`, Processing ${input_path} ...
-python scripts/distill_thinking_CoT_.py --input_file $input_path 
+python scripts/distill_thinking_CoT.py --input_file $input_path 

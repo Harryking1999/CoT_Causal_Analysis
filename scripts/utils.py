@@ -6,11 +6,14 @@ import os
 import argparse
 
 def extract_logic(answer):
-    pattern1 = r"correct \w+ is:?\s*([A-D])"
+    pattern1 = r"correct \w+ is:?\s*[*]*\s*([A-D])" 
     pattern2 = r"correct option is: (true|false|unknown)"
     pattern3 = r"([A-C])\)\s*(True|False|Unknown)"
     pattern4 = r"([A-D])\) "
     pattern5 = r"^[A-D]\.?$"
+    pattern6 = r"\\boxed{([A-D])}"
+    pattern7 = r"correct \w+ is:?\s*[*]*\s*\{([A-D])\}"
+    pattern8 = r"correct \w+ is:?\s*[*]*\s*\(([A-D])\)"
 
     match = re.search(pattern1, answer)
     option = None
@@ -28,6 +31,22 @@ def extract_logic(answer):
         match = re.search(pattern3, answer, re.IGNORECASE)
         if match:
             option = match.group(1)
+
+    if not option:
+        match = re.search(pattern6, answer)
+        if match:
+            option = match.group(1)
+
+    if not option:
+        match = re.search(pattern7, answer)
+        if match:
+            option = match.group(1)
+
+    if not option:
+        match = re.search(pattern8, answer)
+        if match:
+            option = match.group(1)
+
     if not option and len(answer)<16:
         if 'true' in answer.lower():
             option = 'A'
@@ -35,14 +54,17 @@ def extract_logic(answer):
             option = 'B'
         elif 'unknown' in answer.lower():
             option = 'C'
+
     if not option:
         match = re.match(pattern4, answer)
         if match:
             option = match.group(1)
+
     if not option:
         match = re.match(pattern5, answer)
         if match:
             option = match.group(0) 
+
     if not option:
         option = None
         # wrong_data.append(d)
