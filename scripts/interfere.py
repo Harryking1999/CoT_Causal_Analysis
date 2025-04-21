@@ -287,13 +287,26 @@ def intervene(args):
             else:
                 pred = extract_answer(output, sample, args.dataset)
             record_item = sample.copy()
-            if args.interfere_mode in [1, 2]:
-                record_item[f'{prompt}_input_user'] = message[0]
-                record_item[f'{prompt}_input_assistant'] = message[1]
-                record_item[f'{prompt}_output'] = output[0]
-            else:
-                record_item[f'{prompt}_input'] = message
-                record_item[f'{prompt}_output'] = output
+            if args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1']:
+                if args.interfere_mode in [1, 2]:
+                    record_item[f'{prompt}_input_user'] = message[0]
+                    record_item[f'{prompt}_input_assistant'] = message[1]
+                    record_item[f'{prompt}_output'] = output[0]
+                else:
+                    record_item[f'{prompt}_input'] = message
+                    record_item[f'{prompt}_output'] = output
+            elif args.model_name in ['DeepSeekR1-Qwen-1.5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B']:
+                if args.interfere_mode == 1:
+                    record_item[f'{prompt}_input_user'] = message[0]
+                    record_item[f'{prompt}_input_assistant'] = message[1]
+                    record_item[f'{prompt}_output'] = output[1]
+                elif args.interfere_mode == 2:
+                    record_item[f'{prompt}_input_user'] = message[0]
+                    record_item[f'{prompt}_input_assistant'] = message[1]
+                    record_item[f'{prompt}_output'] = output[0]
+                else:
+                    record_item[f'{prompt}_input'] = message
+                    record_item[f'{prompt}_output'] = output
             record_item[f'{prompt}_answer'] = pred
             record_item[f'{prompt}_result'] = (pred == answer)
             accs.append(pred == answer)
