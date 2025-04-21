@@ -146,8 +146,13 @@ class OpenAIModel:
         else:
             if(self.model_name in ['DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B']):
                 generated_content = response['choices'][0]['text'].strip()
-                generated_thinking = generated_content.split("</think>")[0]
-                generated_text = generated_content.split("</think>")[1]
+                # generated_thinking = generated_content.split("</think>")[0]
+                if("</think>" in generated_content):
+                    generated_text = generated_content.split("</think>")[1]
+                    generated_thinking = generated_content.split("</think>")[0]
+                else:
+                    generated_text = generated_content
+                    generated_thinking = ""
             else:
                 if(response['choices'][0]['message']['content'] is not None):
                     generated_text = response['choices'][0]['message']['content'].strip()
