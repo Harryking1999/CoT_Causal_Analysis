@@ -139,13 +139,14 @@ class OpenAIModel:
                     top_p = 1.0,
                     stop = self.stop_words
             )
+
         if(self.model_name not in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B']):
             generated_text = response['choices'][0]['message']['content'].strip()
             return generated_text
         else:
             if(self.model_name in ['DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B']):
                 generated_content = response['choices'][0]['text'].strip()
-                generated_thinking = generated_content.split("</think>")[0].split("<think>")[1]
+                generated_thinking = generated_content.split("</think>")[0]
                 generated_text = generated_content.split("</think>")[1]
             else:
                 if(response['choices'][0]['message']['content'] is not None):
