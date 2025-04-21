@@ -97,6 +97,8 @@ def format_interfere_prompt(args, prompt, full_prompt, item, outputs):
 
     # Handle list messages for interfere_mode 1 and 2
     if args.interfere_mode in [1, 2] and args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1']:
+        default_role = 'math teacher'
+        default_prompt = prompt.split('.')[0] + f'.{default_role}'
         if args.interfere_mode == 1:
             return [item[f'{default_prompt}_input'], reason]
         else:  # mode 2
@@ -194,7 +196,8 @@ def add_random_reason(args,data):
     else:
         raise NotImplemented
     random_reason_path = f'exp_cot/random_reason/random_reason.{args.dataset}.{args.prompt}.{default_role}.{args.model_name}.json'.replace(' ','_')
-    random_reason_data = json.load(open(random_reason_path))
+    with open(random_reason_path, 'r', encoding='utf-8') as f:
+        random_reason_data = json.load(f)
     for d in data:
         d_id = d['id']
         random_reason_item = next((r for r in random_reason_data if r.get('id') == d_id), None)
@@ -236,7 +239,7 @@ def intervene(args):
     accs = []
     dataset_chunks = [data[i:i + args.batch_size] for i in range(0, len(data), args.batch_size)]
     cnt_total = 0
-    for chunk in tqdm(dataset_chunks[0:10]):
+    for chunk in tqdm(dataset_chunks[0:3]):
         messages = [format_interfere_prompt(args, prompt, full_prompt, item, data) for item in chunk]
         cnt_exp = 0
         # print('messages: ', messages)
@@ -312,7 +315,7 @@ if __name__ == '__main__':
     '''
     parser = argparse.ArgumentParser()
     parser.add_argument('--outdir', type=str, default='./exp_cot/output')
-    parser.add_argument('--api_base', type=str, default='https://api.deepseek.com/beta')
+    parser.add_argument('--api_base_num', type=int, default=0, choices=[0, 1], help='0: https://api.deepseek.com/beta, 1: http://localhost:8080/v1')
     parser.add_argument('--api_key', type=str, required=True)
     parser.add_argument('--model_name', type=str, default='gpt-3.5-turbo')  # gpt-3.5-turbo, text-davinci-003
     parser.add_argument('--stop_words', type=str, default='####')
@@ -330,7 +333,14 @@ if __name__ == '__main__':
     #   interfere_mode: 0=default, 1=test Y1 internal causality, 2=test Y1 and Z(Y2) causality
     parser.add_argument('--interfere_mode', type=int, default=0, choices=[0, 1, 2])
     parser.add_argument('--seed', type=int, default=1)
+    parser.add_argument('--api_base', type=str, default='https://api.deepseek.com/beta')
     args = parser.parse_args()
+
+    # Set API base URL based on api_base_num
+    if args.api_base_num == 0:
+        args.api_base = 'https://api.deepseek.com/beta'
+    else:
+        args.api_base = 'http://localhost:8080/v1'
 
     random.seed(args.seed)
     np.random.seed(args.seed)
