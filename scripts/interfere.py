@@ -279,9 +279,14 @@ def intervene(args):
                 cnt_exp += 1
         for sample, output, message in zip(chunk, batch_outputs, messages):
             answer = sample[f'answer']
-            if(args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'DeepSeekR1-Qwen-1.5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B']):
+            if(args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1']):
                 if args.interfere_mode > 0:
                     pred = extract_answer(output[0], sample, args.dataset, args.interfere_mode)
+                else:
+                    pred = extract_answer(output[0], sample, args.dataset)
+            elif args.model_name in ['DeepSeekR1-Qwen-1.5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B']:
+                if args.interfere_mode == 1:
+                    pred = extract_answer(output[1], sample, args.dataset, args.interfere_mode)
                 else:
                     pred = extract_answer(output[0], sample, args.dataset)
             else:
