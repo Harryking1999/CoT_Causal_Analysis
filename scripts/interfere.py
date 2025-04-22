@@ -288,7 +288,7 @@ def intervene(args):
                 if args.interfere_mode == 1:
                     pred = extract_answer(output[1], sample, args.dataset, args.interfere_mode)
                 else:
-                    pred = extract_answer(output[0], sample, args.dataset)
+                    pred = extract_answer(output[0], sample, args.dataset, args.interfere_mode)
             else:
                 pred = extract_answer(output, sample, args.dataset)
             record_item = sample.copy()
