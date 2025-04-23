@@ -344,7 +344,7 @@ if __name__ == '__main__':
     parser.add_argument('--api_key', type=str, required=True)
     parser.add_argument('--model_name', type=str, default='gpt-3.5-turbo')  # gpt-3.5-turbo, text-davinci-003
     parser.add_argument('--stop_words', type=str, default='####')
-    parser.add_argument('--max_new_tokens', type=int, default=2048)
+    parser.add_argument('--max_new_tokens', type=int, default=4096)
     parser.add_argument('--dataset', type=str, default='GSM8K')
     parser.add_argument('--prompt', type=str, default='cot0shot')
     parser.add_argument('--batch_size', type=int, default=1)

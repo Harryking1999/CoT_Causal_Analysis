@@ -151,8 +151,12 @@ class OpenAIModel:
                     generated_text = generated_content.split("</think>")[1]
                     generated_thinking = generated_content.split("</think>")[0]
                 else:
-                    generated_text = generated_content
-                    generated_thinking = ""
+                    if(isinstance(input_string, list) and "<think>" in input_string[1]):#means there should be </think> in output but there isn't (usually becuase of out of length)
+                        generated_text = ""
+                        generated_thinking = generated_content
+                    else:##normal situation
+                        generated_text = generated_content
+                        generated_thinking = ""
             else:
                 if(response['choices'][0]['message']['content'] is not None):
                     generated_text = response['choices'][0]['message']['content'].strip()
