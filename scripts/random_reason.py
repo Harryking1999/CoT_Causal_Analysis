@@ -61,27 +61,30 @@ def tokenize_preserving_newlines(text):
 
 def select_random_segment(sentences, min_length=3):
     part_size = len(sentences) // 3
+    start = max(2*part_size-1,0)
+    end = len(sentences)
+    return (start, end)
 
-    rand_span = [max(2*part_size-1,0),len(sentences)]
+    # rand_span = [max(2*part_size-1,0),len(sentences)]
 
-    try_times = 0
-    while True:
-        try_times+=1
-        pos_1 = random.randint(rand_span[0],rand_span[-1])
-        pos_2 = random.randint(rand_span[0],rand_span[-1])
-        start = min(pos_1, pos_2)
-        end = max(pos_1, pos_2)
-        segment = sentences[start:end]
-        if try_times == 6:
-            if part_size<=2:
-                return (0,len(sentences))
-            return (rand_span[0],rand_span[-1])
-        if len(segment) >= 1 and len(segment)<=8:
-            if sentences[start] == '\n' or sentences[end-1] == '\n':
-                continue
-            for s in segment:
-                if len(s)>min_length:
-                    return (start,end)
+    # try_times = 0
+    # while True:
+    #     try_times+=1
+    #     pos_1 = random.randint(rand_span[0],rand_span[-1])
+    #     pos_2 = random.randint(rand_span[0],rand_span[-1])
+    #     start = min(pos_1, pos_2)
+    #     end = max(pos_1, pos_2)
+    #     segment = sentences[start:end]
+    #     if try_times == 6:
+    #         if part_size<=2:
+    #             return (0,len(sentences))
+    #         return (rand_span[0],rand_span[-1])
+    #     if len(segment) >= 1 and len(segment)<=8:
+    #         if sentences[start] == '\n' or sentences[end-1] == '\n':
+    #             continue
+    #         for s in segment:
+    #             if len(s)>min_length:
+    #                 return (start,end)
 
 def extract_reason(output):
     seps = ['The correct option','\nAnswer:\n', '\n\n', 'Now,']
