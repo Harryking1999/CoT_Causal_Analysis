@@ -263,6 +263,8 @@ def intervene(args):
                 elif(args.model_name in ['DeepSeekR1-Qwen-1.5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B']):
                     if args.interfere_mode == 1:
                         preds = [extract_answer(output[1], sample, args.dataset, args.interfere_mode) for sample, output in zip(chunk, batch_outputs)]
+                    elif args.interfere_mode == 2:
+                        preds = [extract_answer(output[0], sample, args.dataset, args.interfere_mode) for sample, output in zip(chunk, batch_outputs)]
                     else:
                         preds = [extract_answer(output[0], sample, args.dataset) for sample, output in zip(chunk, batch_outputs)]
                 else:
