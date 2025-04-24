@@ -23,7 +23,7 @@ prompts=$3  # cot0shot, direct
 do_reason=$4 # defaultreason, goldreason, randomreason
 do_bias=$5  # nobias, weakbias, strongbias
 do_role=$6  # defaultrole, randomrole
-interfere_mode=$7  # 0=default, 1=test Y1 internal causality, 2=test Y1 and Z(Y2) causality
+interfere_mode=$7  # 0=default, 1=test Y1 internal causality, 2=test Y1 and Z(Y2) causality, 3=test instruction-Y2-Z causality
 api_base_num=$8  # 0=https://api.deepseek.com/beta, 1=http://localhost:8080/v1
 
 if [ $# == '4' ]; then
