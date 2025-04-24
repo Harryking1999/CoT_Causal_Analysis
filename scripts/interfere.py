@@ -235,6 +235,8 @@ def add_random_reason(args,data):
             #     d['random_reason'] = random_reason_item.get('random_reason_thinking', '')
             elif args.interfere_mode == 2:##still use thinking_CoT,but a close <thinking>
                 d['random_reason'] = random_reason_item.get('random_reason_thinking_CoT', '')
+            elif args.interfere_mode == 3:
+                d['random_reason'] = random_reason_item.get('random_reason_thinking_CoT', '')
             else:
                 d['random_reason'] = random_reason_item.get('random_reason', '')
     return data
