@@ -51,7 +51,7 @@ def format_interfere_prompt(args, prompt, full_prompt, item, outputs):
             default_role = 'math teacher'
             default_prompt = prompt.split('.')[0] + f'.{default_role}'
             if args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1']:
-                if args.interfere_mode == 0:
+                if args.interfere_mode not in [1, 2, 3]:
                     reason = extract_reason(item[f'{default_prompt}_output'])
                 elif args.interfere_mode == 1:
                     reason = "<think>\n" + item[f'{default_prompt}_thinking_CoT'] + " So, let me directly conclude the answer. The answer is "
@@ -63,7 +63,7 @@ def format_interfere_prompt(args, prompt, full_prompt, item, outputs):
                 reason = extract_reason(item[f'{default_prompt}_output'])
         elif interfere == 'goldreason':  # use the golden reasoning steps
             reason = item['reason']
-            if args.interfere_mode == 0:
+            if args.interfere_mode not in [1, 2, 3]:
                 pass
             elif args.interfere_mode == 1:
                 reason = "<think>\n" + reason + " So, let me directly conclude the answer. The answer is "
@@ -77,7 +77,7 @@ def format_interfere_prompt(args, prompt, full_prompt, item, outputs):
                 default_role = 'math teacher'
                 default_prompt = prompt.split('.')[0] + f'.{default_role}'
                 if args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B']:
-                    if args.interfere_mode == 0:
+                    if args.interfere_mode not in [1, 2, 3]:
                         reason = extract_reason(item[f'{default_prompt}_output'])
                     elif args.interfere_mode == 1:
                         reason = "<think>\n" + item[f'{default_prompt}_thinking_CoT'] + " So, let me directly conclude the answer. The answer is "
@@ -92,6 +92,8 @@ def format_interfere_prompt(args, prompt, full_prompt, item, outputs):
                 reason = random_new_numbers(reason)
             elif dataset in ['ProofWriter','FOLIO','LOGIQA']:
                 reason = item['random_reason']
+                if args.interfere_mode not in [1, 2, 3]:
+                    pass
                 if args.interfere_mode == 1:
                     reason = "<think>\n" + reason + "So, let me directly conclude the answer. The answer is "
                 elif args.interfere_mode == 2:
