@@ -89,9 +89,23 @@ class OpenAIModel:
         print(f'OpenAI API with {API_BASE}, {model_name}, {stop_words}, {max_new_tokens}')
 
     # used for chat-gpt and gpt-4 and o1
-    def chat_generate(self, input_string, temperature = 1.0):
+    def chat_generate(self, input_string, temperature = 1.0, interfere_mode=0):
+        #interfere_mode influences the output format.
+        #interfere_mode = 0: default setting
+            #input: <|User|>{question}<|Assistant|>
+            #output: for reasoning models: <think>xxxxx</think>yyyy; for non-reasoning models: xxxxxx
+        #interfere_mode = 1: for reasoning models, SCM to be evaluated: <think>thinking_CoT -> thinking_answer</think>
+            #input: <|User|>{question}<|Assistant|><think>xxxx
+            #output: yyyyy</think>zzzzzz
+        #interfere_mode = 2: for reasoning models, SCM to be evaluated: <think>thinking_CoT</think> -> answer
+            #input: <|User|>{question}<|Assistant|><think>xxxx</think>
+            #output: yyyyy
+        #interfere_mode = 3: for reasoning models, SCM to be evaluated: thinking_CoT -> answer
+            #input: <|User|>{question}<|Assistant|>xxxx
+            #output: yyyyy
+
         response = None
-        if(self.model_name in ['o1-mini', 'o1', 'deepseek-reasoner', 'deepseek-r1','Pro/deepseek-ai/DeepSeek-R1']):
+        if(self.model_name in ['deepseek-reasoner']):
             # Handle list messages for deepseek-reasoner
             if isinstance(input_string, list) and self.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1']:
                 messages = [
@@ -110,7 +124,7 @@ class OpenAIModel:
             )
             print('response: ', response)
             # print('messages: ', messages)
-        elif self.model_name in ['DeepSeekR1-Qwen-1.5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B']:
+        elif self.model_name in ['DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B']:
             # Special handling for local API
             if isinstance(input_string, list):
                 question = input_string[0]
@@ -141,27 +155,48 @@ class OpenAIModel:
             )
 
         if(self.model_name not in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B']):
+            #non-reasoning models
             generated_text = response['choices'][0]['message']['content'].strip()
             return generated_text
-        else:
-            if(self.model_name in ['DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B']):
+        else:#reasoning models
+            if(self.model_name in ['DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B']):#vllm reasoning models: parsing by hand
                 generated_content = response['choices'][0]['text'].strip()
                 # generated_thinking = generated_content.split("</think>")[0]
-                if("</think>" in generated_content):
-                    generated_text = generated_content.split("</think>")[1]
-                    generated_thinking = generated_content.split("</think>")[0]
-                else:
-                    if(isinstance(input_string, list) and "<think>" in input_string[1] and "</think>" not in input_string[1]):#means there should be </think> in output but there isn't (usually becuase of out of length)
+                generated_thinking = ""
+                generated_text = ""
+                if(interfere_mode not in [1, 2, 3]):## <think>thinking</think> -> answer
+                    #only 1 situation
+                    if("</think>" in generated_content and "<think>" in generated_content):
+                        generated_text = generated_content.split("</think>")[1]
+                        generated_thinking = generated_content.split("</think>")[0].split("<think>")[1]
+                    elif("</think>" not in generated_content and "<think>" in generated_content):
+                        generated_thinking = generated_text
                         generated_text = ""
-                        generated_thinking = generated_content
-                    else:##normal situation
+                    elif("</think>" in generated_content and "<think>" not in generated_content):
+                        generated_text = generated_content.split("</think>")[1]
+                        generated_thinking = generated_content.split("</think>")[0]
+                    else:
                         generated_text = generated_content
                         generated_thinking = ""
-            else:
+                elif(interfere_mode == 1):## <think>thinking_CoT -> thinking_answer</think>
+                    if("</think>" in generated_content):
+                        generated_text = generated_content.split("</think>")[1]
+                        generated_thinking = generated_content.split("</think>")[0]
+                    else:
+                        generated_text = ""
+                        generated_thinking = generated_content
+                elif(interfere_mode == 2):## <think>thinking_CoT</think> -> answer
+                    generated_text = generated_content
+                    generated_thinking = ""
+                elif(interfere_mode == 3):## thinking_CoT -> answer
+                    generated_text = generated_content
+                    generated_thinking = ""
+            else:##commercial api: parsing with content&reasoning_content
                 if(response['choices'][0]['message']['content'] is not None):
                     generated_text = response['choices'][0]['message']['content'].strip()
                 else:
                     generated_text = ""
+
                 if(response['choices'][0]['message']['reasoning_content'] is not None):
                     generated_thinking = response['choices'][0]['message']['reasoning_content'].strip()
                 else:
@@ -183,12 +218,12 @@ class OpenAIModel:
         generated_text = response['choices'][0]['text'].strip()
         return generated_text
 
-    def generate(self, input_string, temperature = 0.0):
+    def generate(self, input_string, temperature = 0.0, interfere_mode=0):
         if self.model_name in ['text-davinci-002', 'code-davinci-002', 'text-davinci-003', 'gpt-3.5-turbo-instruct']:
             return self.prompt_generate(input_string, temperature)
         elif self.model_name in ['gpt-4', 'gpt-3.5-turbo','gpt-4-turbo-preview','gpt-4-0125-preview','gpt-4-1106-preview',
                                  'llama2-70b-chat', 'llama2-7b-chat', 'mistral-base', 'mistral-sft', 'mistral-dpo', 'o1-mini', 'o1']:
-            return self.chat_generate(input_string, temperature)
+            return self.chat_generate(input_string, temperature, interfere_mode)
         else:
             return self.chat_generate(input_string, temperature)
     

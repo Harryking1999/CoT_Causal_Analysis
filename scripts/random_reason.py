@@ -114,7 +114,7 @@ if __name__ == '__main__':
     OpenAIModel.batch_chat_generate = batch_chat_generate
     # Load default reason data
     suffix = '.thinking' if args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 
-                                              'DeepSeekR1-Qwen-1.5B', 'DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 
+                                              'DeepSeekR1-Qwen-1_5B', 'DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 
                                               'DeepSeekR1-Qwen-32B'] else ''
     default_output_path = f'exp_cot/output/output.{args.dataset}.{args.prompt}.{args.role}.{args.model_name}{suffix}.json'.replace(' ', '_')
     default_data = json.load(open(default_output_path))
