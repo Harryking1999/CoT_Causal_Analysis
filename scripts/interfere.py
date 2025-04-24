@@ -126,10 +126,10 @@ def format_interfere_prompt(args, prompt, full_prompt, item, outputs):
     if args.interfere_mode in [1, 2, 3] and args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B']:
         default_role = 'math teacher'
         default_prompt = prompt.split('.')[0] + f'.{default_role}'
-        if args.interfere_mode == 1:
-            return [item[f'{default_prompt}_input'], reason]
-        else:  # mode 2
-            return [item[f'{default_prompt}_input'], reason]
+        # if args.interfere_mode == 1:
+        return [item[f'{default_prompt}_input'], reason]
+        # else:  # mode 2
+        #     return [item[f'{default_prompt}_input'], reason]
 
     return message
 
@@ -322,7 +322,7 @@ def intervene(args):
                 pred = extract_answer(output, sample, args.dataset)
             record_item = sample.copy()
             if args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1']:
-                if args.interfere_mode in [1, 2]:
+                if args.interfere_mode in [1, 2, 3]:
                     record_item[f'{prompt}_input_user'] = message[0]
                     record_item[f'{prompt}_input_assistant'] = message[1]
                     record_item[f'{prompt}_output'] = output[0]
@@ -333,8 +333,8 @@ def intervene(args):
                 if args.interfere_mode == 1:
                     record_item[f'{prompt}_input_user'] = message[0]
                     record_item[f'{prompt}_input_assistant'] = message[1]
-                    record_item[f'{prompt}_output'] = output[1]
-                elif args.interfere_mode == 2:
+                    record_item[f'{prompt}_output'] = output[1] # Thinking CoT
+                elif args.interfere_mode == 2 or args.interfere_mode == 3:
                     record_item[f'{prompt}_input_user'] = message[0]
                     record_item[f'{prompt}_input_assistant'] = message[1]
                     record_item[f'{prompt}_output'] = output[0]
