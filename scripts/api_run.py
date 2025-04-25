@@ -113,6 +113,8 @@ def load_dataset(dataset, nsamples):
             item['answer'] = str(int(parts[1].strip().replace(',', '')))  # expect integer only
         random.shuffle(items)
         return items[:nsamples] if nsamples > 0 else items[:500]  # default 500 samples
+    elif dataset == "MATH500":
+        data_file = f'./data/{dataset}/test.jsonl'
     else:  # default loading
         if dataset.find(':') > 0:
             dataset, arg = dataset.split(':')

@@ -103,8 +103,9 @@ class OpenAIModel:
         #interfere_mode = 3: for reasoning models, SCM to be evaluated: thinking_CoT -> answer
             #input: <|User|>{question}<|Assistant|>xxxx
             #output: yyyyy
-        if(interfere_mode == 3):
-            self.stop_word = [self.stop_word, "</think>"]
+        print("interfere_mode", interfere_mode)
+        # if(interfere_mode == 3):
+        #     self.stop_words = [self.stop_words, "</think>"]
         response = None
         if(self.model_name in ['deepseek-reasoner']):
             # Handle list messages for deepseek-reasoner
@@ -162,6 +163,7 @@ class OpenAIModel:
         else:#reasoning models
             if(self.model_name in ['DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B']):#vllm reasoning models: parsing by hand
                 generated_content = response['choices'][0]['text'].strip()
+                # generated_content = 3000 * "1" + 3000 * "2"
                 # generated_thinking = generated_content.split("</think>")[0]
                 generated_thinking = ""
                 generated_text = ""
@@ -223,7 +225,10 @@ class OpenAIModel:
         if self.model_name in ['text-davinci-002', 'code-davinci-002', 'text-davinci-003', 'gpt-3.5-turbo-instruct']:
             return self.prompt_generate(input_string, temperature)
         elif self.model_name in ['gpt-4', 'gpt-3.5-turbo','gpt-4-turbo-preview','gpt-4-0125-preview','gpt-4-1106-preview',
-                                 'llama2-70b-chat', 'llama2-7b-chat', 'mistral-base', 'mistral-sft', 'mistral-dpo', 'o1-mini', 'o1']:
+                                 'llama2-70b-chat', 'llama2-7b-chat', 'mistral-base', 'mistral-sft', 'mistral-dpo', 'o1-mini', 
+                                 'o1', 'deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'DeepSeekR1-Qwen-1_5B',
+                                 'DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B']:
+            
             return self.chat_generate(input_string, temperature, interfere_mode)
         else:
             return self.chat_generate(input_string, temperature)

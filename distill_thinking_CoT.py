@@ -89,7 +89,7 @@ def find_answer_in_text(text, answer, find_first=True, dataset=None):
                 answer_positions.append(i)
     
     if not answer_positions:
-        return None
+        return text
     
     # Select target position based on answer type
     if answer in ['A', 'B', 'C', 'D']:

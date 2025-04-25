@@ -278,7 +278,7 @@ def intervene(args):
     for chunk in tqdm(dataset_chunks):
         messages = [format_interfere_prompt(args, prompt, full_prompt, item, data) for item in chunk]
         cnt_exp = 0
-        # print('messages: ', messages)
+        print('messages: ', messages)
         while True:
             if(cnt_exp > 3):
                 batch_outputs = ['']
@@ -288,7 +288,7 @@ def intervene(args):
                     batch_outputs = openai_api.batch_generate(messages)
                 else:
                     batch_outputs = [openai_api.generate(message, interfere_mode=args.interfere_mode) for message in messages]
-                    # print("batch_outputs: ", batch_outputs)
+                    print("batch_outputs: ", batch_outputs)
                 if(args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1']):
                     if args.interfere_mode > 0:
                         preds = [extract_answer(output[0], sample, args.dataset, args.interfere_mode) for sample, output in zip(chunk, batch_outputs)]
