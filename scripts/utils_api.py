@@ -103,7 +103,8 @@ class OpenAIModel:
         #interfere_mode = 3: for reasoning models, SCM to be evaluated: thinking_CoT -> answer
             #input: <|User|>{question}<|Assistant|>xxxx
             #output: yyyyy
-
+        if(interfere_mode == 3):
+            self.stop_word = [self.stop_word, "</think>"]
         response = None
         if(self.model_name in ['deepseek-reasoner']):
             # Handle list messages for deepseek-reasoner
