@@ -135,8 +135,9 @@ def extract_answer(output, item, dataset, interfere_mode=0):
         output = output.split("</think>")[0].split(".")[0]
     elif interfere_mode == 2:
         output = output.split(".")[0]
-    # elif interfere_mode == 3:
-    #     output = output.split(".")[0]
+    elif interfere_mode == 3:
+        if("." in output):
+            output = output.split(".")[0]
     try:
         dataset = dataset.split(':')[0]
         if dataset in ['Addition', 'Product', 'GSM8K']:
