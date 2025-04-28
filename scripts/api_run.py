@@ -115,6 +115,17 @@ def load_dataset(dataset, nsamples):
         return items[:nsamples] if nsamples > 0 else items[:500]  # default 500 samples
     elif dataset == "MATH500":
         data_file = f'./data/{dataset}/test.jsonl'
+        with open(data_file, 'r') as fin:
+            items = [json.loads(line) for line in fin]
+        for idx, item in enumerate(items, start=1):
+            question = item['question']
+            reason = item['solution']
+            answer = item['answer']
+            item.clear()
+            item['id'] = f'MATH500_Q{idx}'
+            item['question'] = question
+            item['reason'] = reason
+            item['answer'] = answer  # expect integer only
     else:  # default loading
         if dataset.find(':') > 0:
             dataset, arg = dataset.split(':')
@@ -138,6 +149,8 @@ def extract_answer(output, item, dataset, interfere_mode=0):
     elif interfere_mode == 3:
         if("." in output):
             output = output.split(".")[0]
+        if("</think>" in output):
+            output = output.split("</think>")[0]
     try:
         dataset = dataset.split(':')[0]
         if dataset in ['Addition', 'Product', 'GSM8K']:

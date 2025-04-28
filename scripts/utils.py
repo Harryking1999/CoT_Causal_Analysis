@@ -13,7 +13,7 @@ def extract_logic(answer):
     pattern5 = r"^[A-D]\.?$"
     pattern6 = r"\\boxed{([A-D])}"
     pattern7 = r"correct \w+ is:?\s*[*]*\s*\{([A-D])\}"
-    pattern8 = r"correct \w+ is:?\s*[*]*\s*\(([A-D])\)"
+    pattern8 = r"which is ([A-D])([.)]?)\b"
 
     match = re.search(pattern1, answer)
     option = None
