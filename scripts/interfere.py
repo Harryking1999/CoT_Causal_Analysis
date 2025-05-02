@@ -69,7 +69,7 @@ def format_interfere_prompt(args, prompt, full_prompt, item, outputs):
                         reason =  item[f'{default_prompt}_thinking_CoT'] + ". Therefore, the option is "
             else:
                 reason = extract_reason(item[f'{default_prompt}_output'])
-        elif interfere == 'goldreason':  # use the golden reasoning steps
+        elif interfere == 'goldreason' or interfere == 'goldreason-r1':  # use the golden reasoning steps
             reason = item['reason']
             if args.interfere_mode not in [1, 2, 3]:
                 pass
@@ -169,6 +169,8 @@ def load_output(args):
     output_file = f'{args.outdir}/output.{args.dataset}.{args.prompt}.{default_role}.{args.model_name}.json'
     if args.interfere_mode in [1, 2, 3]:
         output_file = f'{args.outdir}/output.{args.dataset}.{args.prompt}.{default_role}.{args.model_name}.thinking.json'
+        if args.do_reason == 'goldreason-r1':
+            output_file = f'{args.outdir}/output.{args.dataset}.{args.prompt}.{default_role}.{args.model_name}.thinking.replace_golden.json'
     # if not os.path.exists(output_file):
     #     output_file = f'{args.outdir}/output.{args.dataset}.{args.prompt}.{default_role}.{args.model_name}.json'
     output_file = output_file.replace(' ', '_').replace(':', '_')
@@ -415,7 +417,7 @@ if __name__ == '__main__':
     #   nobias: no bias prompt, weakbias: weak bias prompt, strongbias: strong bias prompt
     parser.add_argument('--do_bias', type=str, default='nobias', choices=['nobias', 'weakbias', 'strongbias'])
     #   defaultreason: CoT from LLM generation, goldreason: golden CoT, randomreason: CoT with number, subject, negative interventions
-    parser.add_argument('--do_reason', type=str, default='defaultreason', choices=['defaultreason', 'goldreason', 'randomreason'])
+    parser.add_argument('--do_reason', type=str, default='defaultreason', choices=['defaultreason', 'goldreason', 'randomreason', 'goldreason-r1'])
     #   interfere_mode: 0=default, 1=test Y1 internal causality, 2=test Y1 and Z(Y2) causality
     parser.add_argument('--interfere_mode', type=int, default=0, choices=[0, 1, 2, 3])
     parser.add_argument('--seed', type=int, default=1)
@@ -433,7 +435,7 @@ if __name__ == '__main__':
     
     print(args.interfere_mode)
 
-    if args.do_reason == 'goldreason' and args.dataset in ['FOLIO', 'LOGIQA']:
+    if (args.do_reason == 'goldreason' or args.do_reason == 'goldreason-r1') and args.dataset in ['FOLIO', 'LOGIQA']:
         print(f'{args.dataset} dataset does not support goldreason because it is not provided.')
     else:
         intervene(args)
