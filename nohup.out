@@ -1,0 +1,10 @@
+Mon Apr 28 11:23:28 2025, Evaluating samples from Addition:6 using prompts cot0shot with randomreason and defaultrole and nobias and mode 3 and api_base_num 0 and seed ...
+D:\code\CoT_Causal_Analysis\scripts\interfere.py:35: SyntaxWarning: invalid escape sequence '\d'
+  parts = re.split('(\d+)', reason)
+Traceback (most recent call last):
+  File "D:\code\CoT_Causal_Analysis\scripts\interfere.py", line 12, in <module>
+    from utils_api import OpenAIModel
+  File "D:\code\CoT_Causal_Analysis\scripts\utils_api.py", line 1, in <module>
+    import backoff  # for exponential backoff
+    ^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'backoff'

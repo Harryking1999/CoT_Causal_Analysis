@@ -11,7 +11,7 @@ import statsmodels.stats.contingency_tables as ssc
 
 
 def load_output(output_file):
-    with open(output_file, 'r') as fin:
+    with open(output_file, 'r', encoding="utf-8") as fin:
         data = json.load(fin)  # data from default role to new role
         print(f'Loaded {len(data)} items from {output_file}')
     return data
