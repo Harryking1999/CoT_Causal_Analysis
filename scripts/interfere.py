@@ -403,11 +403,11 @@ if __name__ == '__main__':
     '''
     parser = argparse.ArgumentParser()
     parser.add_argument('--outdir', type=str, default='./exp_cot/output')
-    parser.add_argument('--api_base_num', type=int, default=0, choices=[0, 1], help='0: https://api.deepseek.com/beta, 1: http://localhost:8080/v1')
+    parser.add_argument('--api_base_num', type=int, default=0, choices=[0, 1, 2], help='0: https://api.deepseek.com/beta, 1: http://localhost:8080/v1 2: http://localhost:8081/v1' )
     parser.add_argument('--api_key', type=str, required=True)
     parser.add_argument('--model_name', type=str, default='gpt-3.5-turbo')  # gpt-3.5-turbo, text-davinci-003
     parser.add_argument('--stop_words', type=str, default='####')
-    parser.add_argument('--max_new_tokens', type=int, default=4096)
+    parser.add_argument('--max_new_tokens', type=int, default=8192)
     parser.add_argument('--dataset', type=str, default='GSM8K')
     parser.add_argument('--prompt', type=str, default='cot0shot')
     parser.add_argument('--batch_size', type=int, default=1)
@@ -427,8 +427,14 @@ if __name__ == '__main__':
     # Set API base URL based on api_base_num
     if args.api_base_num == 0:
         args.api_base = 'https://api.deepseek.com/beta'
-    else:
+    elif args.api_base_num == 1:
         args.api_base = 'http://localhost:8080/v1'
+    elif args.api_base_num == 2:
+        args.api_base = 'http://localhost:8081/v1'
+        args.max_new_tokens = 16384
+
+    # print("base_num: ", args.api_base_num)
+    # print("base: ", args.api_base)    
 
     random.seed(args.seed)
     np.random.seed(args.seed)
@@ -437,6 +443,8 @@ if __name__ == '__main__':
 
     if (args.do_reason == 'goldreason' or args.do_reason == 'goldreason-r1') and args.dataset in ['FOLIO', 'LOGIQA']:
         print(f'{args.dataset} dataset does not support goldreason because it is not provided.')
+    elif args.api_base_num not in [0, 1, 2]:
+        print(f'please choose a correct api_base.')
     else:
         intervene(args)
 
