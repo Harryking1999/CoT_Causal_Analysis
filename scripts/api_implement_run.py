@@ -112,7 +112,7 @@ def main():
     parser.add_argument('--api_key', type=str, required=True)
     parser.add_argument('--model_name', type=str, default='gpt-3.5-turbo')
     parser.add_argument('--stop_words', type=str, default='####')
-    parser.add_argument('--max_new_tokens', type=int, default=2048)
+    parser.add_argument('--max_new_tokens', type=int, default=8192)
     parser.add_argument('--input_file', type=str, required=True)
     parser.add_argument('--seed', type=int, default=1)
     parser.add_argument('--dataset', type=str, default='GSM8K')
@@ -125,6 +125,10 @@ def main():
         args.api_base = "https://api.deepseek.com/beta"
     elif args.api_base_num == 4:
         args.api_base = "https://api.siliconflow.cn/v1"
+    elif args.api_base_num == 5:
+        args.api_base = "http://localhost:8080/v1"
+    elif args.api_base_num == 6:
+        args.api_base = "http://localhost:8081/v1"
     else:
         args.api_base = 'https://api.chatanywhere.tech/v1'
     

@@ -126,7 +126,7 @@ class OpenAIModel:
             )
             print('response: ', response)
             # print('messages: ', messages)
-        elif self.model_name in ['DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B']:
+        elif self.model_name in ['DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B']:
             # Special handling for local API
             if isinstance(input_string, list):
                 question = input_string[0]
@@ -161,7 +161,7 @@ class OpenAIModel:
             generated_text = response['choices'][0]['message']['content'].strip()
             return generated_text
         else:#reasoning models
-            if(self.model_name in ['DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B']):#vllm reasoning models: parsing by hand
+            if(self.model_name in ['DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B']):#vllm reasoning models: parsing by hand
                 generated_content = response['choices'][0]['text'].strip()
                 # generated_content = 3000 * "1" + 3000 * "2"
                 # generated_thinking = generated_content.split("</think>")[0]
@@ -227,7 +227,7 @@ class OpenAIModel:
         elif self.model_name in ['gpt-4', 'gpt-3.5-turbo','gpt-4-turbo-preview','gpt-4-0125-preview','gpt-4-1106-preview',
                                  'llama2-70b-chat', 'llama2-7b-chat', 'mistral-base', 'mistral-sft', 'mistral-dpo', 'o1-mini', 
                                  'o1', 'deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'DeepSeekR1-Qwen-1_5B',
-                                 'DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B']:
+                                 'DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B']:
             
             return self.chat_generate(input_string, temperature, interfere_mode)
         else:
