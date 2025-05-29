@@ -59,6 +59,14 @@ def mcnemar_test(aa, bb):
     result = ssc.mcnemar(table, exact=True, correction=True)
     return result.statistic, result.pvalue
 
+def cohens_d_paired(aa, bb):
+    aa = np.array(aa)
+    bb = np.array(bb)
+    diff = bb - aa
+    mean_diff = np.mean(diff)
+    std_diff = np.std(diff, ddof=1)
+    return mean_diff / std_diff
+
 
 def get_average_treatment_effect(group_a_file, group_b_file):
     aa, bb = get_paired_results(group_a_file, group_b_file)
@@ -80,4 +88,5 @@ if __name__ == '__main__':
     print(f'B - A: {np.mean(bb) - np.mean(aa):.3f} ({np.sum(bb) - np.sum(aa)}/{len(bb)})')
 
     statistic, pvalue = mcnemar_test(aa, bb)
-    print(f'Statistic: {statistic:.2f}, p-value: {pvalue:.2g}')
+    cohens_d = cohens_d_paired(aa, bb)
+    print(f'Statistic: {statistic:.2f}, p-value: {pvalue:.2g}, cohens_d: {cohens_d:.2g}')
