@@ -39,10 +39,11 @@ def retry_item(args, item, prompt, openai_api):
             output = openai_api.generate(message)
             
             # Extract answer
-            if args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1']:
+            if args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'QwQ-32B']:
                 pred = extract_answer(output[0], item, args.dataset)
                 item[f'{prompt}_output'] = output[0]
                 item[f'{prompt}_thinking'] = output[1]
+            # elif args.model_name in ['']:
             else:
                 pred = extract_answer(output, item, args.dataset)
                 item[f'{prompt}_output'] = output

@@ -210,9 +210,9 @@ def api_run(args):
         # split dataset into chunks
         dataset_chunks = [data[i:i + args.batch_size] for i in range(0, len(data), args.batch_size)]
         cnt_total = 0
-        for chunk in tqdm(dataset_chunks[0:10]):
+        for chunk in tqdm(dataset_chunks):
             messages = [format_prompt(full_prompt, item) for item in chunk]
-            # print(messages)
+            print(messages)
             cnt_exp = 0
             while True:
                 if(cnt_exp > 3):
@@ -223,7 +223,7 @@ def api_run(args):
                         batch_outputs = openai_api.batch_generate(messages)
                     else:
                         batch_outputs = [openai_api.generate(message) for message in messages]
-                        print(batch_outputs)
+                        # print('batch_output: ', batch_outputs)
                     # extract the answer and regenerate if the output format is out of expectation
                     if(args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B']):
                         preds = [extract_answer(output[0], sample, args.dataset) for sample, output in zip(chunk, batch_outputs)]
@@ -285,6 +285,9 @@ if __name__ == '__main__':
     parser.add_argument('--seed', type=int, default=1)
 
     args = parser.parse_args()
+
+    if(args.model_name == "QwQ-32B"):
+        args.max_new_tokens = 15000
 
     if args.api_base_num == 2:  
         args.api_base = 'https://dashscope.aliyuncs.com/compatible-mode/v1'  

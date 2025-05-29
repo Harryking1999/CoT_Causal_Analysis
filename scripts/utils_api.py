@@ -89,7 +89,7 @@ class OpenAIModel:
         print(f'OpenAI API with {API_BASE}, {model_name}, {stop_words}, {max_new_tokens}')
 
     # used for chat-gpt and gpt-4 and o1
-    def chat_generate(self, input_string, temperature = 1.0, interfere_mode=0):
+    def chat_generate(self, input_string, temperature = 0.6, interfere_mode=0):
         #interfere_mode influences the output format.
         #interfere_mode = 0: default setting
             #input: <|User|>{question}<|Assistant|>
@@ -103,7 +103,7 @@ class OpenAIModel:
         #interfere_mode = 3: for reasoning models, SCM to be evaluated: thinking_CoT -> answer
             #input: <|User|>{question}<|Assistant|>xxxx
             #output: yyyyy
-        print("interfere_mode", interfere_mode)
+        # print("interfere_mode", interfere_mode)
         # if(interfere_mode == 3):
         #     self.stop_words = [self.stop_words, "</think>"]
         response = None
@@ -135,6 +135,8 @@ class OpenAIModel:
             else:
                 question = input_string
                 prompt = f"<｜User｜>{question}<｜Assistant｜>"
+                if self.model_name in ['QwQ-32B']:
+                    prompt = f"<｜User｜>{question}<｜Assistant｜>\n<think>"
             
             response = completions_with_backoff(
                 model=self.model_name,
@@ -156,7 +158,7 @@ class OpenAIModel:
                     stop = self.stop_words
             )
 
-        if(self.model_name not in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B']):
+        if(self.model_name not in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B']):
             #non-reasoning models
             generated_text = response['choices'][0]['message']['content'].strip()
             return generated_text
@@ -167,6 +169,7 @@ class OpenAIModel:
                 # generated_thinking = generated_content.split("</think>")[0]
                 generated_thinking = ""
                 generated_text = ""
+                # print('generated_content: ', generated_content)
                 if(interfere_mode not in [1, 2, 3]):## <think>thinking</think> -> answer
                     #only 1 situation
                     if("</think>" in generated_content and "<think>" in generated_content):
@@ -181,6 +184,9 @@ class OpenAIModel:
                     else:
                         generated_text = generated_content
                         generated_thinking = ""
+                        if(self.model_name in ['QwQ-32B']):
+                            generated_text = ""
+                            generated_thinking = generated_content
                 elif(interfere_mode == 1):## <think>thinking_CoT -> thinking_answer</think>
                     if("</think>" in generated_content):
                         generated_text = generated_content.split("</think>")[1]
@@ -199,7 +205,6 @@ class OpenAIModel:
                     generated_text = response['choices'][0]['message']['content'].strip()
                 else:
                     generated_text = ""
-
                 if(response['choices'][0]['message']['reasoning_content'] is not None):
                     generated_thinking = response['choices'][0]['message']['reasoning_content'].strip()
                 else:

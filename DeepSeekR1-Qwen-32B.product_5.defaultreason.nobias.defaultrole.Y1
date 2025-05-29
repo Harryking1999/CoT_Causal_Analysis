@@ -1,0 +1,29 @@
+Thu May 15 11:19:10 AM CST 2025, Evaluating samples from Product:5 using prompts cot0shot with defaultreason and defaultrole and nobias and mode 0 and api_base_num 0 and seed ...
+/home/fuzhizhang.fzz/CoT_Causal_Analysis/scripts/interfere.py:35: SyntaxWarning: invalid escape sequence '\d'
+  parts = re.split('(\d+)', reason)
+/home/fuzhizhang.fzz/CoT_Causal_Analysis/scripts/api_run.py:91: SyntaxWarning: invalid escape sequence '\{'
+  fields = re.findall('\{\{\w+\}\}', full_prompt)
+/home/fuzhizhang.fzz/CoT_Causal_Analysis/scripts/api_run.py:162: SyntaxWarning: invalid escape sequence '\d'
+  output = [line for line in output if len(re.findall('\d+', line)) > 0][-1]
+/home/fuzhizhang.fzz/CoT_Causal_Analysis/scripts/api_run.py:164: SyntaxWarning: invalid escape sequence '\d'
+  answer = re.findall('\d+', answer)
+0
+OpenAI API with https://api.deepseek.com/beta, DeepSeekR1-Qwen-32B, ####, 8192
+Loaded 500 items from exp_cot/output/output.Product_5.cot0shot.math_teacher.DeepSeekR1-Qwen-32B.json
+  0%|          | 0/500 [00:00<?, ?it/s]  0%|          | 0/500 [02:40<?, ?it/s]
+messages:  ["Please act as a math teacher and solve the product problem in the given template.\n####\n# Question:\nWhat is the product of <<number1 such as 27>> and <<number2 such as 153>>?\n# Reasoning:\nLet's think step by step. <<number2 153 has three digits, so that we can reason in three steps.>>\n1. <<Multiply number1 27 by the ones place digit 3 of number2 153>>\n2. <<Multiply number1 27 by the tens place digit 50 of number2 153>>\n<<other digits of number2 if it has>>\nAnswer:\nNow, sum all the step results: <<sum of the results>>.\nSo, the final computed product is <<answer>>.\n####\n# Question:\nWhat is the product of 43993 and 73510?\n# Reasoning:\n# Question:\nWhat is the product of 43993 and 73510?\n\n# Reasoning:\n\nLet's calculate the product of **43,993** and **73,510** step by step.\n\n1. **Multiply 43,993 by 0 (ones place of 73,510):**\n   \\[\n   43,\\!993 \\times 0 = 0\n   \\]\n\n2. **Multiply 43,993 by 10 (tens place of 73,510):**\n   \\[\n   43,\\!993 \\times 10 = 439,\\!930\n   \\]\n\n3. **Multiply 43,993 by 500 (hundreds place of 73,510):**\n   \\[\n   43,\\!993 \\times 500 = 21,\\!996,\\!500\n   \\]\n\n4. **Multiply 43,993 by 3,000 (thousands place of 73,510):**\n   \\[\n   43,\\!993 \\times 3,\\!000 = 131,\\!979,\\!000\n   \\]\n\n5. **Multiply 43,993 by 70,000 (ten-thousands place of 73,510):**\n   \\[\n   43,\\!993 \\times 70,\\!000 = 3,\\!079,\\!510,\\!000\n   \\]\nAnswer:"]
+Error communicating with OpenAI: HTTPSConnectionPool(host='api.deepseek.com', port=443): Max retries exceeded with url: /beta/completions (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f28319dde50>: Failed to resolve 'api.deepseek.com' ([Errno -2] Name or service not known)"))
+Sleep 10 seconds before retry ...
+Error communicating with OpenAI: HTTPSConnectionPool(host='api.deepseek.com', port=443): Max retries exceeded with url: /beta/completions (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f28319de600>: Failed to resolve 'api.deepseek.com' ([Errno -2] Name or service not known)"))
+Sleep 10 seconds before retry ...
+Error communicating with OpenAI: HTTPSConnectionPool(host='api.deepseek.com', port=443): Max retries exceeded with url: /beta/completions (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f28319dedb0>: Failed to resolve 'api.deepseek.com' ([Errno -2] Name or service not known)"))
+Sleep 10 seconds before retry ...
+Error communicating with OpenAI: HTTPSConnectionPool(host='api.deepseek.com', port=443): Max retries exceeded with url: /beta/completions (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f28319de810>: Failed to resolve 'api.deepseek.com' ([Errno -2] Name or service not known)"))
+Sleep 10 seconds before retry ...
+Traceback (most recent call last):
+  File "/home/fuzhizhang.fzz/CoT_Causal_Analysis/scripts/interfere.py", line 449, in <module>
+    intervene(args)
+  File "/home/fuzhizhang.fzz/CoT_Causal_Analysis/scripts/interfere.py", line 352, in intervene
+    pred = extract_answer(output[0], sample, args.dataset, args.interfere_mode)
+                          ~~~~~~^^^
+IndexError: string index out of range
