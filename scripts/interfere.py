@@ -321,7 +321,7 @@ def intervene(args):
     accs = []
     dataset_chunks = [data[i:i + args.batch_size] for i in range(0, len(data), args.batch_size)]
     cnt_total = 0
-    for chunk in tqdm(dataset_chunks[0:10]):
+    for chunk in tqdm(dataset_chunks):
         messages = [format_interfere_prompt(args, prompt, full_prompt, item, data) for item in chunk]
         cnt_exp = 0
         print('messages: ', messages)

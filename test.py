@@ -1,23 +1,35 @@
-import numpy as np
-import matplotlib.pyplot as plt
-
-# 参数
-a = 1
-p = 0.1
-x = np.linspace(1, 100, 200)
-
-# acc 图
-plt.figure()
-plt.plot(x, a * x**p, color='blue')
-plt.xticks([])
-plt.yticks([])
-plt.box(True)  # 显示边框
-plt.show()
-
-# loss 图
-plt.figure()
-plt.plot(x, a * (1/x)**p, color='red')
-plt.xticks([])
-plt.yticks([])
-plt.box(True)  # 显示边框
-plt.show()
+import re
+def extract_answer(output, item, dataset, interfere_mode=0):
+    # print("output: ", output)
+    # print("item: ", item)
+    # print("datasetL: ", dataset)
+    # print("interfere_mode: ", interfere_mode)
+    if interfere_mode == 1:
+        output = output.split("</think>")[0].split(".")[0]
+    elif interfere_mode == 2:
+        output = output.split(".")[0]
+    elif interfere_mode == 3:
+        if("." in output):
+            output = output.split(".")[0]
+        if("</think>" in output):
+            output = output.split("</think>")[0]
+    try:
+        dataset = dataset.split(':')[0]
+        if dataset in ['Addition', 'Product', 'GSM8K']:
+            gold = item
+            # Handle interfere_mode 1
+            output = output.split('\n')
+            # tmp_output0 = output[1]
+            # print('output', output)
+            output = [line for line in output if len(re.findall('\d+', line)) > 0][-1]
+            answer = output.replace(',', '').replace('\\!', '').replace('\\', '').replace(" ", "")  # remove middle ',' from numbers like '1,234'
+            answer = re.findall('\d+', answer)
+            answer = gold if gold in answer else answer[-1]
+            answer = answer.strip()
+            return str(int(answer))  # expect integer only
+    except Exception as ex:
+        # LLMs may constantly generate wrong output, let's skip the retry and give it a None result.
+        print('extract_answer:', ex)
+        raise NotImplemented
+    
+print(extract_answer("123,456, 789 is the answer", "12345", 'Addition'))

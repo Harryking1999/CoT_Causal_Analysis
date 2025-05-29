@@ -160,7 +160,7 @@ def extract_answer(output, item, dataset, interfere_mode=0):
             # tmp_output0 = output[1]
             # print('output', output)
             output = [line for line in output if len(re.findall('\d+', line)) > 0][-1]
-            answer = output.replace(',', '').replace('\\!', '').replace('\\', '')  # remove middle ',' from numbers like '1,234'
+            answer = output.replace(',', '').replace('\\!', '').replace('\\', '').replace(" ", "")  # remove middle ',' from numbers like '1,234'
             answer = re.findall('\d+', answer)
             answer = gold if gold in answer else answer[-1]
             answer = answer.strip()
