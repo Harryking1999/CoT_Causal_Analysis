@@ -144,7 +144,7 @@ def extract_answer(output, item, dataset, interfere_mode=0):
     # print("interfere_mode: ", interfere_mode)
     if interfere_mode == 1:
         output = output.split("</think>")[0].split(".")[0]
-    elif interfere_mode == 2:
+    elif interfere_mode == 2 or interfere_mode == 4:
         output = output.split(".")[0]
     elif interfere_mode == 3:
         if("." in output):
