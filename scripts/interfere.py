@@ -119,7 +119,7 @@ def format_interfere_prompt(args, prompt, full_prompt, item, outputs):
                 # elif args.model_name in ['DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B']:
                 #     reason = "<think>\n" + item[f'{default_prompt}_thinking_CoT'] + "</think>"
                 else:
-                    reason = extract_reason(item[f'{default_prompt}_output'])
+                    reason = extract_reason(item[f'{default_prompt}_output']) + '\nTherefore, the answer is'
                 reason = random_new_numbers(reason)
             elif dataset in ['ProofWriter','FOLIO','LOGIQA']:
                 reason = item['random_reason']
@@ -214,12 +214,15 @@ def format_interfere_prompt(args, prompt, full_prompt, item, outputs):
     message = format_prompt(full_prompt, item)
     dataset = dataset.split(':')[0]
     if dataset in ['Addition', 'Product', 'GSM8K']:
-        message = f'{message}\n{reason}\nAnswer:'
+        if args.interfere_mode in [1, 2, 3, 4]:
+            message = f'{message}\n{reason}\nAnswer:'
+        else:
+            message = f'{message}\n{reason}\n'
     else:
         message = f'{message}\n{reason}\nThe correct option is:'
 
     # Handle list messages for interfere_mode 1 and 2
-    if args.interfere_mode in [1, 2, 3, 4] and args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B']:
+    if args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B','Qwen2.5-7B-Instruct']:
         default_role = 'math teacher'
         default_prompt = prompt.split('.')[0] + f'.{default_role}'
         distilled_instruction = item[f'{default_prompt}_input']
@@ -463,6 +466,9 @@ def intervene(args):
                 else:
                     record_item[f'{prompt}_input'] = message
                     record_item[f'{prompt}_output'] = output
+            else:
+                record_item[f'{prompt}_input_new'] = message
+                record_item[f'{prompt}_output_new'] = output
             record_item[f'{prompt}_answer'] = pred
             record_item[f'{prompt}_result'] = (pred == answer)
             accs.append(pred == answer)
@@ -495,7 +501,7 @@ if __name__ == '__main__':
     '''
     parser = argparse.ArgumentParser()
     parser.add_argument('--outdir', type=str, default='./exp_cot/output')
-    parser.add_argument('--api_base_num', type=int, default=0, choices=[0, 1, 2], help='0: https://api.deepseek.com/beta, 1: http://localhost:8080/v1 2: http://localhost:8081/v1' )
+    parser.add_argument('--api_base_num', type=int, default=0, choices=[0, 1, 2, 3], help='0: https://api.deepseek.com/beta, 1: http://localhost:8080/v1 2: http://localhost:8081/v1, 3:https://dashscope.aliyuncs.com/compatible-mode/v1' )
     parser.add_argument('--api_key', type=str, required=True)
     parser.add_argument('--model_name', type=str, default='gpt-3.5-turbo')  # gpt-3.5-turbo, text-davinci-003
     parser.add_argument('--stop_words', type=str, default='####')
@@ -524,6 +530,8 @@ if __name__ == '__main__':
     elif args.api_base_num == 2:
         args.api_base = 'http://localhost:8081/v1'
         args.max_new_tokens = 16384
+    if args.api_base_num == 3:  
+        args.api_base = 'https://dashscope.aliyuncs.com/compatible-mode/v1'  
 
     # print("base_num: ", args.api_base_num)
     # print("base: ", args.api_base)    
@@ -535,7 +543,7 @@ if __name__ == '__main__':
 
     if (args.do_reason == 'goldreason' or args.do_reason == 'goldreason-r1') and args.dataset in ['FOLIO', 'LOGIQA']:
         print(f'{args.dataset} dataset does not support goldreason because it is not provided.')
-    elif args.api_base_num not in [0, 1, 2]:
+    elif args.api_base_num not in [0, 1, 2, 3]:
         print(f'please choose a correct api_base.')
     else:
         intervene(args)

@@ -93,7 +93,7 @@ class OpenAIModel:
         #interfere_mode influences the output format.
         #interfere_mode = 0: default setting
             #input: <|User|>{question}<|Assistant|>
-            #output: for reasoning models: <think>xxxxx</think>yyyy; for non-reasoning models: xxxxxx
+            #output: reasoning: xxxxxx
         #interfere_mode = 1: for reasoning models, SCM to be evaluated: <think>thinking_CoT -> thinking_answer</think>
             #input: <|User|>{question}<|Assistant|><think>xxxx
             #output: yyyyy</think>zzzzzz
@@ -126,7 +126,7 @@ class OpenAIModel:
             )
             print('response: ', response)
             # print('messages: ', messages)
-        elif self.model_name in ['DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B']:
+        elif self.model_name in ['DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B', 'Qwen2.5-7B-Instruct']:
             # Special handling for local API
             if isinstance(input_string, list):
                 question = input_string[0]
@@ -158,7 +158,7 @@ class OpenAIModel:
                     stop = self.stop_words
             )
 
-        if(self.model_name not in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B']):
+        if(self.model_name not in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B','Qwen2.5-7B-Instruct']):
             #non-reasoning models
             generated_text = response['choices'][0]['message']['content'].strip()
             return generated_text
@@ -203,6 +203,8 @@ class OpenAIModel:
                 elif(interfere_mode == 4):
                     generated_text = generated_content
                     generated_thinking = ""
+            elif (self.model_name in ['Qwen2.5-7B-Instruct']):
+                return response['choices'][0]['text'].strip()
             else:##commercial api: parsing with content&reasoning_content
                 if(response['choices'][0]['message']['content'] is not None):
                     generated_text = response['choices'][0]['message']['content'].strip()
