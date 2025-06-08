@@ -145,6 +145,15 @@ class OpenAIModel:
                 temperature=temperature,
                 stop=self.stop_words
             )
+            if self.model_name in ['QwQ-32B']:
+                response = completions_with_backoff(
+                    model=self.model_name,
+                    prompt=prompt,
+                    max_tokens=self.max_new_tokens,
+                    temperature=0.6,
+                    stop=self.stop_words,
+                    top_p = 0.95
+                )
             print('response: ', response)
         else:
             response = chat_completions_with_backoff(
@@ -212,6 +221,7 @@ class OpenAIModel:
                     generated_thinking = response['choices'][0]['message']['reasoning_content'].strip()
                 else:
                     generated_thinking = ""
+            print("final_output: ", str([generated_text, generated_thinking]))
             return [generated_text, generated_thinking]
     
     # used for text/code-davinci

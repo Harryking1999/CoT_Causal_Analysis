@@ -226,7 +226,13 @@ def api_run(args):
                         # print('batch_output: ', batch_outputs)
                     # extract the answer and regenerate if the output format is out of expectation
                     if(args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B']):
-                        preds = [extract_answer(output[0], sample, args.dataset) for sample, output in zip(chunk, batch_outputs)]
+                        preds = []
+                        for sample, output in zip(chunk, batch_outputs):
+                            if(output[0] != ""):
+                                preds.append(extract_answer(output[0], sample, args.dataset, output[1]))
+                            else:
+                                preds.append(extract_answer(output[1], sample, args.dataset, output[1]))
+                        # preds = [extract_answer(output[0], sample, args.dataset, output[1]) for sample, output in zip(chunk, batch_outputs)]
                     else:
                         preds = [extract_answer(output, sample, args.dataset) for sample, output in zip(chunk, batch_outputs)]
                     print("success id: ", cnt_total)
