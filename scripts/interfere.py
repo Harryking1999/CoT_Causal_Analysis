@@ -52,38 +52,46 @@ def format_interfere_prompt(args, prompt, full_prompt, item, outputs):
             default_role = 'math teacher'
             default_prompt = prompt.split('.')[0] + f'.{default_role}'
             if args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B']:
-                if args.interfere_mode not in [1, 2, 3, 4]:
+                if args.interfere_mode not in [1, 2, 3, 4, 5, 6]:
                     reason = extract_reason(item[f'{default_prompt}_output'])
                 elif args.interfere_mode == 1:
-                    reason = "<think>\n" + item[f'{default_prompt}_thinking_CoT'] + ". So, let me directly conclude the answer. The answer is "
+                    reason = "<think>\n" + item[f'{default_prompt}_thinking_CoT'] + ". Therefore, the answer is "
                     if(dataset in ['ProofWriter','FOLIO','LOGIQA']):
-                        reason = "<think>\n" + item[f'{default_prompt}_thinking_CoT'] + ". So, let me directly conclude the answer. The option is "
+                        reason = "<think>\n" + item[f'{default_prompt}_thinking_CoT'] + ". Therefore, the option is "
                 elif args.interfere_mode == 2:
                     postfix = "</think>\nTherefore, the answer is "
                     if(dataset in ['ProofWriter','FOLIO','LOGIQA']):
                         postfix = "</think>\nTherefore, the option is "
                     reason = "<think>\n" + item[f'{default_prompt}_thinking_CoT'] + postfix
                 elif args.interfere_mode == 3:
-                    reason =  item[f'{default_prompt}_thinking_CoT'] + ". Therefore, the answer is "
+                    reason =  item[f'{default_prompt}_output_CoT'] + ". Therefore, the answer is "
                     if(dataset in ['ProofWriter','FOLIO','LOGIQA']):
-                        reason =  item[f'{default_prompt}_thinking_CoT'] + ". Therefore, the option is "
+                        reason =  item[f'{default_prompt}_output_CoT'] + ". Therefore, the option is "
                 elif args.interfere_mode == 4:
                     reason = "<think>" + item[f'{default_prompt}_thinking_CoT'] + "</think>" + item[f'{default_prompt}_output_CoT'] + ".Therefore, the answer is"
                     if(dataset in ['ProofWriter','FOLIO','LOGIQA']):
                         reason =  "<think>" + item[f'{default_prompt}_thinking_CoT'] + "</think>" + item[f'{default_prompt}_output_CoT'] + ".Therefore, the answer is"
+                elif args.interfere_mode == 5:
+                    reason = "<think>" + item[f'{default_prompt}_thinking'] + "</think>" + item[f'{default_prompt}_output_CoT'] + ".Therefore, the answer is"
+                    if(dataset in ['ProofWriter','FOLIO','LOGIQA']):
+                        reason =  "<think>" + item[f'{default_prompt}_thinking_CoT'] + "</think>" + item[f'{default_prompt}_output_CoT'] + ". Therefore, the option is "
+                elif args.interfere_mode == 6:
+                    reason = "<think>" + item[f'{default_prompt}_thinking'] + "</think>" + item[f'{default_prompt}_output_CoT'] + ".Therefore, the answer is"
+                    if(dataset in ['ProofWriter','FOLIO','LOGIQA']):
+                        reason =  "<think>" + item[f'{default_prompt}_thinking_CoT'] + "</think>" + item[f'{default_prompt}_output_CoT'] + ". Therefore, the option is "
             else:
                 reason = extract_reason(item[f'{default_prompt}_output'])
         elif interfere == 'goldreason' or interfere == 'goldreason-r1':  # use the golden reasoning steps
             reason = item['reason']
             default_role = 'math teacher'
             default_prompt = prompt.split('.')[0] + f'.{default_role}'
-            if args.interfere_mode not in [1, 2, 3, 4]:
+            if args.interfere_mode not in [1, 2, 3, 4, 5, 6]:
                 pass
             elif args.interfere_mode == 1:
                 if(dataset in ['ProofWriter','FOLIO','LOGIQA']):
-                    reason = "<think>\n" + reason + " So, let me directly conclude the answer. The option is "
+                    reason = "<think>\n" + reason + ". Therefore, the option is "
                 else:
-                    reason = "<think>\n" + reason + " So, let me directly conclude the answer. The answer is "
+                    reason = "<think>\n" + reason + ". Therefore, the answer is"
             elif args.interfere_mode == 2:
                 if(dataset in ['ProofWriter','FOLIO','LOGIQA']):
                     reason = "<think>\n" + reason + "</think>\nTherefore, option is "
@@ -91,11 +99,11 @@ def format_interfere_prompt(args, prompt, full_prompt, item, outputs):
                     reason = "<think>\n" + reason + "</think>\nTherefore, the answer is "
             elif args.interfere_mode == 3:
                 if(dataset in ['ProofWriter','FOLIO','LOGIQA']):
-                    reason = reason + " Therefore, option is "
+                    reason = reason + " Therefore, the option is "
                 else:
                     reason = reason + " Therefore, the answer is "
             elif args.interfere_mode == 4:
-                reason = "<think>" + reason + "</think>" + item[f'{default_prompt}_thinking_CoT'] + ".Therefore, the answer is"
+                reason = "<think>" + reason + "</think>" + item[f'{default_prompt}_thinking_CoT'] + ". Therefore, the answer is"
             #         if(dataset in ['ProofWriter','FOLIO','LOGIQA']):
             #             reason =  "<think>" + item[f'{default_prompt}_thinking_CoT'] + "</think>" + reason + ".Therefore, the answer is"
         elif interfere == 'randomreason':
@@ -104,14 +112,20 @@ def format_interfere_prompt(args, prompt, full_prompt, item, outputs):
                 default_role = 'math teacher'
                 default_prompt = prompt.split('.')[0] + f'.{default_role}'
                 if args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B']:
-                    if args.interfere_mode not in [1, 2, 3, 4]:
+                    if args.interfere_mode not in [1, 2, 3, 4, 5, 6]:
                         reason = extract_reason(item[f'{default_prompt}_output'])
                     elif args.interfere_mode == 1:
-                        reason = "<think>\n" + item[f'{default_prompt}_thinking_CoT'] + ". So, let me directly conclude the answer. The answer is "
+                        reason = "<think>\n" + item[f'{default_prompt}_thinking_CoT'] + ". Therefore, the answer is"
                     elif args.interfere_mode == 2:
                         reason = "<think>\n" + item[f'{default_prompt}_thinking_CoT'] + "</think>\nTherefore, the answer is "
                     elif args.interfere_mode == 3:
-                        reason =  item[f'{default_prompt}_thinking_CoT'] + ". Therefore, the answer is "
+                        reason =  item[f'{default_prompt}_output_CoT'] + ". Therefore, the answer is "
+                    # elif args.interfere_mode == 4:
+                    #     reason =  item[f'{default_prompt}_thinking_CoT'] + ". Therefore, the answer is "
+                    elif args.interfere_mode == 5:
+                        reason =  item[f'{default_prompt}_thinking']
+                    elif args.interfere_mode == 6:
+                        reason =  item[f'{default_prompt}_output_CoT'] + ". Therefore, the answer is "
                     # elif args.interfere_mode == 4:
                     #     reason = "<think>" + item[f'{default_prompt}_thinking_CoT'] + "</think>" + reason + ".Therefore, the answer is"
                     #     if(dataset in ['ProofWriter','FOLIO','LOGIQA']):
@@ -121,16 +135,23 @@ def format_interfere_prompt(args, prompt, full_prompt, item, outputs):
                 else:
                     reason = extract_reason(item[f'{default_prompt}_output']) + '\nTherefore, the answer is'
                 reason = random_new_numbers(reason)
+                if args.interfere_mode == 5:
+                    reason = "<think>" + reason + "</think>" + item[f'{default_prompt}_output_CoT'] + ". Therefore, the answer is"
+                elif args.interfere_mode == 6:
+                    reason = "<think>" + item[f'{default_prompt}_thinking'] + "</think>" + reason 
             elif dataset in ['ProofWriter','FOLIO','LOGIQA']:
                 reason = item['random_reason']
-                if args.interfere_mode not in [1, 2, 3]:
+                if args.interfere_mode not in [1, 2, 3, 4, 5, 6]:
                     pass
                 if args.interfere_mode == 1:
-                    reason = "<think>\n" + reason + ". So, let me directly conclude the answer. The option is "
+                    reason = "<think>\n" + reason + ". Therefore, the option is "
                 elif args.interfere_mode == 2:
                     reason = "<think>\n" + reason + "</think>\nTherefore, the option is "
                 elif args.interfere_mode == 3:
                     reason = reason + ". Therefore, the option is "
+                # elif args.interfere_mode == 5:
+                #     reason = reason = "<think>\n" + reason + "</think>\n"
+                # elif args.interfere_mode == 6:
             else:
                 # shuffle the subjects in the reasoning steps generated by LLM
                 raise NotImplemented
@@ -196,16 +217,20 @@ def format_interfere_prompt(args, prompt, full_prompt, item, outputs):
                 #    raise ValueError("Problem statement does not contain a valid question.")
             
             if args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B']:
-                if args.interfere_mode not in [1, 2, 3, 4]:
+                if args.interfere_mode not in [1, 2, 3, 4, 5, 6]:
                     reason = reason
                 elif args.interfere_mode == 1:
-                    reason = "<think>\n" + reason + ". So, let me directly conclude the answer. The answer is "
+                    reason = "<think>\n" + reason + ". Therefore, the answer is"
                 elif args.interfere_mode == 2:
                     reason = "<think>\n" + reason + "</think>\nTherefore, the answer is "
                 elif args.interfere_mode == 3:
                     reason =  reason + ". Therefore, the answer is "
                 elif args.interfere_mode == 4:
-                    reason = "<think>" + reason + "</think>" + item[f'{default_prompt}_thinking_CoT'] + ".Therefore, the answer is"
+                    reason = "<think>" + reason + "</think>" + item[f'{default_prompt}_thinking_CoT'] + ". Therefore, the answer is"
+                elif args.interfere_mode == 5:
+                    reason = "<think>" + reason + "</think>\n" + item[f'{default_prompt}_thinking'] + ". Therefore, the answer is"
+                elif args.interfere_mode == 6:
+                    reason = "<think>" + item[f'{default_prompt}_output_CoT'] + "</think>\n" + reason + ". Therefore, the answer is"
             else:
                 raise NotImplemented
         else:
@@ -214,7 +239,7 @@ def format_interfere_prompt(args, prompt, full_prompt, item, outputs):
     message = format_prompt(full_prompt, item)
     dataset = dataset.split(':')[0]
     if dataset in ['Addition', 'Product', 'GSM8K']:
-        if args.interfere_mode in [1, 2, 3, 4]:
+        if args.interfere_mode in [1, 2, 3, 4, 5, 6]:
             message = f'{message}\n{reason}\nAnswer:'
         else:
             message = f'{message}\n{reason}\n'
@@ -258,7 +283,7 @@ def format_interfere_prompt(args, prompt, full_prompt, item, outputs):
 def load_output(args):
     default_role = 'math teacher'
     output_file = f'{args.outdir}/output.{args.dataset}.{args.prompt}.{default_role}.{args.model_name}.json'
-    if args.interfere_mode in [1, 2, 3, 4]:
+    if args.interfere_mode in [1, 2, 3, 4, 5, 6]:
         output_file = f'{args.outdir}/output.{args.dataset}.{args.prompt}.{default_role}.{args.model_name}.thinking.json'
         if args.do_reason == 'goldreason-r1':
             output_file = f'{args.outdir}/output.{args.dataset}.{args.prompt}.{default_role}.{args.model_name}.thinking.replace_golden.json'
@@ -362,6 +387,10 @@ def add_random_reason(args,data):
                 d['random_reason'] = random_reason_item.get('random_reason_thinking_CoT', '')
             elif args.interfere_mode == 4:
                 d['random_reason'] = random_reason_item.get('random_reason_thinking_CoT', '')
+            elif args.interfere_mode == 5:
+                d['random_reason'] = random_reason_item.get('random_reason_thinking', '')
+            elif args.interfere_mode == 6:
+                d['random_reason'] = random_reason_item.get('random_reason_output_CoT', '')
             else:
                 d['random_reason'] = random_reason_item.get('random_reason', '')
     return data
@@ -416,7 +445,7 @@ def intervene(args):
                 elif(args.model_name in ['DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B']):
                     if args.interfere_mode == 1:
                         preds = [extract_answer(output[1], sample, args.dataset, args.interfere_mode) for sample, output in zip(chunk, batch_outputs)]
-                    elif args.interfere_mode == 2 or args.interfere_mode == 4:
+                    elif args.interfere_mode in [2, 4, 5, 6]:
                         preds = [extract_answer(output[0], sample, args.dataset, args.interfere_mode) for sample, output in zip(chunk, batch_outputs)]
                     else:
                         preds = [extract_answer(output[0], sample, args.dataset) for sample, output in zip(chunk, batch_outputs)]
@@ -448,7 +477,7 @@ def intervene(args):
                 pred = extract_answer(output, sample, args.dataset)
             record_item = sample.copy()
             if args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1']:
-                if args.interfere_mode in [1, 2, 3]:
+                if args.interfere_mode in [1, 2, 3, 4, 5, 6]:
                     record_item[f'{prompt}_input_user'] = message[0]
                     record_item[f'{prompt}_input_assistant'] = message[1]
                     record_item[f'{prompt}_output'] = output[0]
@@ -460,7 +489,7 @@ def intervene(args):
                     record_item[f'{prompt}_input_user'] = message[0]
                     record_item[f'{prompt}_input_assistant'] = message[1]
                     record_item[f'{prompt}_output'] = output[1] # Thinking CoT
-                elif args.interfere_mode == 2 or args.interfere_mode == 3:
+                elif args.interfere_mode in [2, 3, 4, 5, 6]:
                     record_item[f'{prompt}_input_user'] = message[0]
                     record_item[f'{prompt}_input_assistant'] = message[1]
                     record_item[f'{prompt}_output'] = output[0]
@@ -490,6 +519,10 @@ def intervene(args):
         interfere_mode = 'Y'
     elif(args.interfere_mode == 4):
         interfere_mode = 'full'
+    elif(args.interfere_mode == 5):
+        interfere_mode = 'full_Y1'
+    elif(args.interfere_mode == 6):
+        interfere_mode = 'full_Y2'
     output_file = f'{args.outdir}/output.{args.dataset}.{prompt}.{args.model_name}.mode{interfere_mode}.json'
     output_file = output_file.replace(' ', '_').replace(':', '_')
     with open(output_file, 'w', encoding='utf-8') as fout:
@@ -518,7 +551,7 @@ if __name__ == '__main__':
     #   defaultreason: CoT from LLM generation, goldreason: golden CoT, randomreason: CoT with number, subject, negative interventions
     parser.add_argument('--do_reason', type=str, default='defaultreason', choices=['defaultreason', 'goldreason', 'randomreason', 'otherreason', 'goldreason-r1', 'outputreason', 'simplereason', 'outputreason'])
     #   interfere_mode: 0=default, 1=test Y1 internal causality, 2=test Y1 and Z(Y2) causality
-    parser.add_argument('--interfere_mode', type=int, default=0, choices=[0, 1, 2, 3, 4])
+    parser.add_argument('--interfere_mode', type=int, default=0, choices=[0, 1, 2, 3, 4, 5, 6])
     parser.add_argument('--seed', type=int, default=1)
     parser.add_argument('--api_base', type=str, default='https://api.deepseek.com/beta')
     args = parser.parse_args()

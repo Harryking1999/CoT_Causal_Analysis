@@ -146,6 +146,8 @@ def process_file(input_file):
                 item['cot0shot.math teacher_output_CoT'] = ""
             else:
                 item['cot0shot.math teacher_output_CoT'] = result.replace("..", ".")
+        else:
+            item['cot0shot.math teacher_output_CoT'] = ""
     
     # Create output filename
     base_name = os.path.splitext(input_file)[0]

@@ -179,7 +179,7 @@ class OpenAIModel:
                 generated_thinking = ""
                 generated_text = ""
                 # print('generated_content: ', generated_content)
-                if(interfere_mode not in [1, 2, 3, 4]):## <think>thinking</think> -> answer
+                if(interfere_mode not in [1, 2, 3, 4, 5, 6]):## <think>thinking</think> -> answer
                     #only 1 situation
                     if("</think>" in generated_content and "<think>" in generated_content):
                         generated_text = generated_content.split("</think>")[1]
@@ -203,15 +203,15 @@ class OpenAIModel:
                     else:
                         generated_text = ""
                         generated_thinking = generated_content
-                elif(interfere_mode == 2):## <think>thinking_CoT</think> -> answer
+                elif(interfere_mode in [2, 3, 4, 5, 6]):## <think>thinking_CoT</think> -> answer
                     generated_text = generated_content
                     generated_thinking = ""
-                elif(interfere_mode == 3):## thinking_CoT -> answer
-                    generated_text = generated_content
-                    generated_thinking = ""
-                elif(interfere_mode == 4):
-                    generated_text = generated_content
-                    generated_thinking = ""
+                # elif(interfere_mode == 3):## thinking_CoT -> answer
+                #     generated_text = generated_content
+                #     generated_thinking = ""
+                # elif(interfere_mode == 4):
+                #     generated_text = generated_content
+                #     generated_thinking = ""
             elif (self.model_name in ['Qwen2.5-7B-Instruct']):
                 return response['choices'][0]['text'].strip()
             else:##commercial api: parsing with content&reasoning_content
