@@ -18,7 +18,7 @@ SYSTEM_PROMPT = """Inverse Wordsmith specializes in creatively inverting the mea
 6. If the sentence contains answer identifiers like "The answer is C", change the answer to a different option.
 output example: \"\"\"Your output\"\"\""""
 
-def batch_chat_generate(self, messages_list, temperature = 0.0):
+def batch_chat_generate(self, messages_list, temperature = 0.0, interfere_mode=0):
         open_ai_messages_list = []
         for message in messages_list:
             open_ai_messages_list.append(
@@ -32,7 +32,7 @@ def batch_chat_generate(self, messages_list, temperature = 0.0):
         )
         return [x['choices'][0]['message']['content'].strip() for x in predictions]
 
-def chat_generate(self, input_string, temperature = 0.0):
+def chat_generate(self, input_string, temperature = 0.0, interfere_mode=0):
         response = chat_completions_with_backoff(
                 model = self.model_name,
                 messages=[
@@ -172,30 +172,55 @@ if __name__ == '__main__':
             sample['random_reason'] = ''.join([other[0],output,other[1]])
             
             # Process _thinking_CoT if it exists
-            if f'{args.prompt}.{args.role}_thinking_CoT' in sample:
-                thinking_cot = sample[f'{args.prompt}.{args.role}_thinking_CoT']
-                thinking_cot_sentences = tokenize_preserving_newlines(thinking_cot)
-                start,end = select_random_segment(thinking_cot_sentences,3)
-                segment_content = thinking_cot_sentences[start:end]
-                segment_content = ''.join(segment_content)
-                segment_content = f'"""{segment_content}"""'
-                try:
-                    # print("thinking_cot!!!!!!!!!!!!!!!!!!!!!!")
-                    cot_output = openai_api.generate(segment_content, temperature=0.7)
-                    matches = re.findall(pattern, cot_output, re.DOTALL)
-                    # print("thinking_cot matches", matches)
-                    if matches and len(matches) == 1:
-                        cot_output = matches[0]
-                        sample['random_reason_thinking_CoT'] = ''.join([
-                            ''.join(thinking_cot_sentences[:start]),
-                            cot_output,
-                            ''.join(thinking_cot_sentences[end:])
-                        ])
-                    # print(" end thinking_cot!!!!!!!!!!!!!!!!!!!!!!")
-                    # print("")
-                except Exception as ex:
-                    print(f"Error processing thinking_CoT: {ex}")
-                    sample['random_reason_thinking_CoT'] = 'FAILED'
+            # if f'{args.prompt}.{args.role}_thinking_CoT' in sample:
+            #     thinking_cot = sample[f'{args.prompt}.{args.role}_thinking_CoT']
+            #     thinking_cot_sentences = tokenize_preserving_newlines(thinking_cot)
+            #     start,end = select_random_segment(thinking_cot_sentences,3)
+            #     segment_content = thinking_cot_sentences[start:end]
+            #     segment_content = ''.join(segment_content)
+            #     segment_content = f'"""{segment_content}"""'
+            #     try:
+            #         # print("thinking_cot!!!!!!!!!!!!!!!!!!!!!!")
+            #         cot_output = openai_api.generate(segment_content, temperature=0.7)
+            #         matches = re.findall(pattern, cot_output, re.DOTALL)
+            #         # print("thinking_cot matches", matches)
+            #         if matches and len(matches) == 1:
+            #             cot_output = matches[0]
+            #             sample['random_reason_thinking_CoT'] = ''.join([
+            #                 ''.join(thinking_cot_sentences[:start]),
+            #                 cot_output,
+            #                 ''.join(thinking_cot_sentences[end:])
+            #             ])
+            #         # print(" end thinking_cot!!!!!!!!!!!!!!!!!!!!!!")
+            #         # print("")
+            #     except Exception as ex:
+            #         print(f"Error processing thinking_CoT: {ex}")
+            #         sample['random_reason_thinking_CoT'] = 'FAILED'
+
+            # if 'reason' in sample:
+            #     goldreason = sample[f'reason']
+            #     goldreason_sentences = tokenize_preserving_newlines(goldreason)
+            #     start,end = select_random_segment(goldreason_sentences,3)
+            #     segment_content = goldreason_sentences[start:end]
+            #     segment_content = ''.join(segment_content)
+            #     segment_content = f'"""{segment_content}"""'
+            #     try:
+            #         print("goldreason!!!!!!!!!!!!!!!!!!!!!!")
+            #         cot_output = openai_api.generate(segment_content, temperature=0.7)
+            #         matches = re.findall(pattern, cot_output, re.DOTALL)
+            #         # print("thinking_cot matches", matches)
+            #         if matches and len(matches) == 1:
+            #             cot_output = matches[0]
+            #             sample['random_reason_goldreason'] = ''.join([
+            #                 ''.join(goldreason_sentences[:start]),
+            #                 cot_output,
+            #                 ''.join(goldreason_sentences[end:])
+            #             ])
+            #         # print(" end thinking_cot!!!!!!!!!!!!!!!!!!!!!!")
+            #         # print("")
+            #     except Exception as ex:
+            #         print(f"Error processing thinking_CoT: {ex}")
+            #         sample['random_reason_goldreason'] = 'FAILED'
             
             # Process _thinking if it exists
             if f'{args.prompt}.{args.role}_thinking' in sample:
@@ -225,6 +250,10 @@ if __name__ == '__main__':
             # Process _output_CoT if it exists
             if f'{args.prompt}.{args.role}_output_CoT' in sample:
                 output_cot = sample[f'{args.prompt}.{args.role}_output_CoT']
+                # print("orig output_cot: ", output_cot)
+                if(len(output_cot.strip()) < 8):
+                    output_cot = sample['reason']
+                # print("new output_cot: ", output_cot)
                 output_cot_sentences = tokenize_preserving_newlines(output_cot)
                 start,end = select_random_segment(output_cot_sentences,3)
                 segment_content = output_cot_sentences[start:end]

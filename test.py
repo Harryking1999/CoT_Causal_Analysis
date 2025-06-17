@@ -1,9 +1,11 @@
 import re
-def extract_answer(output, item, dataset, interfere_mode=0):
+def extract_answer(output, item, dataset, interfere_mode=3):
     # print("output: ", output)
     # print("item: ", item)
     # print("datasetL: ", dataset)
     # print("interfere_mode: ", interfere_mode)
+    if(output[0] == "."):
+        output = output[1:]
     if interfere_mode == 1:
         output = output.split("</think>")[0].split(".")[0]
     elif interfere_mode == 2:
@@ -20,7 +22,10 @@ def extract_answer(output, item, dataset, interfere_mode=0):
             # Handle interfere_mode 1
             output = output.split('\n')
             # tmp_output0 = output[1]
-            # print('output', output)
+            output_ls = [line for line in output if len(re.findall('\d+', line)) > 0]
+            if(len(output_ls) == 0):
+                return ""
+            print('###########################output', output_ls)
             output = [line for line in output if len(re.findall('\d+', line)) > 0][-1]
             answer = output.replace(',', '').replace('\\!', '').replace('\\', '').replace(" ", "")  # remove middle ',' from numbers like '1,234'
             answer = re.findall('\d+', answer)
@@ -32,4 +37,4 @@ def extract_answer(output, item, dataset, interfere_mode=0):
         print('extract_answer:', ex)
         raise NotImplemented
     
-print(extract_answer("123,456, 789 is the answer", "12345", 'Addition'))
+print("extract_ans: ", extract_answer(". \nSo, the final computed product is .", "24", 'Addition'))

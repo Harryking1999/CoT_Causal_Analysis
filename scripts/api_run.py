@@ -142,6 +142,8 @@ def extract_answer(output, item, dataset, interfere_mode=0):
     # print("item: ", item)
     # print("datasetL: ", dataset)
     # print("interfere_mode: ", interfere_mode)
+    if(output[0] == "."):
+        output = output[1:]
     if interfere_mode == 1:
         output = output.split("</think>")[0].split(".")[0]
     elif interfere_mode == 2 or interfere_mode == 4 or interfere_mode == 5 or interfere_mode == 6:
@@ -159,7 +161,11 @@ def extract_answer(output, item, dataset, interfere_mode=0):
             output = output.split('\n')
             # tmp_output0 = output[1]
             # print('output', output)
-            output = [line for line in output if len(re.findall('\d+', line)) > 0][-1]
+            output = [line for line in output if len(re.findall('\d+', line)) > 0]
+            if(len(output) == 0):
+                return ""
+            else:
+                output = output[-1]
             answer = output.replace(',', '').replace('\\!', '').replace('\\', '').replace(" ", "")  # remove middle ',' from numbers like '1,234'
             answer = re.findall('\d+', answer)
             answer = gold if gold in answer else answer[-1]

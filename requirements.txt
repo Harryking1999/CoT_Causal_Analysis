@@ -7,3 +7,4 @@ numpy==1.23.5
 openai==0.28.0
 statsmodels==0.14.1
 tqdm==4.66.1
+networkx
