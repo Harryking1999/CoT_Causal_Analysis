@@ -1,0 +1,10 @@
+Please solve the logical reasoning problem. 
+Given a context and a question, answer with the correct option: A, B, C or D.
+####
+# Context:
+{{context}}
+
+# Question:
+{{question}}
+# Options:
+{{options}}

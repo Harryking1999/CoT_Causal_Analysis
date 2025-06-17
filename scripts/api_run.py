@@ -50,7 +50,7 @@ def load_prompt(dataset, prompt, do_role='match teacher', do_bias='nobias'):
     dataset = dataset.split(':')[0]
     if '_' in dataset:
         dataset = dataset.split('_')[0]
-    if dataset == 'ProofWriter' and prompt != 'direct':
+    if dataset == 'ProofWriter' and prompt != 'direct' and prompt != "newdirect":
         numbers = re.findall(r'\d+', prompt)
         numbers = [int(num) for num in numbers]
         assert len(numbers) == 1
@@ -197,6 +197,8 @@ def extract_answer(output, item, dataset, interfere_mode=0):
 def api_run(args):
     openai_api = OpenAIModel(args.api_base, args.api_key, args.model_name, args.stop_words, args.max_new_tokens)
     full_prompts = [(f'{prompt}.{args.role}', load_prompt(args.dataset, prompt, do_role=args.role)) for prompt in args.prompts.split(',')]
+    # print(full_prompts)
+    # return None
 
     random.seed(args.seed)
     np.random.seed(args.seed)
