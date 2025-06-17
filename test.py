@@ -8,7 +8,7 @@ def extract_answer(output, item, dataset, interfere_mode=3):
         output = output[1:]
     if interfere_mode == 1:
         output = output.split("</think>")[0].split(".")[0]
-    elif interfere_mode == 2:
+    elif interfere_mode == 2 or interfere_mode == 4 :
         output = output.split(".")[0]
     elif interfere_mode == 3:
         if("." in output):
@@ -32,9 +32,12 @@ def extract_answer(output, item, dataset, interfere_mode=3):
             answer = gold if gold in answer else answer[-1]
             answer = answer.strip()
             return str(int(answer))  # expect integer only
+            return str(answer)
     except Exception as ex:
         # LLMs may constantly generate wrong output, let's skip the retry and give it a None result.
         print('extract_answer:', ex)
-        raise NotImplemented
+        return ""
+        # raise NotImplemented
+
     
 print("extract_ans: ", extract_answer(". \nSo, the final computed product is .", "24", 'Addition'))

@@ -146,7 +146,7 @@ def extract_answer(output, item, dataset, interfere_mode=0):
         output = output[1:]
     if interfere_mode == 1:
         output = output.split("</think>")[0].split(".")[0]
-    elif interfere_mode == 2 or interfere_mode == 4 or interfere_mode == 5 or interfere_mode == 6:
+    elif interfere_mode == 2 or interfere_mode == 4:
         output = output.split(".")[0]
     elif interfere_mode == 3:
         if("." in output):
@@ -183,7 +183,8 @@ def extract_answer(output, item, dataset, interfere_mode=0):
     except Exception as ex:
         # LLMs may constantly generate wrong output, let's skip the retry and give it a None result.
         print('extract_answer:', ex)
-        raise NotImplemented
+        # raise NotImplemented
+        return ""
     # except Exception as ex:
     #     # LLMs may constantly generate wrong output, let's skip the retry and give it a None result.
     #     print('extract_answer:', ex)

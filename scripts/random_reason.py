@@ -115,7 +115,7 @@ if __name__ == '__main__':
     # Load default reason data
     suffix = '.thinking' if args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 
                                               'DeepSeekR1-Qwen-1_5B', 'DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 
-                                              'DeepSeekR1-Qwen-32B'] else ''
+                                              'DeepSeekR1-Qwen-32B', 'QwQ-32B'] else ''
     default_output_path = f'exp_cot/output/output.{args.dataset}.{args.prompt}.{args.role}.{args.model_name}{suffix}.json'.replace(' ', '_')
     default_data = json.load(open(default_output_path))
     gpt_model_name = 'gpt-3.5-turbo'
@@ -219,15 +219,9 @@ if __name__ == '__main__':
             #         # print(" end thinking_cot!!!!!!!!!!!!!!!!!!!!!!")
             #         # print("")
             #     except Exception as ex:
-            #         print(f"Error processing thinking_CoT: {ex}")
             #         sample['random_reason_goldreason'] = 'FAILED'
             
             # Process _thinking if it exists
-            if f'{args.prompt}.{args.role}_thinking' in sample:
-                thinking = sample[f'{args.prompt}.{args.role}_thinking']
-                thinking_sentences = tokenize_preserving_newlines(thinking)
-                start,end = select_random_segment(thinking_sentences,3)
-                segment_content = thinking_sentences[start:end]
                 segment_content = ''.join(segment_content)
                 segment_content = f'"""{segment_content}"""'
                 try:
