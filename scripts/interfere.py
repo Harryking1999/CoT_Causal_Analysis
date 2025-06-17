@@ -125,7 +125,10 @@ def format_interfere_prompt(args, prompt, full_prompt, item, outputs):
                     elif args.interfere_mode == 5:
                         reason =  item[f'{default_prompt}_thinking']
                     elif args.interfere_mode == 6:
-                        reason =  item[f'{default_prompt}_output_CoT'] + ". Therefore, the answer is "
+                        if(len(item[f'{default_prompt}_output_CoT']) > 5):
+                            reason =  item[f'{default_prompt}_output_CoT'] + ". Therefore, the answer is "
+                        else:
+                            reason = item['reason'] + ". Therefore, the answer is "
                     # elif args.interfere_mode == 4:
                     #     reason = "<think>" + item[f'{default_prompt}_thinking_CoT'] + "</think>" + reason + ".Therefore, the answer is"
                     #     if(dataset in ['ProofWriter','FOLIO','LOGIQA']):
