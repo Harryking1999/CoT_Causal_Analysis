@@ -14,6 +14,8 @@ def extract_logic(answer):
     pattern6 = r"\\boxed{([A-D])}"
     pattern7 = r"correct \w+ is:?\s*[*]*\s*\{([A-D])\}"
     pattern8 = r"which is ([A-D])([.)]?)\b"
+    pattern9 = r"Answer:\s*([A-D])"
+    pattern10 = r"Correct Option:\s*([A-D])"
 
     match = re.search(pattern1, answer)
     option = None
@@ -44,6 +46,15 @@ def extract_logic(answer):
 
     if not option:
         match = re.search(pattern8, answer)
+        if match:
+            option = match.group(1)
+
+    if not option:
+        match = re.search(pattern9, answer)
+        if match:
+            option = match.group(1)
+    if not option:
+        match = re.search(pattern10, answer)
         if match:
             option = match.group(1)
 
