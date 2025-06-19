@@ -120,7 +120,7 @@ if __name__ == '__main__':
     default_data = json.load(open(default_output_path))
     gpt_model_name = 'gpt-3.5-turbo'
     stop_words = None
-    max_new_tokens = 4096
+    max_new_tokens = 8192
     openai_api = OpenAIModel(args.api_base, args.api_key, gpt_model_name, stop_words, max_new_tokens)
 
     batch_size = args.batch_size
