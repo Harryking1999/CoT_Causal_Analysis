@@ -19,44 +19,60 @@ def needs_retry(item, prompt):
     output_key = f'{prompt}_output'
     answer_key = f'{prompt}_answer'
     print(output_key)
-    return (output_key in item and (not item[output_key] or item[output_key].strip() == '')) or \
-           (answer_key in item and (not item[answer_key] or item[answer_key].strip() == ''))
+    # Always return True to re-extract answer for all items
+    return True
 
 def retry_item(args, item, prompt, openai_api):
     """Retry API call for a single item if needed."""
-    if not needs_retry(item, prompt):
-        return item
-        
-    message = item[f'{prompt}_input']
-    cnt_exp = 0
+    output_key = f'{prompt}_output'
+    answer_key = f'{prompt}_answer'
     
-    while True:
-        if cnt_exp > 5:
-            print(f"Failed to get response after 5 retries for item {item['id']}")
-            return item
-            
-        try:
-            output = openai_api.generate(message)
-            
-            # Extract answer
-            if args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'QwQ-32B']:
-                pred = extract_answer(output[0], item, args.dataset)
-                item[f'{prompt}_output'] = output[0]
-                item[f'{prompt}_thinking'] = output[1]
-            # elif args.model_name in ['']:
-            else:
-                pred = extract_answer(output, item, args.dataset)
-                item[f'{prompt}_output'] = output
+    # Check if output is missing - if so, re-run entire API call
+    if output_key not in item or not item[output_key] or item[output_key].strip() == '':
+        print(f"Missing output for item {item['id']}, re-running API call...")
+        message = item[f'{prompt}_input']
+        cnt_exp = 0
+        
+        while True:
+            if cnt_exp > 5:
+                print(f"Failed to get response after 5 retries for item {item['id']}")
+                return item
                 
-            item[f'{prompt}_answer'] = pred
-            item[f'{prompt}_result'] = (pred == item['answer'])
-            return item
+            try:
+                output = openai_api.generate(message)
+                
+                # Extract answer
+                if args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'QwQ-32B']:
+                    pred = extract_answer(output[0], item, args.dataset)
+                    item[f'{prompt}_output'] = output[0]
+                    item[f'{prompt}_thinking'] = output[1]
+                else:
+                    pred = extract_answer(output, item, args.dataset)
+                    item[f'{prompt}_output'] = output
+                    
+                item[f'{prompt}_answer'] = pred
+                item[f'{prompt}_result'] = (pred == item['answer'])
+                return item
+                
+            except Exception as ex:
+                print(ex)
+                print('Sleep 10 seconds before retry ...')
+                time.sleep(10)
+                cnt_exp += 1
+    else:
+        # Output exists, just re-extract answer
+        print(f"Re-extracting answer for item {item['id']}...")
+        output = item[output_key]
+        
+        # Extract answer
+        if args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'QwQ-32B']:
+            pred = extract_answer(output, item, args.dataset)
+        else:
+            pred = extract_answer(output, item, args.dataset)
             
-        except Exception as ex:
-            print(ex)
-            print('Sleep 10 seconds before retry ...')
-            time.sleep(10)
-            cnt_exp += 1
+        item[f'{prompt}_answer'] = pred
+        item[f'{prompt}_result'] = (pred == item['answer'])
+        return item
 
 def process_file(args, input_file):
     """Process a single output file."""
@@ -87,17 +103,13 @@ def process_file(args, input_file):
     # Process items
     retry_count = 0
     for item in tqdm(items):
-        if needs_retry(item, prompt):
-            retry_count += 1
-            retry_item(args, item, prompt, openai_api)
+        retry_count += 1
+        retry_item(args, item, prompt, openai_api)
     
-    if retry_count > 0:
-        # Write updated results back to file
-        with open(input_file, 'w') as fout:
-            json.dump(items, fout, indent=2)
-        print(f'Updated {retry_count} items in {input_file}')
-    else:
-        print(f'No items needed retry in {input_file}')
+    # Write updated results back to file
+    with open(input_file, 'w') as fout:
+        json.dump(items, fout, indent=2)
+    print(f'Updated {retry_count} items in {input_file}')
     
     # Calculate and print accuracy
     correct_count = sum(1 for item in items if item.get(f'{prompt}_result', False))

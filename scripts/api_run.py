@@ -291,7 +291,7 @@ if __name__ == '__main__':
     parser.add_argument('--api_key', type=str, required=True)
     parser.add_argument('--model_name', type=str, default='gpt-3.5-turbo')  # gpt-3.5-turbo, text-davinci-003
     parser.add_argument('--stop_words', type=str, default='####')
-    parser.add_argument('--max_new_tokens', type=int, default=8192)
+    parser.add_argument('--max_new_tokens', type=int, default=15000)
     parser.add_argument('--dataset', type=str, default='GSM8K')
     parser.add_argument('--prompts', type=str, default='cot0shot')
     parser.add_argument('--role', type=str, default='math teacher')
@@ -301,8 +301,8 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
-    if(args.model_name == "QwQ-32B"):
-        args.max_new_tokens = 15000
+    # if(args.model_name == "QwQ-32B"):
+    #     args.max_new_tokens = 15000
 
     if args.api_base_num == 2:  
         args.api_base = 'https://dashscope.aliyuncs.com/compatible-mode/v1'  

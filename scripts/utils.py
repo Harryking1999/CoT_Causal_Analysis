@@ -16,6 +16,12 @@ def extract_logic(answer):
     pattern8 = r"which is ([A-D])([.)]?)\b"
     pattern9 = r"Answer:\s*([A-D])"
     pattern10 = r"Correct Option:\s*([A-D])"
+    pattern11 = r"Answer:.*?([A-D])([).,]|$)"
+    pattern12 = r"answer is ([A-D])([).,]|$)"
+    pattern13 = r"answer.*?([A-D])([).,]|$)"
+    pattern14 = r"\*\*([A-D])\*\*"
+    pattern15 = r"\{([A-D])\}"
+    pattern16 = r"Correct option:\s*([A-D])"
 
     match = re.search(pattern1, answer)
     option = None
@@ -57,6 +63,36 @@ def extract_logic(answer):
         match = re.search(pattern10, answer)
         if match:
             option = match.group(1)
+    if not option:
+        match = re.search(pattern11, answer)
+        if match:
+            option = match.group(1)
+            print(pattern11)
+    if not option:
+        match = re.search(pattern12, answer)
+        if match:
+            option = match.group(1)
+            print(pattern12)
+    if not option:
+        match = re.search(pattern13, answer)
+        if match:
+            option = match.group(1)
+            print(pattern13)
+    if not option:
+        match = re.search(pattern14, answer)
+        if match:
+            option = match.group(1)
+            print(pattern14)
+    if not option:
+        match = re.search(pattern15, answer)
+        if match:
+            option = match.group(1)
+            print(pattern15)
+    if not option:
+        match = re.search(pattern16, answer)
+        if match:
+            option = match.group(1)
+            print(pattern16)
 
     if not option and len(answer)<16:
         if 'true' in answer.lower():
