@@ -115,12 +115,12 @@ if __name__ == '__main__':
     # Load default reason data
     suffix = '.thinking' if args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 
                                               'DeepSeekR1-Qwen-1_5B', 'DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 
-                                              'DeepSeekR1-Qwen-32B'] else ''
+                                              'DeepSeekR1-Qwen-32B', 'QwQ-32B'] else ''
     default_output_path = f'exp_cot/output/output.{args.dataset}.{args.prompt}.{args.role}.{args.model_name}{suffix}.json'.replace(' ', '_')
     default_data = json.load(open(default_output_path))
     gpt_model_name = 'gpt-3.5-turbo'
     stop_words = None
-    max_new_tokens = 8192
+    max_new_tokens = 4096
     openai_api = OpenAIModel(args.api_base, args.api_key, gpt_model_name, stop_words, max_new_tokens)
 
     batch_size = args.batch_size
