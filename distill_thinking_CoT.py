@@ -67,19 +67,32 @@ def find_answer_in_text(text, answer, find_first=True, dataset=None):
     
     # Split text into sentences while preserving separators
     # First split by double newlines
+    # parts = []
+    # for part in text.split('\n\n'):
+    #     # Then split by single newlines
+    #     for line in part.split('\n'):
+    #         # Finally split by periods
+    #         sentences = line.split('.')
+    #         sentences_new = []
+    #         for i in sentences:
+    #             sentences_new.append(i)
+    #             sentences_new.append('.')
+    #         parts.extend(sentences_new)
+    #         parts.append('\n')  # Add back the period
+    #     parts.append('\n')  # Add back the double newline
+        
     parts = []
     for part in text.split('\n\n'):
         # Then split by single newlines
-        for line in part.split('\n'):
+        
             # Finally split by periods
-            sentences = line.split('.')
-            sentences_new = []
-            for i in sentences:
-                sentences_new.append(i)
-                sentences_new.append('.')
-            parts.extend(sentences_new)
-            parts.append('\n')  # Add back the period
-        parts.append('\n')  # Add back the double newline
+        sentences = part.split('.')
+        sentences_new = []
+        for i in sentences:
+            sentences_new.append(i)
+            sentences_new.append('.')
+        parts.extend(sentences_new)
+        parts.append('\n\n')  # Add back the period
     parts = parts[:-1]  # Remove the last separator
     # print(parts)
     
@@ -154,7 +167,7 @@ def find_answer_in_text(text, answer, find_first=True, dataset=None):
         # print("target_pos: ", parts[target_pos])
         for i in range(target_pos - 1, -1, -1):
             # print("parts: ", parts[i])
-            if contains_answer(parts[i]):
+            if contains_answer(parts[i]) and "Verification" not in parts[i] and "verification" not in parts[i] and 'verify' not in parts[i] and 'Verify' not in parts[i]:
                 final_pos = i
                 # print("final_pos: ", i)
                 break
