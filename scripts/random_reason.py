@@ -120,7 +120,7 @@ if __name__ == '__main__':
     default_data = json.load(open(default_output_path))
     gpt_model_name = 'gpt-3.5-turbo'
     stop_words = None
-    max_new_tokens = 4096
+    max_new_tokens = 8192
     openai_api = OpenAIModel(args.api_base, args.api_key, gpt_model_name, stop_words, max_new_tokens)
 
     batch_size = args.batch_size
@@ -251,8 +251,8 @@ if __name__ == '__main__':
             if f'{args.prompt}.{args.role}_output_CoT' in sample:
                 output_cot = sample[f'{args.prompt}.{args.role}_output_CoT']
                 # print("orig output_cot: ", output_cot)
-                if(len(output_cot.strip()) < 8):
-                    output_cot = sample['reason']
+                # if(len(output_cot.strip()) < 8):
+                #     output_cot = sample['reason']
                 # print("new output_cot: ", output_cot)
                 output_cot_sentences = tokenize_preserving_newlines(output_cot)
                 start,end = select_random_segment(output_cot_sentences,3)
