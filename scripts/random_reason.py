@@ -272,6 +272,31 @@ if __name__ == '__main__':
                 except Exception as ex:
                     print(f"Error processing output_CoT: {ex}")
                     sample['random_reason_output_CoT'] = 'FAILED'
+
+            if f'{args.prompt}.{args.role}_thinking_CoT' in sample:
+                output_cot = sample[f'{args.prompt}.{args.role}_thinking_CoT']
+                # print("orig output_cot: ", output_cot)
+                if(len(output_cot.strip()) < 8):
+                    output_cot = sample['reason']
+                # print("new output_cot: ", output_cot)
+                output_cot_sentences = tokenize_preserving_newlines(output_cot)
+                start,end = select_random_segment(output_cot_sentences,3)
+                segment_content = output_cot_sentences[start:end]
+                segment_content = ''.join(segment_content)
+                segment_content = f'"""{segment_content}"""'
+                try:
+                    cot_output = openai_api.generate(segment_content, temperature=0.7)
+                    matches = re.findall(pattern, cot_output, re.DOTALL)
+                    if matches and len(matches) == 1:
+                        cot_output = matches[0]
+                        sample['random_reason__thinking_CoT'] = ''.join([
+                            ''.join(output_cot_sentences[:start]),
+                            cot_output,
+                            ''.join(output_cot_sentences[end:])
+                        ])
+                except Exception as ex:
+                    print(f"Error processing output_CoT: {ex}")
+                    sample['random_reason_output_CoT'] = 'FAILED'
             
             processed_data.append(sample)
 

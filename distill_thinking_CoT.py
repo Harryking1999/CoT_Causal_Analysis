@@ -67,32 +67,19 @@ def find_answer_in_text(text, answer, find_first=True, dataset=None):
     
     # Split text into sentences while preserving separators
     # First split by double newlines
-    # parts = []
-    # for part in text.split('\n\n'):
-    #     # Then split by single newlines
-    #     for line in part.split('\n'):
-    #         # Finally split by periods
-    #         sentences = line.split('.')
-    #         sentences_new = []
-    #         for i in sentences:
-    #             sentences_new.append(i)
-    #             sentences_new.append('.')
-    #         parts.extend(sentences_new)
-    #         parts.append('\n')  # Add back the period
-    #     parts.append('\n')  # Add back the double newline
-        
     parts = []
     for part in text.split('\n\n'):
         # Then split by single newlines
-        
+        for line in part.split('\n'):
             # Finally split by periods
-        sentences = part.split('.')
-        sentences_new = []
-        for i in sentences:
-            sentences_new.append(i)
-            sentences_new.append('.')
-        parts.extend(sentences_new)
-        parts.append('\n\n')  # Add back the period
+            sentences = line.split('.')
+            sentences_new = []
+            for i in sentences:
+                sentences_new.append(i)
+                sentences_new.append('.')
+            parts.extend(sentences_new)
+            parts.append('\n')  # Add back the period
+        parts.append('\n')  # Add back the double newline
     parts = parts[:-1]  # Remove the last separator
     # print(parts)
     
@@ -111,9 +98,10 @@ def find_answer_in_text(text, answer, find_first=True, dataset=None):
                         answer_positions.append(i)
             # For LOGIQA, also check for option patterns like "A)", "A.", "A," etc.
             elif dataset == 'LOGIQA':
-                # print("part: ", part)
-                # print("answer: ", answer)
+                print("part: ", part)
+                print("answer: ", answer)
                 # LOGIQA specific patterns: "A)", "A.", "A,", "A ", "A\n", "A" at end, "**Answer: A**"
+                print(re.search(rf'(^|\s|:|\*){answer}(\s|\.|,|\n|$|\)|\*)', part, re.IGNORECASE))
                 if re.search(rf'(^|\s|:|\*){answer}(\s|\.|,|\n|$|\)|\*)', part, re.IGNORECASE):
                     answer_positions.append(i)
         else:
@@ -125,7 +113,7 @@ def find_answer_in_text(text, answer, find_first=True, dataset=None):
                 answer_positions.append(i)
     
     if not answer_positions:
-        # print("no answer")
+        print("no answer")
         return text
     
     # Select target position based on answer type
@@ -164,12 +152,12 @@ def find_answer_in_text(text, answer, find_first=True, dataset=None):
         
         # Start from the last answer position and go backwards
         final_pos = target_pos
-        # print("target_pos: ", parts[target_pos])
+        print("target_pos: ", parts[target_pos])
         for i in range(target_pos - 1, -1, -1):
-            # print("parts: ", parts[i])
-            if contains_answer(parts[i]) and "Verification" not in parts[i] and "verification" not in parts[i] and 'verify' not in parts[i] and 'Verify' not in parts[i]:
+            print("parts: ", parts[i])
+            if contains_answer(parts[i]):
                 final_pos = i
-                # print("final_pos: ", i)
+                print("final_pos: ", i)
                 break
             elif len(parts[i]) > 5:
                 break
@@ -201,7 +189,7 @@ def process_file(input_file):
         dataset = 'LOGIQA'
     
     # Process each item
-    for item in items:
+    for item in items[0:1]:
         thinking = item.get('newdirect.math teacher_thinking', '')
         answer = item.get('newdirect.math teacher_answer', '')
         output = item.get('newdirect.math teacher_output', '')
@@ -209,7 +197,7 @@ def process_file(input_file):
         if not thinking or not answer:
             item['newdirect.math teacher_thinking_CoT'] = ''
             item['newdirect.math teacher_output_CoT'] = ''
-            # print("continue")
+            print("continue")
             continue
         
         # Process thinking field - find first occurrence
@@ -217,7 +205,7 @@ def process_file(input_file):
         if result is None:
             item['newdirect.math teacher_thinking_CoT'] = ""
         else:
-            item['newdirect.math teacher_thinking_CoT'] = (result+".").replace("..", ".")
+            item['newdirect.math teacher_thinking_CoT'] = result.replace("..", ".")
         
         # Process output field - find last occurrence
         if output:
@@ -225,7 +213,7 @@ def process_file(input_file):
             if result is None:
                 item['newdirect.math teacher_output_CoT'] = ""
             else:
-                item['newdirect.math teacher_output_CoT'] = (result+".").replace("..", ".")
+                item['newdirect.math teacher_output_CoT'] = result.replace("..", ".")
         else:
             item['newdirect.math teacher_output_CoT'] = ""
     
