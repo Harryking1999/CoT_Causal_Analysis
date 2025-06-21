@@ -89,6 +89,9 @@ def select_random_segment(sentences, min_length=3):
 def extract_reason(output):
     seps = ['The correct option','\nAnswer:\n', '\n\n', 'Now,']
     reason = output
+    # print("reason: ", reason)
+    if(isinstance(reason, list)):
+        return ""
     for sep in seps:
         if reason.find(sep) > 0:
             reason = reason.split(sep)[:-1]

@@ -428,6 +428,11 @@ def add_random_reason(args,data):
                 d['random_reason_thinking_CoT'] = random_reason_item.get('random_reason_thinking_CoT', '')
                 d['random_reason_thinking'] = random_reason_item.get('random_reason_thinking', '')
                 d['random_reason_output_CoT'] = random_reason_item.get('random_reason_output_CoT', '')
+            elif args.interfere_mode == 8:
+                d['random_reason'] = random_reason_item.get('random_reason', '')
+                d['random_reason_thinking_CoT'] = random_reason_item.get('random_reason_thinking_CoT', '')
+                d['random_reason_thinking'] = random_reason_item.get('random_reason_thinking', '')
+                d['random_reason_output_CoT'] = random_reason_item.get('random_reason_output_CoT', '')
             else:
                 d['random_reason'] = random_reason_item.get('random_reason', '')
     return data
