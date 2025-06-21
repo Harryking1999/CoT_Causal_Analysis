@@ -101,7 +101,7 @@ def find_answer_in_text(text, answer, find_first=True, dataset=None):
                 # print("part: ", part)
                 # print("answer: ", answer)
                 # LOGIQA specific patterns: "A)", "A.", "A,", "A ", "A\n", "A" at end, "**Answer: A**"
-                print(re.search(rf'(^|\s|:|\*){answer}(\s|\.|,|\n|$|\)|\*)', part, re.IGNORECASE))
+                # print(re.search(rf'(^|\s|:|\*){answer}(\s|\.|,|\n|$|\)|\*)', part, re.IGNORECASE))
                 if re.search(rf'(^|\s|:|\*){answer}(\s|\.|,|\n|$|\)|\*)', part, re.IGNORECASE):
                     answer_positions.append(i)
         else:
