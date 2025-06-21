@@ -150,13 +150,13 @@ def format_interfere_prompt(args, prompt, full_prompt, item, outputs):
                 if args.interfere_mode == 5:
                     reason = "<think>" + reason + "</think>" + item[f'{default_prompt}_output_CoT'] + ". Therefore, the answer is"
                 elif args.interfere_mode == 6:
-                    reason = "<think>" + item[f'{default_prompt}_thinking'] + "</think>" + reason 
+                    reason = "<think>" + item[f'{default_prompt}_thinking'] + "</think>" + reason + ". Therefore, the answer is"
                 elif args.interfere_mode == 7:
                     reason = "<think>" + reason + "</think>"
                 ##no need for interfere mode=8, because already done
             elif dataset in ['ProofWriter','FOLIO','LOGIQA']:
-                # default_role = 'math teacher'
-                # default_prompt = prompt.split('.')[0] + f'.{default_role}'
+                default_role = 'math teacher'
+                default_prompt = prompt.split('.')[0] + f'.{default_role}'
                 reason = item['random_reason']
                 if args.interfere_mode not in [1, 2, 3, 4, 5, 6, 7, 8]:
                     pass

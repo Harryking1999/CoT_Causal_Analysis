@@ -120,7 +120,7 @@ if __name__ == '__main__':
     default_data = json.load(open(default_output_path))
     gpt_model_name = 'gpt-3.5-turbo'
     stop_words = None
-    max_new_tokens = 8192
+    max_new_tokens = 4096
     openai_api = OpenAIModel(args.api_base, args.api_key, gpt_model_name, stop_words, max_new_tokens)
 
     batch_size = args.batch_size
@@ -259,9 +259,12 @@ if __name__ == '__main__':
                 segment_content = output_cot_sentences[start:end]
                 segment_content = ''.join(segment_content)
                 segment_content = f'"""{segment_content}"""'
+                # print("segment_content: \n", segment_content)
+                # print("orig_content: \n", output_cot_sentences)
                 try:
                     cot_output = openai_api.generate(segment_content, temperature=0.7)
                     matches = re.findall(pattern, cot_output, re.DOTALL)
+                    # print("cot_output: ", cot_output)
                     if matches and len(matches) == 1:
                         cot_output = matches[0]
                         sample['random_reason_output_CoT'] = ''.join([
@@ -269,6 +272,9 @@ if __name__ == '__main__':
                             cot_output,
                             ''.join(output_cot_sentences[end:])
                         ])
+                        # print("output_cot_1: ", ''.join(output_cot_sentences[:start]))
+                        # print("output_cot_2: ", cot_output)
+                        # print("output_cot_3: ", ''.join(output_cot_sentences[end:]))
                 except Exception as ex:
                     print(f"Error processing output_CoT: {ex}")
                     sample['random_reason_output_CoT'] = 'FAILED'
@@ -276,8 +282,8 @@ if __name__ == '__main__':
             if f'{args.prompt}.{args.role}_thinking_CoT' in sample:
                 output_cot = sample[f'{args.prompt}.{args.role}_thinking_CoT']
                 # print("orig output_cot: ", output_cot)
-                if(len(output_cot.strip()) < 8):
-                    output_cot = sample['reason']
+                # if(len(output_cot.strip()) < 8):
+                #     output_cot = sample['reason']
                 # print("new output_cot: ", output_cot)
                 output_cot_sentences = tokenize_preserving_newlines(output_cot)
                 start,end = select_random_segment(output_cot_sentences,3)
@@ -289,7 +295,7 @@ if __name__ == '__main__':
                     matches = re.findall(pattern, cot_output, re.DOTALL)
                     if matches and len(matches) == 1:
                         cot_output = matches[0]
-                        sample['random_reason__thinking_CoT'] = ''.join([
+                        sample['random_reason_thinking_CoT'] = ''.join([
                             ''.join(output_cot_sentences[:start]),
                             cot_output,
                             ''.join(output_cot_sentences[end:])
@@ -302,4 +308,5 @@ if __name__ == '__main__':
 
     output_random_reason_path = f'exp_cot/random_reason/random_reason.{args.dataset}.{args.prompt}.{args.role}.{args.model_name}.json'.replace(' ','_')
     with open(output_random_reason_path, 'w', encoding='utf-8') as fout:
+        print(output_random_reason_path)
         json.dump(processed_data, fout, ensure_ascii=False, indent=2)

@@ -98,8 +98,8 @@ def find_answer_in_text(text, answer, find_first=True, dataset=None):
                         answer_positions.append(i)
             # For LOGIQA, also check for option patterns like "A)", "A.", "A," etc.
             elif dataset == 'LOGIQA':
-                print("part: ", part)
-                print("answer: ", answer)
+                # print("part: ", part)
+                # print("answer: ", answer)
                 # LOGIQA specific patterns: "A)", "A.", "A,", "A ", "A\n", "A" at end, "**Answer: A**"
                 print(re.search(rf'(^|\s|:|\*){answer}(\s|\.|,|\n|$|\)|\*)', part, re.IGNORECASE))
                 if re.search(rf'(^|\s|:|\*){answer}(\s|\.|,|\n|$|\)|\*)', part, re.IGNORECASE):
@@ -113,7 +113,7 @@ def find_answer_in_text(text, answer, find_first=True, dataset=None):
                 answer_positions.append(i)
     
     if not answer_positions:
-        print("no answer")
+        # print("no answer")
         return text
     
     # Select target position based on answer type
@@ -152,12 +152,12 @@ def find_answer_in_text(text, answer, find_first=True, dataset=None):
         
         # Start from the last answer position and go backwards
         final_pos = target_pos
-        print("target_pos: ", parts[target_pos])
+        # print("target_pos: ", parts[target_pos])
         for i in range(target_pos - 1, -1, -1):
-            print("parts: ", parts[i])
+            # print("parts: ", parts[i])
             if contains_answer(parts[i]):
                 final_pos = i
-                print("final_pos: ", i)
+                # print("final_pos: ", i)
                 break
             elif len(parts[i]) > 5:
                 break
@@ -189,7 +189,7 @@ def process_file(input_file):
         dataset = 'LOGIQA'
     
     # Process each item
-    for item in items[0:1]:
+    for item in items:
         thinking = item.get('newdirect.math teacher_thinking', '')
         answer = item.get('newdirect.math teacher_answer', '')
         output = item.get('newdirect.math teacher_output', '')
@@ -197,7 +197,7 @@ def process_file(input_file):
         if not thinking or not answer:
             item['newdirect.math teacher_thinking_CoT'] = ''
             item['newdirect.math teacher_output_CoT'] = ''
-            print("continue")
+            # print("continue")
             continue
         
         # Process thinking field - find first occurrence
