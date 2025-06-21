@@ -466,7 +466,10 @@ def intervene(args):
         print('messages: ', messages)
         while True:
             if(cnt_exp > 3):
-                batch_outputs = ['']
+                if(args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B']):
+                    batch_outputs = [['', '']]
+                else:
+                    batch_outputs = ['']
                 break
             try:
                 if len(messages) >= 2:

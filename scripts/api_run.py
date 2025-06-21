@@ -142,6 +142,8 @@ def extract_answer(output, item, dataset, interfere_mode=0):
     # print("item: ", item)
     # print("datasetL: ", dataset)
     # print("interfere_mode: ", interfere_mode)
+    if(len(output) == 0):
+        return ""
     if(output[0] == "."):
         output = output[1:]
     if interfere_mode == 1:
