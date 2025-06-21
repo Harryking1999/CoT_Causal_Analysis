@@ -164,6 +164,8 @@ def extract_answer(output, item, dataset, interfere_mode=0):
             output = [line for line in output if len(re.findall('\d+', line)) > 0]
             if(len(output) == 0):
                 return ""
+            elif interfere_mode in [5,6,8]:
+                output = output[0]
             else:
                 output = output[-1]
             answer = output.replace(',', '').replace('\\!', '').replace('\\', '').replace(" ", "")  # remove middle ',' from numbers like '1,234'
