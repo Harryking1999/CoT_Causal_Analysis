@@ -28,7 +28,7 @@ def retry_item(args, item, prompt, openai_api):
     answer_key = f'{prompt}_answer'
     
     # Check if output is missing - if so, re-run entire API call
-    if output_key not in item or not item[output_key] or item[output_key].strip() == '':
+    if output_key not in item or not item[output_key] or not isinstance(item[output_key], str) or item[output_key].strip() == '':
         print(f"Missing output for item {item['id']}, re-running API call...")
         message = item[f'{prompt}_input']
         cnt_exp = 0
@@ -125,7 +125,7 @@ def main():
     parser.add_argument('--api_key', type=str, required=True)
     parser.add_argument('--model_name', type=str, default='gpt-3.5-turbo')
     parser.add_argument('--stop_words', type=str, default='####')
-    parser.add_argument('--max_new_tokens', type=int, default=8192)
+    parser.add_argument('--max_new_tokens', type=int, default=15000)
     parser.add_argument('--input_file', type=str, required=True)
     parser.add_argument('--seed', type=int, default=1)
     parser.add_argument('--dataset', type=str, default='GSM8K')
