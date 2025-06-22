@@ -179,7 +179,7 @@ class OpenAIModel:
                 generated_thinking = ""
                 generated_text = ""
                 # print('generated_content: ', generated_content)
-                if(interfere_mode not in [1, 2, 3, 4, 5, 6]):## <think>thinking</think> -> answer
+                if(interfere_mode not in [1, 2, 3, 4, 5, 6, 7]):## <think>thinking</think> -> answer
                     #only 1 situation
                     if("</think>" in generated_content and "<think>" in generated_content):
                         generated_text = generated_content.split("</think>")[1]
@@ -203,7 +203,7 @@ class OpenAIModel:
                     else:
                         generated_text = ""
                         generated_thinking = generated_content
-                elif(interfere_mode in [2, 3, 4, 5, 6]):## <think>thinking_CoT</think> -> answer
+                elif(interfere_mode in [2, 3, 4, 5, 6, 7]):## <think>thinking_CoT</think> -> answer
                     generated_text = generated_content
                     generated_thinking = ""
                 # elif(interfere_mode == 3):## thinking_CoT -> answer
@@ -223,7 +223,7 @@ class OpenAIModel:
                     generated_thinking = response['choices'][0]['message']['reasoning_content'].strip()
                 else:
                     generated_thinking = ""
-            print("final_output: ", str([generated_text, generated_thinking]))
+            print("final_output: ", str([generated_text, generated_thinking]).encode('utf-8', errors='ignore').decode('utf-8'))
             return [generated_text, generated_thinking]
     
     # used for text/code-davinci

@@ -16,6 +16,7 @@ def find_answer_in_text(text, answer, find_first=True, dataset=None):
         dataset: The dataset name to handle special cases
     """
     # Check if answer is an option (A, B, C, D)
+    # print("answer: ", answer)
     is_option = answer in ['A', 'B', 'C', 'D', 'a', 'b', 'c', 'd']
     
     # Handle ProofWriter special case
@@ -47,6 +48,17 @@ def find_answer_in_text(text, answer, find_first=True, dataset=None):
             is_option = True
         else:
             answer_meanings = []
+    elif dataset == 'LOGIQA':
+        # LOGIQA has ABCD options, need to handle them specially
+        # For LOGIQA, we need to ensure we match the exact option letter
+        # and handle cases where the answer might be in different formats
+        if is_option:
+            # LOGIQA options are just A, B, C, D - no meaning mapping needed
+            answer_meanings = []
+            # Ensure answer is uppercase for consistent matching
+            answer = answer.upper()
+        else:
+            answer_meanings = []
     else:
         answer_meanings = []
     
@@ -69,6 +81,7 @@ def find_answer_in_text(text, answer, find_first=True, dataset=None):
             parts.append('\n')  # Add back the period
         parts.append('\n')  # Add back the double newline
     parts = parts[:-1]  # Remove the last separator
+    # print(parts)
     
     # Find the sentence containing the answer
     answer_positions = []
@@ -83,24 +96,75 @@ def find_answer_in_text(text, answer, find_first=True, dataset=None):
                 for meaning in answer_meanings:
                     if re.search(rf'(^|\s){meaning}(\s|\.|,|\n|$|\))', part, re.IGNORECASE):
                         answer_positions.append(i)
+            # For LOGIQA, also check for option patterns like "A)", "A.", "A," etc.
+            elif dataset == 'LOGIQA':
+                # print("part: ", part)
+                # print("answer: ", answer)
+                # LOGIQA specific patterns: "A)", "A.", "A,", "A ", "A\n", "A" at end, "**Answer: A**"
+                # print(re.search(rf'(^|\s|:|\*){answer}(\s|\.|,|\n|$|\)|\*)', part, re.IGNORECASE))
+                if re.search(rf'(^|\s|:|\*){answer}(\s|\.|,|\n|$|\)|\*)', part, re.IGNORECASE):
+                    answer_positions.append(i)
         else:
             # For non-options (numbers), use the original matching logic
             if normalized_answer in normalize_number(part):
+                # print("ind: ", i)
+                # print("part: ", normalize_number(part))
+                # print("normalized_answer: ", normalized_answer)
                 answer_positions.append(i)
     
     if not answer_positions:
+        # print("no answer")
         return text
     
     # Select target position based on answer type
     if answer in ['A', 'B', 'C', 'D']:
         # For ABCD options, always use the last occurrence
-        target_pos = answer_positions[-1]
-    else:
-        # For other types (numbers, True/False/Unknown), use first or last based on find_first
-        target_pos = answer_positions[0] if find_first else answer_positions[-1]
+        find_first = False
     
-    # Return all parts before the target position
-    ret = ''.join(parts[:target_pos])
+    if find_first:
+        # For find_first=True, use first occurrence
+        target_pos = answer_positions[0]
+        # Return all parts before the target position
+        ret = ''.join(parts[:target_pos])
+    else:
+        # For find_first=False, implement new logic
+        # Start with the last occurrence
+        target_pos = answer_positions[-1]
+        
+        # Function to check if a part contains the answer
+        def contains_answer(part):
+            # if len(part.strip()) < 5:
+            #     return False
+            if is_option:
+                if re.search(rf'(^|\s){answer}(\s|\.|,|\n|$|\))', part):
+                    return True
+                if dataset == 'ProofWriter' and answer_meanings:
+                    for meaning in answer_meanings:
+                        if re.search(rf'(^|\s){meaning}(\s|\.|,|\n|$|\))', part, re.IGNORECASE):
+                            return True
+                elif dataset == 'LOGIQA':
+                    # LOGIQA specific option matching with case-insensitive search
+                    if re.search(rf'(^|\s|:|\*){answer}(\s|\.|,|\n|$|\)|\*)', part, re.IGNORECASE):
+                        return True
+                return False
+            else:
+                return normalized_answer in normalize_number(part)
+        
+        # Start from the last answer position and go backwards
+        final_pos = target_pos
+        # print("target_pos: ", parts[target_pos])
+        for i in range(target_pos - 1, -1, -1):
+            # print("parts: ", parts[i])
+            if contains_answer(parts[i]):
+                final_pos = i
+                # print("final_pos: ", i)
+                break
+            elif len(parts[i]) > 5:
+                break
+        
+        # Return all parts before the final position
+        ret = ''.join(parts[:final_pos])
+    
     while True:
         if(len(ret) < 2):
             break
@@ -117,37 +181,41 @@ def process_file(input_file):
         items = json.load(fin)
     
     # Extract dataset name from filename
+    # print(items[0:2])
     dataset = None
     if 'ProofWriter' in input_file:
         dataset = 'ProofWriter'
+    elif 'LOGIQA' in input_file:
+        dataset = 'LOGIQA'
     
     # Process each item
     for item in items:
-        thinking = item.get('cot0shot.math teacher_thinking', '')
-        answer = item.get('cot0shot.math teacher_answer', '')
-        output = item.get('cot0shot.math teacher_output', '')
+        thinking = item.get('newdirect.math teacher_thinking', '')
+        answer = item.get('newdirect.math teacher_answer', '')
+        output = item.get('newdirect.math teacher_output', '')
         
         if not thinking or not answer:
-            item['cot0shot.math teacher_thinking_CoT'] = ''
-            item['cot0shot.math teacher_output_CoT'] = ''
+            item['newdirect.math teacher_thinking_CoT'] = ''
+            item['newdirect.math teacher_output_CoT'] = ''
+            # print("continue")
             continue
         
         # Process thinking field - find first occurrence
         result = find_answer_in_text(thinking, answer, find_first=True, dataset=dataset)
         if result is None:
-            item['cot0shot.math teacher_thinking_CoT'] = ""
+            item['newdirect.math teacher_thinking_CoT'] = ""
         else:
-            item['cot0shot.math teacher_thinking_CoT'] = result.replace("..", ".")
+            item['newdirect.math teacher_thinking_CoT'] = result.replace("..", ".")
         
         # Process output field - find last occurrence
         if output:
             result = find_answer_in_text(output, answer, find_first=False, dataset=dataset)
             if result is None:
-                item['cot0shot.math teacher_output_CoT'] = ""
+                item['newdirect.math teacher_output_CoT'] = ""
             else:
-                item['cot0shot.math teacher_output_CoT'] = result.replace("..", ".")
+                item['newdirect.math teacher_output_CoT'] = result.replace("..", ".")
         else:
-            item['cot0shot.math teacher_output_CoT'] = ""
+            item['newdirect.math teacher_output_CoT'] = ""
     
     # Create output filename
     base_name = os.path.splitext(input_file)[0]

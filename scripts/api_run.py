@@ -144,6 +144,8 @@ def extract_answer(output, item, dataset, interfere_mode=0):
     # print("item: ", item)
     # print("datasetL: ", dataset)
     # print("interfere_mode: ", interfere_mode)
+    if(len(output) == 0):
+        return ""
     if(output[0] == "."):
         output = output[1:]
     if interfere_mode == 1:
@@ -166,6 +168,8 @@ def extract_answer(output, item, dataset, interfere_mode=0):
             output = [line for line in output if len(re.findall('\d+', line)) > 0]
             if(len(output) == 0):
                 return ""
+            elif interfere_mode in [5,6,8]:
+                output = output[0]
             else:
                 output = output[-1]
             answer = output.replace(',', '').replace('\\!', '').replace('\\', '').replace(" ", "")  # remove middle ',' from numbers like '1,234'
@@ -296,7 +300,7 @@ if __name__ == '__main__':
     parser.add_argument('--api_key', type=str, required=True)
     parser.add_argument('--model_name', type=str, default='gpt-3.5-turbo')  # gpt-3.5-turbo, text-davinci-003
     parser.add_argument('--stop_words', type=str, default='####')
-    parser.add_argument('--max_new_tokens', type=int, default=8192)
+    parser.add_argument('--max_new_tokens', type=int, default=15000)
     parser.add_argument('--dataset', type=str, default='GSM8K')
     parser.add_argument('--prompts', type=str, default='cot0shot')
     parser.add_argument('--role', type=str, default='math teacher')
@@ -306,8 +310,8 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
-    if(args.model_name == "QwQ-32B"):
-        args.max_new_tokens = 15000
+    # if(args.model_name == "QwQ-32B"):
+    #     args.max_new_tokens = 15000
 
     if args.api_base_num == 2:  
         args.api_base = 'https://dashscope.aliyuncs.com/compatible-mode/v1'  
