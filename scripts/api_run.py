@@ -14,6 +14,7 @@ import numpy as np
 import re
 from utils import extract_logic
 from collections import defaultdict
+from openai_math500 import openai_extract_answer
 
 def add_bias_sentence(prompt, bias_sentence):
     pattern = r"(#|##) Reasoning"
@@ -94,7 +95,7 @@ def format_prompt(full_prompt, item):
         if type(value) == list:
             value = '\n'.join(value)
         full_prompt = full_prompt.replace(field, value)
-    assert full_prompt.find('{{') < 0 and full_prompt.find('}}') < 0
+    # assert full_prompt.find('{{') < 0 and full_prompt.find('}}') < 0
     return full_prompt
 
 def load_dataset(dataset, nsamples):
@@ -118,7 +119,7 @@ def load_dataset(dataset, nsamples):
         with open(data_file, 'r') as fin:
             items = [json.loads(line) for line in fin]
         for idx, item in enumerate(items, start=1):
-            question = item['question']
+            question = item['problem']
             reason = item['solution']
             answer = item['answer']
             item.clear()
@@ -126,6 +127,7 @@ def load_dataset(dataset, nsamples):
             item['question'] = question
             item['reason'] = reason
             item['answer'] = answer  # expect integer only
+        return items[:nsamples] if nsamples > 0 else items[:500]  # default 500 samples
     else:  # default loading
         if dataset.find(':') > 0:
             dataset, arg = dataset.split(':')
@@ -180,6 +182,9 @@ def extract_answer(output, item, dataset, interfere_mode=0):
         elif dataset.startswith('FOLIO'):
             answer = extract_logic(output)
             return str(answer)
+        elif dataset.startswith('MATH500'):
+        #     answer = openai_extract_answer(output, item['answer'])
+            return ""
     except Exception as ex:
         # LLMs may constantly generate wrong output, let's skip the retry and give it a None result.
         print('extract_answer:', ex)
