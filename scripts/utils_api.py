@@ -223,7 +223,8 @@ class OpenAIModel:
                     generated_thinking = response['choices'][0]['message']['reasoning_content'].strip()
                 else:
                     generated_thinking = ""
-            print("final_output: ", str([generated_text, generated_thinking]).encode('utf-8', errors='ignore').decode('utf-8'))
+            # print("final_output: ", str([generated_text, generated_thinking]).encode('utf-8', errors='ignore').decode('utf-8'))
+            # print("final_output: ", [generated_text, generated_thinking])
             return [generated_text, generated_thinking]
     
     # used for text/code-davinci
