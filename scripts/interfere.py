@@ -56,26 +56,26 @@ def format_interfere_prompt(args, prompt, full_prompt, item, outputs):
                 if args.interfere_mode not in [1, 2, 3, 4, 5, 6, 7, 8]:
                     reason = extract_reason(item[f'{default_prompt}_output'])
                 elif args.interfere_mode == 1:
-                    reason = "<think>\n" + item[f'{default_prompt}_thinking_CoT'] + ". Therefore, the answer is "
+                    reason = "<think>" + item[f'{default_prompt}_thinking_CoT'] + ". Therefore, my final answer is: "
                     if(dataset in ['ProofWriter','FOLIO','LOGIQA']):
-                        reason = "<think>\n" + item[f'{default_prompt}_thinking_CoT'] + ". Therefore, the option is "
+                        reason = "<think>" + item[f'{default_prompt}_thinking_CoT'] + ". Therefore, my final option is: "
                 elif args.interfere_mode == 2:
-                    postfix = "</think>\nTherefore, the answer is "
+                    postfix = "</think>Therefore, my final answer is: "
                     if(dataset in ['ProofWriter','FOLIO','LOGIQA']):
-                        postfix = "</think>\nTherefore, the option is "
-                    reason = "<think>\n" + item[f'{default_prompt}_thinking_CoT'] + postfix
+                        postfix = "</think>Therefore, my final option is: "
+                    reason = "<think>" + item[f'{default_prompt}_thinking_CoT'] + postfix
                 elif args.interfere_mode == 3:
-                    reason =  item[f'{default_prompt}_output_CoT'] + ". Therefore, the answer is "
+                    reason =  item[f'{default_prompt}_output_CoT'] + ". Therefore, my final answer is: "
                     if(dataset in ['ProofWriter','FOLIO','LOGIQA']):
-                        reason =  item[f'{default_prompt}_output_CoT'] + ". Therefore, the option is "
+                        reason =  item[f'{default_prompt}_output_CoT'] + ". Therefore, my final option is: "
                 elif args.interfere_mode == 4:
-                    reason = "<think>" + item[f'{default_prompt}_thinking_CoT'] + "</think>" + item[f'{default_prompt}_output_CoT'] + ".Therefore, the answer is"
+                    reason = "<think>" + item[f'{default_prompt}_thinking_CoT'] + "</think>" + item[f'{default_prompt}_output_CoT'] + ".Therefore, my final answer is: "
                     if(dataset in ['ProofWriter','FOLIO','LOGIQA']):
-                        reason =  "<think>" + item[f'{default_prompt}_thinking_CoT'] + "</think>" + item[f'{default_prompt}_output_CoT'] + ".Therefore, the answer is"
+                        reason =  "<think>" + item[f'{default_prompt}_thinking_CoT'] + "</think>" + item[f'{default_prompt}_output_CoT'] + ". Therefore, my final option is: "
                 elif args.interfere_mode in [5, 6, 8]:
-                    reason = "<think>" + item[f'{default_prompt}_thinking'] + "</think>" + item[f'{default_prompt}_output_CoT'] + ".Therefore, the answer is"
+                    reason = "<think>" + item[f'{default_prompt}_thinking'] + "</think>" + item[f'{default_prompt}_output_CoT'] + ".Therefore, my final answer is: "
                     if(dataset in ['ProofWriter','FOLIO','LOGIQA']):
-                        reason =  "<think>" + item[f'{default_prompt}_thinking_CoT'] + "</think>" + item[f'{default_prompt}_output_CoT'] + ". Therefore, the option is "
+                        reason =  "<think>" + item[f'{default_prompt}_thinking_CoT'] + "</think>" + item[f'{default_prompt}_output_CoT'] + ". Therefore, my final option is: "
                 # elif args.interfere_mode == 6:
                 #     reason = "<think>" + item[f'{default_prompt}_thinking'] + "</think>" + item[f'{default_prompt}_output_CoT'] + ".Therefore, the answer is"
                 #     if(dataset in ['ProofWriter','FOLIO','LOGIQA']):
@@ -120,11 +120,11 @@ def format_interfere_prompt(args, prompt, full_prompt, item, outputs):
                     if args.interfere_mode not in [1, 2, 3, 4, 5, 6, 7, 8]:
                         reason = extract_reason(item[f'{default_prompt}_output'])
                     elif args.interfere_mode == 1:
-                        reason = "<think>\n" + item[f'{default_prompt}_thinking_CoT'] + ". Therefore, the answer is"
+                        reason = "<think>\n" + item[f'{default_prompt}_thinking_CoT'] + ". Therefore, my final answer is: "
                     elif args.interfere_mode == 2:
-                        reason = "<think>\n" + item[f'{default_prompt}_thinking_CoT'] + "</think>\nTherefore, the answer is "
+                        reason = "<think>\n" + item[f'{default_prompt}_thinking_CoT'] + "</think>Therefore, my final answer is: "
                     elif args.interfere_mode == 3:
-                        reason =  item[f'{default_prompt}_output_CoT'] + ". Therefore, the answer is "
+                        reason =  item[f'{default_prompt}_output_CoT'] + ". Therefore, my final answer is: "
                     # elif args.interfere_mode == 4:
                     #     reason =  item[f'{default_prompt}_thinking_CoT'] + ". Therefore, the answer is "
                     elif args.interfere_mode == 5:
@@ -138,7 +138,7 @@ def format_interfere_prompt(args, prompt, full_prompt, item, outputs):
                     elif args.interfere_mode == 7:
                         reason = item['reason']
                     elif args.interfere_mode == 8:
-                        reason = "<think>\n" + item[f'{default_prompt}_thinking'] + "</think>\n" + item[f'{default_prompt}_output_CoT'] + ". Therefore, the answer is"
+                        reason = "<think>\n" + item[f'{default_prompt}_thinking'] + "</think>\n" + item[f'{default_prompt}_output_CoT'] + ". Therefore, my final answer is: "
                     # elif args.interfere_mode == 4:
                     #     reason = "<think>" + item[f'{default_prompt}_thinking_CoT'] + "</think>" + reason + ".Therefore, the answer is"
                     #     if(dataset in ['ProofWriter','FOLIO','LOGIQA']):
@@ -149,9 +149,9 @@ def format_interfere_prompt(args, prompt, full_prompt, item, outputs):
                     reason = extract_reason(item[f'{default_prompt}_output']) + '\nTherefore, the answer is'
                 reason = random_new_numbers(reason)
                 if args.interfere_mode == 5:
-                    reason = "<think>" + reason + "</think>" + item[f'{default_prompt}_output_CoT'] + ". Therefore, the answer is"
+                    reason = "<think>" + reason + "</think>" + item[f'{default_prompt}_output_CoT'] + ". Therefore, my final answer is: "
                 elif args.interfere_mode == 6:
-                    reason = "<think>" + item[f'{default_prompt}_thinking'] + "</think>" + reason + ". Therefore, the answer is"
+                    reason = "<think>" + item[f'{default_prompt}_thinking'] + "</think>" + reason + ". Therefore, my final answer is: "
                 elif args.interfere_mode == 7:
                     reason = "<think>" + reason + "</think>"
                 ##no need for interfere mode=8, because already done
@@ -163,19 +163,19 @@ def format_interfere_prompt(args, prompt, full_prompt, item, outputs):
                     pass
                 if args.interfere_mode == 1:
                     reason = item['random_reason_thinking_CoT']
-                    reason = "<think>\n" + reason + ". Therefore, the option is "
+                    reason = "<think>\n" + reason + ". Therefore, my final option is: "
                 elif args.interfere_mode == 2:
-                    reason = "<think>\n" + reason + "</think>\nTherefore, the option is "
+                    reason = "<think>\n" + reason + "</think>Therefore, my final option is: "
                 elif args.interfere_mode == 3:
-                    reason = reason + ". Therefore, the option is "
+                    reason = reason + ". Therefore, my final option is: "
                 elif args.interfere_mode == 5:
-                    reason = "<think>" + item['random_reason_thinking'] + "</think>" + item[f'{default_prompt}_output_CoT'] + ". Therefore, the option is"
+                    reason = "<think>" + item['random_reason_thinking'] + "</think>" + item[f'{default_prompt}_output_CoT'] + ". Therefore, my final option is: "
                 elif args.interfere_mode == 6:
-                    reason = "<think>" + item[f'{default_prompt}_thinking'] + "</think>" + item['random_reason_output_CoT'] + ". Therefore, the option is"
+                    reason = "<think>" + item[f'{default_prompt}_thinking'] + "</think>" + item['random_reason_output_CoT'] + ". Therefore, my final option is: "
                 elif args.interfere_mode == 7:
                     reason = "<think>\n" + item['random_reason_thinking'] + "</think>\n"
                 elif args.interfere_mode == 8:
-                    reason = reason = "<think>" + item['random_reason_thinking'] + "</think>" + item['random_reason_output_CoT']  + ". Therefore, the option is"
+                    reason = reason = "<think>" + item['random_reason_thinking'] + "</think>" + item['random_reason_output_CoT']  + ". Therefore, my final option is: "
             else:
                 # shuffle the subjects in the reasoning steps generated by LLM
                 raise NotImplemented
