@@ -7,8 +7,8 @@ import argparse
 
 def extract_logic(answer):
     pattern1 = r"correct \w+ is:?\s*[*]*\s*([A-D])" 
-    pattern2 = r"correct option is: (true|false|unknown)"
-    pattern3 = r"([A-C])\)\s*(True|False|Unknown)"
+    pattern2 = r"correct option is: (true|false|unknown|uncertain)"
+    pattern3 = r"([A-C])\)\s*(True|False|Unknown|Uncertain)"
     pattern4 = r"([A-D])\) "
     pattern5 = r"^[A-D]\.?$"
     pattern6 = r"\\boxed{([A-D])}"
@@ -32,7 +32,7 @@ def extract_logic(answer):
     if not option:
         match = re.search(pattern2, answer, re.IGNORECASE)
         if match:
-            word_to_option = {"true": "A", "false": "B", "unknown": "C"}
+            word_to_option = {"true": "A", "false": "B", "unknown": "C", "uncertain": "C"}
             option = word_to_option.get(match.group(1).lower())
 
     if not option:
