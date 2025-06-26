@@ -1,0 +1,15 @@
+Wed Jun 25 10:50:37 AM CST 2025, Evaluating samples from FOLIO using prompts newdirect with randomreason and defaultrole and nobias and mode 6 and api_base_num 2 and seed ...
+/home/fuzhizhang.fzz/CoT_Causal_Analysis/scripts/interfere.py:36: SyntaxWarning: invalid escape sequence '\d'
+  parts = re.split('(\d+)', reason)
+6
+OpenAI API with http://localhost:8081/v1, DeepSeekR1-Qwen-7B, ####, 16384
+Traceback (most recent call last):
+  File "/home/fuzhizhang.fzz/CoT_Causal_Analysis/scripts/interfere.py", line 646, in <module>
+    intervene(args)
+  File "/home/fuzhizhang.fzz/CoT_Causal_Analysis/scripts/interfere.py", line 463, in intervene
+    data = load_output(args)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/fuzhizhang.fzz/CoT_Causal_Analysis/scripts/interfere.py", line 317, in load_output
+    with open(output_file, 'r') as fin:
+         ^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'exp_cot/output/output.FOLIO.newdirect.math_teacher.DeepSeekR1-Qwen-7B.thinking.json'

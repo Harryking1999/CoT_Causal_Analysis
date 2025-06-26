@@ -1,0 +1,11 @@
+Tue Jun 24 04:52:51 PM CST 2025, Evaluating -1 samples from MATH500 using prompts newdirect ...
+/home/fuzhizhang.fzz/CoT_Causal_Analysis/scripts/api_run.py:92: SyntaxWarning: invalid escape sequence '\{'
+  fields = re.findall('\{\{\w+\}\}', full_prompt)
+/home/fuzhizhang.fzz/CoT_Causal_Analysis/scripts/api_run.py:180: SyntaxWarning: invalid escape sequence '\d'
+  output = [line for line in output if len(re.findall('\d+', line)) > 0]
+/home/fuzhizhang.fzz/CoT_Causal_Analysis/scripts/api_run.py:188: SyntaxWarning: invalid escape sequence '\d'
+  answer = re.findall('\d+', answer)
+http://localhost:8080/v1
+123
+OpenAI API with http://localhost:8080/v1, QwQ-32B, ####, 15000
+Existed file exp_cot/output/output.MATH500.newdirect.math_teacher.QwQ-32B.json
