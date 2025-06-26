@@ -157,6 +157,14 @@ def extract_answer(output, item, dataset, interfere_mode=0):
             output = output.split(".")[0]
         if("</think>" in output):
             output = output.split("</think>")[0]
+    elif interfere_mode in [5,6,8]:
+        if("<｜end▁of▁thinking｜>" in output):
+            output = output.split("<｜end▁of▁thinking｜>")[0]
+        if('<think>' in output):
+            output = output.split("<think>")[0]
+        if('</think>' in output):
+            output = output.split("</think>")[0]
+        # 按句号分割，取第一个有意义的句子
     try:
         dataset = dataset.split(':')[0]
         if dataset in ['Addition', 'Product', 'GSM8K']:
@@ -177,30 +185,38 @@ def extract_answer(output, item, dataset, interfere_mode=0):
             answer = gold if gold in answer else answer[-1]
             answer = answer.strip()
             return str(int(answer))  # expect integer only
-        elif dataset.startswith('ProofWriter'):
-            answer = extract_logic(output)
-            return str(answer)
-        elif dataset.startswith('LOGIQA'):
-            answer = extract_logic(output)
-            return str(answer)
-        elif dataset.startswith('FOLIO'):
-            answer = extract_logic(output)
-            return str(answer)
         elif dataset.startswith('MATH500'):
-        #     answer = openai_extract_answer(output, item['answer'])
             return ""
+        else:
+            paragraphs = output.split("\n")
+            cnt_meaningful_sentences = 0
+            output_ls = []
+            for paragraph in paragraphs:
+                sentences = paragraph.split(".")
+                for sentence in sentences:
+                    # 去除空白字符后，如果句子不全是* \n \ 等符号，则认为有意义
+                    if(cnt_meaningful_sentences > 3):
+                        break
+                    cleaned_sentence = sentence.strip()
+                    if cleaned_sentence and not all(c in ['*', '\n', '\\', ' ', '\t', '|', '｜'] for c in cleaned_sentence):
+                        output_ls.append(cleaned_sentence)
+                        cnt_meaningful_sentences += 1
+                    else:
+                        # 如果没有找到有意义的句子，保持原样
+                        pass
+            final_ans = None
+            for i in output_ls:
+                tmp_ans = extract_logic(i)
+                if(tmp_ans != None and tmp_ans != "None"):
+                    # print("output_tmp: ", i)
+                    final_ans = tmp_ans
+                    break
+            return final_ans
     except Exception as ex:
         # LLMs may constantly generate wrong output, let's skip the retry and give it a None result.
-        print('extract_answer:', ex)
+        print('extract_answer error:', ex)
         # raise NotImplemented
         return ""
-    # except Exception as ex:
-    #     # LLMs may constantly generate wrong output, let's skip the retry and give it a None result.
-    #     print('extract_answer:', ex)
-    #     return str(None)
-
-    # raise NotImplemented
-
 
 
 def api_run(args):
