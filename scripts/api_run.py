@@ -72,7 +72,7 @@ def load_prompt(dataset, prompt, do_role='match teacher', do_bias='nobias'):
         role = do_role
         full_prompt = full_prompt.replace('{{role}}', role)
     # add bias prompt for random intervention
-    is_math = dataset in ['Addition', 'Product', 'GSM8K']
+    is_math = dataset in ['Addition', 'Product', 'GSM8K', 'MATH500']
     if do_bias == 'strongbias':
         bias_sentence = 'I think the correct answer is: {{biasanswer}}' \
                         if is_math else 'I think the correct option is: {{biasoption}}'

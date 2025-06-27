@@ -31,7 +31,7 @@ def extract_reason(output):
             break
     return reason
 
-def random_new_numbers(reason):
+def random_new_numbers(reason, dataset=None, item=None):
     # generate a new number with different digits
     parts = re.split('(\d+)', reason)
     numbers = [part for i, part in enumerate(parts) if i % 2 == 1]
@@ -41,6 +41,18 @@ def random_new_numbers(reason):
     numbers = [''.join(v) for v in numbers]
     parts = [numbers[i//2] if i % 2 == 1 else part for i, part in enumerate(parts)]
     new_reason = ''.join(parts)
+    
+    # Special handling for MATH500 dataset: replace correct answer with biasanswer
+    if dataset == 'MATH500' and item is not None and 'answer' in item and 'biasanswer' in item:
+        correct_answer = item['answer']
+        bias_answer = item['biasanswer']
+        # Only replace if correct_answer contains no digits
+        if not any(char.isdigit() for char in correct_answer):
+            # Replace all occurrences of the correct answer with the bias answer
+            new_reason = new_reason.replace(correct_answer, bias_answer)
+    
+    # print("original_reason: ", reason)
+    # print("new_reason: ", new_reason)
     return new_reason
 
 
@@ -136,7 +148,7 @@ def format_interfere_prompt(args, prompt, full_prompt, item, outputs):
                         # else:
                         #     reason = item['reason'] + ". Therefore, the answer is "
                     elif args.interfere_mode == 7:
-                        reason = item['reason']
+                        reason = item[f'{default_prompt}_thinking']
                     elif args.interfere_mode == 8:
                         reason = "<think>\n" + item[f'{default_prompt}_thinking'] + "</think>\n" + item[f'{default_prompt}_output_CoT'] + ". Therefore, my final answer is: "
                     # elif args.interfere_mode == 4:
@@ -147,7 +159,7 @@ def format_interfere_prompt(args, prompt, full_prompt, item, outputs):
                 #     reason = "<think>\n" + item[f'{default_prompt}_thinking_CoT'] + "</think>"
                 else:
                     reason = extract_reason(item[f'{default_prompt}_output']) + '\nTherefore, the answer is'
-                reason = random_new_numbers(reason)
+                reason = random_new_numbers(reason, dataset, item)
                 if args.interfere_mode == 5:
                     reason = "<think>" + reason + "</think>" + item[f'{default_prompt}_output_CoT'] + ". Therefore, my final answer is: "
                 elif args.interfere_mode == 6:
@@ -375,7 +387,7 @@ def add_bias_answer(data, wrong=True):
 def add_saved_bias_answer(data, wrong=True):
     for item in data:
         if wrong:
-            item['biasanswer'] = item['cot0shot.math teacher_bias_answer']
+            item['biasanswer'] = item['biasanswer']
         else:
             item['biasanswer'] = item['answer']
     return data

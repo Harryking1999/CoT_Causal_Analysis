@@ -12,12 +12,19 @@ def extract_boxed_content(text):
     Handles nested braces properly using stack-based approach
     """
     # Find the start of \boxed{
+    print("text_before_extract: ", text)
     start = text.find('\\boxed{')
     if start == -1:
-        return text
+        # Fallback: try to find "oxed{" in case \b was interpreted as backspace
+        start = text.find('oxed{')
+        if start == -1:
+            return text
+        else:
+            # Adjust start position to account for missing \b
+            start += 5  # length of 'oxed{'
+    else:
+        start += 7  # length of '\boxed{'
     
-    # Start from the opening brace of \boxed{
-    start += 7  # length of '\boxed{'
     brace_count = 1
     i = start
     
@@ -29,8 +36,10 @@ def extract_boxed_content(text):
         i += 1
     
     if brace_count == 0:
+        print("text_after_extract: ", text[start:i-1])
         return text[start:i-1]  # Return content between braces, excluding the closing brace
     else:
+        print("text_after_extract: ", text)
         return text  # Return original text if braces are not balanced
 
 def is_answer_in_sentence(sentence, target_answer):
@@ -362,7 +371,8 @@ def generate_bias_answer(model: str, response: str, correct_answer: str, api_key
 def full_process(file_path, model_name, index=-1, mode=0):
     file_name = file_path.split("/")[-1]
     prompt = file_name.split(".")[3].replace("_", " ")
-    api_key=""
+    soucre_model = file_name.split(".")[4]
+    api_key="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"
     # print(file_name.split("."))
     key_prefix = "newdirect." + prompt
     
@@ -373,13 +383,14 @@ def full_process(file_path, model_name, index=-1, mode=0):
     # Limit data if index is specified
     if index > 0:
         data = data[:index]
-    
+    # data = data[0:10]
     for i, row in tqdm(enumerate(data), total=len(data), desc="Processing data", unit="row"):
         raw_response = row[key_prefix + "_output"]
         raw_thinking = row[key_prefix + "_thinking"]
         correct_answer = row['answer']
         try:
             extracted_answer = openai_extract_answer(model_name, raw_response, correct_answer, api_key)
+            print("final extracted_answer: ", extracted_answer)
         except Exception as e:
             print(f"Error extracting answer from response: {e}")
             continue
@@ -425,7 +436,21 @@ def full_process(file_path, model_name, index=-1, mode=0):
     if mode == 0:
         output_file = file_name + ".extracted"
     else:
-        output_file = f"exp_cot/output/output.MATH500.newdirect.math_teacher.{model_name}.thinking.json"
+        output_file = f"exp_cot/output/output.MATH500.newdirect.math_teacher.{soucre_model}.thinking.json"
+    
+    # Calculate accuracy
+    correct_count = 0
+    total_count = 0
+    
+    for row in data:
+        result_key = key_prefix + '_result'
+        if result_key in row and row[result_key]:
+            total_count += 1
+            if row[result_key].lower() == 'true':
+                correct_count += 1
+    
+    accuracy = (correct_count / total_count * 100) if total_count > 0 else 0
+    print(f"Accuracy: {correct_count}/{total_count} = {accuracy:.2f}%")
     
     with open(output_file, 'w+', encoding='utf-8') as f:
         json.dump(data, f, indent=4)
