@@ -372,7 +372,7 @@ def full_process(file_path, model_name, index=-1, mode=0):
     file_name = file_path.split("/")[-1]
     prompt = file_name.split(".")[3].replace("_", " ")
     soucre_model = file_name.split(".")[4]
-    api_key="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"
+    api_key=""
     # print(file_name.split("."))
     key_prefix = "newdirect." + prompt
     
