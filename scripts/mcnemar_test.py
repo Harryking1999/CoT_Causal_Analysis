@@ -19,8 +19,20 @@ def load_output(output_file):
 
 def get_accuracy(output_file):
     outputs = load_output(output_file)
-    key = path.basename(output_file).split('.')
-    key = '.'.join(key[2:4]).replace('math_teacher', 'math teacher')
+    
+    # Check if file has .extracted suffix
+    is_extracted = '.extracted' in output_file
+    
+    if is_extracted:
+        # For extracted files, use key_prefix format
+        file_name = path.basename(output_file).replace('.extracted', '')
+        prompt = file_name.split(".")[3].replace("math_teacher", "math teacher")
+        key = "newdirect." + prompt
+    else:
+        # Original format
+        key = path.basename(output_file).split('.')
+        key = '.'.join(key[2:4]).replace('math_teacher', 'math teacher')
+    
     aa = []
     for item in outputs:
         result = item[f'{key}_result']
@@ -32,19 +44,66 @@ def get_paired_results(group_a_file, group_b_file):
     group_a = load_output(group_a_file.replace(':', '_'))
     group_b = load_output(group_b_file.replace(':', '_'))
     assert len(group_a) == len(group_b)
-    key_a = path.basename(group_a_file).split('.')
-    key_a = '.'.join(key_a[2:4]).replace('math_teacher', 'math teacher')
-    key_b = path.basename(group_b_file).split('.')
-    key_b = '.'.join(key_b[2:4]).replace('math_teacher', 'math teacher')
+    
+    # Check if files have .extracted suffix
+    is_extracted_a = '.extracted' in group_a_file
+    is_extracted_b = '.extracted' in group_b_file
+    
+    if is_extracted_a:
+        # For extracted files, use key_prefix format
+        file_name_a = path.basename(group_a_file).replace('.extracted', '')
+        prompt_a = file_name_a.split(".")[3].replace("math_teacher", "math teacher")
+        key_a = "newdirect." + prompt_a
+    else:
+        # Original format
+        key_a = path.basename(group_a_file).split('.')
+        key_a = '.'.join(key_a[2:4]).replace('math_teacher', 'math teacher')
+    
+    if is_extracted_b:
+        # For extracted files, use key_prefix format
+        file_name_b = path.basename(group_b_file).replace('.extracted', '')
+        prompt_b = file_name_b.split(".")[3].replace("math_teacher", "math teacher")
+        print("file_name_b: ", file_name_b)
+        key_b = "newdirect." + prompt_b
+        print("promtp_b: ", prompt_b)
+    else:
+        # Original format
+        key_b = path.basename(group_b_file).split('.')
+        key_b = '.'.join(key_b[2:4]).replace('math_teacher', 'math teacher')
 
     aa = []
     bb = []
     for a, b in zip(group_a, group_b):
         assert a['id'] == b['id']
-        result_a = a[f'{key_a}_result']
-        result_b = b[f'{key_b}_result']
-        aa.append(1 if result_a else 0)
-        bb.append(1 if result_b else 0)
+        
+        # Use appropriate key format based on file type
+        if is_extracted_a:
+            result_a = a[f'{key_a}_result']
+            # print(f"{key_a}_result")
+        else:
+            result_a = a[f'{key_a}_result']
+            
+        if is_extracted_b:
+            result_b = b[f'{key_b}_result']
+            # print(f"{key_b}_result")
+        else:
+            result_b = b[f'{key_b}_result']
+
+        # Check if result_a is True or contains "true" string
+        if isinstance(result_a, bool):
+            aa.append(1 if result_a else 0)
+        elif isinstance(result_a, str):
+            aa.append(1 if 'true' in result_a.lower() else 0)
+        else:
+            aa.append(1 if result_a else 0)
+
+        # Check if result_b is True or contains "true" string
+        if isinstance(result_b, bool):
+            bb.append(1 if result_b else 0)
+        elif isinstance(result_b, str):
+            bb.append(1 if 'true' in result_b.lower() else 0)
+        else:
+            bb.append(1 if result_b else 0)
     return aa, bb
 
 

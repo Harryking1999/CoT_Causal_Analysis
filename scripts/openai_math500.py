@@ -135,7 +135,7 @@ def openai_extract_answer(model, response: str, correct_answer: str, api_key: st
     openai_api2 = OpenAIModel(
         model_name=model,
         max_new_tokens=3000,
-        API_BASE="https://api.openai.com/v1",
+        API_BASE="https://api.chatanywhere.tech/v1",
         API_KEY=api_key,
         stop_words='####',
     )
@@ -184,7 +184,7 @@ def openai_extract_thinking_answer(model, response: str, correct_answer: str, ap
     openai_api2 = OpenAIModel(
         model_name=model,
         max_new_tokens=3000,
-        API_BASE="https://api.openai.com/v1",
+        API_BASE="https://api.chatanywhere.tech/v1",
         API_KEY=api_key,
         stop_words='####',
     )
@@ -247,7 +247,7 @@ def compare_answer(model: str, response: str, correct_answer: str, api_key: str)
     openai_api2 = OpenAIModel(
         model_name=model,
         max_new_tokens=3000,
-        API_BASE="https://api.openai.com/v1",
+        API_BASE="https://api.chatanywhere.tech/v1",
         API_KEY=api_key,
         stop_words='####',
     )
@@ -317,7 +317,7 @@ def generate_bias_answer(model: str, response: str, correct_answer: str, api_key
     openai_api2 = OpenAIModel(
         model_name=model,
         max_new_tokens=3000,
-        API_BASE="https://api.openai.com/v1",
+        API_BASE="https://api.chatanywhere.tech/v1",
         API_KEY=api_key,
         stop_words='####',
     )
@@ -367,10 +367,70 @@ def generate_bias_answer(model: str, response: str, correct_answer: str, api_key
         return ""
     return extract_boxed_content(result.strip())
 
+def openai_extract_simple_answer(model: str, response: str, gold_answer: str, api_key: str) -> str:
+    """
+    Extracts the answer using a simple prompt that looks for "Therefore, my final answer is:".
+    """
+    openai_api = OpenAIModel(
+        model_name=model,
+        max_new_tokens=3000,
+        API_BASE="https://api.chatanywhere.tech/v1",
+        API_KEY=api_key,
+        stop_words='####',
+    )
+    
+    prompt = f"""Extract the answer that immediately follows the phrase "Therefore, my final answer is:" in the text below. 
+
+CRITICAL INSTRUCTIONS:
+1. Find the FIRST occurrence of "Therefore, my final answer is:" in the text
+2. Extract ONLY the answer that appears immediately after this phrase
+3. IGNORE any later corrections, revisions, or updated answers
+4. Do NOT look for the "last" or "most recent" occurrence - only the FIRST one
+5. The answer should be the one that is closest to the phrase "Therefore, my final answer is:"
+6. Extract the answer regardless of whether it's in \boxed{{}} format or not
+7. Look for the answer that appears right after "Therefore, my final answer is:" regardless of formatting
+
+EXTRACTION METHOD:
+- Look for "Therefore, my final answer is:"， and Extract the answer that comes immediately 
+- The answer can be in \boxed{{}} format or plain text - do not only look for answers in \boxed{{}}
+- Extract the answer that is closest to the phrase, regardless of formatting
+
+The input below may include reasoning, multiple iterations, or even revised answers, but you only need to extract the answer appearing immediately after the FIRST occurrence of "Therefore, my final answer is:". 
+
+*(Do not include any previous answers or reasoning; only provide the answer that appears right after the FIRST "Therefore, my final answer is:". Stop at the first line break, punctuation, or obvious answer boundary.)*
+
+Input:
+Therefore, my final answer is: {response}
+Reference answer for verification: {gold_answer}
+
+Place the answer in \boxed{{}} format.
+"""
+    # if(len(response) > 200):
+    #     response = response[0:200]
+
+    cnt_total = 0
+    cnt_exp = 0
+    result = None
+    while True:
+        if(cnt_exp > 3):
+            break
+        try:
+            result = openai_api.chat_generate(prompt, temperature=0.0)
+            cnt_total += 1
+            break
+        except Exception as ex:
+            print(ex)
+            print('Sleep 10 seconds before retry ...')
+            time.sleep(10)
+            cnt_exp += 1
+    print("result: ", result)
+    if result is None:
+        return ""
+    return extract_boxed_content(result.strip())
 
 def full_process(file_path, model_name, index=-1, mode=0):
     file_name = file_path.split("/")[-1]
-    prompt = file_name.split(".")[3].replace("_", " ")
+    prompt = file_name.split(".")[3].replace("math_teacher", "math teacher")
     soucre_model = file_name.split(".")[4]
     api_key=""
     # print(file_name.split("."))
@@ -386,26 +446,46 @@ def full_process(file_path, model_name, index=-1, mode=0):
     # data = data[0:10]
     for i, row in tqdm(enumerate(data), total=len(data), desc="Processing data", unit="row"):
         raw_response = row[key_prefix + "_output"]
-        raw_thinking = row[key_prefix + "_thinking"]
         correct_answer = row['answer']
-        try:
-            extracted_answer = openai_extract_answer(model_name, raw_response, correct_answer, api_key)
-            print("final extracted_answer: ", extracted_answer)
-        except Exception as e:
-            print(f"Error extracting answer from response: {e}")
-            continue
 
-        if extracted_answer is not None:
-            data[i][key_prefix + '_extracted_answer'] = extracted_answer
-            data[i][key_prefix + '_answer'] = ""
-        try:
-            result = compare_answer(model_name, extracted_answer, correct_answer, api_key)
-            data[i][key_prefix + '_result'] = result
-        except Exception as e:
-            print(f"Error comparing answer: {e}")
-            continue
+        if mode == 0:
+            # Extract answer using the simple prompt format
+            try:
+                extracted_answer = openai_extract_simple_answer(model_name, raw_response, correct_answer, api_key)
+                print("final extracted_answer: ", extracted_answer)
+                if extracted_answer is not None:
+                    data[i][key_prefix + '_extracted_answer'] = extracted_answer
+                    data[i][key_prefix + '_answer'] = ""
+                    
+                    # Compare answer for accuracy calculation
+                    try:
+                        result = compare_answer(model_name, extracted_answer, correct_answer, api_key)
+                        data[i][key_prefix + '_result'] = result
+                    except Exception as e:
+                        print(f"Error comparing answer: {e}")
+                        continue
+            except Exception as e:
+                print(f"Error extracting answer from response: {e}")
+                continue
 
-        if mode == 1:
+        elif mode == 1:
+            raw_thinking = row[key_prefix + "_thinking"]
+            try:
+                extracted_answer = openai_extract_answer(model_name, raw_response, correct_answer, api_key)
+                print("final extracted_answer: ", extracted_answer)
+            except Exception as e:
+                print(f"Error extracting answer from response: {e}")
+                continue
+
+            if extracted_answer is not None:
+                data[i][key_prefix + '_extracted_answer'] = extracted_answer
+                data[i][key_prefix + '_answer'] = ""
+            try:
+                result = compare_answer(model_name, extracted_answer, correct_answer, api_key)
+                data[i][key_prefix + '_result'] = result
+            except Exception as e:
+                print(f"Error comparing answer: {e}")
+                continue
             # Extract _output_CoT: find last occurrence of extracted_answer in raw_response
             if extracted_answer is not None:
                 output_cot = split_and_restore_sentences(raw_response, extracted_answer, find_last=True)
@@ -434,11 +514,11 @@ def full_process(file_path, model_name, index=-1, mode=0):
     
     # Save the updated data
     if mode == 0:
-        output_file = file_name + ".extracted"
+        output_file = file_path + ".extracted"
     else:
         output_file = f"exp_cot/output/output.MATH500.newdirect.math_teacher.{soucre_model}.thinking.json"
     
-    # Calculate accuracy
+    # Calculate accuracy (for both mode=0 and mode=1)
     correct_count = 0
     total_count = 0
     
