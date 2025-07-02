@@ -1,0 +1,2 @@
+Please solve the math problem. 
+Question: What is the Product of {{number1}} and {{number2}}? Please reason step by step.

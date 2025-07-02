@@ -126,12 +126,14 @@ class OpenAIModel:
             )
             print('response: ', response)
             # print('messages: ', messages)
-        elif self.model_name in ['DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B', 'Qwen2.5-7B-Instruct']:
+        elif self.model_name in ['DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B', 'Qwen2.5-7B-Instruct', 'DeepSeekR1-Llama-8B', 'Qwen2.5-32B-Instruct']:
             # Special handling for local API
             if isinstance(input_string, list):
                 question = input_string[0]
                 answer_prefix = input_string[1]
                 prompt = f"<｜User｜>{question}<｜Assistant｜>{answer_prefix}"
+                if (self.model_name in ['Qwen2.5-32B-Instruct', 'Qwen2.5-7B-Instruct']):
+                    prompt = f'<|im_start|>user\n{question}<|im_end|>\n<|im_start|>assistant\n{answer_prefix}'
             else:
                 question = input_string
                 prompt = f"<｜User｜>{question}<｜Assistant｜>"
@@ -151,8 +153,8 @@ class OpenAIModel:
                     prompt=prompt,
                     max_tokens=self.max_new_tokens,
                     temperature=0.6,
-                    stop=self.stop_words,
-                    top_p = 0.95
+                    stop=self.stop_words
+                    # top_p = 0.95
                 )
             print('response: ', response)
         else:
@@ -167,12 +169,12 @@ class OpenAIModel:
                     stop = self.stop_words
             )
 
-        if(self.model_name not in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B','Qwen2.5-7B-Instruct']):
+        if(self.model_name not in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B','Qwen2.5-7B-Instruct', 'DeepSeekR1-Llama-8B', 'Qwen2.5-32B-Instruct']):
             #non-reasoning models
             generated_text = response['choices'][0]['message']['content'].strip()
             return generated_text
         else:#reasoning models
-            if(self.model_name in ['DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B']):#vllm reasoning models: parsing by hand
+            if(self.model_name in ['DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B', 'DeepSeekR1-Llama-8B']):#vllm reasoning models: parsing by hand
                 generated_content = response['choices'][0]['text'].strip()
                 # generated_content = 3000 * "1" + 3000 * "2"
                 # generated_thinking = generated_content.split("</think>")[0]
@@ -212,7 +214,7 @@ class OpenAIModel:
                 # elif(interfere_mode == 4):
                 #     generated_text = generated_content
                 #     generated_thinking = ""
-            elif (self.model_name in ['Qwen2.5-7B-Instruct']):
+            elif (self.model_name in ['Qwen2.5-7B-Instruct', 'Qwen2.5-32B-Instruct']):
                 return response['choices'][0]['text'].strip()
             else:##commercial api: parsing with content&reasoning_content
                 if(response['choices'][0]['message']['content'] is not None):
@@ -248,7 +250,7 @@ class OpenAIModel:
         elif self.model_name in ['gpt-4', 'gpt-3.5-turbo','gpt-4-turbo-preview','gpt-4-0125-preview','gpt-4-1106-preview',
                                  'llama2-70b-chat', 'llama2-7b-chat', 'mistral-base', 'mistral-sft', 'mistral-dpo', 'o1-mini', 
                                  'o1', 'deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'DeepSeekR1-Qwen-1_5B',
-                                 'DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B']:
+                                 'DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B', 'DeepSeekR1-Llama-8B']:
             
             return self.chat_generate(input_string, temperature, interfere_mode)
         else:

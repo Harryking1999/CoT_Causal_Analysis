@@ -102,6 +102,8 @@ def extract_logic(answer):
 
     if not option:
         match = re.search(pattern9, answer)
+        print('pattern_9_match: ', match)
+        print('answer: ', answer)
         if match:
             option = match.group(1)
             print(pattern9)
@@ -278,35 +280,41 @@ def extract_answer(output, item, dataset, interfere_mode=0):
             answer = re.findall('\d+', answer)
             answer = gold if gold in answer else answer[-1]
             answer = answer.strip()
+            print(answer)
             return str(int(answer))  # expect integer only
         elif dataset.startswith('MATH500'):
             return ""
         else:
-            paragraphs = output.split("\n")
-            cnt_meaningful_sentences = 0
-            output_ls = []
-            for paragraph in paragraphs:
-                sentences = paragraph.split(".")
-                for sentence in sentences:
-                    # 去除空白字符后，如果句子不全是* \n \ 等符号，则认为有意义
-                    if(cnt_meaningful_sentences > 3):
+            if(interfere_mode in [5,6,8]):
+                paragraphs = output.split("\n")
+                cnt_meaningful_sentences = 0
+                output_ls = []
+                for paragraph in paragraphs:
+                    sentences = paragraph.split(".")
+                    for sentence in sentences:
+                        # 去除空白字符后，如果句子不全是* \n \ 等符号，则认为有意义
+                        if(cnt_meaningful_sentences > 3):
+                            break
+                        cleaned_sentence = sentence.strip()
+                        if cleaned_sentence and not all(c in ['*', '\n', '\\', ' ', '\t', '|', '｜'] for c in cleaned_sentence):
+                            output_ls.append(cleaned_sentence)
+                            cnt_meaningful_sentences += 1
+                        else:
+                            # 如果没有找到有意义的句子，保持原样
+                            pass
+                final_ans = None
+                for i in output_ls:
+                    tmp_ans = extract_logic(i)
+                    if(tmp_ans != None and tmp_ans != "None"):
+                        # print("output_tmp: ", i)
+                        final_ans = tmp_ans
                         break
-                    cleaned_sentence = sentence.strip()
-                    if cleaned_sentence and not all(c in ['*', '\n', '\\', ' ', '\t', '|', '｜'] for c in cleaned_sentence):
-                        output_ls.append(cleaned_sentence)
-                        cnt_meaningful_sentences += 1
-                    else:
-                        # 如果没有找到有意义的句子，保持原样
-                        pass
-            final_ans = None
-            for i in output_ls:
-                tmp_ans = extract_logic(i)
-                if(tmp_ans != None and tmp_ans != "None"):
-                    # print("output_tmp: ", i)
-                    final_ans = tmp_ans
-                    break
-            print("final_ans: ", final_ans)
-            return final_ans
+                print("final_ans: ", final_ans)
+                return final_ans
+            else:
+                answer = extract_logic(output)
+                print("final_ans: ", answer)
+                return str(answer)
     except Exception as ex:
         # LLMs may constantly generate wrong output, let's skip the retry and give it a None result.
         print('extract_answer error:', ex)
@@ -316,6 +324,6 @@ def extract_answer(output, item, dataset, interfere_mode=0):
 # print("extract_ans: ", extract_answer(". \nSo, the final computed product is .", "24", 'Addition'))
 # print("extract_logic: ", extract_logic("D"))
 
-extract_answer("A\n<｜end▁of▁thinking｜>\nBased on the given context, the statement \"Fiona is smart\" is true. Here's the reasoning step by step:\n\n1. Fiona is stated to be quiet (from the context: \"Fiona is quiet\").\n2. The context includes the rule: \"All quiet things are cold.\" Therefore, since Fiona is quiet, she must be cold.\n3. The context also includes the rule: \"All cold, quiet things are smart.\" Since Fiona is both cold (from step 2) and quiet, she must be smart.\n\nThus, Fiona is smart, making the statement true.\n\n**Correct Option: A) True**", 1, "ProofWriter", 5)
+extract_answer("1289524214. \n\nI apologize for the confusion in my previous explanation. Let's correct it and solve the problem accurately.\n\nTo find the sum of 850754945 and 991933270, we will add the two numbers together step by step:\n\n1. Write down the numbers one under the other, aligning the digits by place value:\n```\n  850754945\n+ 991933270\n```\n\n2. Add the numbers starting from the rightmost digit (units place) and move to the left:\n- Units place: 5 + 0 = 5\n- Tens place: 4 + 7 = 11 (write down 1, carry over 1)\n- Hundreds place: 9 + 2 + 1 (carried over) = 12 (write down 2, carry over 1)\n- Thousands place: 4 + 3 + 1 (carried over) = 8\n- Ten thousands place: 5 + 9 = 14 (write down 4, carry over 1)\n- Hundred thousands place: 7 + 3 + 1 (carried over) = 11 (write down 1, carry over 1)\n- Millions place: 0 + 1 + 1 (carried over) = 2\n- Ten millions place: 5 + 9 = 14 (write down 4, carry over 1)\n- Hundred millions place: 8 + 9 + 1 (carried over) = 18 (write down 8, carry over 1)\n- Billions place: 1 (carried over)\n\n3. Write down the final sum:\n```\n  850754945\n+ 991933270\n-----------\n 1842688215\n```\n\nTherefore, the sum of 850754945 and 991933270 is 1842688215.", {'answer': 1289524214}, "Addition", 5)
 
 # print(all(c in ['*', '\n', '\\', ' ', '\t'] for c in "B"))

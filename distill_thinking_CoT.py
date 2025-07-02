@@ -5,7 +5,8 @@ import argparse
 
 def normalize_number(number_str):
     """Normalize number string by removing commas and spaces."""
-    return re.sub(r'[,\s]', '', number_str)
+    # return re.sub(r'[,\s]', '', number_str)
+    return re.sub(r'[,!\s\\]', '', number_str)
 
 def find_answer_in_text(text, answer, find_first=True, dataset=None):
     """Find the answer in the text, handling different number formats.
@@ -179,6 +180,13 @@ def process_file(input_file):
     # Load items
     with open(input_file, 'r', encoding='utf-8') as fin:
         items = json.load(fin)
+    key_prefix = None
+    if('newdirectbase' in input_file):
+        key_prefix = 'newdirectbase'
+    else:
+        key_prefix = 'newdirect'
+
+    
     
     # Extract dataset name from filename
     # print(items[0:2])
@@ -190,32 +198,37 @@ def process_file(input_file):
     
     # Process each item
     for item in items:
-        thinking = item.get('newdirect.math teacher_thinking', '')
-        answer = item.get('newdirect.math teacher_answer', '')
-        output = item.get('newdirect.math teacher_output', '')
+        thinking = item.get(key_prefix + '.math teacher_thinking', '')
+        answer = item.get(key_prefix + '.math teacher_answer', '')
+        output = item.get(key_prefix + '.math teacher_output', '')
         
-        if not thinking or not answer:
-            item['newdirect.math teacher_thinking_CoT'] = ''
-            item['newdirect.math teacher_output_CoT'] = ''
+        if not thinking and not answer:
+            item[key_prefix + '.math teacher_thinking_CoT'] = ''
+            item[key_prefix + '.math teacher_output_CoT'] = ''
             # print("continue")
             continue
-        
-        # Process thinking field - find first occurrence
-        result = find_answer_in_text(thinking, answer, find_first=True, dataset=dataset)
-        if result is None:
-            item['newdirect.math teacher_thinking_CoT'] = ""
+
+        if not thinking:
+            item[key_prefix + '.math teacher_thinking_CoT'] = ''
         else:
-            item['newdirect.math teacher_thinking_CoT'] = result.replace("..", ".")
+            # Process thinking field - find first occurrence
+            result = find_answer_in_text(thinking, answer, find_first=True, dataset=dataset)
+            if result is None:
+                item[key_prefix + '.math teacher_thinking_CoT'] = ""
+            else:
+                item[key_prefix + '.math teacher_thinking_CoT'] = result.replace("..", ".")
         
         # Process output field - find last occurrence
         if output:
             result = find_answer_in_text(output, answer, find_first=False, dataset=dataset)
+            if result == "." or result == ".." and len(output.split(".") > 1):
+                result = output.split(".")[0]
             if result is None:
-                item['newdirect.math teacher_output_CoT'] = ""
+                item[key_prefix + '.math teacher_output_CoT'] = ""
             else:
-                item['newdirect.math teacher_output_CoT'] = result.replace("..", ".")
+                item[key_prefix + '.math teacher_output_CoT'] = result.replace("..", ".")
         else:
-            item['newdirect.math teacher_output_CoT'] = ""
+            item[key_prefix + '.math teacher_output_CoT'] = ""
     
     # Create output filename
     base_name = os.path.splitext(input_file)[0]

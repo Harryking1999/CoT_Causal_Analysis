@@ -51,7 +51,7 @@ def load_prompt(dataset, prompt, do_role='match teacher', do_bias='nobias'):
     dataset = dataset.split(':')[0]
     if '_' in dataset:
         dataset = dataset.split('_')[0]
-    if dataset == 'ProofWriter' and prompt != 'direct' and prompt != "newdirect":
+    if dataset == 'ProofWriter' and prompt != 'direct' and prompt != "newdirect" and prompt != "newdirectbase":
         numbers = re.findall(r'\d+', prompt)
         numbers = [int(num) for num in numbers]
         assert len(numbers) == 1
@@ -176,7 +176,7 @@ def extract_answer(output, item, dataset, interfere_mode=0):
             output = [line for line in output if len(re.findall('\d+', line)) > 0]
             if(len(output) == 0):
                 return ""
-            elif interfere_mode in [5,6,8]:
+            elif interfere_mode in [5,6,8,9]:
                 output = output[0]
             else:
                 output = output[-1]
@@ -188,30 +188,36 @@ def extract_answer(output, item, dataset, interfere_mode=0):
         elif dataset.startswith('MATH500'):
             return ""
         else:
-            paragraphs = output.split("\n")
-            cnt_meaningful_sentences = 0
-            output_ls = []
-            for paragraph in paragraphs:
-                sentences = paragraph.split(".")
-                for sentence in sentences:
-                    # 去除空白字符后，如果句子不全是* \n \ 等符号，则认为有意义
-                    if(cnt_meaningful_sentences > 3):
+            if(interfere_mode in [5,6,8,9]):
+                paragraphs = output.split("\n")
+                cnt_meaningful_sentences = 0
+                output_ls = []
+                for paragraph in paragraphs:
+                    sentences = paragraph.split(".")
+                    for sentence in sentences:
+                        # 去除空白字符后，如果句子不全是* \n \ 等符号，则认为有意义
+                        if(cnt_meaningful_sentences > 3):
+                            break
+                        cleaned_sentence = sentence.strip()
+                        if cleaned_sentence and not all(c in ['*', '\n', '\\', ' ', '\t', '|', '｜'] for c in cleaned_sentence):
+                            output_ls.append(cleaned_sentence)
+                            cnt_meaningful_sentences += 1
+                        else:
+                            # 如果没有找到有意义的句子，保持原样
+                            pass
+                final_ans = None
+                for i in output_ls:
+                    tmp_ans = extract_logic(i)
+                    if(tmp_ans != None and tmp_ans != "None"):
+                        # print("output_tmp: ", i)
+                        final_ans = tmp_ans
                         break
-                    cleaned_sentence = sentence.strip()
-                    if cleaned_sentence and not all(c in ['*', '\n', '\\', ' ', '\t', '|', '｜'] for c in cleaned_sentence):
-                        output_ls.append(cleaned_sentence)
-                        cnt_meaningful_sentences += 1
-                    else:
-                        # 如果没有找到有意义的句子，保持原样
-                        pass
-            final_ans = None
-            for i in output_ls:
-                tmp_ans = extract_logic(i)
-                if(tmp_ans != None and tmp_ans != "None"):
-                    # print("output_tmp: ", i)
-                    final_ans = tmp_ans
-                    break
-            return final_ans
+                print("final_ans: ", final_ans)
+                return final_ans
+            else:
+                answer = extract_logic(output)
+                print("final_ans: ", answer)
+                return str(answer)
     except Exception as ex:
         # LLMs may constantly generate wrong output, let's skip the retry and give it a None result.
         print('extract_answer error:', ex)
@@ -251,7 +257,7 @@ def api_run(args):
             while True:
                 if(cnt_exp > 3):
                     # Fix: Set batch_outputs to match the expected format for different model types
-                    if args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B']:
+                    if args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B', 'DeepSeekR1-Llama-8B']:
                         batch_outputs = [['', ''] for _ in chunk]  # [output, thinking] format
                     else:
                         batch_outputs = [''] * len(chunk)  # Simple string format
@@ -264,7 +270,7 @@ def api_run(args):
                         batch_outputs = [openai_api.generate(message) for message in messages]
                         # print('batch_output: ', batch_outputs)
                     # extract the answer and regenerate if the output format is out of expectation
-                    if(args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B']):
+                    if(args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B','DeepSeekR1-Llama-8B']):
                         preds = []
                         for sample, output in zip(chunk, batch_outputs):
                             if(output[0] != ""):
@@ -286,7 +292,7 @@ def api_run(args):
                 answer = sample[f'answer']
                 record_item = sample.copy()
                 record_item[f'{prompt}_input'] = message
-                if(args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B']):
+                if(args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B', 'DeepSeekR1-Llama-8B']):
                     record_item[f'{prompt}_output'] = output[0]
                     record_item[f'{prompt}_thinking'] = output[1]
                 else:
