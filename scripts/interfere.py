@@ -50,6 +50,9 @@ def random_new_numbers(reason, dataset=None, item=None):
         if not any(char.isdigit() for char in correct_answer):
             # Replace all occurrences of the correct answer with the bias answer
             new_reason = new_reason.replace(correct_answer, bias_answer)
+    elif dataset == 'MATH500' and item is not None and 'answer' in item and 'biasanswer' not in item:
+        correct_answer = item['answer']
+        bias_answer = ''
     
     # print("original_reason: ", reason)
     # print("new_reason: ", new_reason)
@@ -395,7 +398,10 @@ def add_bias_answer(data, wrong=True):
 def add_saved_bias_answer(data, wrong=True):
     for item in data:
         if wrong:
-            item['biasanswer'] = item['biasanswer']
+            if 'biasanswer' in item:
+                item['biasanswer'] = item['biasanswer']
+            else:
+                item['biasanswer'] = ''
         else:
             item['biasanswer'] = item['answer']
     return data
