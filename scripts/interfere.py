@@ -88,6 +88,8 @@ def format_interfere_prompt(args, prompt, full_prompt, item, outputs):
                     if(dataset in ['ProofWriter','FOLIO','LOGIQA']):
                         reason =  "<think>" + item[f'{default_prompt}_thinking_CoT'] + "</think>" + item[f'{default_prompt}_output_CoT'] + ". Therefore, my final option is: "
                 elif args.interfere_mode in [5, 6, 8]:
+                    if (f'{default_prompt}_output_CoT' not in item.keys()):
+                        item[f'{default_prompt}_output_CoT'] = ''
                     reason = "<think>" + item[f'{default_prompt}_thinking'] + "</think>" + item[f'{default_prompt}_output_CoT'] + ".Therefore, my final answer is: "
                     if(dataset in ['ProofWriter','FOLIO','LOGIQA']):
                         reason =  "<think>" + item[f'{default_prompt}_thinking_CoT'] + "</think>" + item[f'{default_prompt}_output_CoT'] + ". Therefore, my final option is: "
@@ -149,6 +151,8 @@ def format_interfere_prompt(args, prompt, full_prompt, item, outputs):
                     elif args.interfere_mode == 5:
                         reason =  item[f'{default_prompt}_thinking']
                     elif args.interfere_mode == 6:
+                        if (f'{default_prompt}_output_CoT' not in item.keys()):
+                            item[f'{default_prompt}_output_CoT'] = ''
                         reason = item[f'{default_prompt}_output_CoT']
                         # if(len(item[f'{default_prompt}_output_CoT']) > 5):
                         #     reason =  item[f'{default_prompt}_output_CoT'] + ". Therefore, the answer is "
@@ -170,6 +174,8 @@ def format_interfere_prompt(args, prompt, full_prompt, item, outputs):
                     reason = extract_reason(item[f'{default_prompt}_output']) + '\nTherefore, the answer is'
                 reason = random_new_numbers(reason, dataset, item)
                 if args.interfere_mode == 5:
+                    if (f'{default_prompt}_output_CoT' not in item.keys()):
+                        item[f'{default_prompt}_output_CoT'] = ''
                     reason = "<think>" + reason + "</think>" + item[f'{default_prompt}_output_CoT'] + ". Therefore, my final answer is: "
                 elif args.interfere_mode == 6:
                     reason = "<think>" + item[f'{default_prompt}_thinking'] + "</think>" + reason + ". Therefore, my final answer is: "
