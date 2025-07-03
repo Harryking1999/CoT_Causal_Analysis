@@ -1,0 +1,21 @@
+Thu Jul 3 03:54:27 PM CST 2025, Evaluating samples from MATH500 using prompts newdirect with defaultreason and defaultrole and strongbias and mode 5 and api_base_num 2 and seed ...
+/home/fuzhizhang.fzz/CoT_Causal_Analysis/scripts/interfere.py:36: SyntaxWarning: invalid escape sequence '\d'
+  parts = re.split('(\d+)', reason)
+5
+OpenAI API with http://localhost:8081/v1, DeepSeekR1-Llama-8B, ####, 16384
+Traceback (most recent call last):
+  File "/home/fuzhizhang.fzz/CoT_Causal_Analysis/scripts/interfere.py", line 675, in <module>
+    intervene(args)
+  File "/home/fuzhizhang.fzz/CoT_Causal_Analysis/scripts/interfere.py", line 484, in intervene
+    data = load_output(args)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/fuzhizhang.fzz/CoT_Causal_Analysis/scripts/interfere.py", line 345, in load_output
+    output = add_bias(args.dataset, output, wrong='random' not in args.do_reason)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzhizhang.fzz/CoT_Causal_Analysis/scripts/interfere.py", line 409, in add_bias
+    data = add_saved_bias_answer(data, wrong=wrong)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fuzhizhang.fzz/CoT_Causal_Analysis/scripts/interfere.py", line 398, in add_saved_bias_answer
+    item['biasanswer'] = item['biasanswer']
+                         ~~~~^^^^^^^^^^^^^^
+KeyError: 'biasanswer'
