@@ -432,9 +432,12 @@ def full_process(file_path, model_name, index=-1, mode=0):
     file_name = file_path.split("/")[-1]
     prompt = file_name.split(".")[3].replace("math_teacher", "math teacher")
     soucre_model = file_name.split(".")[4]
-    api_key=""
+    api_key="sk-nQ9VR63Qzx8weOyJdIqVRYBi8Q3zEzJaCfflOu48hd7GNdfX"
     # print(file_name.split("."))
-    key_prefix = "newdirect." + prompt
+    if("newdirectbase" in file_path):
+        key_prefix = "newdirectbase." + prompt
+    else:
+        key_prefix = "newdirect." + prompt
     
     # Read JSON file as list of dictionaries
     with open(file_path, 'r', encoding='utf-8') as f:
@@ -469,7 +472,6 @@ def full_process(file_path, model_name, index=-1, mode=0):
                 continue
 
         elif mode == 1:
-            raw_thinking = row[key_prefix + "_thinking"]
             try:
                 extracted_answer = openai_extract_answer(model_name, raw_response, correct_answer, api_key)
                 print("final extracted_answer: ", extracted_answer)
@@ -499,6 +501,7 @@ def full_process(file_path, model_name, index=-1, mode=0):
                 continue
 
             try:
+                raw_thinking = row[key_prefix + "_thinking"]
                 extracted_thinking_answer = openai_extract_thinking_answer(model_name, raw_thinking, correct_answer, api_key)
             except Exception as e:
                 print(f"Error extracting answer from thinking: {e}")
