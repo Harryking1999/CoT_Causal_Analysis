@@ -250,7 +250,7 @@ def api_run(args):
         # split dataset into chunks
         dataset_chunks = [data[i:i + args.batch_size] for i in range(0, len(data), args.batch_size)]
         cnt_total = 0
-        for chunk in tqdm(dataset_chunks):
+        for chunk in tqdm(dataset_chunks[0:10]):
             messages = [format_prompt(full_prompt, item) for item in chunk]
             # print(messages)  # Comment out to avoid encoding issues
             cnt_exp = 0
