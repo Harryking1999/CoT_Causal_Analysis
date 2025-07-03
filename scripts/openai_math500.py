@@ -487,6 +487,7 @@ def full_process(file_path, model_name, index=-1, mode=0):
                 data[i][key_prefix + '_result'] = result
             except Exception as e:
                 print(f"Error comparing answer: {e}")
+                data[i][key_prefix + '_result'] = ""
                 continue
             # Extract _output_CoT: find last occurrence of extracted_answer in raw_response
             if extracted_answer is not None:
@@ -498,6 +499,7 @@ def full_process(file_path, model_name, index=-1, mode=0):
                 data[i]['biasanswer'] = bias_answer
             except Exception as e:
                 print(f"Error generating biased answer: {e}")
+                data[i]['biasanswer'] = ""
                 continue
 
             try:
