@@ -101,7 +101,7 @@ def format_interfere_prompt(args, prompt, full_prompt, item, outputs):
                     reason = "<think>" + item[f'{default_prompt}_thinking'] + "</think>"
                     if(dataset in ['ProofWriter','FOLIO','LOGIQA']):
                         reason =  "<think>" + item[f'{default_prompt}_thinking_CoT'] + "</think>"
-            elif args.model_name in ['Qwen2.5-32B-Instruct']:
+            elif args.model_name in ['Qwen2.5-32B-Instruct', 'Qwen2.5-3B-Instruct']:
                 reason = item[f'{default_prompt}_output_CoT'] + ". Therefore, my final answer is: "
                 if(dataset in ['ProofWriter','FOLIO','LOGIQA']):
                     reason = item[f'{default_prompt}_output_CoT'] + ". Therefore, my final option is: "
@@ -168,7 +168,7 @@ def format_interfere_prompt(args, prompt, full_prompt, item, outputs):
                     #         reason =  "<think>" + item[f'{default_prompt}_thinking_CoT'] + "</think>" + reason + ".Therefore, the answer is"
                 # elif args.model_name in ['DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B']:
                 #     reason = "<think>\n" + item[f'{default_prompt}_thinking_CoT'] + "</think>"
-                elif args.model_name in ['Qwen2.5-32B-Instruct']:
+                elif args.model_name in ['Qwen2.5-32B-Instruct', 'Qwen2.5-3B-Instruct']:
                     reason = item[f'{default_prompt}_output_CoT'] + ". Therefore, my final answer is: "
                 else:
                     reason = extract_reason(item[f'{default_prompt}_output']) + '\nTherefore, the answer is'
@@ -298,7 +298,7 @@ def format_interfere_prompt(args, prompt, full_prompt, item, outputs):
         message = f'{message}\n{reason}\nThe correct option is:'
 
     # Handle list messages for interfere_mode 1 and 2
-    if args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B', 'DeepSeekR1-Llama-8B', 'Qwen2.5-32B-Instruct']:
+    if args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B', 'DeepSeekR1-Llama-8B', 'Qwen2.5-32B-Instruct', 'Qwen2.5-3B-Instruct']:
         default_role = 'math teacher'
         default_prompt = prompt.split('.')[0] + f'.{default_role}'
         distilled_instruction = item[f'{default_prompt}_input']
@@ -338,7 +338,7 @@ def load_output(args):
         output_file = f'{args.outdir}/output.{args.dataset}.{args.prompt}.{default_role}.{args.model_name}.thinking.json'
         if args.do_reason == 'goldreason-r1':
             output_file = f'{args.outdir}/output.{args.dataset}.{args.prompt}.{default_role}.{args.model_name}.thinking.replace_golden.json'
-    if args.model_name in ['Qwen2.5-32B-Instruct']:
+    if args.model_name in ['Qwen2.5-32B-Instruct', 'Qwen2.5-3B-Instruct']:
         output_file = f'{args.outdir}/output.{args.dataset}.{args.prompt}.{default_role}.{args.model_name}.thinking.json'
     # if not os.path.exists(output_file):
     #     output_file = f'{args.outdir}/output.{args.dataset}.{args.prompt}.{default_role}.{args.model_name}.json'
@@ -539,7 +539,7 @@ def intervene(args):
                         preds = [extract_answer(output[0], sample, args.dataset, args.interfere_mode) for sample, output in zip(chunk, batch_outputs)]
                     else:
                         preds = [extract_answer(output[0], sample, args.dataset) for sample, output in zip(chunk, batch_outputs)]
-                elif(args.model_name in ['Qwen2.5-32B-Instruct', 'Qwen2.5-7B-Instruct']):
+                elif(args.model_name in ['Qwen2.5-32B-Instruct', 'Qwen2.5-7B-Instruct', 'Qwen2.5-3B-Instruct']):
                     preds = [extract_answer(output, sample, args.dataset, 9) for sample, output in zip(chunk, batch_outputs)]
                 else:
                     preds = [extract_answer(output, sample, args.dataset) for sample, output in zip(chunk, batch_outputs)]
@@ -565,7 +565,7 @@ def intervene(args):
                     pred = extract_answer(output[1], sample, args.dataset, args.interfere_mode)
                 else:
                     pred = extract_answer(output[0], sample, args.dataset, args.interfere_mode)
-            elif(args.model_name in ['Qwen2.5-32B-Instruct', 'Qwen2.5-7B-Instruct']):
+            elif(args.model_name in ['Qwen2.5-32B-Instruct', 'Qwen2.5-7B-Instruct', 'Qwen2.5-3B-Instruct']):
                     pred = extract_answer(output, sample, args.dataset, 9)
             else:
                 pred = extract_answer(output, sample, args.dataset)
@@ -590,7 +590,7 @@ def intervene(args):
                 else:
                     record_item[f'{prompt}_input'] = message
                     record_item[f'{prompt}_output'] = output
-            elif args.model_name in ['Qwen2.5-32B-Instruct', 'Qwen2.5-7B-Instruct']:
+            elif args.model_name in ['Qwen2.5-32B-Instruct', 'Qwen2.5-7B-Instruct', 'Qwen2.5-3B-Instruct']:
                 record_item[f'{prompt}_input_user'] = message[0]
                 record_item[f'{prompt}_input_assistant'] = message[1]
                 record_item[f'{prompt}_output'] = output # Thinking CoT
