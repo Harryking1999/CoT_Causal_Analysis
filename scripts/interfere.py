@@ -102,7 +102,10 @@ def format_interfere_prompt(args, prompt, full_prompt, item, outputs):
                     if(dataset in ['ProofWriter','FOLIO','LOGIQA']):
                         reason =  "<think>" + item[f'{default_prompt}_thinking_CoT'] + "</think>"
             elif args.model_name in ['Qwen2.5-32B-Instruct', 'Qwen2.5-3B-Instruct']:
-                reason = item[f'{default_prompt}_output_CoT'] + ". Therefore, my final answer is: "
+                if(f'{default_prompt}_output_CoT' in item.keys()):
+                    reason = item[f'{default_prompt}_output_CoT'] + ". Therefore, my final answer is: "
+                else:
+                    reason = ". Therefore, my final answer is: "
                 if(dataset in ['ProofWriter','FOLIO','LOGIQA']):
                     reason = item[f'{default_prompt}_output_CoT'] + ". Therefore, my final option is: "
             else:
@@ -169,7 +172,10 @@ def format_interfere_prompt(args, prompt, full_prompt, item, outputs):
                 # elif args.model_name in ['DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B']:
                 #     reason = "<think>\n" + item[f'{default_prompt}_thinking_CoT'] + "</think>"
                 elif args.model_name in ['Qwen2.5-32B-Instruct', 'Qwen2.5-3B-Instruct']:
-                    reason = item[f'{default_prompt}_output_CoT'] + ". Therefore, my final answer is: "
+                    if(f'{default_prompt}_output_CoT' in item.keys()):
+                        reason = item[f'{default_prompt}_output_CoT'] + ". Therefore, my final answer is: "
+                    else:
+                        reason = ". Therefore, my final answer is: "
                 else:
                     reason = extract_reason(item[f'{default_prompt}_output']) + '\nTherefore, the answer is'
                 reason = random_new_numbers(reason, dataset, item)
