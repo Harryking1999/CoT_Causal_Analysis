@@ -107,6 +107,7 @@ class OpenAIModel:
         # if(interfere_mode == 3):
         #     self.stop_words = [self.stop_words, "</think>"]
         response = None
+        system_prompt = "You are a helpful AI Assistant that provides well-reasoned and detailed responses. You first think about the reasoning process as an internal monologue and then provide the user with the answer. Respond in the following format: <think>\n...\n</think>\n<answer>\n...\n</answer>"
         if(self.model_name in ['deepseek-reasoner']):
             # Handle list messages for deepseek-reasoner
             if isinstance(input_string, list) and self.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1']:
@@ -126,7 +127,7 @@ class OpenAIModel:
             )
             print('response: ', response)
             # print('messages: ', messages)
-        elif self.model_name in ['DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B', 'Qwen2.5-7B-Instruct', 'DeepSeekR1-Llama-8B', 'Qwen2.5-32B-Instruct', 'Qwen2.5-3B-Instruct']:
+        elif self.model_name in ['DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B', 'Qwen2.5-7B-Instruct', 'DeepSeekR1-Llama-8B', 'Qwen2.5-32B-Instruct', 'Qwen2.5-3B-Instruct', 'Qwen2.5-3B-GRPO-16000', 'Qwen2.5-3B-GRPO', 'Qwen2.5-3B-distill']:
             # Special handling for local API
             if isinstance(input_string, list):
                 question = input_string[0]
@@ -134,11 +135,23 @@ class OpenAIModel:
                 prompt = f"<｜User｜>{question}<｜Assistant｜>{answer_prefix}"
                 if (self.model_name in ['Qwen2.5-32B-Instruct', 'Qwen2.5-7B-Instruct', 'Qwen2.5-3B-Instruct']):
                     prompt = f'<|im_start|>user\n{question}<|im_end|>\n<|im_start|>assistant\n{answer_prefix}'
+                elif (self.model_name in ['Qwen2.5-3B-GRPO-16000', 'Qwen2.5-3B-GRPO']):
+                    # For Qwen2.5-3B-GRPO models, use chat_template format
+                    prompt = f"{system_prompt}<|User|>{question}<｜Assistant｜>{answer_prefix}"
+                elif (self.model_name in ['Qwen2.5-3B-distill']):
+                    # For Qwen2.5-3B-distill, use <|im_start|> format with system prompt
+                    prompt = f'<|im_start|>system\n{system_prompt}<|im_end|>\n<|im_start|>user\n{question}<|im_end|>\n<|im_start|>assistant\n{answer_prefix}'
             else:
                 question = input_string
                 prompt = f"<｜User｜>{question}<｜Assistant｜>"
                 if self.model_name in ['QwQ-32B']:
                     prompt = f"<｜User｜>{question}<｜Assistant｜>\n<think>"
+                elif (self.model_name in ['Qwen2.5-3B-GRPO-16000', 'Qwen2.5-3B-GRPO']):
+                    # For Qwen2.5-3B-GRPO models, use chat_template format
+                    prompt = f"{system_prompt}<|User|>{question}<｜Assistant｜>"
+                elif (self.model_name in ['Qwen2.5-3B-distill']):
+                    # For Qwen2.5-3B-distill, use <|im_start|> format with system prompt
+                    prompt = f'<|im_start|>system\n{system_prompt}<|im_end|>\n<|im_start|>user\n{question}<|im_end|>\n<|im_start|>assistant\n'
             
             response = completions_with_backoff(
                 model=self.model_name,
@@ -169,7 +182,7 @@ class OpenAIModel:
                     stop = self.stop_words
             )
 
-        if(self.model_name not in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B','Qwen2.5-7B-Instruct', 'DeepSeekR1-Llama-8B', 'Qwen2.5-32B-Instruct', 'Qwen2.5-3B-Instruct']):
+        if(self.model_name not in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B','Qwen2.5-7B-Instruct', 'DeepSeekR1-Llama-8B', 'Qwen2.5-32B-Instruct', 'Qwen2.5-3B-Instruct', 'Qwen2.5-3B-GRPO-16000', 'Qwen2.5-3B-GRPO', 'Qwen2.5-3B-distill']):
             #non-reasoning models
             generated_text = response['choices'][0]['message']['content'].strip()
             return generated_text
@@ -214,7 +227,7 @@ class OpenAIModel:
                 # elif(interfere_mode == 4):
                 #     generated_text = generated_content
                 #     generated_thinking = ""
-            elif (self.model_name in ['Qwen2.5-7B-Instruct', 'Qwen2.5-32B-Instruct', 'Qwen2.5-3B-Instruct']):
+            elif (self.model_name in ['Qwen2.5-7B-Instruct', 'Qwen2.5-32B-Instruct', 'Qwen2.5-3B-Instruct', 'Qwen2.5-3B-GRPO-16000', 'Qwen2.5-3B-GRPO', 'Qwen2.5-3B-distill']):
                 return response['choices'][0]['text'].strip()
             else:##commercial api: parsing with content&reasoning_content
                 if(response['choices'][0]['message']['content'] is not None):
@@ -250,7 +263,7 @@ class OpenAIModel:
         elif self.model_name in ['gpt-4', 'gpt-3.5-turbo','gpt-4-turbo-preview','gpt-4-0125-preview','gpt-4-1106-preview',
                                  'llama2-70b-chat', 'llama2-7b-chat', 'mistral-base', 'mistral-sft', 'mistral-dpo', 'o1-mini', 
                                  'o1', 'deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'DeepSeekR1-Qwen-1_5B',
-                                 'DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B', 'DeepSeekR1-Llama-8B']:
+                                 'DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B', 'DeepSeekR1-Llama-8B', 'Qwen2.5-3B-GRPO-16000', 'Qwen2.5-3B-GRPO', 'Qwen2.5-3B-distill']:
             
             return self.chat_generate(input_string, temperature, interfere_mode)
         else:

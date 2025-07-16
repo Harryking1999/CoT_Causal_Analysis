@@ -186,7 +186,9 @@ def process_file(input_file):
     else:
         key_prefix = 'newdirect'
 
-    
+    flag_openr1_pattern = False
+    if(".Qwen2.5-3B-GRPO" in input_file or ".Qwen2.5-3B-Distill-GRPO" in input_file):
+        flag_openr1_pattern = True
     
     # Extract dataset name from filename
     # print(items[0:2])
@@ -220,6 +222,8 @@ def process_file(input_file):
         
         # Process output field - find last occurrence
         if output:
+            if(flag_openr1_pattern):
+                output = output.split("</think>")[0]
             result = find_answer_in_text(output, answer, find_first=False, dataset=dataset)
             if result == "." or result == ".." and len(output.split(".") > 1):
                 result = output.split(".")[0]
