@@ -54,6 +54,8 @@ def get_paired_results(group_a_file, group_b_file):
         file_name_a = path.basename(group_a_file).replace('.extracted', '')
         prompt_a = file_name_a.split(".")[3].replace("math_teacher", "math teacher")
         key_a = "newdirect." + prompt_a
+        if('newdirectbase' in file_name_a):
+            key_a = "newdirectbase." + prompt_a
     else:
         # Original format
         key_a = path.basename(group_a_file).split('.')
@@ -65,6 +67,8 @@ def get_paired_results(group_a_file, group_b_file):
         prompt_b = file_name_b.split(".")[3].replace("math_teacher", "math teacher")
         print("file_name_b: ", file_name_b)
         key_b = "newdirect." + prompt_b
+        if('newdirectbase' in file_name_b):
+            key_b = "newdirectbase." + prompt_b
         print("promtp_b: ", prompt_b)
     else:
         # Original format
