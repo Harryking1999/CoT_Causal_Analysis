@@ -448,7 +448,7 @@ def full_process(file_path, model_name, index=-1, mode=0):
     # Limit data if index is specified
     if index > 0:
         data = data[:index]
-    # data = data[0:10]
+    # data = data[0:3]
     for i, row in tqdm(enumerate(data), total=len(data), desc="Processing data", unit="row"):
         raw_response = row[key_prefix + "_output"]
         correct_answer = row['answer']

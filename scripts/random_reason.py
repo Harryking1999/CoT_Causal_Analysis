@@ -138,6 +138,8 @@ if __name__ == '__main__':
             for d in chunk:
                 # Process _output field
                 default_reason = d[f'{args.prompt}.{args.role}_output']
+                if("Base" in args.model_name and len(default_reason) > 10000):
+                    default_reason = default_reason[0:10000]
                 default_reason = extract_reason(default_reason)
                 default_reason_sentences = tokenize_preserving_newlines(default_reason)
                 start,end = select_random_segment(default_reason_sentences,3)
@@ -164,8 +166,8 @@ if __name__ == '__main__':
                 break
             except Exception as ex:
                 print(ex)
-                print('Sleep 10 seconds before retry ...')
-                time.sleep(10)
+                print('Sleep 3 seconds before retry ...')
+                time.sleep(3)
                 if try_time >= 5:
                     batch_outputs = ['FAILED']*len(input_segments)
                     break
