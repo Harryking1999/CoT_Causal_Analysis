@@ -1,4 +1,4 @@
-Please act as a {{role}} and solve the product problem in the given template.
+Please solve the product problem in the given template.
 ####
 # Question:
 What is the product of <<number1 such as 27>> and <<number2 such as 153>>?

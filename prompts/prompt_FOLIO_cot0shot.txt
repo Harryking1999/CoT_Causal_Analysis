@@ -1,4 +1,4 @@
-Please act as a {{role}} and reason step by step to solve the logical reasoning problem. Given a context and a question, explain your reasoning process and give the answer with the format "\nThe correct option is: A/B/C".
+Please reason step by step to solve the logical reasoning problem. After completing the your step-by-step reasoning process, give your final answer in the following format: "\nThe correct option is: A/B/C".
 ####
 # Context:
 {{context}}

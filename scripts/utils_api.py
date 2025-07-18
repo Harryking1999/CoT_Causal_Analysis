@@ -127,13 +127,13 @@ class OpenAIModel:
             )
             print('response: ', response)
             # print('messages: ', messages)
-        elif self.model_name in ['DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B', 'Qwen2.5-7B-Instruct', 'DeepSeekR1-Llama-8B', 'Qwen2.5-32B-Instruct', 'Qwen2.5-3B-Instruct', 'Qwen2.5-3B-GRPO-16000', 'Qwen2.5-3B-GRPO', 'Qwen2.5-3B-distill']:
+        elif self.model_name in ['DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B', 'Qwen2.5-7B-Instruct', 'DeepSeekR1-Llama-8B', 'Qwen2.5-32B-Instruct', 'Qwen2.5-3B-Instruct', 'Qwen2.5-3B-GRPO-16000', 'Qwen2.5-3B-GRPO', 'Qwen2.5-3B-distill', 'Qwen2.5-3B-Base']:
             # Special handling for local API
             if isinstance(input_string, list):
                 question = input_string[0]
                 answer_prefix = input_string[1]
                 prompt = f"<｜User｜>{question}<｜Assistant｜>{answer_prefix}"
-                if (self.model_name in ['Qwen2.5-32B-Instruct', 'Qwen2.5-7B-Instruct', 'Qwen2.5-3B-Instruct']):
+                if (self.model_name in ['Qwen2.5-32B-Instruct', 'Qwen2.5-7B-Instruct', 'Qwen2.5-3B-Instruct', 'Qwen2.5-3B-Base']):
                     prompt = f'<|im_start|>user\n{question}<|im_end|>\n<|im_start|>assistant\n{answer_prefix}'
                 elif (self.model_name in ['Qwen2.5-3B-GRPO-16000', 'Qwen2.5-3B-GRPO']):
                     # For Qwen2.5-3B-GRPO models, use chat_template format
@@ -182,7 +182,7 @@ class OpenAIModel:
                     stop = self.stop_words
             )
 
-        if(self.model_name not in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B','Qwen2.5-7B-Instruct', 'DeepSeekR1-Llama-8B', 'Qwen2.5-32B-Instruct', 'Qwen2.5-3B-Instruct', 'Qwen2.5-3B-GRPO-16000', 'Qwen2.5-3B-GRPO', 'Qwen2.5-3B-distill']):
+        if(self.model_name not in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B','Qwen2.5-7B-Instruct', 'DeepSeekR1-Llama-8B', 'Qwen2.5-32B-Instruct', 'Qwen2.5-3B-Instruct', 'Qwen2.5-3B-GRPO-16000', 'Qwen2.5-3B-GRPO', 'Qwen2.5-3B-distill', 'Qwen2.5-3B-Base']):
             #non-reasoning models
             generated_text = response['choices'][0]['message']['content'].strip()
             return generated_text
@@ -227,7 +227,7 @@ class OpenAIModel:
                 # elif(interfere_mode == 4):
                 #     generated_text = generated_content
                 #     generated_thinking = ""
-            elif (self.model_name in ['Qwen2.5-7B-Instruct', 'Qwen2.5-32B-Instruct', 'Qwen2.5-3B-Instruct', 'Qwen2.5-3B-GRPO-16000', 'Qwen2.5-3B-GRPO', 'Qwen2.5-3B-distill']):
+            elif (self.model_name in ['Qwen2.5-7B-Instruct', 'Qwen2.5-32B-Instruct', 'Qwen2.5-3B-Instruct', 'Qwen2.5-3B-GRPO-16000', 'Qwen2.5-3B-GRPO', 'Qwen2.5-3B-distill', 'Qwen2.5-3B-Base']):
                 return response['choices'][0]['text'].strip()
             else:##commercial api: parsing with content&reasoning_content
                 if(response['choices'][0]['message']['content'] is not None):
