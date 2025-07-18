@@ -51,7 +51,7 @@ def load_prompt(dataset, prompt, do_role='match teacher', do_bias='nobias'):
     dataset = dataset.split(':')[0]
     if '_' in dataset:
         dataset = dataset.split('_')[0]
-    if dataset == 'ProofWriter' and prompt != 'direct' and prompt != "newdirect" and prompt != "newdirectbase":
+    if dataset == 'ProofWriter' and prompt != 'direct' and prompt != "newdirect" and prompt != "newdirectbase" and prompt != "cot0shot":
         numbers = re.findall(r'\d+', prompt)
         numbers = [int(num) for num in numbers]
         assert len(numbers) == 1

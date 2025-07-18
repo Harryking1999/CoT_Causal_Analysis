@@ -1,4 +1,4 @@
-Please act as a {{role}} and solve the addition problem in the given template.
+Please solve the addition problem in the given template.
 ####
 # Question:
 What is the sum of <<number1>> and <<number2>>?

@@ -436,8 +436,10 @@ def full_process(file_path, model_name, index=-1, mode=0):
     # print(file_name.split("."))
     if("newdirectbase" in file_path):
         key_prefix = "newdirectbase." + prompt
-    else:
+    elif("newdirect" in file_path):
         key_prefix = "newdirect." + prompt
+    else:
+        key_prefix = "cot0shot." + prompt
     
     # Read JSON file as list of dictionaries
     with open(file_path, 'r', encoding='utf-8') as f:

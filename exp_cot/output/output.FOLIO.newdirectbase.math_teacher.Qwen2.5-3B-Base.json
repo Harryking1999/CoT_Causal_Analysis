@@ -1,0 +1,152 @@
+[
+  {
+    "id": "FOLIO_dev_31",
+    "context": "A person is either a Grand Slam champion or an Oscar-nominated actor. All people who are Grand Slam champions are professional tennis players. All Oscar-nominated actors are celebrities. All professional tennis players are athletes. If a person is a celebrity then they are well paid. If a person is an athlete then they are famous. All well-paid people live in tax havens. If Djokovic is famous and is an athlete, then Djokovic lives in well paid.",
+    "question": "Based on the above information, is the following statement true, false, or uncertain? Djokovic lives in a tax haven.",
+    "options": [
+      "A) True",
+      "B) False",
+      "C) Uncertain"
+    ],
+    "answer": "A",
+    "newdirectbase.math teacher_input": "Please solve the logical reasoning problem.\nGiven a context and a question, answer with the correct option: A, B or C. Please reason step by step.\n####\n# Context:\nA person is either a Grand Slam champion or an Oscar-nominated actor. All people who are Grand Slam champions are professional tennis players. All Oscar-nominated actors are celebrities. All professional tennis players are athletes. If a person is a celebrity then they are well paid. If a person is an athlete then they are famous. All well-paid people live in tax havens. If Djokovic is famous and is an athlete, then Djokovic lives in well paid.\n\n# Question:\nBased on the above information, is the following statement true, false, or uncertain? Djokovic lives in a tax haven.\n# Options:\nA) True\nB) False\nC) Uncertain",
+    "newdirectbase.math teacher_output": "",
+    "newdirectbase.math teacher_answer": "",
+    "newdirectbase.math teacher_result": false
+  },
+  {
+    "id": "FOLIO_dev_159",
+    "context": "No students who work in the library are from the computer science department. All students who have part-time jobs offered by the university are students who work in the library. All students who take the database course are from the computer science department. All students instructed by professor David are taking the database course. All students working in the lab are instructed by professor David. James is a student working in the lab. Jack neither has a part-time job offered by the university nor works in the lab.",
+    "question": "Based on the above information, is the following statement true, false, or uncertain? James either takes the database course or has a part-time job offered by the university.",
+    "options": [
+      "A) True",
+      "B) False",
+      "C) Uncertain"
+    ],
+    "answer": "A",
+    "newdirectbase.math teacher_input": "Please solve the logical reasoning problem.\nGiven a context and a question, answer with the correct option: A, B or C. Please reason step by step.\n####\n# Context:\nNo students who work in the library are from the computer science department. All students who have part-time jobs offered by the university are students who work in the library. All students who take the database course are from the computer science department. All students instructed by professor David are taking the database course. All students working in the lab are instructed by professor David. James is a student working in the lab. Jack neither has a part-time job offered by the university nor works in the lab.\n\n# Question:\nBased on the above information, is the following statement true, false, or uncertain? James either takes the database course or has a part-time job offered by the university.\n# Options:\nA) True\nB) False\nC) Uncertain",
+    "newdirectbase.math teacher_output": "",
+    "newdirectbase.math teacher_answer": "",
+    "newdirectbase.math teacher_result": false
+  },
+  {
+    "id": "FOLIO_dev_144",
+    "context": "Breeding back is a form of artificial selection by the deliberate selective breeding of domestic animals. Heck cattle were bred-back in the 1920s to resemble the aurochs. [BG] Heck cattle are animals. [BG] Aurochs are animals. Some animals to be bred-back resemble animals that are extinct.",
+    "question": "Based on the above information, is the following statement true, false, or uncertain? Aurochs are extinct.",
+    "options": [
+      "A) True",
+      "B) False",
+      "C) Uncertain"
+    ],
+    "answer": "C",
+    "newdirectbase.math teacher_input": "Please solve the logical reasoning problem.\nGiven a context and a question, answer with the correct option: A, B or C. Please reason step by step.\n####\n# Context:\nBreeding back is a form of artificial selection by the deliberate selective breeding of domestic animals. Heck cattle were bred-back in the 1920s to resemble the aurochs. [BG] Heck cattle are animals. [BG] Aurochs are animals. Some animals to be bred-back resemble animals that are extinct.\n\n# Question:\nBased on the above information, is the following statement true, false, or uncertain? Aurochs are extinct.\n# Options:\nA) True\nB) False\nC) Uncertain",
+    "newdirectbase.math teacher_output": "",
+    "newdirectbase.math teacher_answer": "",
+    "newdirectbase.math teacher_result": false
+  },
+  {
+    "id": "FOLIO_dev_19",
+    "context": "All rabbits are cute. Some turtles exist. An animal is either a rabbit or a squirrel. If something is skittish, then it is not still. All squirrels are skittish. Rock is still.",
+    "question": "Based on the above information, is the following statement true, false, or uncertain? If Rock is not both a turtle and a squirrel, then Rock is either cute or skittish.",
+    "options": [
+      "A) True",
+      "B) False",
+      "C) Uncertain"
+    ],
+    "answer": "A",
+    "newdirectbase.math teacher_input": "Please solve the logical reasoning problem.\nGiven a context and a question, answer with the correct option: A, B or C. Please reason step by step.\n####\n# Context:\nAll rabbits are cute. Some turtles exist. An animal is either a rabbit or a squirrel. If something is skittish, then it is not still. All squirrels are skittish. Rock is still.\n\n# Question:\nBased on the above information, is the following statement true, false, or uncertain? If Rock is not both a turtle and a squirrel, then Rock is either cute or skittish.\n# Options:\nA) True\nB) False\nC) Uncertain",
+    "newdirectbase.math teacher_output": "To determine the answer, let's break down the information step by step:\n\n1. **All rabbits are cute.**\n2. **Some turtles exist.**\n3. **An animal is either a rabbit or a squirrel.**\n4. **If something is skittish, then it is not still.**\n5. **All squirrels are skittish.**\n6. **Rock is still.**\n\nNow, let's analyze the question: \"If Rock is not both a turtle and a squirrel, then Rock is either cute or skittish.\"\n\n### Step-by-Step Analysis:\n\n1. **Rock is still.**\n   - This means Rock cannot be skittish (since skittishness implies being not still).\n\n2. **Rock is not both a turtle and a squirrel.**\n   - This means Rock is neither a turtle nor a squirrel.\n\n3. **Rock is either cute or skittish.**\n   - Since Rock is not skittish (because it is still), it must be cute.\n\nTherefore, the statement \"If Rock is not both a turtle and a squirrel, then Rock is either cute or skittish\" is true.\n\n### Conclusion:\nThe correct answer is **A) True**.",
+    "newdirectbase.math teacher_answer": "A",
+    "newdirectbase.math teacher_result": true
+  },
+  {
+    "id": "FOLIO_dev_80",
+    "context": "No bakery is spicy. All cupcakes are bakeries. All hotpots are spicy. All products of Baked by Melissa are cupcakes. If dried Thai chilies are spicy or a bakery, then dried Thai chilies are a hotpot or are spicy.",
+    "question": "Based on the above information, is the following statement true, false, or uncertain? Dried Thai chilies are not a product of Baked by Melissa.",
+    "options": [
+      "A) True",
+      "B) False",
+      "C) Uncertain"
+    ],
+    "answer": "A",
+    "newdirectbase.math teacher_input": "Please solve the logical reasoning problem.\nGiven a context and a question, answer with the correct option: A, B or C. Please reason step by step.\n####\n# Context:\nNo bakery is spicy. All cupcakes are bakeries. All hotpots are spicy. All products of Baked by Melissa are cupcakes. If dried Thai chilies are spicy or a bakery, then dried Thai chilies are a hotpot or are spicy.\n\n# Question:\nBased on the above information, is the following statement true, false, or uncertain? Dried Thai chilies are not a product of Baked by Melissa.\n# Options:\nA) True\nB) False\nC) Uncertain",
+    "newdirectbase.math teacher_output": "",
+    "newdirectbase.math teacher_answer": "",
+    "newdirectbase.math teacher_result": false
+  },
+  {
+    "id": "FOLIO_dev_162",
+    "context": "If George likes music, he wants to compose. If George has access to a program, he can compose. If George can compose and wants to compose, he will compose.",
+    "question": "Based on the above information, is the following statement true, false, or uncertain? If George will not compose, George can not compose.",
+    "options": [
+      "A) True",
+      "B) False",
+      "C) Uncertain"
+    ],
+    "answer": "C",
+    "newdirectbase.math teacher_input": "Please solve the logical reasoning problem.\nGiven a context and a question, answer with the correct option: A, B or C. Please reason step by step.\n####\n# Context:\nIf George likes music, he wants to compose. If George has access to a program, he can compose. If George can compose and wants to compose, he will compose.\n\n# Question:\nBased on the above information, is the following statement true, false, or uncertain? If George will not compose, George can not compose.\n# Options:\nA) True\nB) False\nC) Uncertain",
+    "newdirectbase.math teacher_output": "",
+    "newdirectbase.math teacher_answer": "",
+    "newdirectbase.math teacher_result": false
+  },
+  {
+    "id": "FOLIO_dev_147",
+    "context": "All students are humans. If someone studies, then they are a student. A person either studys or teaches. No young person teaches. Jerry neither teaches nor is a manager. Rose is young or a student.",
+    "question": "Based on the above information, is the following statement true, false, or uncertain? Rose is a human or a manager.",
+    "options": [
+      "A) True",
+      "B) False",
+      "C) Uncertain"
+    ],
+    "answer": "A",
+    "newdirectbase.math teacher_input": "Please solve the logical reasoning problem.\nGiven a context and a question, answer with the correct option: A, B or C. Please reason step by step.\n####\n# Context:\nAll students are humans. If someone studies, then they are a student. A person either studys or teaches. No young person teaches. Jerry neither teaches nor is a manager. Rose is young or a student.\n\n# Question:\nBased on the above information, is the following statement true, false, or uncertain? Rose is a human or a manager.\n# Options:\nA) True\nB) False\nC) Uncertain",
+    "newdirectbase.math teacher_output": "To determine the truth value of the statement \"Rose is a human or a manager,\" let's analyze the given information step by step:\n\n1. **All students are humans.**\n   - This means that if someone is a student, they are also a human.\n\n2. **If someone studies, then they are a student.**\n   - This implies that studying is a necessary condition for being a student.\n\n3. **A person either studies or teaches.**\n   - This means that for every person, they either study or teach, but not both.\n\n4. **No young person teaches.**\n   - This means that if someone is young, they cannot be a teacher.\n\n5. **Jerry neither teaches nor is a manager.**\n   - This means that Jerry is not a teacher and not a manager.\n\n6. **Rose is young or a student.**\n   - This means that Rose is either young or a student.\n\nNow, let's consider the statement \"Rose is a human or a manager.\"\n\n- Since Rose is either young or a student (from point 6), and we know that no young person teaches (from point 4), it follows that Rose cannot be a teacher.\n- Therefore, Rose cannot be a manager either, because if she were a manager, she would have to be a person who either studies or teaches (from point 3), and we already established that she is not a teacher.\n\nThus, the statement \"Rose is a human or a manager\" is false.\n\n**Answer:** B) False",
+    "newdirectbase.math teacher_answer": "B",
+    "newdirectbase.math teacher_result": false
+  },
+  {
+    "id": "FOLIO_dev_201",
+    "context": "Ailton Silva, born in 1995, is commonly known as Ailton. Ailton is a football player who was loaned out to Braga. Ailton Silva is a Brazillian footballer who plays for Nautico. Nautico is a football club along with Braga. Fluminense is a football club.",
+    "question": "Based on the above information, is the following statement true, false, or uncertain? Ailton was not loaned out to a football club.",
+    "options": [
+      "A) True",
+      "B) False",
+      "C) Uncertain"
+    ],
+    "answer": "B",
+    "newdirectbase.math teacher_input": "Please solve the logical reasoning problem.\nGiven a context and a question, answer with the correct option: A, B or C. Please reason step by step.\n####\n# Context:\nAilton Silva, born in 1995, is commonly known as Ailton. Ailton is a football player who was loaned out to Braga. Ailton Silva is a Brazillian footballer who plays for Nautico. Nautico is a football club along with Braga. Fluminense is a football club.\n\n# Question:\nBased on the above information, is the following statement true, false, or uncertain? Ailton was not loaned out to a football club.\n# Options:\nA) True\nB) False\nC) Uncertain",
+    "newdirectbase.math teacher_output": "",
+    "newdirectbase.math teacher_answer": "",
+    "newdirectbase.math teacher_result": false
+  },
+  {
+    "id": "FOLIO_dev_33",
+    "context": "Diamond Mine is a professional wrestling stable, formed in WWE. Roderick Strong leads Diamond Mine. Diamond Mine includes the Creed Brothers, and Ivy Nile. Imperium has a feud with Diamond Mine.",
+    "question": "Based on the above information, is the following statement true, false, or uncertain? Roderick strong leads a professional wrestling stable.",
+    "options": [
+      "A) True",
+      "B) False",
+      "C) Uncertain"
+    ],
+    "answer": "A",
+    "newdirectbase.math teacher_input": "Please solve the logical reasoning problem.\nGiven a context and a question, answer with the correct option: A, B or C. Please reason step by step.\n####\n# Context:\nDiamond Mine is a professional wrestling stable, formed in WWE. Roderick Strong leads Diamond Mine. Diamond Mine includes the Creed Brothers, and Ivy Nile. Imperium has a feud with Diamond Mine.\n\n# Question:\nBased on the above information, is the following statement true, false, or uncertain? Roderick strong leads a professional wrestling stable.\n# Options:\nA) True\nB) False\nC) Uncertain",
+    "newdirectbase.math teacher_output": "",
+    "newdirectbase.math teacher_answer": "",
+    "newdirectbase.math teacher_result": false
+  },
+  {
+    "id": "FOLIO_dev_149",
+    "context": "All students are humans. If someone studies, then they are a student. A person either studys or teaches. No young person teaches. Jerry neither teaches nor is a manager. Rose is young or a student.",
+    "question": "Based on the above information, is the following statement true, false, or uncertain? It is not true that Rose is a student and Jerry is a human.",
+    "options": [
+      "A) True",
+      "B) False",
+      "C) Uncertain"
+    ],
+    "answer": "B",
+    "newdirectbase.math teacher_input": "Please solve the logical reasoning problem.\nGiven a context and a question, answer with the correct option: A, B or C. Please reason step by step.\n####\n# Context:\nAll students are humans. If someone studies, then they are a student. A person either studys or teaches. No young person teaches. Jerry neither teaches nor is a manager. Rose is young or a student.\n\n# Question:\nBased on the above information, is the following statement true, false, or uncertain? It is not true that Rose is a student and Jerry is a human.\n# Options:\nA) True\nB) False\nC) Uncertain",
+    "newdirectbase.math teacher_output": "",
+    "newdirectbase.math teacher_answer": "",
+    "newdirectbase.math teacher_result": false
+  }
+]

@@ -1,0 +1,4 @@
+Please solve the math problem step by step.
+# Question:
+{{question}}
+# Reasoning:
