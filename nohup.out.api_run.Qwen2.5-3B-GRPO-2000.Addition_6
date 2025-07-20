@@ -1,0 +1,83 @@
+Sun Jul 20 09:21:41 PM CST 2025, Evaluating -1 samples from Addition:6 using prompts newdirectbase ...
+/home/fuzhizhang.fzz/CoT_Causal_Analysis/scripts/api_run.py:92: SyntaxWarning: invalid escape sequence '\{'
+  fields = re.findall('\{\{\w+\}\}', full_prompt)
+/home/fuzhizhang.fzz/CoT_Causal_Analysis/scripts/api_run.py:176: SyntaxWarning: invalid escape sequence '\d'
+  output = [line for line in output if len(re.findall('\d+', line)) > 0]
+/home/fuzhizhang.fzz/CoT_Causal_Analysis/scripts/api_run.py:184: SyntaxWarning: invalid escape sequence '\d'
+  answer = re.findall('\d+', answer)
+http://localhost:8080/v1
+123
+OpenAI API with http://localhost:8080/v1, Qwen2.5-3B-GRPO-2000, ####, 20000
+Output to: exp_cot/output/output.Addition_6.newdirectbase.math_teacher.Qwen2.5-3B-GRPO-2000.json
+  0%|          | 0/3 [00:00<?, ?it/s] 33%|███▎      | 1/3 [00:01<00:03,  1.96s/it] 67%|██████▋   | 2/3 [00:03<00:01,  1.88s/it]100%|██████████| 3/3 [00:05<00:00,  1.66s/it]100%|██████████| 3/3 [00:05<00:00,  1.72s/it]
+response:  {
+  "id": "cmpl-29661899a4e547d492ae4ecddc234ba4",
+  "object": "text_completion",
+  "created": 1753017702,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 791763 and 819982, we can follow these steps:\n\n1. Write down the numbers one below the other, aligning them by their place values (ones, tens, hundreds, etc.).\n2. Add the digits in the ones place: 3 + 2 = 5. Write down 5 in the ones place of the sum.\n3. Add the digits in the tens place: 6 + 8 = 14. Write down 4 in the tens place of the sum and carry over 1 to the hundreds place.\n4. Add the digits in the hundreds place along with the carried-over 1: 7 + 9 + 1 = 17. Write down 7 in the hundreds place of the sum and carry over 1 to the thousands place.\n5. Add the digits in the thousands place along with the carried-over 1: 1 + 9 + 1 = 11. Write down 1 in the thousands place of the sum and carry over 1 to the ten-thousands place.\n6. Add the digits in the ten-thousands place along with the carried-over 1: 1 + 1 = 2. Write down 2 in the ten-thousands place of the sum.\n7. Add the digits in the hundred-thousands place: 7 + 8 = 15. Write down 5 in the hundred-thousands place of the sum and carry over 1 to the millions place.\n8. Add the digits in the millions place along with the carried-over 1: 1 + 0 = 1. Write down 1 in the millions place of the sum.\n\nThe sum of 791763 and 819982 is 1611745.\n</think>\n<answer>\n1611745\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 100,
+    "total_tokens": 505,
+    "completion_tokens": 405,
+    "prompt_tokens_details": null
+  }
+}
+success id:  0
+response:  {
+  "id": "cmpl-f2707577d69e412f84949dee1b8a2599",
+  "object": "text_completion",
+  "created": 1753017704,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 201088 and 978393, we can follow these steps:\n\n1. Align the numbers by their place values, making sure that the ones, tens, hundreds, thousands, and so on, are in the same columns.\n2. Add the digits in the ones column: 8 + 3 = 11. Write down 1 and carry over 1 to the tens column.\n3. Add the digits in the tens column, including the carried-over 1: 8 + 9 + 1 = 18. Write down 8 and carry over 1 to the hundreds column.\n4. Add the digits in the hundreds column, including the carried-over 1: 0 + 3 + 1 = 4. Write down 4.\n5. Add the digits in the thousands column: 1 + 7 = 8. Write down 8.\n6. Add the digits in the ten-thousands column: 0 + 9 = 9. Write down 9.\n7. Add the digits in the hundred-thousands column: 2 + 9 = 11. Write down 1 and carry over 1 to the millions column.\n8. Add the digits in the millions column, including the carried-over 1: 1 + 0 = 1. Write down 1.\n\nNow, let's put it all together:\n\n```\n  201088\n+ 978393\n------\n 1179481\n```\n\nSo, the sum of 201088 and 978393 is 1179481.\n</think>\n<answer>\n1179481\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 100,
+    "total_tokens": 480,
+    "completion_tokens": 380,
+    "prompt_tokens_details": null
+  }
+}
+success id:  1
+response:  {
+  "id": "cmpl-8b5ea8828aea4f809e8b83128b568bea",
+  "object": "text_completion",
+  "created": 1753017706,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 723460 and 189100, we can follow these steps:\n\n1. Align the numbers by their place values, making sure that the digits in the same place value are lined up vertically.\n2. Add the digits in the ones place: 0 + 0 = 0. Write down 0.\n3. Add the digits in the tens place: 6 + 0 = 6. Write down 6.\n4. Add the digits in the hundreds place: 4 + 1 = 5. Write down 5.\n5. Add the digits in the thousands place: 3 + 9 = 12. Write down 2 and carry over 1 to the ten-thousands place.\n6. Add the digits in the ten-thousands place: 2 + 8 + 1 (carried over) = 11. Write down 1 and carry over 1 to the hundred-thousands place.\n7. Add the digits in the hundred-thousands place: 7 + 1 + 1 (carried over) = 9. Write down 9.\n\nThe sum of 723460 and 189100 is 912560.\n</think>\n<answer>\n912560\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 100,
+    "total_tokens": 387,
+    "completion_tokens": 287,
+    "prompt_tokens_details": null
+  }
+}
+success id:  2
+acc_newdirectbase.math teacher: 1.0 (3/3)
+Write 3 items into exp_cot/output/output.Addition_6.newdirectbase.math_teacher.Qwen2.5-3B-GRPO-2000.json
