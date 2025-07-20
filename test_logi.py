@@ -37,3 +37,6 @@ if __name__ == "__main__":
     
     # Analyze results
     analyze_results(input_path) 
+
+    x = "First, we know that Lin Xi went to see the reeds.So, we can eliminate option C, as it is not related to the reeds.\n\n## Reasoning:<｜Assistant｜>Next, we know that if the temperature is very low, Lin Xi will not go to see the reeds.Since Lin Xi went to see the reeds, we can infer that the temperature was not very low.\n\n## Reasoning:<｜Assistant｜>Now, we know that if the sky was clear, Lin Xi would go to see the reeds.Since Lin Xi went to see the reeds, we can infer that the sky was clear.\n\n## Reasoning:<｜Assistant｜>Finally, we know that if the reed flowers float, Lin Xi will go to see the reeds.Since Lin Xi did not go to see the reeds, we cannot infer that the reed flowers floated."
+    print(x.split("</think>"))

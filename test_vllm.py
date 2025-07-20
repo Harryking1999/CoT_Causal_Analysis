@@ -195,7 +195,7 @@ import re
 openai.api_base = "http://localhost:8080/v1"
 openai.api_key = "EMPTY"  # vLLM不需要真实的API key
 
-user_prompt = "Please solve the math problem.\nQuestion: What is the sum of 534280104 and 651658122? Please reason step by step.. I think the correct answer is: 1185838226\n. Let me solve the "
+user_prompt = "Please solve the math problem.\nQuestion: What is the sum of 534280104 and 651658122?"
 
 # 根据chat_template格式化prompt
 bos_token = ""  # 模拟bos_token
@@ -206,16 +206,16 @@ try:
     print("第一次请求 - 正常请求")
     print("=" * 60)
     print("使用的prompt格式:")
-    print(repr(full_prompt))
+    # print(repr(full_prompt))
     print("-" * 60)
     # 第一次请求
     response1 = openai.ChatCompletion.create(
-        model="Qwen2.5-3B-Base",
+        model="Qwen2.5-3B-Distill-22000",
         messages=[
             {"role": "user", "content": user_prompt}
         ],
         temperature=0.7,
-        max_tokens=2000,
+        max_tokens=20000,
         stop=["<｜end▁of▁sentence｜>"],
         stream=False
     )

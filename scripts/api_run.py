@@ -250,7 +250,7 @@ def api_run(args):
         # split dataset into chunks
         dataset_chunks = [data[i:i + args.batch_size] for i in range(0, len(data), args.batch_size)]
         cnt_total = 0
-        for chunk in tqdm(dataset_chunks):
+        for chunk in tqdm(dataset_chunks[0:3]):
             messages = [format_prompt(full_prompt, item) for item in chunk]
             # print(messages)  # Comment out to avoid encoding issues
             cnt_exp = 0
@@ -327,7 +327,7 @@ if __name__ == '__main__':
     parser.add_argument('--api_key', type=str, required=True)
     parser.add_argument('--model_name', type=str, default='gpt-3.5-turbo')  # gpt-3.5-turbo, text-davinci-003
     parser.add_argument('--stop_words', type=str, default='####')
-    parser.add_argument('--max_new_tokens', type=int, default=15000)
+    parser.add_argument('--max_new_tokens', type=int, default=20000)
     parser.add_argument('--dataset', type=str, default='GSM8K')
     parser.add_argument('--prompts', type=str, default='cot0shot')
     parser.add_argument('--role', type=str, default='math teacher')

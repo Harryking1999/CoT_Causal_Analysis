@@ -1,0 +1,35 @@
+[
+  {
+    "number1": "673436698",
+    "number2": "538327286",
+    "answer": "1211763984",
+    "reason": "Let's add the two numbers digit by digit.\n1. The ones place: 8 + 6 = 14, write down 4 and carry over 1.\n2. The tens place: 9 + 8 + 1 (carry over) = 18, write down 8 and carry over 1.\n3. The hundreds place: 6 + 2 + 1 (carry over) = 9.\n4. The thousands place: 6 + 7 = 13, write down 3 and carry over 1.\n5. The ten thousands place: 3 + 2 + 1 (carry over) = 6.\n6. The hundred thousands place: 4 + 3 = 7.\n7. The millions place: 3 + 8 = 11, write down 1 and carry over 1.\n8. The ten millions place: 7 + 3 + 1 (carry over) = 11, write down 1 and carry over 1.\n9. The hundred millions place: 6 + 5 + 1 (carry over) = 12, write down 2 and carry over 1.\n10. The final carry over: 1.",
+    "id": "Addition_Q377",
+    "newdirect.math teacher_input": "Please solve the math problem.\nQuestion: What is the sum of 673436698 and 538327286?",
+    "newdirect.math teacher_output": "",
+    "newdirect.math teacher_answer": "",
+    "newdirect.math teacher_result": false
+  },
+  {
+    "number1": "351943250",
+    "number2": "170139784",
+    "answer": "522083034",
+    "reason": "Let's add the two numbers digit by digit.\n1. The ones place: 0 + 4 = 4.\n2. The tens place: 5 + 8 = 13, write down 3 and carry over 1.\n3. The hundreds place: 2 + 7 + 1 (carry over) = 10, write down 0 and carry over 1.\n4. The thousands place: 3 + 9 + 1 (carry over) = 13, write down 3 and carry over 1.\n5. The ten thousands place: 4 + 3 + 1 (carry over) = 8.\n6. The hundred thousands place: 9 + 1 = 10, write down 0 and carry over 1.\n7. The millions place: 1 + 0 + 1 (carry over) = 2.\n8. The ten millions place: 5 + 7 = 12, write down 2 and carry over 1.\n9. The hundred millions place: 3 + 1 + 1 (carry over) = 5.",
+    "id": "Addition_Q180",
+    "newdirect.math teacher_input": "Please solve the math problem.\nQuestion: What is the sum of 351943250 and 170139784?",
+    "newdirect.math teacher_output": "",
+    "newdirect.math teacher_answer": "",
+    "newdirect.math teacher_result": false
+  },
+  {
+    "number1": "631529940",
+    "number2": "831901572",
+    "answer": "1463431512",
+    "reason": "Let's add the two numbers digit by digit.\n1. The ones place: 0 + 2 = 2.\n2. The tens place: 4 + 7 = 11, write down 1 and carry over 1.\n3. The hundreds place: 9 + 5 + 1 (carry over) = 15, write down 5 and carry over 1.\n4. The thousands place: 9 + 1 + 1 (carry over) = 11, write down 1 and carry over 1.\n5. The ten thousands place: 2 + 0 + 1 (carry over) = 3.\n6. The hundred thousands place: 5 + 9 = 14, write down 4 and carry over 1.\n7. The millions place: 1 + 1 + 1 (carry over) = 3.\n8. The ten millions place: 3 + 3 = 6.\n9. The hundred millions place: 6 + 8 = 14, write down 4 and carry over 1.\n10. The final carry over: 1.",
+    "id": "Addition_Q355",
+    "newdirect.math teacher_input": "Please solve the math problem.\nQuestion: What is the sum of 631529940 and 831901572?",
+    "newdirect.math teacher_output": "",
+    "newdirect.math teacher_answer": "",
+    "newdirect.math teacher_result": false
+  }
+]
