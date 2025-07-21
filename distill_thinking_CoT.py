@@ -189,7 +189,7 @@ def process_file(input_file):
         key_prefix = 'cot0shot'
 
     flag_openr1_pattern = False
-    if(".Qwen2.5-3B-GRPO" in input_file or ".Qwen2.5-3B-Distill-GRPO" in input_file):
+    if(".Qwen2.5-3B-GRPO" in input_file or ".Qwen2.5-3B-SFT-GRPO" in input_file):
         flag_openr1_pattern = True
     
     # Extract dataset name from filename
