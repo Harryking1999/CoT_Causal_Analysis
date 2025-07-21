@@ -1,0 +1,148 @@
+Mon Jul 21 03:42:15 PM CST 2025, Evaluating -1 samples from Product:2 using prompts newdirectbase ...
+/home/fuzhizhang.fzz/CoT_Causal_Analysis/scripts/api_run.py:92: SyntaxWarning: invalid escape sequence '\{'
+  fields = re.findall('\{\{\w+\}\}', full_prompt)
+/home/fuzhizhang.fzz/CoT_Causal_Analysis/scripts/api_run.py:176: SyntaxWarning: invalid escape sequence '\d'
+  output = [line for line in output if len(re.findall('\d+', line)) > 0]
+/home/fuzhizhang.fzz/CoT_Causal_Analysis/scripts/api_run.py:184: SyntaxWarning: invalid escape sequence '\d'
+  answer = re.findall('\d+', answer)
+http://localhost:8080/v1
+123
+OpenAI API with http://localhost:8080/v1, Qwen2.5-3B-SFT-GRPO-4000, ####, 20000
+Output to: exp_cot/output/output.Product_2.newdirectbase.math_teacher.Qwen2.5-3B-SFT-GRPO-4000.json
+  0%|          | 0/500 [00:00<?, ?it/s]  0%|          | 1/500 [00:02<16:57,  2.04s/it]  0%|          | 2/500 [00:03<15:42,  1.89s/it]  1%|          | 3/500 [00:04<12:39,  1.53s/it]  1%|          | 4/500 [00:07<14:38,  1.77s/it]  1%|          | 5/500 [00:08<13:34,  1.65s/it]response:  {
+  "id": "cmpl-5657c94099d542fda689116df2ee8b44",
+  "object": "text_completion",
+  "created": 1753083735,
+  "model": "Qwen2.5-3B-SFT-GRPO-4000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of finding the product of 12 and 62, we need to perform a multiplication operation. Let's break it down step by step:\n\n1. **Understanding the multiplication**: The product of two numbers is the result of multiplying them together. In this case, we need to multiply 12 by 62.\n\n2. **Breaking down the multiplication**: We can use the standard algorithm for multiplication, which involves breaking down the numbers and then adding the results of smaller multiplications.\n\n3. **Multiplying 12 by 62**:\n   - First, let's break down 62 into 60 and 2.\n   - Then, we multiply 12 by 60 and 12 by 2 separately.\n\n4. **Multiplying 12 by 60**:\n   - \\( 12 \\times 60 \\) can be thought of as \\( 12 \\times (6 \\times 10) \\).\n   - Using the associative property of multiplication, we can rewrite it as \\( (12 \\times 6) \\times 10 \\).\n   - Calculate \\( 12 \\times 6 = 72 \\).\n   - Then, \\( 72 \\times 10 = 720 \\).\n\n5. **Multiplying 12 by 2**:\n   - \\( 12 \\times 2 = 24 \\).\n\n6. **Adding the results**:\n   - Now, we add the two products we obtained: \\( 720 + 24 \\).\n   - \\( 720 + 24 = 744 \\).\n\nTherefore, the product of 12 and 62 is 744.\n\n</think>\n<answer>\nThe product of 12 and 62 is 744.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 92,
+    "total_tokens": 490,
+    "completion_tokens": 398,
+    "prompt_tokens_details": null
+  }
+}
+success id:  0
+response:  {
+  "id": "cmpl-3ef93e6172064d08a33eb2f8a40d085d",
+  "object": "text_completion",
+  "created": 1753083737,
+  "model": "Qwen2.5-3B-SFT-GRPO-4000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of finding the product of 11 and 21, we need to perform a multiplication operation. Let's break it down step by step:\n\n1. **Understanding the multiplication**: The product of two numbers is the result of multiplying them together. In this case, we need to multiply 11 by 21.\n\n2. **Breaking down the multiplication**: We can use the distributive property of multiplication over addition to make the calculation easier. This property states that \\(a \\times (b + c) = a \\times b + a \\times c\\).\n\n3. **Expressing 21 as a sum**: We can express 21 as \\(20 + 1\\). This allows us to use the distributive property:\n   \\[\n   11 \\times 21 = 11 \\times (20 + 1)\n   \\]\n\n4. **Applying the distributive property**:\n   \\[\n   11 \\times (20 + 1) = 11 \\times 20 + 11 \\times 1\n   \\]\n\n5. **Calculating each term**:\n   - \\(11 \\times 20 = 220\\)\n   - \\(11 \\times 1 = 11\\)\n\n6. **Adding the results**:\n   \\[\n   220 + 11 = 231\n   \\]\n\nTherefore, the product of 11 and 21 is 231.\n</think>\n<answer>\nThe product of 11 and 21 is 231.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 92,
+    "total_tokens": 442,
+    "completion_tokens": 350,
+    "prompt_tokens_details": null
+  }
+}
+success id:  1
+response:  {
+  "id": "cmpl-6e3ed18874ec46aa8f3ab350881619b0",
+  "object": "text_completion",
+  "created": 1753083739,
+  "model": "Qwen2.5-3B-SFT-GRPO-4000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of finding the product of 73 and 24, we can use the standard multiplication algorithm. This involves multiplying each digit of one number by each digit of the other number and then summing the results. Let's break it down step by step:\n\n1. **Multiply 73 by 4 (the units digit of 24):**\n   - 73 \u00d7 4 = 292\n\n2. **Multiply 73 by 20 (the tens digit of 24, which is 2 \u00d7 10):**\n   - 73 \u00d7 20 = 1460\n\n3. **Add the two results together:**\n   - 292 + 1460 = 1752\n\nSo, the product of 73 and 24 is 1752.\n</think>\n<answer>\nThe product of 73 and 24 is 1752.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 92,
+    "total_tokens": 306,
+    "completion_tokens": 214,
+    "prompt_tokens_details": null
+  }
+}
+success id:  2
+response:  {
+  "id": "cmpl-83e18209fbc84b6e870278ee1d22fe1c",
+  "object": "text_completion",
+  "created": 1753083740,
+  "model": "Qwen2.5-3B-SFT-GRPO-4000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of finding the product of 29 and 69, we can use the standard multiplication algorithm. Let's break it down step by step:\n\n1. **Set up the multiplication**: Write 29 on top and 69 below it, aligning the digits by place value.\n\n```\n  29\n\u00d7 69\n```\n\n2. **Multiply 29 by 9 (the units digit of 69)**:\n   - Multiply 29 by 9: \\( 29 \\times 9 = 261 \\)\n   - Write down 261 below the line, aligning the units digit with the units column.\n\n```\n  29\n\u00d7 69\n-----\n  261\n```\n\n3. **Multiply 29 by 6 (the tens digit of 69)**:\n   - Multiply 29 by 6: \\( 29 \\times 6 = 174 \\)\n   - Since this is in the tens place, we need to shift the result one place to the left (multiply by 10).\n   - So, \\( 174 \\times 10 = 1740 \\)\n   - Write down 1740 below the previous result, aligning the units digit with the tens column.\n\n```\n  29\n\u00d7 69\n-----\n  261\n 1740\n```\n\n4. **Add the two results together**:\n   - Add the numbers in the first row (261) to the numbers in the second row (1740).\n\n```\n  261\n+1740\n-----\n 1991\n```\n\nSo, the product of 29 and 69 is 1991.\n</think>\n<answer>\nThe product of 29 and 69 is 1991.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 92,
+    "total_tokens": 512,
+    "completion_tokens": 420,
+    "prompt_tokens_details": null
+  }
+}
+success id:  3
+response:  {
+  "id": "cmpl-299716858f824762957e068ff74bd1fe",
+  "object": "text_completion",
+  "created": 1753083742,
+  "model": "Qwen2.5-3B-SFT-GRPO-4000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of finding the product of 47 and 82, we can use the standard multiplication algorithm. This involves multiplying each digit of one number by each digit of the other number and then summing the results. Let's break it down step by step:\n\n1. **Multiply 47 by 2 (the units digit of 82):**\n   \\[\n   47 \\times 2 = 94\n   \\]\n   Write down 94.\n\n2. **Multiply 47 by 8 (the tens digit of 82), and remember to shift the result one place to the left:**\n   \\[\n   47 \\times 8 = 376\n   \\]\n   Since we are multiplying by the tens digit, we shift the result one place to the left:\n   \\[\n   3760\n   \\]\n   Write down 3760.\n\n3. **Add the two results together:**\n   \\[\n   94 + 3760 = 3854\n   \\]\n\nSo, the product of 47 and 82 is 3854.\n</think>\n<answer>\nThe product of 47 and 82 is 3854.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 92,
+    "total_tokens": 370,
+    "completion_tokens": 278,
+    "prompt_tokens_details": null
+  }
+}
+success id:  4
+response:  {
+  "id": "cmpl-6737d118e6ab4ef584a177454d65e845",
+  "object": "text_completion",
+  "created": 1753083743,
+  "model": "Qwen2.5-3B-SFT-GRPO-4000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of finding the product of 76 and 94, we can use the standard multiplication algorithm. This involves multiplying each digit of one number by each digit of the other number and then summing the results. Let's break it down step by step.\n\nFirst, let's write the numbers in a vertical format for clarity:\n```\n  76\n\u00d7 94\n```\n\nWe'll start by multiplying 76 by 4 (the units digit of 94):\n```\n  76\n\u00d7  4\n-----\n 304\n```\nSo, 76 \u00d7 4 = 304.\n\nNext, we'll multiply 76 by 90 (the tens digit of 94, which is 9 with a zero added for the tens place):\n```\n  76\n\u00d7 90\n-----\n 6840\n```\nSo, 76 \u00d7 90 = 6840.\n\nNow, we add the two results together:\n```\n  304\n+6840\n-----\n 7144\n```\nTherefore, the product of 76 and 94 is 7144.\n</think>\n<answer>\nThe product of 76 and 94 is 7144.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 92,
+    "total_tokens": 382,
+    "completion_tokens": 290,
+    "prompt_tokens_details": null
+  }
+}  1%|          | 6/500 [00:09<13:05,  1.59s/it]  1%|▏         | 7/500 [00:11<11:42,  1.43s/it]  2%|▏         | 8/500 [00:12<10:50,  1.32s/it]  2%|▏         | 9/500 [00:13<10:13,  1.25s/it]
