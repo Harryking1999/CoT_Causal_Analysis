@@ -456,6 +456,8 @@ def full_process(file_path, model_name, index=-1, mode=0):
         if mode == 0:
             # Extract answer using the simple prompt format
             try:
+                if(model_name in ['Qwen2.5-3B-SFT-GRPO-4000', 'Qwen2.5-3B-GRPO-4000', 'Qwen2.5-3B-GRPO-8000']):
+                    raw_response.split("</think>")[0]
                 extracted_answer = openai_extract_simple_answer(model_name, raw_response, correct_answer, api_key)
                 print("final extracted_answer: ", extracted_answer)
                 if extracted_answer is not None:
