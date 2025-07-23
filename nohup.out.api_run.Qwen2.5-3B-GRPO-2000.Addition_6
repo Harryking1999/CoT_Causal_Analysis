@@ -1,4 +1,4 @@
-Sun Jul 20 09:21:41 PM CST 2025, Evaluating -1 samples from Addition:6 using prompts newdirectbase ...
+Wed Jul 23 03:56:38 PM CST 2025, Evaluating -1 samples from Addition:6 using prompts newdirectbase ...
 /home/fuzhizhang.fzz/CoT_Causal_Analysis/scripts/api_run.py:92: SyntaxWarning: invalid escape sequence '\{'
   fields = re.findall('\{\{\w+\}\}', full_prompt)
 /home/fuzhizhang.fzz/CoT_Causal_Analysis/scripts/api_run.py:176: SyntaxWarning: invalid escape sequence '\d'
@@ -9,11 +9,11 @@ http://localhost:8080/v1
 123
 OpenAI API with http://localhost:8080/v1, Qwen2.5-3B-GRPO-2000, ####, 20000
 Output to: exp_cot/output/output.Addition_6.newdirectbase.math_teacher.Qwen2.5-3B-GRPO-2000.json
-  0%|          | 0/3 [00:00<?, ?it/s] 33%|███▎      | 1/3 [00:01<00:03,  1.96s/it] 67%|██████▋   | 2/3 [00:03<00:01,  1.88s/it]100%|██████████| 3/3 [00:05<00:00,  1.66s/it]100%|██████████| 3/3 [00:05<00:00,  1.72s/it]
+  0%|          | 0/3 [00:00<?, ?it/s] 33%|███▎      | 1/3 [00:01<00:03,  1.96s/it] 67%|██████▋   | 2/3 [00:03<00:01,  1.88s/it]100%|██████████| 3/3 [00:05<00:00,  1.65s/it]100%|██████████| 3/3 [00:05<00:00,  1.72s/it]
 response:  {
-  "id": "cmpl-29661899a4e547d492ae4ecddc234ba4",
+  "id": "cmpl-76913a9aba214f6a9e410994a313b9ad",
   "object": "text_completion",
-  "created": 1753017702,
+  "created": 1753257398,
   "model": "Qwen2.5-3B-GRPO-2000",
   "choices": [
     {
@@ -34,9 +34,9 @@ response:  {
 }
 success id:  0
 response:  {
-  "id": "cmpl-f2707577d69e412f84949dee1b8a2599",
+  "id": "cmpl-866d38f812cc4e87a352fce55006edce",
   "object": "text_completion",
-  "created": 1753017704,
+  "created": 1753257400,
   "model": "Qwen2.5-3B-GRPO-2000",
   "choices": [
     {
@@ -57,9 +57,9 @@ response:  {
 }
 success id:  1
 response:  {
-  "id": "cmpl-8b5ea8828aea4f809e8b83128b568bea",
+  "id": "cmpl-afc6169d88064ccab6d903665002cd2b",
   "object": "text_completion",
-  "created": 1753017706,
+  "created": 1753257402,
   "model": "Qwen2.5-3B-GRPO-2000",
   "choices": [
     {
