@@ -1,8 +1,8 @@
-sh random_reason.sh Qwen2.5-3B-GRPO-8000 ProofWriter newdirectbase
-sh random_reason.sh Qwen2.5-3B-GRPO-8000 LOGIQA newdirectbase
-sh random_reason.sh Qwen2.5-3B-GRPO-8000 FOLIO newdirectbase
-python ./scripts/openai_math500.py --model_name gpt-4.1-mini --file_path ./exp_cot/output/output.MATH500.newdirectbase.math_teacher.Qwen2.5-3B-GRPO-8000.json --mode 1
-# python ./scripts/openai_math500.py --model_name gpt-4.1-mini --file_path exp_cot/output/output.MATH500.newdirectbase.randomreason.Qwen2.5-3B-SFT-GRPO-4000.modedefault.json --mode 0
+sh random_reason.sh Qwen2.5-3B-GRPO-2000 ProofWriter newdirectbase
+sh random_reason.sh Qwen2.5-3B-GRPO-2000 LOGIQA newdirectbase
+sh random_reason.sh Qwen2.5-3B-GRPO-2000 FOLIO newdirectbase
+python ./scripts/openai_math500.py --model_name gpt-4.1-mini --file_path ./exp_cot/output/output.MATH500.newdirectbase.math_teacher.Qwen2.5-3B-GRPO-2000.json --mode 1
+# python ./scripts/openai_math500.py --model_name gpt-4.1-mini --file_path exp_cot/output/output.MATH500.newdirectbase.randomreason.Qwen2.5-3B-GRPO-8000.modedefault.json --mode 0
 # # python ./scripts/openai_math500.py --model_name gpt-4.1-mini --file_path exp_cot/output/output.MATH500.newdirectbase.defaultreason.Qwen2.5-3B-SFT-GRPO-4000.modedefault.json --mode 0
 # python ./scripts/openai_math500.py --model_name gpt-4.1-mini --file_path exp_cot/output/output.MATH500.newdirectbase.defaultreason_strongbias.Qwen2.5-3B-SFT-GRPO-4000.modedefault.json --mode 0
 # python .\scripts\openai_math500.py --model_name gpt-4.1-mini --file_path ./exp_cot/output/output.MATH500.newdirect.math_teacher.deepseek-reasoner.json --mode 1
