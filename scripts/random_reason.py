@@ -118,7 +118,7 @@ if __name__ == '__main__':
     # Load default reason data
     suffix = '.thinking' if args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 
                                               'DeepSeekR1-Qwen-1_5B', 'DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 
-                                              'DeepSeekR1-Qwen-32B', 'QwQ-32B', 'DeepSeekR1-Llama-8B', 'Qwen2.5-32B-Instruct', 'Qwen2.5-3B-Instruct', 'Qwen2.5-3B-Base', 'Qwen2.5-3B-GRPO-16000', 'Qwen2.5-3B-GRPO-2000', 'Qwen2.5-3B-GRPO-4000', 'Qwen2.5-3B-GRPO-8000', 'Qwen2.5-3B-SFT-GRPO-4000'] else ''
+                                              'DeepSeekR1-Qwen-32B', 'QwQ-32B', 'DeepSeekR1-Llama-8B', 'Qwen2.5-32B-Instruct', 'Qwen2.5-3B-Instruct', 'Qwen2.5-3B-Base', 'Qwen2.5-3B-GRPO-16000', 'Qwen2.5-3B-GRPO-2000', 'Qwen2.5-3B-GRPO-4000', 'Qwen2.5-3B-GRPO-8000', 'Qwen2.5-3B-SFT-GRPO-4000', 'Qwen2.5-3B-SFT-GRPO-200', 'Qwen2.5-3B-SFT-GRPO-400'] else ''
     default_output_path = f'exp_cot/output/output.{args.dataset}.{args.prompt}.{args.role}.{args.model_name}{suffix}.json'.replace(' ', '_')
     print("load_path: ", default_output_path)
     default_data = json.load(open(default_output_path))
@@ -139,8 +139,8 @@ if __name__ == '__main__':
             for d in chunk:
                 # Process _output field
                 default_reason = d[f'{args.prompt}.{args.role}_output']
-                if("Base" in args.model_name and len(default_reason) > 10000):
-                    default_reason = default_reason[0:10000]
+                if("Base" in args.model_name and len(default_reason) > 24000):
+                    default_reason = default_reason[0:24000]
                 default_reason = extract_reason(default_reason)
                 default_reason_sentences = tokenize_preserving_newlines(default_reason)
                 start,end = select_random_segment(default_reason_sentences,3)
