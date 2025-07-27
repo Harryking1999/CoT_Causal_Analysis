@@ -432,7 +432,7 @@ def full_process(file_path, model_name, index=-1, mode=0):
     file_name = file_path.split("/")[-1]
     prompt = file_name.split(".")[3].replace("math_teacher", "math teacher")
     soucre_model = file_name.split(".")[4]
-    api_key="sk-nQ9VR63Qzx8weOyJdIqVRYBi8Q3zEzJaCfflOu48hd7GNdfX"
+    api_key="sk-q3Uf5DW0HY4HKLiw7EJNNkyErdxfXXAN6CZARkXyArNLitxa"
     # print(file_name.split("."))
     if("newdirectbase" in file_path):
         key_prefix = "newdirectbase." + prompt
