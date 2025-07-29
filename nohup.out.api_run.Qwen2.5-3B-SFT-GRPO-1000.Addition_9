@@ -1,0 +1,1413 @@
+Tue Jul 29 10:52:50 AM CST 2025, Evaluating -1 samples from Addition:9 using prompts newdirectbase ...
+/home/fuzhizhang.fzz/CoT_Causal_Analysis/scripts/api_run.py:92: SyntaxWarning: invalid escape sequence '\{'
+  fields = re.findall('\{\{\w+\}\}', full_prompt)
+/home/fuzhizhang.fzz/CoT_Causal_Analysis/scripts/api_run.py:176: SyntaxWarning: invalid escape sequence '\d'
+  output = [line for line in output if len(re.findall('\d+', line)) > 0]
+/home/fuzhizhang.fzz/CoT_Causal_Analysis/scripts/api_run.py:184: SyntaxWarning: invalid escape sequence '\d'
+  answer = re.findall('\d+', answer)
+http://localhost:8081/v1
+123
+OpenAI API with http://localhost:8081/v1, Qwen2.5-3B-SFT-GRPO-1000, ####, 20000
+Output to: exp_cot/output/output.Addition_9.newdirectbase.math_teacher.Qwen2.5-3B-SFT-GRPO-1000.json
+  0%|          | 0/500 [00:00<?, ?it/s]  0%|          | 1/500 [00:01<08:59,  1.08s/it]  0%|          | 2/500 [00:03<13:20,  1.61s/it]  1%|          | 3/500 [00:04<11:13,  1.36s/it]  1%|          | 4/500 [00:04<08:51,  1.07s/it]  1%|          | 5/500 [00:07<12:31,  1.52s/it]  1%|          | 6/500 [00:09<14:00,  1.70s/it]response:  {
+  "id": "cmpl-93dbfe56989b4905a9737145df8100f3",
+  "object": "text_completion",
+  "created": 1753757570,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of adding 673436698 and 538327286, we can follow these steps:\n1. First, let's align the numbers by their place values, making sure the digits in the same place value are in the same column.\n2. Then, we'll add the numbers starting from the rightmost digit (the units place) and move to the left.\n3. If the sum of any column is 10 or more, we'll carry over the extra digit to the next column to the left.\n4. Let's perform the addition:\n   673436698\n   +538327286\n   _________\n   1211764084\n</think>\n<answer>\nThe sum of 673436698 and 538327286 is 1211764084.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 324,
+    "completion_tokens": 218,
+    "prompt_tokens_details": null
+  }
+}
+success id:  0
+response:  {
+  "id": "cmpl-ac56217a585f4e10b4c1629cd278b458",
+  "object": "text_completion",
+  "created": 1753757571,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of adding 351943250 and 170139784, we can follow these steps:\n1. Align the numbers by their place values, making sure the digits in the same place value are in the same column.\n2. Start adding from the rightmost digit (the units place) and move to the left.\n3. If the sum of any column is 10 or more, carry over the extra digit to the next column to the left.\n4. Continue this process until all columns have been added.\nLet's perform the addition:\n```\n  351943250\n+ 170139784\n-----------\n```\nStarting from the rightmost column:\n- 0 + 4 = 4\n- 5 + 8 = 13 (write down 3, carry over 1)\n- 2 + 7 + 1 (carried over) = 10 (write down 0, carry over 1)\n- 3 + 3 + 1 (carried over) = 7\n- 9 + 1 = 10 (write down 0, carry over 1)\n- 4 + 0 + 1 (carried over) = 5\n- 1 + 7 = 8\n- 3 + 1 = 4\n- 5 + 0 = 5\nSo, the sum is:\n```\n  351943250\n+ 170139784\n-----------\n  522083034\n```\n</think>\n<answer>\nThe sum of 351943250 and 170139784 is 522083034.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 510,
+    "completion_tokens": 404,
+    "prompt_tokens_details": null
+  }
+}
+success id:  1
+response:  {
+  "id": "cmpl-d33e7462ad5b416bae4be93d465501eb",
+  "object": "text_completion",
+  "created": 1753757573,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of adding 631529940 and 831901572, we can follow these steps:\n1. First, let's align the numbers by their place values, making sure the digits in the same place value are in the same column.\n2. Then, we'll add the numbers starting from the rightmost digit (units place) and move to the left.\n3. If the sum of any column is 10 or more, we'll carry over the extra digit to the next column to the left.\n4. Let's perform the addition:\n   631529940\n+ 831901572\n-----------------\n   1463431512\n</think>\n<answer>\nThe sum of 631529940 and 831901572 is 1463431512.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 321,
+    "completion_tokens": 215,
+    "prompt_tokens_details": null
+  }
+}
+success id:  2
+response:  {
+  "id": "cmpl-ae8a270c0d964541b5850c88820aacb8",
+  "object": "text_completion",
+  "created": 1753757574,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of adding 750287621 and 360102348, we need to follow the standard procedure for addition of large numbers. This involves aligning the numbers by their place values and adding each column from right to left, carrying over any excess to the next column as necessary. Let's break it down step by step.\n...\n</think>\n<answer>\nThe sum of 750287621 and 360102348 is 1110390969.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 237,
+    "completion_tokens": 131,
+    "prompt_tokens_details": null
+  }
+}
+success id:  3
+response:  {
+  "id": "cmpl-d5f657e7e5474056a500d99309621ffa",
+  "object": "text_completion",
+  "created": 1753757575,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of adding 824190622 and 203514191, we can follow these steps:\n1. Align the numbers by their place values, ensuring that the digits in the same place value are in the same column.\n2. Start adding from the rightmost digit (the units place) and move to the left.\n3. If the sum of any column is 10 or more, carry over the extra digit to the next column to the left.\n4. Continue this process until all columns have been added.\nLet's perform the addition:\n```\n  824190622\n+  203514191\n--------------\n```\nStarting from the rightmost column:\n- 2 + 1 = 3\n- 2 + 9 = 11 (write down 1 and carry over 1)\n- 0 + 1 + 1 (carried over) = 2\n- 9 + 4 + 1 (carried over) = 14 (write down 4 and carry over 1)\n- 6 + 5 + 1 (carried over) = 12 (write down 2 and carry over 1)\n- 9 + 3 + 1 (carried over) = 13 (write down 3 and carry over 1)\n- 1 + 0 + 1 (carried over) = 2\n- 8 + 2 = 10 (write down 0 and carry over 1)\n- 1 (carried over)\n```\n  824190622\n+  203514191\n--------------\n 1027704813\n```\nThe sum of 824190622 and 203514191 is 1027704813.\n</think>\n<answer>\nThe sum of 824190622 and 203514191 is 1027704813.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 580,
+    "completion_tokens": 474,
+    "prompt_tokens_details": null
+  }
+}
+success id:  4
+response:  {
+  "id": "cmpl-db5f5f24a47a435ca304913a17d23893",
+  "object": "text_completion",
+  "created": 1753757577,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of adding 685497553 and 418270610, we can follow these steps:\n1. First, let's align the numbers by their place values, making sure the digits in each place value are in the same column:\n   ```\n   685497553\n   +418270610\n   ```\n2. Now, we'll add the numbers starting from the rightmost digit (the units place) and moving to the left:\n   - Units place: 3 + 0 = 3\n   - Tens place: 5 + 1 = 6\n   - Hundreds place: 5 + 6 = 11 (write down 1 and carry over 1)\n   - Thousands place: 7 + 0 + 1 (carried over) = 8\n   - Ten thousands place: 9 + 7 = 16 (write down 6 and carry over 1)\n   - Hundred thousands place: 4 + 2 + 1 (carried over) = 7\n   - Millions place: 8 + 1 = 9\n   - Ten millions place: 6 + 0 = 6\n3. Now, let's put all the digits together, including the carried over digits:\n   ```\n   685497553\n   +418270610\n   ---------\n   1103768163\n   ```\nSo, the sum of 685497553 and 418270610 is 1103768163.\n</think>\n<answer>\nThe sum of 685497553 and 418270610 is 1103768163.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 527,
+    "completion_tokens": 421,
+    "prompt_tokens_details": null
+  }
+}
+success id:  5
+response:  {
+  "id": "cmpl-645f3b9a7b5e436dbcb1c182eef9eb43",
+  "object": "text_completion",
+  "created": 1753757579,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of finding the sum of 522632563 and 870037450, we can follow these steps:\n1. Align the numbers by their place values, ensuring that the digits in the same place value are in the same column.\n2. Add the digits starting from the rightmost column (units place) and move to the left.\n3. If the sum of digits in any column is 10 or more, carry over the extra digit to the next column to the left.\n4. Continue this process until all columns have been added.\nLet's perform the addition:\n```\n  522632563\n+ 870037450\n-----------\n```\nStarting from the rightmost column (units place):\n3 + 0 = 3\nNext column: 6 + 5 = 11. Write down 1 and carry over 1.\nNext column: 5 + 4 + 1 (carried over) = 10. Write down 0 and carry over 1.\nNext column: 2 + 7 + 1 (carried over) = 10. Write down 0 and carry over 1.\nNext column: 3 + 0 + 1 (carried over) = 4.\nNext column: 2 + 0 = 2.\nNext column: 6 + 0 = 6.\nNext column: 2 + 8 = 10. Write down 0 and carry over 1.\nNext column: 5 + 7 + 1 (carried over) = 13. Write down 3 and carry over 1.\nNext column: 2 + 0 + 1 (carried over) = 3.\nNext column: 5 + 8 = 13. Write down 3 and carry over 1.\nNext column: 0 + 5 + 1 (carried over) = 6.\nNext column: 5 + 0 = 5.\nNext column: 0 + 5 = 5.\nNext column: 0 + 0 = 0.\nThe final sum is:\n```\n  522632563\n+ 870037450\n-----------\n 1392670013\n```\nTherefore, the sum of 522632563 and 870037450 is 1392670013.\n</think>\n<answer>\n1392670013\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 675,
+    "completion_tokens": 569,
+    "prompt_tokens_details": null
+  }
+}  1%|▏         | 7/500 [00:11<16:49,  2.05s/it]  2%|▏         | 8/500 [00:14<17:48,  2.17s/it]  2%|▏         | 9/500 [00:16<18:15,  2.23s/it]  2%|▏         | 10/500 [00:19<18:40,  2.29s/it]  2%|▏         | 11/500 [00:21<18:08,  2.23s/it]
+success id:  6
+response:  {
+  "id": "cmpl-9a773a8df4b340f288a0a26fc18cb42c",
+  "object": "text_completion",
+  "created": 1753757582,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of finding the sum of 553233942 and 645157245, we can follow these steps:\n1. Align the numbers by their place values, ensuring that the digits in the same place value are in the same column.\n2. Add the digits starting from the rightmost column (units place) and move to the left.\n3. If the sum of digits in any column is 10 or more, carry over the extra digit to the next column to the left.\n4. Continue this process until all columns have been added.\nLet's perform the addition:\n```\n  553233942\n+ 645157245\n-----------\n```\nStarting from the rightmost column (units place):\n2 + 5 = 7\nNext column: 4 + 4 = 8\nNext column: 9 + 2 = 11 (write down 1, carry over 1)\nNext column: 3 + 5 + 1 (carried over) = 9\nNext column: 3 + 1 = 4\nNext column: 5 + 4 = 9\nNext column: 5 + 6 = 11 (write down 1, carry over 1)\nNext column: 3 + 6 + 1 (carried over) = 10 (write down 0, carry over 1)\nNext column: 5 + 0 + 1 (carried over) = 6\nNext column: 5 + 0 = 5\nNext column: 5 + 0 = 5\nNext column: 5 + 0 = 5\nThe final sum is:\n```\n  553233942\n+ 645157245\n-----------\n 1198391187\n```\nTherefore, the sum of 553233942 and 645157245 is 1198391187.\n</think>\n<answer>\nThe sum of 553233942 and 645157245 is 1198391187.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 608,
+    "completion_tokens": 502,
+    "prompt_tokens_details": null
+  }
+}
+success id:  7
+response:  {
+  "id": "cmpl-118389334a7a4188aab99e864a479dd6",
+  "object": "text_completion",
+  "created": 1753757584,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of adding 999474677 and 507199088, we can follow these steps:\n1. First, let's align the numbers by their place values:\n   ```\n   999474677\n   + 507199088\n   ```\n2. Now, we'll add the numbers starting from the rightmost digit (units place) and moving to the left:\n   - Units place: 7 + 8 = 15. We write down 5 and carry over 1.\n   - Tens place: 6 + 0 + 1 (carried over) = 7. We write down 7.\n   - Hundreds place: 4 + 9 + 0 = 13. We write down 3 and carry over 1.\n   - Thousands place: 7 + 1 + 1 (carried over) = 9. We write down 9.\n   - Ten thousands place: 4 + 0 + 0 = 4. We write down 4.\n   - Hundred thousands place: 7 + 7 + 0 = 14. We write down 4 and carry over 1.\n   - Millions place: 9 + 0 + 1 (carried over) = 10. We write down 0 and carry over 1.\n   - Ten millions place: 9 + 5 + 1 (carried over) = 15. We write down 5 and carry over 1.\n   - Hundred millions place: 0 + 0 + 1 (carried over) = 1. We write down 1.\n3. After adding all the digits, we get the sum:\n   ```\n   1506673765\n   ```\nSo, the sum of 999474677 and 507199088 is 1506673765.\n</think>\n<answer>\nThe sum of 999474677 and 507199088 is 1506673765.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 591,
+    "completion_tokens": 485,
+    "prompt_tokens_details": null
+  }
+}
+success id:  8
+response:  {
+  "id": "cmpl-b7bbb49d953743d4a23f02ed36aa1038",
+  "object": "text_completion",
+  "created": 1753757587,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of finding the sum of 417264422 and 398148511, we can follow these steps:\n1. Align the numbers by their place values, ensuring that the digits in the same place value are in the same column.\n2. Add the digits starting from the rightmost column (units place) and move to the left.\n3. If the sum of the digits in any column is 10 or more, carry over the extra digit to the next column to the left.\n4. Continue this process until all columns have been added.\nLet's perform the addition step by step:\n```\n  417264422\n+ 398148511\n-----------\n```\nStarting from the rightmost column (units place):\n2 + 1 = 3\nNext column: 2 + 1 = 3\nNext column: 4 + 5 = 9\nNext column: 4 + 8 = 12 (write down 2, carry over 1)\nNext column: 6 + 4 + 1 (carry over) = 11 (write down 1, carry over 1)\nNext column: 7 + 8 + 1 (carry over) = 16 (write down 6, carry over 1)\nNext column: 1 + 1 + 1 (carry over) = 3\nNext column: 7 + 3 = 10 (write down 0, carry over 1)\nNext column: 4 + 9 + 1 (carry over) = 14 (write down 4, carry over 1)\nNext column: 1 + 4 + 1 (carry over) = 6\nNext column: 4 + 3 = 7\nFinally, the leftmost column: 4 + 0 = 4\nSo, the sum of 417264422 and 398148511 is 815413933.\n</think>\n<answer>\nThe sum of 417264422 and 398148511 is 815413933.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 601,
+    "completion_tokens": 495,
+    "prompt_tokens_details": null
+  }
+}
+success id:  9
+response:  {
+  "id": "cmpl-ff1e6b6d174b4130835fc5944ef517da",
+  "object": "text_completion",
+  "created": 1753757589,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of finding the sum of 850754945 and 991933270, we can follow these steps:\n1. Align the numbers by their place values, ensuring that the digits in the same place value are in the same column.\n2. Add the digits starting from the rightmost column (units place) and move to the left.\n3. If the sum of digits in any column is 10 or more, carry over the extra digit to the next column to the left.\n4. Continue this process until all columns have been added.\n5. Finally, write down the result.\n</think>\n<answer>\nLet's perform the addition step by step:\n```\n  850754945\n+ 991933270\n---------\n```\nStarting from the rightmost column (units place):\n5 + 0 = 5\n4 + 7 = 11 (write down 1, carry over 1)\n9 + 2 + 1 (carried over) = 12 (write down 2, carry over 1)\n4 + 3 + 1 (carried over) = 8\n5 + 9 + 1 (carried over) = 15 (write down 5, carry over 1)\n7 + 1 + 1 (carried over) = 9\n5 + 9 = 14 (write down 4, carry over 1)\n8 + 0 + 1 (carried over) = 9\nSo, the sum is:\n```\n  850754945\n+ 991933270\n---------\n 1842688215\n```\nTherefore, the sum of 850754945 and 991933270 is 1842688215.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 535,
+    "completion_tokens": 429,
+    "prompt_tokens_details": null
+  }
+}
+success id:  10
+response:  {
+  "id": "cmpl-29490c8697de4921b59d42b988229d45",
+  "object": "text_completion",
+  "created": 1753757591,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of adding 908835416 and 580931369, we can follow these steps:\n1. Align the numbers by their place values, ensuring that the digits in the same place value are in the same column.\n2. Start adding from the rightmost digit (the units place) and move to the left.\n3. If the sum of any column is 10 or more, carry over the extra digit to the next column to the left.\n4. Continue this process until all columns have been added.\n5. Finally, check the sum to ensure accuracy.\n</think>\n<answer>\nLet's perform the addition step by step:\n```\n  908835416\n+  580931369\n-----------\n  1489766785\n```\nThe sum of 908835416 and 580931369 is 1489766785.\nTo verify, we can break it down:\n- Units place: 6 + 9 = 15 (write 5, carry 1)\n- Tens place: 1 + 3 + 1 (carry) = 5\n- Hundreds place: 4 + 1 + 0 = 5\n- Thousands place: 5 + 3 + 0 = 8\n- Ten thousands place: 3 + 0 + 8 = 11 (write 1, carry 1)\n- Hundred thousands place: 5 + 0 + 8 = 13 (write 3, carry 1)\n- Millions place: 8 + 0 + 9 + 1 (carry) = 18 (write 8, carry 1)\n- Ten millions place: 0 + 8 + 1 (carry) = 9\n- Hundred millions place: 9 + 5 = 14 (write 4, carry 1)\n- Billion place: 1 + 1 (carry) = 2\nThus, the sum is indeed 1489766785.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 581,
+    "completion_tokens": 475,
+    "prompt_tokens_details": null
+  }
+}  2%|▏         | 12/500 [00:23<18:19,  2.25s/it]  3%|▎         | 13/500 [00:24<14:19,  1.77s/it]  3%|▎         | 14/500 [00:26<15:14,  1.88s/it]  3%|▎         | 15/500 [00:27<13:29,  1.67s/it]  3%|▎         | 16/500 [00:29<14:25,  1.79s/it]  3%|▎         | 17/500 [00:31<16:02,  1.99s/it]
+success id:  11
+response:  {
+  "id": "cmpl-2c3355e3d1514eb89778df4ce17b52bd",
+  "object": "text_completion",
+  "created": 1753757594,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of adding 427852669 and 854724435, we need to follow the standard procedure for addition of large numbers. This involves aligning the numbers by their place values and adding each column from right to left, carrying over any excess to the next column as necessary. Let's break it down step by step.\n...\n</think>\n<answer>\nThe sum of 427852669 and 854724435 is 1282577104.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 237,
+    "completion_tokens": 131,
+    "prompt_tokens_details": null
+  }
+}
+success id:  12
+response:  {
+  "id": "cmpl-0425718a087146fc91e1abbca0ac1f6d",
+  "object": "text_completion",
+  "created": 1753757594,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of adding 796002456 and 864063871, we need to follow the standard procedure for addition of large numbers. The key steps involve aligning the numbers by their place values and then adding each column from right to left, carrying over any excess to the next column as necessary.\n</think>\n<answer>\nFirst, let's align the numbers by their place values:\n```\n  796002456\n+ 864063871\n```\nNow, we add the numbers column by column from right to left:\n- In the units place: 6 + 1 = 7\n- In the tens place: 5 + 7 = 12 (write down 2, carry over 1)\n- In the hundreds place: 4 + 8 + 1 (carried over) = 13 (write down 3, carry over 1)\n- In the thousands place: 2 + 6 + 1 (carried over) = 9\n- In the ten thousands place: 0 + 0 + 1 (carried over) = 1\n- In the hundred thousands place: 0 + 4 + 1 (carried over) = 5\n- In the millions place: 9 + 6 = 15 (write down 5, carry over 1)\n- In the ten millions place: 6 + 8 + 1 (carried over) = 15 (write down 5, carry over 1)\n- In the hundred millions place: 7 + 8 + 1 (carried over) = 16 (write down 6, carry over 1)\n- In the billion place: 0 + 0 + 1 (carried over) = 1\n\nSo, the sum of 796002456 and 864063871 is 1659066327.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 551,
+    "completion_tokens": 445,
+    "prompt_tokens_details": null
+  }
+}
+success id:  13
+response:  {
+  "id": "cmpl-c481ee97460346c6b263a0f58e9db561",
+  "object": "text_completion",
+  "created": 1753757596,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of adding 160261934 and 616579138, we can follow these steps:\n1. First, let's align the numbers by their place values, making sure the digits in the same place value are in the same column.\n2. Then, we'll add the numbers starting from the rightmost digit (units place) and move to the left.\n3. If the sum of any column is 10 or more, we'll carry over the extra digit to the next column to the left.\n4. Let's perform the addition:\n   1 6 0 2 6 1 9 3 4\n   + 6 1 6 5 7 9 1 3 8\n   ----------------------\n   7 7 6 8 4 1 3 3 2\n</think>\n<answer>\nThe sum of 160261934 and 616579138 is 776841332.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 345,
+    "completion_tokens": 239,
+    "prompt_tokens_details": null
+  }
+}
+success id:  14
+response:  {
+  "id": "cmpl-487631d9862b4b46ac363e5a64653ba2",
+  "object": "text_completion",
+  "created": 1753757598,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of finding the sum of 282911059 and 281026748, we can follow these steps:\n1. Align the numbers by their place values, making sure the digits in the same place value are in the same column.\n2. Add the digits starting from the rightmost column (units place) and move to the left.\n3. If the sum of digits in any column is 10 or more, carry over the extra digit to the next column to the left.\n4. Continue this process until all columns have been added.\nLet's perform the addition:\n```\n  282911059\n+ 281026748\n-----------\n```\nStarting from the rightmost column (units place):\n9 + 8 = 17 (write down 7 and carry over 1)\nNext column: 5 + 4 + 1 (carry) = 10 (write down 0 and carry over 1)\nNext column: 0 + 7 + 1 (carry) = 8\nNext column: 1 + 6 = 7\nNext column: 1 + 0 = 1\nNext column: 2 + 8 = 10 (write down 0 and carry over 1)\nNext column: 2 + 1 + 1 (carry) = 4\nNext column: 8 + 2 = 10 (write down 0 and carry over 1)\nNext column: 8 + 2 = 10 (write down 0 and carry over 1)\nNext column: 2 + 1 = 3\nSo, the sum of 282911059 and 281026748 is 563937807.\n</think>\n<answer>\n563937807\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 526,
+    "completion_tokens": 420,
+    "prompt_tokens_details": null
+  }
+}
+success id:  15
+response:  {
+  "id": "cmpl-d17c59b110ab48a2918b20bc8d484c10",
+  "object": "text_completion",
+  "created": 1753757600,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of adding 591525997 and 397622729, we can follow these steps:\n1. Align the numbers by their place values, ensuring that the digits in the same place value are in the same column.\n2. Add the digits starting from the rightmost column (units place) and move to the left.\n3. If the sum in any column is 10 or more, carry over the tens digit to the next column to the left.\n4. Continue this process until all columns have been added.\nLet's perform the addition:\n```\n  591525997\n+  397622729\n-----------\n```\nStarting from the rightmost column (units place):\n7 + 9 = 16 (write down 6 and carry over 1)\nNext column: 9 + 2 + 1 (carry) = 12 (write down 2 and carry over 1)\nNext column: 5 + 7 + 1 (carry) = 13 (write down 3 and carry over 1)\nNext column: 2 + 6 + 1 (carry) = 9\nNext column: 5 + 9 = 14 (write down 4 and carry over 1)\nNext column: 1 + 3 + 1 (carry) = 5\nNext column: 9 + 9 = 18 (write down 8 and carry over 1)\nNext column: 9 + 0 + 1 (carry) = 10 (write down 0 and carry over 1)\nNext column: 9 + 1 (carry) = 10 (write down 0 and carry over 1)\nNext column: 5 + 0 + 1 (carry) = 6\nNext column: 5 + 0 = 5\nNext column: 0 + 0 = 0\nNext column: 0 + 0 = 0\nNext column: 0 + 0 = 0\nThe final sum is 989148726.\n</think>\n<answer>\nThe sum of 591525997 and 397622729 is 989148726.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 616,
+    "completion_tokens": 510,
+    "prompt_tokens_details": null
+  }
+}
+success id:  16
+response:  {
+  "id": "cmpl-942c23e50b44448f8e4c54d31a8dc267",
+  "object": "text_completion",
+  "created": 1753757602,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of finding the sum of 119427193 and 268540207, we can follow these steps:\n1. Align the numbers by their place values, making sure the digits in the same place value are in the same column.\n2. Add the digits starting from the rightmost column (units place) and move to the left.\n3. If the sum of digits in any column is 10 or more, carry over the extra digit to the next column to the left.\n4. Continue this process until all columns have been added.\nLet's perform the addition:\n```\n  119427193\n+ 268540207\n-----------\n```\nStarting from the rightmost column (units place):\n3 + 7 = 10. Write down 0 and carry over 1.\nNext column: 9 + 0 + 1 (carried over) = 10. Write down 0 and carry over 1.\nNext column: 7 + 2 + 1 (carried over) = 10. Write down 0 and carry over 1.\nNext column: 2 + 5 + 1 (carried over) = 8.\nNext column: 4 + 4 = 8.\nNext column: 9 + 8 = 17. Write down 7 and carry over 1.\nNext column: 1 + 6 + 1 (carried over) = 8.\nNext column: 1 + 2 = 3.\nNext column: 1 + 1 = 2.\nSo, the sum of 119427193 and 268540207 is 387967400.\n</think>\n<answer>\n387967400\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 517,
+    "completion_tokens": 411,
+    "prompt_tokens_details": null
+  }
+}  4%|▎         | 18/500 [00:33<16:02,  2.00s/it]  4%|▍         | 19/500 [00:35<13:43,  1.71s/it]  4%|▍         | 20/500 [00:36<12:06,  1.51s/it]  4%|▍         | 21/500 [00:37<10:58,  1.38s/it]  4%|▍         | 22/500 [00:37<09:15,  1.16s/it]  5%|▍         | 23/500 [00:39<11:24,  1.43s/it]  5%|▍         | 24/500 [00:40<10:27,  1.32s/it]
+success id:  17
+response:  {
+  "id": "cmpl-b9a58ea16c904b32a6b11310276c30c0",
+  "object": "text_completion",
+  "created": 1753757604,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of adding 833931691 and 579314615, we can follow these steps:\n1. First, let's align the numbers by their place values, making sure the digits in the same place value are in the same column.\n2. Then, we'll add the numbers starting from the rightmost digit (the units place) and move to the left.\n3. If the sum of any column is 10 or more, we'll carry over the extra digit to the next column to the left.\n4. Let's perform the addition:\n   833931691\n+ 579314615\n--------------\n   1413246306\n</think>\n<answer>\nThe sum of 833931691 and 579314615 is 1413246306.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 321,
+    "completion_tokens": 215,
+    "prompt_tokens_details": null
+  }
+}
+success id:  18
+response:  {
+  "id": "cmpl-fe718a2f555a42f88b244255ee9e135b",
+  "object": "text_completion",
+  "created": 1753757605,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of adding 389136634 and 807826512, we can follow these steps:\n1. First, let's align the numbers by their place values, making sure the digits in the same place value are in the same column.\n2. Then, we'll add the numbers starting from the rightmost digit (units place) and move to the left.\n3. If the sum of any column is 10 or more, we'll carry over the extra digit to the next column to the left.\n4. Let's perform the addition:\n   389136634\n+ 807826512\n-----------------\n   1196963146\n</think>\n<answer>\nThe sum of 389136634 and 807826512 is 1196963146.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 321,
+    "completion_tokens": 215,
+    "prompt_tokens_details": null
+  }
+}
+success id:  19
+response:  {
+  "id": "cmpl-7ccdde165e864fe2806ba533acd7b788",
+  "object": "text_completion",
+  "created": 1753757606,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of adding 544866269 and 813762923, we can follow these steps:\n1. First, let's align the numbers by their place values, making sure the digits in the same place value are in the same column.\n2. Then, we'll add the numbers starting from the rightmost digit (units place) and move to the left.\n3. If the sum of any column is 10 or more, we'll carry over the extra digit to the next column to the left.\n4. Let's perform the addition:\n   544866269\n   +813762923\n   _________\n   1358629202\n</think>\n<answer>\nThe sum of 544866269 and 813762923 is 1358629202.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 323,
+    "completion_tokens": 217,
+    "prompt_tokens_details": null
+  }
+}
+success id:  20
+response:  {
+  "id": "cmpl-efa49b1e94034d1c8ca67645812971e4",
+  "object": "text_completion",
+  "created": 1753757607,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of adding 372097062 and 864086435, we need to follow the standard procedure for addition of large numbers. The key steps involve aligning the numbers by their place values, adding the digits column by column from right to left, and carrying over any excess to the next column. Let's break it down step by step.\n...\n</think>\n<answer>\nThe sum of 372097062 and 864086435 is 1236183497.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 241,
+    "completion_tokens": 135,
+    "prompt_tokens_details": null
+  }
+}
+success id:  21
+response:  {
+  "id": "cmpl-92834b73f81e40e59a9862a943d6ca6e",
+  "object": "text_completion",
+  "created": 1753757608,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of adding 531992865 and 402099104, we can follow these steps:\n1. Align the numbers by their place values, ensuring that the digits in the same place value are in the same column.\n2. Add the digits starting from the rightmost column (units place) and move to the left.\n3. If the sum in any column is 10 or more, carry over the tens digit to the next column to the left.\n4. Continue this process until all columns have been added.\n</think>\n<answer>\nLet's perform the addition step by step:\n```\n  531992865\n+ 402099104\n---------\n```\nStarting from the rightmost column (units place):\n5 + 4 = 9\nNext column: 8 + 0 = 8\nNext column: 6 + 1 = 7\nNext column: 2 + 9 = 11 (write down 1 and carry over 1)\nNext column: 9 + 9 + 1 (carried over) = 19 (write down 9 and carry over 1)\nNext column: 1 + 0 + 1 (carried over) = 2\nNext column: 9 + 2 = 11 (write down 1 and carry over 1)\nNext column: 3 + 0 + 1 (carried over) = 4\nNext column: 5 + 4 = 9\nSo, the sum is:\n```\n  531992865\n+ 402099104\n---------\n  934091969\n```\nTherefore, the sum of 531992865 and 402099104 is 934091969.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 533,
+    "completion_tokens": 427,
+    "prompt_tokens_details": null
+  }
+}
+success id:  22
+response:  {
+  "id": "cmpl-560d333a05b7478db9f1f2b0fdd5cab3",
+  "object": "text_completion",
+  "created": 1753757610,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of adding 838938177 and 603499126, we can follow these steps:\n1. First, let's align the numbers by their place values, making sure the digits in the same place value are in the same column.\n2. Then, we'll add the numbers starting from the rightmost digit (the units place) and move to the left.\n3. If the sum of any column is 10 or more, we'll carry over the extra digit to the next column to the left.\n4. Let's perform the addition:\n   838938177\n+        603499126\n-----------------\n   442437303\n</think>\n<answer>\nThe sum of 838938177 and 603499126 is 442437303.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 321,
+    "completion_tokens": 215,
+    "prompt_tokens_details": null
+  }
+}
+success id:  23
+response:  {
+  "id": "cmpl-e321043f49ae49d29cb6cb8bc7ac048d",
+  "object": "text_completion",
+  "created": 1753757611,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of adding 280983056 and 418768450, we can follow these steps:\n1. First, let's align the numbers by their place values, making sure the digits in the same place value are in the same column.\n2. We have:\n   ```\n   280983056\n   +418768450\n   ```\n3. Now, we'll add the numbers column by column from right to left, starting with the units place:\n   - Units place: 6 + 0 = 6\n   - Tens place: 5 + 5 = 10. We write down 0 and carry over 1.\n   - Hundreds place: 0 + 4 = 4. Adding the carried over 1, we get 5.\n   - Thousands place: 3 + 8 = 11. Adding the carried over 1, we get 12. We write down 2 and carry over 1.\n   - Ten thousands place: 8 + 7 = 15. Adding the carried over 1, we get 16. We write down 6 and carry over 1.\n   - Hundred thousands place: 9 + 6 = 15. Adding the carried over 1, we get 16. We write down 6 and carry over 1.\n   - Millions place: 0 + 1 = 1. Adding the carried over 1, we get 2.\n   - Ten millions place: 2 + 4 = 6.\n4. Putting it all together, we get:\n   ```\n   280983056\n   +418768450\n   ------\n   699751506\n   ```\nSo, the sum of 280983056 and 418768450 is 699751506.\n</think>\n<answer>\nThe sum of 280983056 and 418768450 is 699751506.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 592,
+    "completion_tokens": 486,
+    "prompt_tokens_details": null
+  }
+}  5%|▌         | 25/500 [00:43<12:55,  1.63s/it]  5%|▌         | 26/500 [00:45<15:19,  1.94s/it]  5%|▌         | 27/500 [00:48<16:45,  2.13s/it]  6%|▌         | 28/500 [00:50<16:50,  2.14s/it]  6%|▌         | 29/500 [00:53<18:23,  2.34s/it]
+success id:  24
+response:  {
+  "id": "cmpl-3146c36efa8842a8af798c040bad2fc5",
+  "object": "text_completion",
+  "created": 1753757613,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of adding 934723866 and 702753419, we can follow these steps:\n1. Align the numbers by their place values, ensuring that the digits in the same place value are in the same column.\n2. Add the digits starting from the rightmost column (units place) and move to the left.\n3. If the sum of digits in any column is 10 or more, carry over the extra digit to the next column to the left.\n4. Continue this process until all columns have been added.\nLet's perform the addition:\n```\n  934723866\n+  702753419\n--------------\n```\nStarting from the rightmost column (units place):\n6 + 9 = 15 (write down 5 and carry over 1)\nNext column: 8 + 1 + 1 = 10 (write down 0 and carry over 1)\nNext column: 3 + 5 + 0 + 1 = 9 (write down 9)\nNext column: 2 + 7 + 0 = 9 (write down 9)\nNext column: 7 + 2 + 0 = 9 (write down 9)\nNext column: 4 + 0 + 0 = 4 (write down 4)\nNext column: 3 + 0 + 0 = 3 (write down 3)\nNext column: 0 + 0 + 0 = 0 (write down 0)\nNext column: 9 + 7 + 0 = 16 (write down 6 and carry over 1)\nNext column: 3 + 0 + 1 = 4 (write down 4)\nNext column: 0 + 0 + 0 = 0 (write down 0)\nNext column: 9 + 0 + 0 = 9 (write down 9)\nNext column: 9 + 0 + 0 = 9 (write down 9)\nNext column: 9 + 0 + 0 = 9 (write down 9)\nNext column: 9 + 0 + 0 = 9 (write down 9)\nThe final sum is 1637478075.\n</think>\n<answer>\nThe sum of 934723866 and 702753419 is 1637478075.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 654,
+    "completion_tokens": 548,
+    "prompt_tokens_details": null
+  }
+}
+success id:  25
+response:  {
+  "id": "cmpl-fc3ee3c2aa0348818c049b88b47d0987",
+  "object": "text_completion",
+  "created": 1753757616,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of adding 977289657 and 122353274, we can follow these steps:\n1. Align the numbers by their place values, ensuring that the digits in the same place value are in the same column.\n2. Start adding from the rightmost digit (the units place) and move to the left.\n3. If the sum of any column is 10 or more, carry over the extra digit to the next column to the left.\n4. Continue this process until all columns have been added.\nLet's perform the addition:\n```\n  977289657\n+  122353274\n--------------\n```\nStarting from the units place:\n7 + 4 = 11. Write down 1 and carry over 1.\nNext column: 5 + 7 + 1 (carried over) = 13. Write down 3 and carry over 1.\nNext column: 9 + 3 + 1 (carried over) = 13. Write down 3 and carry over 1.\nNext column: 8 + 5 + 1 (carried over) = 14. Write down 4 and carry over 1.\nNext column: 2 + 2 + 1 (carried over) = 5. Write down 5.\nNext column: 7 + 3 = 10. Write down 0 and carry over 1.\nNext column: 7 + 1 = 8. Write down 8.\nNext column: 7 + 0 = 7. Write down 7.\nNext column: 9 + 0 = 9. Write down 9.\nNext column: 7 + 0 = 7. Write down 7.\nThe final result is:\n```\n  977289657\n+  122353274\n--------------\n 1099642931\n```\nSo, the sum of 977289657 and 122353274 is 1099642931.\n</think>\n<answer>\nThe sum of 977289657 and 122353274 is 1099642931.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 631,
+    "completion_tokens": 525,
+    "prompt_tokens_details": null
+  }
+}
+success id:  26
+response:  {
+  "id": "cmpl-10d0522af3654e2db3d46eb10ccc4792",
+  "object": "text_completion",
+  "created": 1753757619,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of finding the sum of 176827714 and 919473645, we can follow these steps:\n1. Align the numbers by their place values, making sure the digits in the same place value are in the same column.\n2. Add the digits starting from the rightmost column (units place) and move to the left.\n3. If the sum of digits in any column is 10 or more, carry over the extra digit to the next column to the left.\n4. Continue this process until all columns have been added.\nLet's perform the addition:\n```\n  176827714\n+ 919473645\n-----------\n```\nStarting from the rightmost column (units place):\n4 + 5 = 9\nNext column: 1 + 4 = 5\nNext column: 7 + 3 = 10 (write down 0 and carry over 1)\nNext column: 7 + 6 + 1 (carried over) = 14 (write down 4 and carry over 1)\nNext column: 2 + 7 + 1 (carried over) = 10 (write down 0 and carry over 1)\nNext column: 8 + 4 + 1 (carried over) = 13 (write down 3 and carry over 1)\nNext column: 6 + 9 + 1 (carried over) = 16 (write down 6 and carry over 1)\nNext column: 7 + 1 + 1 (carried over) = 9\nNext column: 1 + 0 = 1\nFinally, the leftmost column: 1 + 0 = 1\nSo, the sum of 176827714 and 919473645 is 1096301359.\n</think>\n<answer>\n1096301359\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 554,
+    "completion_tokens": 448,
+    "prompt_tokens_details": null
+  }
+}
+success id:  27
+response:  {
+  "id": "cmpl-93e484bda1884fe2bb75d9f91a01f031",
+  "object": "text_completion",
+  "created": 1753757621,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of finding the sum of 833808999 and 713552229, we can follow these steps:\n1. Align the numbers by their place values, ensuring that the digits in the same place value are in the same column.\n2. Add the digits starting from the rightmost column (units place) and move to the left.\n3. If the sum of digits in any column is 10 or more, carry over the extra digit to the next column to the left.\n4. Continue this process until all columns have been added.\nLet's perform the addition:\n```\n  833808999\n+ 713552229\n-----------\n```\nStarting from the rightmost column (units place):\n9 + 9 = 18 (write down 8 and carry over 1)\nNext column: 9 + 2 + 1 (carry) = 12 (write down 2 and carry over 1)\nNext column: 8 + 5 + 1 (carry) = 14 (write down 4 and carry over 1)\nNext column: 0 + 3 + 1 (carry) = 4 (write down 4)\nNext column: 8 + 1 = 9 (no carry)\nNext column: 3 + 7 = 10 (write down 0 and carry over 1)\nNext column: 3 + 1 = 4 (no carry)\nNext column: 3 + 7 = 10 (write down 0 and carry over 1)\nNext column: 8 + 7 = 15 (write down 5 and carry over 1)\nNext column: 8 + 1 = 9 (no carry)\nNext column: 3 + 0 = 3 (no carry)\nNext column: 8 + 0 = 8 (no carry)\nNext column: 0 + 0 = 0 (no carry)\nNext column: 0 + 0 = 0 (no carry)\nThe final sum is:\n```\n  833808999\n+ 713552229\n-----------\n 1547361228\n```\nTherefore, the sum of 833808999 and 713552229 is 1547361228.\n</think>\n<answer>\nThe sum of 833808999 and 713552229 is 1547361228.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 685,
+    "completion_tokens": 579,
+    "prompt_tokens_details": null
+  }
+}
+success id:  28
+response:  {
+  "id": "cmpl-01d0c69e64f44314b5047bad5a2e1b50",
+  "object": "text_completion",
+  "created": 1753757624,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of finding the sum of 134852725 and 822750144, we can follow these steps:\n1. Align the numbers by their place values, making sure the digits in the same place value are in the same column.\n2. Add the digits starting from the rightmost column (units place) and move to the left.\n3. If the sum of digits in any column is 10 or more, carry over the extra digit to the next column to the left.\n4. Continue this process until all columns have been added.\n5. Finally, write down the result.\n</think>\n<answer>\nLet's perform the addition step by step:\n```\n  134852725\n+ 822750144\n-----------\n```\nStarting from the rightmost column (units place):\n5 + 4 = 9\nNext column: 2 + 4 = 6\nNext column: 7 + 1 = 8\nNext column: 5 + 0 = 5\nNext column: 8 + 5 = 13 (write down 3, carry over 1)\nNext column: 4 + 7 + 1 (carry over) = 12 (write down 2, carry over 1)\nNext column: 8 + 2 + 1 (carry over) = 11 (write down 1, carry over 1)\nNext column: 3 + 2 + 1 (carry over) = 6\nNext column: 1 + 8 = 9\nNext column: 1 + 1 = 2\nSo, the sum is:\n```\n  134852725\n+ 822750144\n-----------\n  957602869\n```\nTherefore, the sum of 134852725 and 822750144 is 957602869.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 556,
+    "completion_tokens": 450,
+    "prompt_tokens_details": null
+  }
+}  6%|▌         | 30/500 [00:55<17:59,  2.30s/it]  6%|▌         | 31/500 [00:58<19:46,  2.53s/it]  6%|▋         | 32/500 [01:01<19:36,  2.51s/it]  7%|▋         | 33/500 [01:05<23:08,  2.97s/it]  7%|▋         | 34/500 [01:06<18:39,  2.40s/it]
+success id:  29
+response:  {
+  "id": "cmpl-7c00ab0047964c54b35947039d6fc115",
+  "object": "text_completion",
+  "created": 1753757626,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of finding the sum of 637269777 and 501286598, we need to follow these steps:\n1. Align the numbers by their place values, ensuring that the digits in the same place value are in the same column.\n2. Add the digits starting from the rightmost column (units place) and move to the left.\n3. If the sum of digits in any column is 10 or more, carry over the extra digit to the next column to the left.\n4. Continue this process until all columns have been added.\n</think>\n<answer>\nLet's perform the addition step by step:\n```\n  637269777\n+ 501286598\n-----------\n```\nStarting from the rightmost column (units place):\n7 + 8 = 15 (write down 5 and carry over 1)\nNext column: 7 + 9 + 1 (carried over) = 17 (write down 7 and carry over 1)\nNext column: 9 + 6 + 1 (carried over) = 16 (write down 6 and carry over 1)\nNext column: 6 + 2 + 1 (carried over) = 9\nNext column: 2 + 8 = 10 (write down 0 and carry over 1)\nNext column: 7 + 1 + 1 (carried over) = 9\nNext column: 3 + 0 = 3\nNext column: 6 + 5 = 11 (write down 1 and carry over 1)\nNext column: 7 + 2 + 1 (carried over) = 10 (write down 0 and carry over 1)\nNext column: 6 + 5 + 1 (carried over) = 12 (write down 2 and carry over 1)\nNext column: 3 + 1 = 4\nNext column: 6 + 0 = 6\nNext column: 6 + 5 = 11 (write down 1 and carry over 1)\nNext column: 3 + 1 = 4\nNext column: 6 + 0 = 6\nNext column: 6 + 0 = 6\nNext column: 7 + 0 = 7\nNext column: 7 + 0 = 7\nNext column: 7 + 0 = 7\nSo, the sum of 637269777 and 501286598 is:\n```\n  637269777\n+ 501286598\n-----------\n 1138556375\n```\nTherefore, the sum is 1138556375.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 739,
+    "completion_tokens": 633,
+    "prompt_tokens_details": null
+  }
+}
+success id:  30
+response:  {
+  "id": "cmpl-ce53e7e3ef4e42e18813e1bd26f655c4",
+  "object": "text_completion",
+  "created": 1753757629,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of finding the sum of 415705416 and 690782504, we can follow these steps:\n1. Align the numbers by their place values, ensuring that the digits in the same place value are in the same column.\n2. Add the digits starting from the rightmost column (units place) and move to the left.\n3. If the sum of digits in any column is 10 or more, carry over the extra digit to the next column to the left.\n4. Continue this process until all columns have been added.\n5. Finally, write down the result.\n</think>\n<answer>\nLet's perform the addition step by step:\n```\n  415705416\n+ 690782504\n-----------\n```\nStarting from the rightmost column (units place):\n6 + 4 = 10. Write down 0 and carry over 1.\nNext column: 1 + 5 + 0 = 6. Add the carried over 1: 6 + 1 = 7. Write down 7.\nNext column: 4 + 2 + 1 = 7. Write down 7.\nNext column: 5 + 8 + 0 = 13. Write down 3 and carry over 1.\nNext column: 0 + 7 + 1 = 8. Write down 8.\nNext column: 7 + 9 + 0 = 16. Write down 6 and carry over 1.\nNext column: 1 + 0 + 1 = 2. Write down 2.\nNext column: 5 + 6 = 11. Write down 1 and carry over 1.\nNext column: 4 + 1 + 1 = 6. Write down 6.\nNext column: 1 + 6 = 7. Write down 7.\nSo, the sum is:\n```\n  415705416\n+ 690782504\n-----------\n 1106487920\n```\nTherefore, the sum of 415705416 and 690782504 is 1106487920.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 614,
+    "completion_tokens": 508,
+    "prompt_tokens_details": null
+  }
+}
+success id:  31
+response:  {
+  "id": "cmpl-62c65f3b23334c80bcef9238140c4909",
+  "object": "text_completion",
+  "created": 1753757631,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of adding 369074769 and 558222419, we can follow these steps:\n1. Align the numbers by their place values, ensuring that the digits in the same place value are in the same column.\n2. Add the digits starting from the rightmost column (units place) and move to the left.\n3. If the sum of digits in any column is 10 or more, carry over the extra digit to the next column to the left.\n4. Continue this process until all columns have been added.\nLet's perform the addition:\n```\n  369074769\n+  558222419\n--------------\n```\nStarting from the rightmost column (units place):\n9 + 9 = 18\nWrite down 8 and carry over 1 to the next column.\n```\n  369074769\n+  558222419\n--------------\n       8\n```\nNext column (tens place):\n7 + 1 + 1 = 9\nWrite down 9.\n```\n  369074769\n+  558222419\n--------------\n      98\n```\nNext column (hundreds place):\n4 + 2 + 7 = 13\nWrite down 3 and carry over 1 to the next column.\n```\n  369074769\n+  558222419\n--------------\n     398\n```\nNext column (thousands place):\n7 + 2 + 4 + 1 = 14\nWrite down 4 and carry over 1 to the next column.\n```\n  369074769\n+  558222419\n--------------\n    4398\n```\nNext column (ten thousands place):\n6 + 2 + 2 + 1 = 11\nWrite down 1 and carry over 1 to the next column.\n```\n  369074769\n+  558222419\n--------------\n   14398\n```\nNext column (hundred thousands place):\n0 + 5 + 2 + 1 = 8\nWrite down 8.\n```\n  369074769\n+  558222419\n--------------\n  814398\n```\nNext column (millions place):\n9 + 5 + 1 = 15\nWrite down 5 and carry over 1 to the next column.\n```\n  369074769\n+  558222419\n--------------\n  5814398\n```\nNext column (ten millions place):\n6 + 5 + 1 = 12\nWrite down 2 and carry over 1 to the next column.\n```\n  369074769\n+  558222419\n--------------\n 25814398\n```\nNext column (hundred millions place):\n3 + 5 + 1 = 9\nWrite down 9.\n```\n  369074769\n+  558222419\n--------------\n925814398\n```\nThe final sum of 369074769 and 558222419 is 925814398.\n</think>\n<answer>\n925814398\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 941,
+    "completion_tokens": 835,
+    "prompt_tokens_details": null
+  }
+}
+success id:  32
+response:  {
+  "id": "cmpl-af12394c4ea44f6eb85e602d1a9e0984",
+  "object": "text_completion",
+  "created": 1753757635,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of adding 877728158 and 797271052, we can follow these steps:\n1. First, let's align the numbers by their place values, making sure the digits in the same place value are in the same column.\n2. Then, we'll add the numbers starting from the rightmost digit (the units place) and move to the left.\n3. If the sum of any column is 10 or more, we'll carry over the extra digit to the next column to the left.\n4. Let's perform the addition:\n   877728158\n   +797271052\n   _________\n   1675000210\n</think>\n<answer>\nThe sum of 877728158 and 797271052 is 1675000210.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 324,
+    "completion_tokens": 218,
+    "prompt_tokens_details": null
+  }
+}
+success id:  33
+response:  {
+  "id": "cmpl-05707d6231a440ac833175ae7bb1b6a3",
+  "object": "text_completion",
+  "created": 1753757636,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of finding the sum of 637836865 and 796686200, we can follow these steps:\n1. First, let's align the numbers by their place values to ensure we add the correct digits together.\n2. We have:\n   637836865\n   +796686200\n3. Now, we'll add the numbers starting from the rightmost digit (units place) and moving to the left.\n4. Starting with the units place:\n   5 + 0 = 5\n5. Moving to the tens place:\n   6 + 0 = 6\n6. Proceeding to the hundreds place:\n   8 + 0 = 8\n7. Moving to the thousands place:\n   3 + 0 = 3\n8. Now, let's move to the ten-thousands place:\n   7 + 0 = 7\n9. Proceeding to the hundred-thousands place:\n   8 + 6 = 14 (write down 4 and carry over 1)\n10. Moving to the millions place:\n    3 + 9 = 12 (write down 2 and carry over 1)\n11. Proceeding to the ten-millions place:\n    6 + 7 = 13 (write down 3 and carry over 1)\n12. Finally, we have the carry-over from the previous step:\n    1 + 0 = 1\n13. Putting it all together, we get:\n   637836865\n   +796686200\n   _________\n   1434523065\n</think>\n<answer>\nThe sum of 637836865 and 796686200 is 1434523065.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 538,
+    "completion_tokens": 432,
+    "prompt_tokens_details": null
+  }
+}  7%|▋         | 35/500 [01:08<17:53,  2.31s/it]  7%|▋         | 36/500 [01:10<17:34,  2.27s/it]  7%|▋         | 37/500 [01:12<17:27,  2.26s/it]  8%|▊         | 38/500 [01:15<18:57,  2.46s/it]  8%|▊         | 39/500 [01:16<15:40,  2.04s/it]  8%|▊         | 40/500 [01:19<16:05,  2.10s/it]
+success id:  34
+response:  {
+  "id": "cmpl-3d33c21355034d97aec55eb5b781570f",
+  "object": "text_completion",
+  "created": 1753757639,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of finding the sum of 522624440 and 794878646, we need to follow these steps:\n1. Align the numbers by their place values, ensuring that the digits in the same place value are in the same column.\n2. Add the digits starting from the rightmost column (units place) and move to the left.\n3. If the sum of digits in any column is 10 or more, carry over the extra digit to the next column to the left.\n4. Continue this process until all columns have been added.\n</think>\n<answer>\nLet's perform the addition step by step:\n```\n  522624440\n+ 794878646\n-----------\n```\nStarting from the rightmost column (units place):\n- 0 + 6 = 6\n- 4 + 4 = 8\n- 4 + 8 = 12 (write down 2, carry over 1)\n- 4 + 7 + 1 (carried over) = 12 (write down 2, carry over 1)\n- 2 + 8 + 1 (carried over) = 11 (write down 1, carry over 1)\n- 6 + 9 + 1 (carried over) = 16 (write down 6, carry over 1)\n- 2 + 7 + 1 (carried over) = 10 (write down 0, carry over 1)\n- 5 + 0 + 1 (carried over) = 6\n\nSo, the sum is:\n```\n  522624440\n+ 794878646\n-----------\n 1317503086\n```\nTherefore, the sum of 522624440 and 794878646 is 1317503086.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 554,
+    "completion_tokens": 448,
+    "prompt_tokens_details": null
+  }
+}
+success id:  35
+response:  {
+  "id": "cmpl-8a965ad563e0468886cb3a3ccbcc91ec",
+  "object": "text_completion",
+  "created": 1753757641,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of finding the sum of 387773480 and 915094797, we can follow these steps:\n1. Align the numbers by their place values, making sure the digits in the same place value are in the same column.\n2. Add the digits starting from the rightmost column (units place) and move to the left.\n3. If the sum of digits in any column is 10 or more, carry over the extra digit to the next column to the left.\n4. Continue this process until all columns have been added.\n5. Finally, write down the result.\n</think>\n<answer>\nLet's perform the addition step by step:\n```\n  387773480\n+ 915094797\n-----------\n```\nStarting from the rightmost column (units place):\n- 0 + 7 = 7\n- 8 + 9 = 17 (write down 7, carry over 1)\n- 4 + 7 + 1 (carried over) = 12 (write down 2, carry over 1)\n- 3 + 9 + 1 (carried over) = 13 (write down 3, carry over 1)\n- 7 + 0 + 1 (carried over) = 8\n- 7 + 5 + 1 (carried over) = 13 (write down 3, carry over 1)\n- 8 + 1 + 1 (carried over) = 10 (write down 0, carry over 1)\n- 3 + 1 (carried over) = 4\n\nSo, the sum is:\n```\n  387773480\n+ 915094797\n-----------\n 1302868277\n```\nTherefore, the sum of 387773480 and 915094797 is 1302868277.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 567,
+    "completion_tokens": 461,
+    "prompt_tokens_details": null
+  }
+}
+success id:  36
+response:  {
+  "id": "cmpl-03bc76b1fb75467182a96f8041dc0d97",
+  "object": "text_completion",
+  "created": 1753757643,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of finding the sum of 449337234 and 757267817, we can follow these steps:\n1. Align the numbers by their place values, ensuring that the digits in the same place value are in the same column.\n2. Add the digits starting from the rightmost column (units place) and move to the left.\n3. If the sum of digits in any column is 10 or more, carry over the extra digit to the next column to the left.\n4. Continue this process until all columns have been added.\nLet's perform the addition:\n```\n  449337234\n+ 757267817\n-----------\n```\nStarting from the rightmost column (units place):\n4 + 7 = 11 (write down 1 and carry over 1)\nNext column: 3 + 8 + 1 (carried over) = 12 (write down 2 and carry over 1)\nNext column: 7 + 7 + 1 (carried over) = 15 (write down 5 and carry over 1)\nNext column: 3 + 2 + 1 (carried over) = 6\nNext column: 9 + 6 = 15 (write down 5 and carry over 1)\nNext column: 4 + 5 + 1 (carried over) = 10 (write down 0 and carry over 1)\nNext column: 4 + 7 + 1 (carried over) = 12 (write down 2 and carry over 1)\nNext column: 4 + 7 = 11 (write down 1 and carry over 1)\nNext column: 4 + 7 = 11 (write down 1 and carry over 1)\nNext column: 4 + 7 = 11 (write down 1 and carry over 1)\nNext column: 4 + 7 = 11 (write down 1 and carry over 1)\nFinally, we have 1 carried over, which we write down in the leftmost column.\nSo, the sum is:\n```\n  449337234\n+ 757267817\n-----------\n 1206605051\n```\nTherefore, the sum of 449337234 and 757267817 is 1206605051.\n</think>\n<answer>\nThe sum of 449337234 and 757267817 is 1206605051.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 709,
+    "completion_tokens": 603,
+    "prompt_tokens_details": null
+  }
+}
+success id:  37
+response:  {
+  "id": "cmpl-004a6e1069e84a70bf1da90fb0e01e1d",
+  "object": "text_completion",
+  "created": 1753757646,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of adding 760550973 and 730724453, we can follow these steps:\n1. First, let's align the numbers by their place values, making sure the digits in the same place value are in the same column.\n2. Then, we'll add the numbers starting from the rightmost digit (units place) and move to the left.\n3. If the sum of any column is 10 or more, we'll carry over the extra digit to the next column to the left.\n4. Let's perform the addition:\n   760550973\n+ 730724453\n--------------\n   1491275426\n</think>\n<answer>\nThe sum of 760550973 and 730724453 is 1491275426.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 320,
+    "completion_tokens": 214,
+    "prompt_tokens_details": null
+  }
+}
+success id:  38
+response:  {
+  "id": "cmpl-258730c421a24d13912a602ee87fe4dc",
+  "object": "text_completion",
+  "created": 1753757647,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of adding 688773950 and 349297217, we can follow these steps:\n1. Align the numbers by their place values, ensuring that the digits in the same place value are in the same column.\n2. Add the digits starting from the rightmost column (units place) and move to the left.\n3. If the sum in any column is 10 or more, carry over the tens digit to the next column to the left.\n4. Continue this process until all columns have been added.\nLet's perform the addition:\n```\n  688773950\n+  349297217\n--------------\n```\nStarting from the rightmost column (units place):\n1. 0 + 7 = 7\n2. 5 + 1 = 6\n3. 9 + 2 = 11 (write down 1 and carry over 1)\n4. 3 + 7 + 1 (carried over) = 11 (write down 1 and carry over 1)\n5. 7 + 9 + 1 (carried over) = 17 (write down 7 and carry over 1)\n6. 8 + 4 + 1 (carried over) = 13 (write down 3 and carry over 1)\n7. 8 + 3 + 1 (carried over) = 12 (write down 2 and carry over 1)\n8. 6 + 0 + 1 (carried over) = 7\nSo, the sum is:\n```\n  688773950\n+  349297217\n--------------\n 1038071167\n```\nTherefore, the sum of 688773950 and 349297217 is 1038071167.\n</think>\n<answer>\n1038071167\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 566,
+    "completion_tokens": 460,
+    "prompt_tokens_details": null
+  }
+}
+success id:  39
+response:  {
+  "id": "cmpl-3124cd723f3f429ca7c0adc5e1ef0e46",
+  "object": "text_completion",
+  "created": 1753757649,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of adding 320935006 and 715664991, we can follow these steps:\n1. First, let's align the numbers by their place values, making sure the digits in each place value are in the same column:\n   ```\n   320935006\n   +715664991\n   ```\n2. Now, we'll add the numbers starting from the rightmost digit (the units place) and moving to the left:\n   - Units place: 6 + 1 = 7\n   - Tens place: 0 + 9 = 9\n   - Hundreds place: 0 + 4 = 4\n   - Thousands place: 5 + 9 = 14 (write down 4, carry over 1)\n   - Ten thousands place: 3 + 6 + 1 (carry over) = 10 (write down 0, carry over 1)\n   - Hundred thousands place: 2 + 5 + 1 (carry over) = 8\n   - Millions place: 0 + 1 = 1\n   - Ten millions place: 3 + 7 = 10 (write down 0, carry over 1)\n   - Hundred millions place: 1 (carry over)\n3. Now, let's put all the digits together, including the carried-over digits:\n   ```\n   1036600007\n   ```\nSo, the sum of 320935006 and 715664991 is 1036600007.\n</think>\n<answer>\nThe sum of 320935006 and 715664991 is 1036600007.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 521,
+    "completion_tokens": 415,
+    "prompt_tokens_details": null
+  }
+}  8%|▊         | 41/500 [01:21<15:51,  2.07s/it]  8%|▊         | 42/500 [01:23<16:20,  2.14s/it]  9%|▊         | 43/500 [01:25<17:01,  2.23s/it]  9%|▉         | 44/500 [01:28<17:03,  2.24s/it]  9%|▉         | 45/500 [01:30<17:10,  2.27s/it]  9%|▉         | 46/500 [01:31<13:27,  1.78s/it]
+success id:  40
+response:  {
+  "id": "cmpl-df7abeaae2054a2ab9b878433a50f8a1",
+  "object": "text_completion",
+  "created": 1753757651,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of adding 577878174 and 358761354, we need to follow the standard procedure for addition of large numbers. This involves aligning the numbers by their place values and adding each column from right to left, carrying over any excess to the next column as necessary. Let's break it down step by step.\n</think>\n<answer>\nFirst, let's align the numbers by their place values:\n```\n  577878174\n+ 358761354\n```\nNow, let's add the numbers column by column from right to left:\n1. Units place: 4 + 4 = 8\n2. Tens place: 7 + 5 = 12 (write down 2, carry over 1)\n3. Hundreds place: 1 + 3 + 1 (carry over) = 5\n4. Thousands place: 8 + 6 = 14 (write down 4, carry over 1)\n5. Ten thousands place: 7 + 7 + 1 (carry over) = 15 (write down 5, carry over 1)\n6. Hundred thousands place: 8 + 8 + 1 (carry over) = 17 (write down 7, carry over 1)\n7. Millions place: 7 + 5 + 1 (carry over) = 13 (write down 3, carry over 1)\n8. Ten millions place: 7 + 3 + 1 (carry over) = 11 (write down 1, carry over 1)\n9. Hundred millions place: 5 + 0 + 1 (carry over) = 6\n\nSo, the sum is:\n```\n  577878174\n+ 358761354\n---------\n  936639528\n```\nTherefore, the sum of 577878174 and 358761354 is 936639528.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 578,
+    "completion_tokens": 472,
+    "prompt_tokens_details": null
+  }
+}
+success id:  41
+response:  {
+  "id": "cmpl-44a8f6ccc1824cea98e01e053a8b2dd2",
+  "object": "text_completion",
+  "created": 1753757654,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of adding 796328469 and 132964169, we can follow these steps:\n1. Align the numbers by their place values, ensuring that the digits in the same place value are in the same column.\n2. Add the digits starting from the rightmost column (units place) and move to the left.\n3. If the sum of the digits in any column is 10 or more, carry over the extra digit to the next column to the left.\n4. Continue this process until all columns have been added.\nLet's perform the addition:\n```\n  796328469\n+  132964169\n--------------\n```\nStarting from the rightmost column (units place):\n9 + 9 = 18\nWrite down 8 and carry over 1 to the next column.\nNext column: 6 + 6 + 1 (carried over) = 13\nWrite down 3 and carry over 1 to the next column.\nNext column: 4 + 1 + 1 (carried over) = 6\nNext column: 8 + 3 + 1 (carried over) = 12\nWrite down 2 and carry over 1 to the next column.\nNext column: 2 + 2 + 1 (carried over) = 5\nNext column: 9 + 9 + 1 (carried over) = 19\nWrite down 9 and carry over 1 to the next column.\nNext column: 9 + 3 + 1 (carried over) = 13\nWrite down 3 and carry over 1 to the next column.\nNext column: 6 + 1 + 1 (carried over) = 8\nNext column: 6 + 0 + 1 (carried over) = 7\nNext column: 9 + 0 + 0 = 9\nFinally, the leftmost column: 7 + 1 = 8\nSo, the sum of 796328469 and 132964169 is 929292638.\n</think>\n<answer>\n929292638\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 610,
+    "completion_tokens": 504,
+    "prompt_tokens_details": null
+  }
+}
+success id:  42
+response:  {
+  "id": "cmpl-f70ba83839b5455fa4ed870071e2ed33",
+  "object": "text_completion",
+  "created": 1753757656,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of adding 177661096 and 387831334, we can follow these steps:\n1. First, let's align the numbers by their place values, making sure the digits in each place value are in the same column:\n   ```\n   177661096\n   +387831334\n   ```\n2. Now, we'll add the numbers starting from the rightmost digit (the units place) and moving to the left:\n   - Units place: 6 + 4 = 10. We write down 0 and carry over 1.\n   - Tens place: 9 + 3 + 1 (carried over) = 13. We write down 3 and carry over 1.\n   - Hundreds place: 0 + 1 + 1 (carried over) = 2. We write down 2.\n   - Thousands place: 1 + 3 = 4. We write down 4.\n   - Ten thousands place: 6 + 8 = 14. We write down 4 and carry over 1.\n   - Hundred thousands place: 6 + 7 + 1 (carried over) = 14. We write down 4 and carry over 1.\n   - Millions place: 7 + 8 + 1 (carried over) = 16. We write down 6 and carry over 1.\n   - Ten millions place: 1 + 3 + 1 (carried over) = 5. We write down 5.\n3. After adding all the digits, we get the sum:\n   ```\n   565492430\n   ```\nSo, the sum of 177661096 and 387831334 is 565492430.\n</think>\n<answer>\nThe sum of 177661096 and 387831334 is 565492430.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 572,
+    "completion_tokens": 466,
+    "prompt_tokens_details": null
+  }
+}
+success id:  43
+response:  {
+  "id": "cmpl-792f7db0dd0b4db99727016afd348d6a",
+  "object": "text_completion",
+  "created": 1753757658,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of finding the sum of 276950670 and 684354875, we can follow these steps:\n1. Align the numbers by their place values, making sure the digits in the same place value are in the same column.\n2. Add the digits starting from the rightmost column (units place) and move to the left.\n3. If the sum of digits in any column is 10 or more, carry over the extra digit to the next column to the left.\n4. Continue this process until all columns have been added.\n5. Finally, write down the result.\n</think>\n<answer>\nLet's perform the addition step by step:\n```\n  276950670\n+ 684354875\n-----------\n```\nStarting from the rightmost column (units place):\n- 0 + 5 = 5\n- 7 + 7 = 14 (write down 4, carry over 1)\n- 6 + 8 + 1 (carry) = 15 (write down 5, carry over 1)\n- 0 + 4 + 1 (carry) = 5\n- 9 + 5 + 1 (carry) = 15 (write down 5, carry over 1)\n- 6 + 3 + 1 (carry) = 10 (write down 0, carry over 1)\n- 7 + 4 + 1 (carry) = 12 (write down 2, carry over 1)\n- 7 + 8 + 1 (carry) = 16 (write down 6, carry over 1)\n- 2 + 6 + 1 (carry) = 9\n\nSo, the sum is:\n```\n  276950670\n+ 684354875\n-----------\n  961305545\n```\nTherefore, the sum of 276950670 and 684354875 is 961305545.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 584,
+    "completion_tokens": 478,
+    "prompt_tokens_details": null
+  }
+}
+success id:  44
+response:  {
+  "id": "cmpl-3359dd352e8d4a988ddcf67465ab6709",
+  "object": "text_completion",
+  "created": 1753757661,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of adding 757615827 and 455556134, we need to follow the standard procedure for addition of large numbers. This involves aligning the numbers by their place values and adding each column from right to left, carrying over any excess to the next column as necessary. Let's break it down step by step.\n...\n</think>\n<answer>\nThe sum of 757615827 and 455556134 is 1213172961.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 237,
+    "completion_tokens": 131,
+    "prompt_tokens_details": null
+  }
+}
+success id:  45
+response:  {
+  "id": "cmpl-ba0e83e2152e456ab49945eb396b08e7",
+  "object": "text_completion",
+  "created": 1753757661,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of finding the sum of 146694123 and 431280949, we can follow these steps:\n1. Align the numbers by their place values, ensuring that the digits in the same place value are in the same column.\n2. Add the digits starting from the rightmost column (units place) and move to the left.\n3. If the sum of digits in any column is 10 or more, carry over the extra digit to the next column to the left.\n4. Continue this process until all columns have been added.\nLet's perform the addition:\n```\n  146694123\n+ 431280949\n-----------\n```\nStarting from the rightmost column (units place):\n3 + 9 = 12 (write down 2, carry over 1)\nNext column: 2 + 4 + 1 (carry) = 7\nNext column: 1 + 8 + 0 (carry) = 9\nNext column: 4 + 0 + 0 = 4\nNext column: 6 + 2 + 0 = 8\nNext column: 6 + 1 + 0 = 7\nNext column: 4 + 3 + 0 = 7\nNext column: 1 + 4 + 0 = 5\nNext column: 0 + 1 + 0 = 1\nNext column: 1 + 0 + 0 = 1\nNext column: 0 + 0 + 0 = 0\nThe final sum is:\n```\n  146694123\n+ 431280949\n-----------\n  577975072\n```\nTherefore, the sum of 146694123 and 431280949 is 577975072.\n</think>\n<answer>\n577975072\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 558,
+    "completion_tokens": 452,
+    "prompt_tokens_details": null
+  }
+}  9%|▉         | 47/500 [01:33<14:23,  1.91s/it] 10%|▉         | 48/500 [01:35<14:39,  1.95s/it] 10%|▉         | 49/500 [01:37<14:20,  1.91s/it]
+success id:  46
+response:  {
+  "id": "cmpl-511ef837cf194770ade3f48d36ec017c",
+  "object": "text_completion",
+  "created": 1753757663,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of adding 655030537 and 539123186, we can follow these steps:\n1. First, let's align the numbers by their place values, making sure the digits in each place value are in the same column:\n   ```\n   655030537\n   +539123186\n   ```\n2. Now, we'll add the numbers starting from the rightmost digit (the units place) and moving to the left:\n   - Units place: 7 + 6 = 13. We write down 3 and carry over 1.\n   - Tens place: 0 + 8 + 1 (carried over) = 9.\n   - Hundreds place: 5 + 1 = 6.\n   - Thousands place: 3 + 3 = 6.\n   - Ten thousands place: 0 + 2 = 2.\n   - Hundred thousands place: 5 + 9 = 14. We write down 4 and carry over 1.\n   - Millions place: 5 + 3 + 1 (carried over) = 9.\n   - Ten millions place: 6 + 5 = 11. We write down 1 and carry over 1.\n   - Hundred millions place: 1 (carried over).\n3. Now, let's put all the digits together, including the carried over digits:\n   ```\n   1114963723\n   ```\nSo, the sum of 655030537 and 539123186 is 1114963723.\n</think>\n<answer>\nThe sum of 655030537 and 539123186 is 1114963723.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 527,
+    "completion_tokens": 421,
+    "prompt_tokens_details": null
+  }
+}
+success id:  47
+response:  {
+  "id": "cmpl-8e7cb3412b4545a2858264096bf85adf",
+  "object": "text_completion",
+  "created": 1753757665,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of adding 544029220 and 223590367, we can follow these steps:\n1. Align the numbers by their place values, ensuring that the digits in the same place value are in the same column.\n2. Start adding from the rightmost digit (the units place) and move to the left.\n3. If the sum of any column is 10 or more, carry over the extra digit to the next column to the left.\n4. Continue this process until all columns have been added.\n</think>\n<answer>\nLet's perform the addition step by step:\n```\n  544029220\n+  223590367\n-----------\n  767619587\n```\nStarting from the rightmost digit:\n- 0 + 7 = 7\n- 2 + 6 = 8\n- 9 + 3 = 12 (write down 2, carry over 1)\n- 2 + 5 + 1 (carried over) = 8\n- 0 + 9 + 1 (carried over) = 10 (write down 0, carry over 1)\n- 4 + 5 + 1 (carried over) = 10 (write down 0, carry over 1)\n- 4 + 2 + 1 (carried over) = 7\n- 5 + 2 = 7\n\nSo, the sum of 544029220 and 223590367 is 767619587.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 479,
+    "completion_tokens": 373,
+    "prompt_tokens_details": null
+  }
+}
+success id:  48
+response:  {
+  "id": "cmpl-711c997434c64ff788c8f071e5e605eb",
+  "object": "text_completion",
+  "created": 1753757667,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of finding the sum of 801225344 and 889293053, we can follow these steps:\n1. Align the numbers by their place values, ensuring that the digits in the same place value are in the same column.\n2. Add the digits starting from the rightmost column (units place) and move to the left.\n3. If the sum of digits in any column is 10 or more, carry over the extra digit to the next column to the left.\n4. Continue this process until all columns have been added.\nLet's perform the addition:\n```\n  801225344\n+ 889293053\n-----------\n```\nStarting from the rightmost column (units place):\n4 + 3 = 7\nNext column: 4 + 5 = 9\nNext column: 2 + 0 = 2\nNext column: 5 + 9 = 14 (write down 4, carry over 1)\nNext column: 2 + 3 + 1 (carry over) = 6\nNext column: 1 + 9 = 10 (write down 0, carry over 1)\nNext column: 0 + 8 + 1 (carry over) = 9\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 0 + 1 (carry over) = 1\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\nNext column: 0 + 1 = 1\nNext column: 8 + 0 = 8\nNext column: 8 + 8 = 16 (write down 6, carry over 1)\n",
+      "logprobs": null,
+      "finish_reason": "length",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 20106,
+    "completion_tokens": 20000,
+    "prompt_tokens_details": null
+  }
+} 10%|█         | 50/500 [03:52<5:14:13, 41.90s/it] 10%|█         | 51/500 [03:55<3:46:15, 30.24s/it] 10%|█         | 52/500 [03:57<2:42:51, 21.81s/it] 11%|█         | 53/500 [03:59<1:58:39, 15.93s/it] 11%|█         | 54/500 [04:00<1:25:16, 11.47s/it]
+success id:  49
+response:  {
+  "id": "cmpl-d640c60129334313a9ca2341380ac208",
+  "object": "text_completion",
+  "created": 1753757802,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of finding the sum of 178826447 and 975449473, we can follow these steps:\n1. First, let's align the numbers by their place values to ensure we add the correct digits together.\n2. We have:\n   ```\n   178826447\n   +975449473\n   ```\n3. Now, we'll add the numbers starting from the rightmost digit (units place) and moving to the left.\n4. Starting with the units place:\n   - 7 + 3 = 10\n   - We write down 0 and carry over 1 to the next column.\n5. Moving to the tens place:\n   - 4 + 7 + 1 (carried over) = 12\n   - We write down 2 and carry over 1 to the next column.\n6. Proceeding to the hundreds place:\n   - 6 + 4 + 1 (carried over) = 11\n   - We write down 1 and carry over 1 to the next column.\n7. Moving to the thousands place:\n   - 8 + 5 + 1 (carried over) = 14\n   - We write down 4 and carry over 1 to the next column.\n8. Proceeding to the ten-thousands place:\n   - 8 + 4 + 1 (carried over) = 13\n   - We write down 3 and carry over 1 to the next column.\n9. Moving to the hundred-thousands place:\n   - 7 + 5 + 1 (carried over) = 13\n   - We write down 3 and carry over 1 to the next column.\n10. Proceeding to the millions place:\n    - 1 + 9 + 1 (carried over) = 11\n    - We write down 1 and carry over 1 to the next column.\n11. Finally, in the ten-millions place:\n    - 1 + 1 (carried over) = 2\n    - We write down 2.\n12. Putting it all together, we get:\n   ```\n   178826447\n   +975449473\n   ------\n   1154275920\n   ```\nSo, the sum of 178826447 and 975449473 is 1154275920.\n</think>\n<answer>\nThe sum of 178826447 and 975449473 is 1154275920.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 718,
+    "completion_tokens": 612,
+    "prompt_tokens_details": null
+  }
+}
+success id:  50
+response:  {
+  "id": "cmpl-48ff91acf4bb4da1a4b62a5ba59db203",
+  "object": "text_completion",
+  "created": 1753757805,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of adding 647732858 and 324509737, we can follow these steps:\n1. Align the numbers by their place values, ensuring that the digits in the same place value are in the same column.\n2. Add the digits starting from the rightmost column (units place) and move to the left.\n3. If the sum of digits in any column is 10 or more, carry over the extra digit to the next column to the left.\n4. Continue this process until all columns have been added.\nLet's perform the addition:\n```\n  647732858\n+ 324509737\n-----------\n```\nStarting from the rightmost column (units place):\n8 + 7 = 15 (write down 5 and carry over 1)\nNext column: 5 + 3 + 1 (carried over) = 9\nNext column: 2 + 9 = 11 (write down 1 and carry over 1)\nNext column: 7 + 0 + 1 (carried over) = 8\nNext column: 3 + 5 = 8\nNext column: 7 + 4 = 11 (write down 1 and carry over 1)\nNext column: 7 + 2 + 1 (carried over) = 10 (write down 0 and carry over 1)\nNext column: 4 + 3 + 1 (carried over) = 8\nNext column: 6 + 3 = 9\nNext column: 6 + 2 = 8\nFinally, the leftmost column: 6 + 3 = 9\nSo, the sum of 647732858 and 324509737 is 972242595.\n</think>\n<answer>\n972242595\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 542,
+    "completion_tokens": 436,
+    "prompt_tokens_details": null
+  }
+}
+success id:  51
+response:  {
+  "id": "cmpl-9d2a7e6c4f244de991eebfd1d5446943",
+  "object": "text_completion",
+  "created": 1753757808,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of finding the sum of 238780515 and 656926566, we can follow these steps:\n1. Align the numbers by their place values, making sure the digits in the same place value are in the same column.\n2. Add the digits starting from the rightmost column (units place) and move to the left.\n3. If the sum of digits in any column is 10 or more, carry over the extra digit to the next column to the left.\n4. Continue this process until all columns have been added.\nLet's perform the addition:\n```\n  238780515\n+ 656926566\n-----------\n```\nStarting from the rightmost column (units place):\n5 + 6 = 11 (write down 1 and carry over 1)\nNext column: 1 + 5 + 6 = 12 (write down 2 and carry over 1)\nNext column: 0 + 6 + 2 = 8 (write down 8 and carry over 1)\nNext column: 5 + 9 + 1 = 15 (write down 5 and carry over 1)\nNext column: 8 + 6 + 1 = 15 (write down 5 and carry over 1)\nNext column: 7 + 5 + 1 = 13 (write down 3 and carry over 1)\nNext column: 3 + 6 + 1 = 10 (write down 0 and carry over 1)\nNext column: 2 + 0 + 1 = 3 (write down 3)\nFinally, the leftmost column: 2 + 0 = 2 (no carryover)\nSo, the sum of 238780515 and 656926566 is 895707081.\n</think>\n<answer>\n895707081\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 551,
+    "completion_tokens": 445,
+    "prompt_tokens_details": null
+  }
+}
+success id:  52
+response:  {
+  "id": "cmpl-4ee2c7baaaf946d2a5ea2c612a2300b6",
+  "object": "text_completion",
+  "created": 1753757810,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of adding 649424786 and 792873169, we can follow these steps:\n1. First, let's align the numbers by their place values, making sure the digits in the same place value are in the same column.\n2. Then, we'll add the numbers starting from the rightmost digit (units place) and move to the left.\n3. If the sum of any column is 10 or more, we'll carry over the extra digit to the next column to the left.\n4. Let's perform the addition:\n   649424786\n   +792873169\n   _________\n   1442307955\n</think>\n<answer>\nThe sum of 649424786 and 792873169 is 1442307955.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 323,
+    "completion_tokens": 217,
+    "prompt_tokens_details": null
+  }
+}
+success id:  53
+response:  {
+  "id": "cmpl-28d9b4f09ef84cb29470df0d32fa252f",
+  "object": "text_completion",
+  "created": 1753757811,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of adding 342376364 and 355952862, we can follow these steps:\n1. First, let's align the numbers by their place values, making sure the digits in the same place value are in the same column.\n2. Then, we'll add the numbers column by column, starting from the rightmost digit (units place) and moving to the left.\n3. If the sum of any column is 10 or more, we'll carry over the extra digit to the next column to the left.\n4. Let's perform the addition:\n   ```\n   342376364\n   +355952862\n   ------\n   ```\n   Starting from the rightmost column:\n   - Units place: 4 + 2 = 6\n   - Tens place: 6 + 6 = 12 (write down 2, carry over 1)\n   - Hundreds place: 3 + 8 + 1 (carry over) = 12 (write down 2, carry over 1)\n   - Thousands place: 7 + 5 + 1 (carry over) = 13 (write down 3, carry over 1)\n   - Ten thousands place: 6 + 9 + 1 (carry over) = 16 (write down 6, carry over 1)\n   - Hundred thousands place: 3 + 5 + 1 (carry over) = 9\n   - Millions place: 4 + 3 = 7\n   - Ten millions place: 3 + 0 = 3\n   - Hundred millions place: 0 + 0 = 0\n   - The result is 708329226.\n</think>\n<answer>\nThe sum of 342376364 and 355952862 is 708329226.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 543,
+    "completion_tokens": 437,
+    "prompt_tokens_details": null
+  }
+} 11%|█         | 55/500 [04:02<1:04:22,  8.68s/it] 11%|█         | 56/500 [04:04<47:18,  6.39s/it]   11%|█▏        | 57/500 [04:06<37:51,  5.13s/it] 12%|█▏        | 58/500 [04:08<32:16,  4.38s/it] 12%|█▏        | 59/500 [04:10<26:21,  3.59s/it] 12%|█▏        | 60/500 [04:14<26:39,  3.64s/it]
+success id:  54
+response:  {
+  "id": "cmpl-0d3ea4307bb142d7ada52cc7eff0b385",
+  "object": "text_completion",
+  "created": 1753757813,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of adding 248708728 and 378220428, we can follow these steps:\n1. First, let's align the numbers by their place values, making sure the digits in the same place value are in the same column.\n2. Then, we'll add the numbers starting from the rightmost digit (the units place) and move to the left.\n3. If the sum of any column is 10 or more, we'll carry over the extra digit to the next column to the left.\n4. Let's perform the addition:\n   248708728\n+ 378220428\n--------------\n   626929156\n</think>\n<answer>\nThe sum of 248708728 and 378220428 is 626929156.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 319,
+    "completion_tokens": 213,
+    "prompt_tokens_details": null
+  }
+}
+success id:  55
+response:  {
+  "id": "cmpl-5466e544dcfa434f898292d1c052c95f",
+  "object": "text_completion",
+  "created": 1753757814,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of finding the sum of 405113796 and 730909864, we can follow these steps:\n1. Align the numbers by their place values, ensuring that the digits in the same place value are in the same column.\n2. Add the digits starting from the rightmost column (units place) and move to the left.\n3. If the sum of digits in any column is 10 or more, carry over the extra digit to the next column to the left.\n4. Continue this process until all columns have been added.\nLet's perform the addition:\n```\n  405113796\n+ 730909864\n-----------\n```\nStarting from the rightmost column (units place):\n6 + 4 = 10. Write down 0 and carry over 1.\nNext column: 9 + 6 + 1 (carried over) = 16. Write down 6 and carry over 1.\nNext column: 7 + 8 + 1 (carried over) = 16. Write down 6 and carry over 1.\nNext column: 3 + 0 + 1 (carried over) = 4. Write down 4.\nNext column: 1 + 9 = 10. Write down 0 and carry over 1.\nNext column: 1 + 0 + 1 (carried over) = 2. Write down 2.\nNext column: 5 + 3 = 8. Write down 8.\nNext column: 0 + 7 = 7. Write down 7.\nNext column: 4 + 4 = 8. Write down 8.\nSo, the sum of 405113796 and 730909864 is 836023660.\n</think>\n<answer>\n836023660\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 542,
+    "completion_tokens": 436,
+    "prompt_tokens_details": null
+  }
+}
+success id:  56
+response:  {
+  "id": "cmpl-84025f2f69244481971f7d4339ce2be3",
+  "object": "text_completion",
+  "created": 1753757816,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of adding 883187487 and 106130128, we can follow these steps:\n1. Align the numbers by their place values, ensuring that the digits in the same place value are in the same column.\n2. Start adding from the rightmost digit (the units place) and move to the left.\n3. If the sum of any column is 10 or more, carry over the tens digit to the next column to the left.\n4. Continue this process until all columns have been added.\nLet's perform the addition:\n```\n  883187487\n+ 106130128\n-----------\n```\nStarting from the rightmost column:\n- 7 + 8 = 15 (write down 5, carry over 1)\n- 8 + 2 + 1 (carried over) = 11 (write down 1, carry over 1)\n- 7 + 0 + 1 (carried over) = 8\n- 1 + 3 = 4\n- 8 + 1 = 9\n- 3 + 0 = 3\n- 8 + 6 = 14 (write down 4, carry over 1)\n- 8 + 1 + 1 (carried over) = 10 (write down 0, carry over 1)\n- 8 + 0 + 1 (carried over) = 9\nSo, the sum of 883187487 and 106130128 is 989317615.\n</think>\n<answer>\n989317615\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 494,
+    "completion_tokens": 388,
+    "prompt_tokens_details": null
+  }
+}
+success id:  57
+response:  {
+  "id": "cmpl-9f1e6253aada485d8dd252609935ee8a",
+  "object": "text_completion",
+  "created": 1753757819,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of adding 483277968 and 627002452, we can follow these steps:\n1. First, let's align the numbers by their place values, making sure the digits in the same place value are in the same column.\n2. Then, we'll add the numbers starting from the rightmost digit (the units place) and move to the left.\n3. If the sum of any column is 10 or more, we'll carry over the extra digit to the next column to the left.\n4. Let's perform the addition:\n   483277968\n+ 627002452\n-----------------\n   1100280420\n</think>\n<answer>\nThe sum of 483277968 and 627002452 is 1100280420.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 322,
+    "completion_tokens": 216,
+    "prompt_tokens_details": null
+  }
+}
+success id:  58
+response:  {
+  "id": "cmpl-2cabf1d8e41f49da98ae1a9be11ffaa6",
+  "object": "text_completion",
+  "created": 1753757821,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of adding 589473790 and 219574375, we can follow these steps:\n1. First, let's align the numbers by their place values, making sure the digits in the same place value are in the same column.\n2. We have:\n   ```\n   589473790\n   +219574375\n   ```\n3. Now, we'll add the numbers column by column, starting from the rightmost digit (units place) and moving to the left.\n4. Let's start with the units place:\n   - 0 + 5 = 5\n   - Next, the tens place:\n   - 9 + 7 = 16, so we write down 6 and carry over 1 to the hundreds place.\n   - Next, the hundreds place:\n   - 7 + 4 + 1 (carried over) = 12, so we write down 2 and carry over 1 to the thousands place.\n   - Next, the thousands place:\n   - 3 + 5 + 1 (carried over) = 9\n   - Next, the ten thousands place:\n   - 7 + 9 = 16, so we write down 6 and carry over 1 to the hundred thousands place.\n   - Next, the hundred thousands place:\n   - 4 + 1 + 1 (carried over) = 6\n   - Next, the millions place:\n   - 8 + 1 = 9\n   - Finally, the ten millions place:\n   - 5 + 0 = 5\n5. Putting it all together, we get:\n   ```\n   589473790\n   +219574375\n   ------\n   809048165\n   ```\nSo, the sum of 589473790 and 219574375 is 809048165.\n</think>\n<answer>\n809048165\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 578,
+    "completion_tokens": 472,
+    "prompt_tokens_details": null
+  }
+}
+success id:  59
+response:  {
+  "id": "cmpl-978a453874c8415fb413cf32787153e0",
+  "object": "text_completion",
+  "created": 1753757824,
+  "model": "Qwen2.5-3B-SFT-GRPO-1000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve the problem of adding 350750554 and 621834985, we can follow these steps:\n1. Align the numbers by their place values, ensuring that the digits in the same place value are in the same column.\n2. Add the digits starting from the rightmost column (units place) and move to the left.\n3. If the sum in any column is 10 or more, carry over the tens digit to the next column to the left.\n4. Continue this process until all columns have been added.\nLet's perform the addition:\n```\n  350750554\n+ 621834985\n-----------\n```\nStarting from the rightmost column (units place):\n4 + 5 = 9\nNext column: 5 + 8 = 13 (write down 3, carry over 1)\nNext column: 0 + 4 + 1 (carried over) = 5\nNext column: 5 + 3 = 8\nNext column: 7 + 1 = 8\nNext column: 0 + 2 = 2\nNext column: 5 + 6 = 11 (write down 1, carry over 1)\nNext column: 5 + 2 + 1 (carried over) = 8\nNext column: 3 + 6 = 9\nNext column: 3 + 3 = 6\nNext column: 3 + 0 = 3\nThe final sum is:\n```\n  350750554\n+ 621834985\n-----------\n  972585539\n```\nSo, the sum of 350750554 and 621834985 is 972585539.\n</think>\n<answer>\n972585539\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": 151643,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 544,
+    "completion_tokens": 438,
+    "prompt_tokens_details": null
+  }
+} 12%|█▏        | 61/500 [04:17<26:15,  3.59s/it] 12%|█▏        | 62/500 [04:21<27:12,  3.73s/it] 13%|█▎        | 63/500 [04:26<28:55,  3.97s/it]
