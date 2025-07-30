@@ -1,0 +1,171 @@
+Wed Jul 30 09:17:40 PM CST 2025, Evaluating -1 samples from Addition:9 using prompts newdirectbase ...
+/home/fuzhizhang.fzz/CoT_Causal_Analysis/scripts/api_run.py:92: SyntaxWarning: invalid escape sequence '\{'
+  fields = re.findall('\{\{\w+\}\}', full_prompt)
+/home/fuzhizhang.fzz/CoT_Causal_Analysis/scripts/api_run.py:176: SyntaxWarning: invalid escape sequence '\d'
+  output = [line for line in output if len(re.findall('\d+', line)) > 0]
+/home/fuzhizhang.fzz/CoT_Causal_Analysis/scripts/api_run.py:184: SyntaxWarning: invalid escape sequence '\d'
+  answer = re.findall('\d+', answer)
+http://localhost:8081/v1
+123
+OpenAI API with http://localhost:8081/v1, Qwen2.5-3B-GRPO-600, ####, 20000
+Output to: exp_cot/output/output.Addition_9.newdirectbase.math_teacher.Qwen2.5-3B-GRPO-600.json
+  0%|          | 0/500 [00:00<?, ?it/s]  0%|          | 1/500 [00:01<10:56,  1.31s/it]  0%|          | 2/500 [00:02<09:53,  1.19s/it]  1%|          | 3/500 [00:03<09:18,  1.12s/it]  1%|          | 4/500 [00:04<08:58,  1.09s/it]  1%|          | 5/500 [00:05<08:58,  1.09s/it]  1%|          | 6/500 [00:06<09:19,  1.13s/it]response:  {
+  "id": "cmpl-5de1370e4e014abf9fa28a3b94de931f",
+  "object": "text_completion",
+  "created": 1753881460,
+  "model": "Qwen2.5-3B-GRPO-600",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve this math problem, we need to add the two numbers together. The first number is 673436698 and the second number is 538327286. We can start by adding the digits in the ones place, which are 8 and 6. The sum of these digits is 14, so we write down 4 and carry over 1 to the tens place. Next, we add the digits in the tens place, which are 9 and 2, along with the carried over 1. The sum of these digits is 12, so we write down 2 and carry over 1 to the hundreds place. We continue this process for each place value, carrying over any extra digits as needed. Finally, we add the digits in the millions place, which are 3 and 3, along with the carried over 1. The sum of these digits is 7, so we write down 7. Therefore, the sum of 673436698 and 538327286 is 1211763984.\n</think>\n<answer>\n1211763984\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 373,
+    "completion_tokens": 267,
+    "prompt_tokens_details": null
+  }
+}
+success id:  0
+response:  {
+  "id": "cmpl-0a2eb97fc4b5454792e67bd1190c3f6d",
+  "object": "text_completion",
+  "created": 1753881461,
+  "model": "Qwen2.5-3B-GRPO-600",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve this math problem, we need to add the two numbers together. The first number is 351943250 and the second number is 170139784. We can start by adding the digits in the ones place, which are 0 and 4. The sum of these digits is 4. Next, we move to the tens place and add the digits 5 and 8, which gives us a sum of 13. We write down the 3 and carry over the 1 to the hundreds place. We continue this process for each place value, carrying over any extra digits as needed. Finally, we add the digits in the millions place, which are 3 and 1, and the sum is 4. Therefore, the sum of 351943250 and 170139784 is 522083034.\n</think>\n<answer>\n522083034\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 329,
+    "completion_tokens": 223,
+    "prompt_tokens_details": null
+  }
+}
+success id:  1
+response:  {
+  "id": "cmpl-05d0af2ad5984db7804f15c776e0c8cc",
+  "object": "text_completion",
+  "created": 1753881463,
+  "model": "Qwen2.5-3B-GRPO-600",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve this math problem, we need to add the two numbers together. The first number is 631529940 and the second number is 831901572. We can start by adding the digits in the ones place, which are 0 and 7. The sum of these digits is 7. Next, we move to the tens place and add the digits 4 and 5, which gives us 9. We continue this process for each place value, carrying over any extra digits as necessary. After adding all the digits, we get the sum of 631529940 and 831901572, which is 1463431512.\n</think>\n<answer>\nThe sum of 631529940 and 831901572 is 1463431512.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 318,
+    "completion_tokens": 212,
+    "prompt_tokens_details": null
+  }
+}
+success id:  2
+response:  {
+  "id": "cmpl-0feb9e3dea1941da970a8e91a6222bcd",
+  "object": "text_completion",
+  "created": 1753881464,
+  "model": "Qwen2.5-3B-GRPO-600",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve this math problem, we need to add the two numbers together. The first number is 750287621 and the second number is 360102348. We can start by adding the digits in the ones place, which are 1 and 8. The sum of these digits is 9. Next, we move to the tens place and add the digits 2 and 4, which gives us 6. We continue this process for each place value, carrying over any extra digits as necessary. After adding all the digits, we get the sum of 750287621 and 360102348, which is 1110390969.\n</think>\n<answer>\nThe sum of 750287621 and 360102348 is 1110390969.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 318,
+    "completion_tokens": 212,
+    "prompt_tokens_details": null
+  }
+}
+success id:  3
+response:  {
+  "id": "cmpl-ad49be0a6b6f4144a30e54924dfc1da3",
+  "object": "text_completion",
+  "created": 1753881465,
+  "model": "Qwen2.5-3B-GRPO-600",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve this math problem, we need to add the two numbers together. The first number is 824190622 and the second number is 203514191. We can start by adding the digits in the ones place, which are 2 and 9. The sum of these digits is 11. We write down the 1 and carry over the 1 to the tens place. Next, we add the digits in the tens place, which are 6 and 1, along with the carried over 1. The sum of these digits is 8. We write down the 8. We continue this process for each place value, carrying over any extra digits as needed. The final sum of the two numbers is 1027704813.\n</think>\n<answer>\nThe sum of 824190622 and 203514191 is 1027704813.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 328,
+    "completion_tokens": 222,
+    "prompt_tokens_details": null
+  }
+}
+success id:  4
+response:  {
+  "id": "cmpl-e0a9ea81fa2d4cc19c45f52d4e738f01",
+  "object": "text_completion",
+  "created": 1753881466,
+  "model": "Qwen2.5-3B-GRPO-600",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve this math problem, we need to add the two numbers together. The first number is 685497553 and the second number is 418270610. We can start by adding the digits in the ones place, which are 5 and 0. The sum of these digits is 5. Next, we add the digits in the tens place, which are 5 and 6. The sum of these digits is 11. We write down the 1 and carry over the 1 to the hundreds place. We then add the digits in the hundreds place, which are 7 and 0, along with the carried over 1. The sum of these digits is 8. We write down the 8. We continue this process for each place value, carrying over any extra digits as needed. The final sum of the two numbers is 1103768163.\n</think>\n<answer>\nThe sum of 685497553 and 418270610 is 1103768163.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 355,
+    "completion_tokens": 249,
+    "prompt_tokens_details": null
+  }
+}
+success id:  5
+response:  {
+  "id": "cmpl-3c8c454234e14c138413fbfc63a40287",
+  "object": "text_completion",
+  "created": 1753881467,
+  "model": "Qwen2.5-3B-GRPO-600",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo solve this math problem, we need to add the two numbers together. The first number is 522632563 and the second number is 870037450. We can start by adding the digits in the ones place, which are 6 and 5. The sum of these digits is 11, so we write down 1 and carry over 1 to the tens place. Next, we add the digits in the tens place, which are 5 and 4, along with the carried over 1. The sum of these digits is 10, so we write down 0 and carry over 1 to the hundreds place. We continue this process for each digit in the numbers, carrying over any extra digits to the next place value. Finally, we add the digits in the millions place, which are 2 and 0, along with the carried over 1. The sum of these digits is 3, so we write down 3. Therefore, the sum of 522632563 and 870037450 is 1392670013.\n</think>\n<answer>\nThe sum of 522632563 and 870037450 is 1392670013.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 404,
+    "completion_tokens": 298,
+    "prompt_tokens_details": null
+  }
+}  1%|▏         | 7/500 [00:08<10:10,  1.24s/it]  2%|▏         | 8/500 [00:09<09:24,  1.15s/it]  2%|▏         | 9/500 [00:10<10:14,  1.25s/it]  2%|▏         | 10/500 [00:11<09:25,  1.15s/it]  2%|▏         | 11/500 [00:13<10:09,  1.25s/it]  2%|▏         | 12/500 [00:14<10:03,  1.24s/it]
