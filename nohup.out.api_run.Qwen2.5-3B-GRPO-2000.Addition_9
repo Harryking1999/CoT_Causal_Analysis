@@ -10081,4 +10081,1434 @@ response:  {
     "completion_tokens": 669,
     "prompt_tokens_details": null
   }
-} 88%|████████▊ | 438/500 [29:59<02:09,  2.09s/it] 88%|████████▊ | 439/500 [30:01<01:51,  1.82s/it] 88%|████████▊ | 440/500 [30:03<01:52,  1.88s/it] 88%|████████▊ | 441/500 [30:04<01:37,  1.65s/it] 88%|████████▊ | 442/500 [30:06<01:38,  1.69s/it]
+} 88%|████████▊ | 438/500 [29:59<02:09,  2.09s/it] 88%|████████▊ | 439/500 [30:01<01:51,  1.82s/it] 88%|████████▊ | 440/500 [30:03<01:52,  1.88s/it] 88%|████████▊ | 441/500 [30:04<01:37,  1.65s/it] 88%|████████▊ | 442/500 [30:06<01:38,  1.69s/it] 89%|████████▊ | 443/500 [30:07<01:30,  1.58s/it]
+success id:  437
+response:  {
+  "id": "cmpl-6dd75e8407174054b77d53217fab5ef2",
+  "object": "text_completion",
+  "created": 1753957302,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 697260595 and 389653273, we can follow these steps:\n\n1. Align the numbers by their place values, starting from the rightmost digit (units place).\n2. Add the digits in the units place: 5 + 7 = 12. Write down 2 and carry over 1 to the next column.\n3. Add the digits in the tens place: 9 + 2 + 1 (carried over) = 12. Write down 2 and carry over 1 to the next column.\n4. Continue this process for each column, carrying over any extra digits as needed.\n5. Finally, add the digits in the millions place: 6 + 3 + 1 (carried over) = 10. Write down 0 and carry over 1 to the next column.\n\nThe final sum is 1086913868.\n</think>\n<answer>\nThe sum of 697260595 and 389653273 is 1086913868.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 362,
+    "completion_tokens": 256,
+    "prompt_tokens_details": null
+  }
+}
+success id:  438
+response:  {
+  "id": "cmpl-4bf0984248464d9ea481baefd493f303",
+  "object": "text_completion",
+  "created": 1753957304,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 416209211 and 588232158, we can follow these steps:\n\n1. Align the numbers by their place values, starting from the rightmost digit (units place).\n2. Add the digits in the units place: 1 + 8 = 9.\n3. Move to the next column (tens place): 2 + 5 = 7.\n4. Continue this process for each column, moving from right to left.\n5. If the sum of any column is greater than 9, carry over the extra digit to the next column.\n\nLet's perform the addition:\n\n```\n  416209211\n+ 588232158\n----------\n```\n\nStarting from the rightmost column:\n\n- Units place: 1 + 8 = 9\n- Tens place: 2 + 5 = 7\n- Hundreds place: 9 + 1 = 10 (write down 0 and carry over 1)\n- Thousands place: 0 + 2 + 1 (carry over) = 3\n- Ten-thousands place: 2 + 3 = 5\n- Hundred-thousands place: 6 + 8 = 14 (write down 4 and carry over 1)\n- Millions place: 1 + 8 + 1 (carry over) = 10 (write down 0 and carry over 1)\n- Ten-millions place: 4 + 5 + 1 (carry over) = 10 (write down 0 and carry over 1)\n- Hundred-millions place: 0 + 0 = 0 (since there are no more digits to add)\n\nSo, the sum of 416209211 and 588232158 is 1004441369.\n</think>\n<answer>\n1004441369\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 543,
+    "completion_tokens": 437,
+    "prompt_tokens_details": null
+  }
+}
+success id:  439
+response:  {
+  "id": "cmpl-a61b545ae37a4db691bffcd7e309c94a",
+  "object": "text_completion",
+  "created": 1753957306,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 191239285 and 232332126, we can follow these steps:\n\n1. Align the numbers by their place values, starting from the rightmost digit (units place).\n2. Add the digits in the units place: 5 + 6 = 11. Write down 1 and carry over 1 to the next column.\n3. Add the digits in the tens place: 8 + 2 + 1 (carried over) = 11. Write down 1 and carry over 1 to the next column.\n4. Continue this process for each column, carrying over any excess to the next column.\n5. Finally, add the digits in the millions place: 1 + 2 + 1 (carried over) = 4.\n\nSo, the sum of 191239285 and 232332126 is 423561411.\n</think>\n<answer>\n423561411\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 343,
+    "completion_tokens": 237,
+    "prompt_tokens_details": null
+  }
+}
+success id:  440
+response:  {
+  "id": "cmpl-f01dcdd9adb54079b788c0611ac1aab6",
+  "object": "text_completion",
+  "created": 1753957307,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 954916472 and 301905667, we can follow these steps:\n\n1. Align the numbers by their place values, starting from the rightmost digit (units place).\n2. Add the digits in the units place: 2 + 7 = 9.\n3. Move to the next column (tens place): 6 + 6 = 12. Write down 2 and carry over 1 to the next column.\n4. Continue adding the digits in each column, including the carried-over value:\n   - Hundreds place: 4 + 5 + 1 (carried-over) = 10. Write down 0 and carry over 1.\n   - Thousands place: 9 + 0 + 1 (carried-over) = 10. Write down 0 and carry over 1.\n   - Ten-thousands place: 1 + 1 + 1 (carried-over) = 3.\n   - Hundred-thousands place: 5 + 0 = 5.\n   - Millions place: 9 + 3 = 12. Write down 2 and carry over 1.\n   - Ten-millions place: 0 + 0 + 1 (carried-over) = 1.\n   - Hundred-millions place: 0 + 0 = 0.\n\nNow, let's put all the digits together, including the carried-over values:\n1250022149\n\nSo, the sum of 954916472 and 301905667 is 1250022149.\n</think>\n<answer>\n1250022149\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 491,
+    "completion_tokens": 385,
+    "prompt_tokens_details": null
+  }
+}
+success id:  441
+response:  {
+  "id": "cmpl-1460b4adb7524385932b716ac0c12db9",
+  "object": "text_completion",
+  "created": 1753957309,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 999465742 and 837778941, we can follow these steps:\n\n1. Align the numbers by their place values, starting from the rightmost digit (units place).\n2. Add the digits in the units place: 2 + 1 = 3.\n3. Move to the next place value (tens place): 4 + 9 = 13. Write down 3 and carry over 1 to the hundreds place.\n4. Continue adding the digits in the hundreds place: 5 + 7 + 1 (carried over) = 13. Write down 3 and carry over 1 to the thousands place.\n5. Repeat this process for the thousands, ten-thousands, hundred-thousands, and millions places.\n\nHere's the calculation:\n\n```\n  999465742\n+  837778941\n----------\n  1837244683\n```\n\nSo, the sum of 999465742 and 837778941 is 1837244683.\n</think>\n<answer>\n1837244683\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 390,
+    "completion_tokens": 284,
+    "prompt_tokens_details": null
+  }
+}
+success id:  442
+response:  {
+  "id": "cmpl-043186b4d7cf49d6a0292239da2f8ab0",
+  "object": "text_completion",
+  "created": 1753957310,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 377477256 and 216781980, we can follow these steps:\n\n1. Align the numbers by their place values, making sure that the digits in the same place value are lined up vertically.\n2. Add the digits in the ones place: 6 + 0 = 6. Write down 6.\n3. Add the digits in the tens place: 5 + 8 = 13. Write down 3 and carry over 1 to the hundreds place.\n4. Add the digits in the hundreds place, including the carry-over: 7 + 1 + 1 = 9. Write down 9.\n5. Add the digits in the thousands place: 7 + 9 = 16. Write down 6 and carry over 1 to the ten-thousands place.\n6. Add the digits in the ten-thousands place, including the carry-over: 4 + 1 + 1 = 6. Write down 6.\n7. Add the digits in the hundred-thousands place: 7 + 6 = 13. Write down 3 and carry over 1 to the millions place.\n8. Add the digits in the millions place, including the carry-over: 7 + 2 + 1 = 10. Write down 0 and carry over 1 to the ten-millions place.\n9. Add the digits in the ten-millions place, including the carry-over: 3 + 1 = 4. Write down 4.\n\nThe sum of 377477256 and 216781980 is 594259236.\n</think>\n<answer>\n594259236\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 494,
+    "completion_tokens": 388,
+    "prompt_tokens_details": null
+  }
+} 89%|████████▉ | 444/500 [30:09<01:32,  1.65s/it] 89%|████████▉ | 445/500 [30:11<01:40,  1.82s/it] 89%|████████▉ | 446/500 [30:13<01:38,  1.82s/it] 89%|████████▉ | 447/500 [30:14<01:33,  1.77s/it] 90%|████████▉ | 448/500 [30:16<01:21,  1.57s/it] 90%|████████▉ | 449/500 [30:17<01:13,  1.43s/it]
+success id:  443
+response:  {
+  "id": "cmpl-62424eb9086d49228048aa9ff7120098",
+  "object": "text_completion",
+  "created": 1753957312,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 214759092 and 861630836, we can follow these steps:\n\n1. Align the numbers by their place values, making sure that the digits in the same place value are lined up vertically.\n2. Add the digits in the ones place: 2 + 6 = 8. Write down the 8 in the ones place of the sum.\n3. Add the digits in the tens place: 9 + 3 = 12. Write down the 2 in the tens place of the sum and carry over the 1 to the hundreds place.\n4. Add the digits in the hundreds place, including the carried-over 1: 5 + 0 + 8 + 1 = 14. Write down the 4 in the hundreds place of the sum and carry over the 1 to the thousands place.\n5. Add the digits in the thousands place, including the carried-over 1: 7 + 6 + 0 + 1 = 14. Write down the 4 in the thousands place of the sum and carry over the 1 to the ten-thousands place.\n6. Add the digits in the ten-thousands place, including the carried-over 1: 4 + 1 + 1 = 6. Write down the 6 in the ten-thousands place of the sum.\n7. Add the digits in the hundred-thousands place: 1 + 8 = 9. Write down the 9 in the hundred-thousands place of the sum.\n8. Add the digits in the millions place: 2 + 8 = 10. Write down the 0 in the millions place of the sum and carry over the 1 to the ten-millions place.\n9. Add the digits in the ten-millions place, including the carried-over 1: 1 + 1 = 2. Write down the 2 in the ten-millions place of the sum.\n\nThe sum of 214759092 and 861630836 is 1076390928.\n</think>\n<answer>\n1076390928\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 584,
+    "completion_tokens": 478,
+    "prompt_tokens_details": null
+  }
+}
+success id:  444
+response:  {
+  "id": "cmpl-11c220cbe9354cd5a09ce7e4132af3ea",
+  "object": "text_completion",
+  "created": 1753957314,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 482092723 and 754624232, we can follow these steps:\n\n1. Align the numbers by their place values, starting from the rightmost digit (units place).\n2. Add the digits in the units place: 2 + 2 = 4.\n3. Move to the next place value (tens place): 7 + 3 = 10. Write down 0 and carry over 1 to the hundreds place.\n4. Continue adding the digits in the hundreds place: 2 + 4 + 1 (carried over) = 7.\n5. Repeat this process for the thousands, ten-thousands, hundred-thousands, and millions places.\n6. Finally, add the digits in the millions place: 9 + 5 = 14. Write down 4 and carry over 1 to the ten-millions place.\n7. Add the digits in the ten-millions place: 0 + 6 + 1 (carried over) = 7.\n8. Add the digits in the hundred-millions place: 8 + 7 = 15. Write down 5 and carry over 1 to the billion place.\n9. Add the digits in the billion place: 4 + 0 + 1 (carried over) = 5.\n\nNow, let's put it all together:\n\n482092723\n+ 754624232\n-----------\n1236616955\n\nSo, the sum of 482092723 and 754624232 is 1236616955.\n</think>\n<answer>\n1236616955\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 500,
+    "completion_tokens": 394,
+    "prompt_tokens_details": null
+  }
+}
+success id:  445
+response:  {
+  "id": "cmpl-0bdd0421f91a4685befff233f9c028d1",
+  "object": "text_completion",
+  "created": 1753957316,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 506172121 and 965959214, we can follow these steps:\n\n1. Align the numbers by their place values, starting from the rightmost digit (units place). This will make it easier to add the numbers column by column.\n\n2. Add the digits in the units place: 1 + 4 = 5. Write down 5 in the units place of the sum.\n\n3. Move to the next column (tens place). Add the digits: 2 + 1 = 3. Write down 3 in the tens place of the sum.\n\n4. Continue this process for each column, moving from right to left. For example, in the hundreds place, add 7 + 9 = 16. Write down 6 in the hundreds place and carry over 1 to the thousands place.\n\n5. In the thousands place, add the digits along with the carried-over value: 1 + 2 + 5 = 8. Write down 8 in the thousands place of the sum.\n\n6. Repeat this process for the remaining columns until you reach the leftmost column (billions place). In this case, there are no more columns to add, so we simply write down the carried-over value from the previous step.\n\n7. The final sum is 1472131335.\n\nSo, the sum of 506172121 and 965959214 is 1472131335.\n</think>\n<answer>\n1472131335\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 461,
+    "completion_tokens": 355,
+    "prompt_tokens_details": null
+  }
+}
+success id:  446
+response:  {
+  "id": "cmpl-c90acd8551ad4f5aaee238f98c3aea9b",
+  "object": "text_completion",
+  "created": 1753957317,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 619287319 and 948006532, we can follow these steps:\n\n1. Align the numbers by their place values, starting from the rightmost digit (units place).\n2. Add the digits in the units place: 9 + 2 = 11. Write down 1 and carry over 1 to the next column.\n3. Add the digits in the tens place: 7 + 5 + 1 (carried over) = 13. Write down 3 and carry over 1 to the next column.\n4. Continue this process for each column, carrying over any excess to the next column.\n5. Finally, add the digits in the millions place: 1 + 0 + 1 (carried over) = 2.\n\nSo, the sum of 619287319 and 948006532 is 1567293851.\n</think>\n<answer>\n1567293851\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 345,
+    "completion_tokens": 239,
+    "prompt_tokens_details": null
+  }
+}
+success id:  447
+response:  {
+  "id": "cmpl-5b23c30a06fb45709b87cfe587961730",
+  "object": "text_completion",
+  "created": 1753957318,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 854438441 and 445746760, we can follow these steps:\n\n1. Align the numbers by their place values, starting from the rightmost digit (units place).\n2. Add the digits in the units place: 1 + 0 = 1. Write down 1.\n3. Move to the next place value (tens place): 4 + 6 = 10. Write down 0 and carry over 1 to the hundreds place.\n4. Continue this process for each place value, carrying over any excess to the next higher place value.\n5. Finally, add the digits in the highest place value (billions place): 8 + 4 = 12. Write down 2 and carry over 1 to the trillions place.\n\nThe sum of 854438441 and 445746760 is 1299985201.\n</think>\n<answer>\n1299985201\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 344,
+    "completion_tokens": 238,
+    "prompt_tokens_details": null
+  }
+}
+success id:  448
+response:  {
+  "id": "cmpl-46f9a51e5a454a05b41eccb62e7da69a",
+  "object": "text_completion",
+  "created": 1753957320,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 123100565 and 782236333, we can follow these steps:\n\n1. Align the numbers by their place values, starting from the rightmost digit (units place). This will help us add the numbers correctly.\n\n2. Add the digits in the units place: 5 + 3 = 8. Write down 8 in the units place of the sum.\n\n3. Move to the next place value, the tens place. Add the digits: 6 + 3 = 9. Write down 9 in the tens place of the sum.\n\n4. Continue this process for each place value, moving from right to left. Add the digits in the hundreds place: 0 + 6 = 6. Write down 6 in the hundreds place of the sum.\n\n5. Add the digits in the thousands place: 5 + 3 = 8. Write down 8 in the thousands place of the sum.\n\n6. Add the digits in the ten-thousands place: 1 + 2 = 3. Write down 3 in the ten-thousands place of the sum.\n\n7. Add the digits in the hundred-thousands place: 0 + 2 = 2. Write down 2 in the hundred-thousands place of the sum.\n\n8. Add the digits in the millions place: 1 + 8 = 9. Write down 9 in the millions place of the sum.\n\n9. Finally, add the digits in the ten-millions place: 0 + 7 = 7. Write down 7 in the ten-millions place of the sum.\n\n10. Combine all the digits in the sum: 905336900.\n\nSo, the sum of 123100565 and 782236333 is 905336900.\n</think>\n<answer>\n905336900\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 534,
+    "completion_tokens": 428,
+    "prompt_tokens_details": null
+  }
+} 90%|█████████ | 450/500 [30:19<01:19,  1.60s/it] 90%|█████████ | 451/500 [30:20<01:20,  1.65s/it] 90%|█████████ | 452/500 [30:22<01:14,  1.55s/it] 91%|█████████ | 453/500 [30:23<01:11,  1.51s/it] 91%|█████████ | 454/500 [30:24<01:04,  1.39s/it] 91%|█████████ | 455/500 [30:26<01:08,  1.51s/it]
+success id:  449
+response:  {
+  "id": "cmpl-acf290323e6349868e173f322ff591bc",
+  "object": "text_completion",
+  "created": 1753957322,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 173609487 and 180406912, we can follow these steps:\n\n1. Align the numbers by their place values, making sure that the digits in the same place value are lined up vertically.\n2. Add the digits in the ones place: 7 + 2 = 9\n3. Add the digits in the tens place: 8 + 1 = 9\n4. Add the digits in the hundreds place: 4 + 6 = 10. Write down 0 and carry over 1 to the thousands place.\n5. Add the digits in the thousands place, including the carry-over: 9 + 0 + 4 + 1 = 14. Write down 4 and carry over 1 to the ten-thousands place.\n6. Add the digits in the ten-thousands place, including the carry-over: 6 + 0 + 0 + 1 = 7.\n7. Add the digits in the hundred-thousands place: 3 + 0 = 3.\n8. Add the digits in the millions place: 7 + 1 = 8.\n9. Add the digits in the ten-millions place: 1 + 0 = 1.\n\nNow, let's put it all together:\n\n```\n  173609487\n+ 180406912\n----------\n  354016399\n```\n\nSo, the sum of 173609487 and 180406912 is 354016399.\n</think>\n<answer>\n354016399\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 487,
+    "completion_tokens": 381,
+    "prompt_tokens_details": null
+  }
+}
+success id:  450
+response:  {
+  "id": "cmpl-c3277684a1a24904a025f1d6179e33bc",
+  "object": "text_completion",
+  "created": 1753957323,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 276903495 and 449467824, we can follow these steps:\n\n1. Align the numbers by their place values, starting from the rightmost digit (units place).\n2. Add the digits in the units place: 5 + 4 = 9.\n3. Move to the next place value (tens place): 9 + 2 = 11. Write down 1 and carry over 1 to the hundreds place.\n4. Continue adding the digits in the hundreds place: 3 + 7 + 1 (carried over) = 11. Write down 1 and carry over 1 to the thousands place.\n5. Repeat this process for the thousands, ten-thousands, hundred-thousands, and millions places.\n\nHere's the addition:\n\n```\n  276903495\n+ 449467824\n----------\n  726371319\n```\n\nSo, the sum of 276903495 and 449467824 is 726371319.\n</think>\n<answer>\n726371319\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 386,
+    "completion_tokens": 280,
+    "prompt_tokens_details": null
+  }
+}
+success id:  451
+response:  {
+  "id": "cmpl-ec7d9b0c668549d8adbd0fe3e34cc6f8",
+  "object": "text_completion",
+  "created": 1753957325,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 142974944 and 301779810, we can follow these steps:\n\n1. Align the numbers by their place values, making sure that the digits in each column match up correctly.\n2. Add the digits in the ones place: 4 + 0 = 4. Write down the 4 in the ones place of the sum.\n3. Move to the tens place: 9 + 8 = 17. Write down the 7 in the tens place of the sum and carry over the 1 to the hundreds place.\n4. Continue adding the digits in the hundreds place: 4 + 7 + 1 (carried over) = 12. Write down the 2 in the hundreds place of the sum and carry over the 1 to the thousands place.\n5. Repeat this process for the thousands, ten-thousands, hundred-thousands, and millions places.\n\nFollowing these steps, we get:\n\n```\n  142974944\n+ 301779810\n----------\n  444754754\n```\n\nSo, the sum of 142974944 and 301779810 is 444754754.\n</think>\n<answer>\n444754754\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 416,
+    "completion_tokens": 310,
+    "prompt_tokens_details": null
+  }
+}
+success id:  452
+response:  {
+  "id": "cmpl-97071c561fea411f80449b51b2f62bd1",
+  "object": "text_completion",
+  "created": 1753957326,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 805079554 and 393039647, we can follow these steps:\n\n1. Align the numbers by their place values, starting from the rightmost digit (units place).\n2. Add the digits in the units place: 4 + 7 = 11. Write down 1 and carry over 1 to the next column.\n3. Add the digits in the tens place: 5 + 6 + 1 (carried over) = 12. Write down 2 and carry over 1 to the next column.\n4. Continue this process for each column, carrying over any extra digits as needed.\n5. Finally, add the digits in the millions place: 0 + 3 + 1 (carried over) = 4.\n\nSo, the sum of 805079554 and 393039647 is 1208119201.\n</think>\n<answer>\n1208119201\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 344,
+    "completion_tokens": 238,
+    "prompt_tokens_details": null
+  }
+}
+success id:  453
+response:  {
+  "id": "cmpl-322f3d60652748f29640bfc9303b7185",
+  "object": "text_completion",
+  "created": 1753957327,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 333666283 and 711514593, we can follow these steps:\n\n1. Align the numbers by their place values, starting from the rightmost digit (units place). This will help us add the numbers correctly.\n\n2. Add the digits in the units place: 3 + 3 = 6. Write down 6 in the units place of the sum.\n\n3. Move to the next place value, the tens place. Add the digits: 6 + 5 = 11. Write down 1 in the tens place of the sum and carry over 1 to the hundreds place.\n\n4. Continue adding the digits in the hundreds place, including the carried-over 1: 6 + 1 + 4 = 11. Write down 1 in the hundreds place of the sum and carry over 1 to the thousands place.\n\n5. Repeat this process for the thousands, ten-thousands, hundred-thousands, and millions places. In each step, add the digits and carry over any excess to the next place value.\n\n6. Finally, add the digits in the millions place, including the carried-over 1: 3 + 7 + 1 = 11. Write down 1 in the millions place of the sum and carry over 1 to the ten-millions place.\n\n7. Since there are no more digits to add, we have reached the end of the sum. The final sum is 1045180876.\n\nSo, the sum of 333666283 and 711514593 is 1045180876.\n</think>\n<answer>\n1045180876\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 492,
+    "completion_tokens": 386,
+    "prompt_tokens_details": null
+  }
+}
+success id:  454
+response:  {
+  "id": "cmpl-6f56a9ab0f214f96b4d68b54efaaebda",
+  "object": "text_completion",
+  "created": 1753957329,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 142023890 and 536582273, we can follow these steps:\n\n1. Align the numbers by their place values, starting from the rightmost digit (units place). This will help us add the numbers correctly.\n\n2. Add the digits in the units place: 0 + 7 = 7. Write down 7 in the units place of the sum.\n\n3. Move to the tens place: 9 + 2 = 11. Write down 1 in the tens place of the sum and carry over 1 to the hundreds place.\n\n4. Continue adding the digits in the hundreds place: 8 + 2 + 1 (carried over) = 11. Write down 1 in the hundreds place of the sum and carry over 1 to the thousands place.\n\n5. Repeat this process for the thousands, ten-thousands, hundred-thousands, and millions places.\n\n6. Finally, add the digits in the millions place: 2 + 5 + 1 (carried over) = 8. Write down 8 in the millions place of the sum.\n\n7. Combine all the digits in the sum: 888606163.\n\nSo, the sum of 142023890 and 536582273 is 888606163.\n</think>\n<answer>\n888606163\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 432,
+    "completion_tokens": 326,
+    "prompt_tokens_details": null
+  }
+} 91%|█████████ | 456/500 [30:28<01:06,  1.51s/it] 91%|█████████▏| 457/500 [30:29<01:02,  1.46s/it] 92%|█████████▏| 458/500 [30:30<00:56,  1.35s/it] 92%|█████████▏| 459/500 [30:31<00:52,  1.29s/it] 92%|█████████▏| 460/500 [30:33<00:58,  1.47s/it] 92%|█████████▏| 461/500 [30:34<00:56,  1.45s/it]
+success id:  455
+response:  {
+  "id": "cmpl-102fe52585b6463cb0866ea1cf51c3de",
+  "object": "text_completion",
+  "created": 1753957330,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 267594986 and 780465097, we can follow these steps:\n\n1. Align the numbers by their place values, making sure that the digits in the same place value are lined up vertically.\n2. Add the digits in the ones place: 6 + 7 = 13. Write down 3 and carry over 1 to the tens place.\n3. Add the digits in the tens place, including the carried-over 1: 9 + 5 + 1 = 15. Write down 5 and carry over 1 to the hundreds place.\n4. Continue this process for each place value, carrying over any extra digits as needed.\n5. Finally, add the digits in the millions place, including the carried-over 1: 2 + 7 + 1 = 10. Write down 0 and carry over 1 to the ten millions place.\n\nBy following these steps, we can find the sum of 267594986 and 780465097.\n</think>\n<answer>\nThe sum of 267594986 and 780465097 is 1048060083.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 390,
+    "completion_tokens": 284,
+    "prompt_tokens_details": null
+  }
+}
+success id:  456
+response:  {
+  "id": "cmpl-9b400ee789a54e459da68bab425b389c",
+  "object": "text_completion",
+  "created": 1753957332,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 917077201 and 582637352, we can follow these steps:\n\n1. Align the numbers by their place values, starting from the rightmost digit (units place).\n2. Add the digits in the units place: 1 + 5 = 6. Write down 6.\n3. Move to the next column (tens place): 7 + 3 = 10. Write down 0 and carry over 1 to the next column.\n4. Continue this process for each column, carrying over any excess to the next column as needed.\n5. Finally, add the digits in the leftmost column (billions place): 9 + 5 = 14. Write down 4 and carry over 1 to the next column.\n\nThe sum of 917077201 and 582637352 is 1499714553.\n</think>\n<answer>\n1499714553\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 341,
+    "completion_tokens": 235,
+    "prompt_tokens_details": null
+  }
+}
+success id:  457
+response:  {
+  "id": "cmpl-2360fa9a67044013a3ce8ab68d590a12",
+  "object": "text_completion",
+  "created": 1753957333,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 452287775 and 182792995, we can follow these steps:\n\n1. Align the numbers by their place values, making sure that the digits in each column match up correctly.\n2. Add the digits in the ones place: 7 + 5 = 12. Write down the 2 and carry over the 1 to the tens place.\n3. Add the digits in the tens place, including the carried-over 1: 7 + 9 + 1 = 17. Write down the 7 and carry over the 1 to the hundreds place.\n4. Continue this process for each column, carrying over any extra digits as needed.\n5. Finally, add the digits in the millions place, including the carried-over 1: 4 + 1 + 1 = 6. Write down the 6.\n\nThe sum of 452287775 and 182792995 is 635080770.\n</think>\n<answer>\n635080770\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 356,
+    "completion_tokens": 250,
+    "prompt_tokens_details": null
+  }
+}
+success id:  458
+response:  {
+  "id": "cmpl-2fd0394fa24f4d7093ea9e2bc428aeb0",
+  "object": "text_completion",
+  "created": 1753957334,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 881921042 and 801591195, we can follow these steps:\n\n1. Align the numbers by their place values, starting from the rightmost digit (units place).\n2. Add the digits in the units place: 2 + 9 = 11. Write down 1 and carry over 1 to the next column.\n3. Add the digits in the tens place: 4 + 1 + 1 = 6. Write down 6.\n4. Add the digits in the hundreds place: 0 + 9 + 5 = 14. Write down 4 and carry over 1 to the next column.\n5. Add the digits in the thousands place: 1 + 1 + 1 = 3. Write down 3.\n6. Add the digits in the ten-thousands place: 9 + 5 + 0 = 14. Write down 4 and carry over 1 to the next column.\n7. Add the digits in the hundred-thousands place: 2 + 5 + 1 = 8. Write down 8.\n8. Add the digits in the millions place: 8 + 8 + 0 = 16. Write down 6 and carry over 1 to the next column.\n9. Add the digits in the ten-millions place: 1 + 0 + 1 = 2. Write down 2.\n10. Add the digits in the hundred-millions place: 8 + 0 + 0 = 8. Write down 8.\n\nThe sum of 881921042 and 801591195 is 1683512237.\n</think>\n<answer>\n1683512237\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 509,
+    "completion_tokens": 403,
+    "prompt_tokens_details": null
+  }
+}
+success id:  459
+response:  {
+  "id": "cmpl-1fcbd4ca1a6a4779888dd19ce2440e82",
+  "object": "text_completion",
+  "created": 1753957336,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 578230859 and 385970256, we can follow these steps:\n\n1. Align the numbers by their place values, making sure that the digits in the same place value are lined up vertically.\n2. Add the digits in the ones place: 9 + 6 = 15. Write down the 5 and carry over the 1 to the tens place.\n3. Add the digits in the tens place, including the carried-over 1: 8 + 5 + 1 = 14. Write down the 4 and carry over the 1 to the hundreds place.\n4. Continue this process for each place value, carrying over any extra digits as needed.\n\nHere's how it looks:\n\n```\n  578230859\n+ 385970256\n----------\n```\n\nAfter performing all the additions, we get:\n\n```\n  578230859\n+ 385970256\n----------\n  964201115\n```\n\nSo, the sum of 578230859 and 385970256 is 964201115.\n</think>\n<answer>\n964201115\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 410,
+    "completion_tokens": 304,
+    "prompt_tokens_details": null
+  }
+}
+success id:  460
+response:  {
+  "id": "cmpl-6d956bdbb82a4cfc90defba735d78734",
+  "object": "text_completion",
+  "created": 1753957337,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 918492001 and 923729238, we can follow these steps:\n\n1. Align the numbers by their place values, starting from the rightmost digit (units place). This will make it easier to add each column individually.\n2. Add the digits in the units place: 1 + 8 = 9\n3. Move to the next column (tens place): 0 + 2 = 2\n4. Continue adding the digits in each column, moving from right to left:\n   - Hundreds place: 0 + 3 = 3\n   - Thousands place: 2 + 9 = 11 (write down 1 and carry over 1 to the next column)\n   - Ten-thousands place: 9 + 7 + 1 (carried over) = 17 (write down 7 and carry over 1 to the next column)\n   - Hundred-thousands place: 4 + 2 + 1 (carried over) = 7\n   - Millions place: 8 + 3 = 11 (write down 1 and carry over 1 to the next column)\n   - Ten-millions place: 1 + 9 + 1 (carried over) = 11 (write down 1 and carry over 1 to the next column)\n   - Hundred-millions place: 9 + 9 + 1 (carried over) = 19 (write down 9 and carry over 1 to the next column)\n5. Finally, add the digits in the hundred-millions place: 1 + 1 (carried over) = 2\n\nNow, let's put all the results together: 291177139\n\nSo, the sum of 918492001 and 923729238 is 291177139.\n</think>\n<answer>\n291177139\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 549,
+    "completion_tokens": 443,
+    "prompt_tokens_details": null
+  }
+} 92%|█████████▏| 462/500 [30:36<01:02,  1.63s/it] 93%|█████████▎| 463/500 [30:38<00:59,  1.60s/it] 93%|█████████▎| 464/500 [30:40<01:04,  1.79s/it] 93%|█████████▎| 465/500 [30:41<00:55,  1.58s/it] 93%|█████████▎| 466/500 [30:43<00:51,  1.52s/it] 93%|█████████▎| 467/500 [30:44<00:45,  1.38s/it]
+success id:  461
+response:  {
+  "id": "cmpl-4f38759ae8fe465291a97c2905ce4da4",
+  "object": "text_completion",
+  "created": 1753957339,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 345631564 and 734746160, we can follow these steps:\n\n1. Align the numbers by their place values, making sure that the digits in the same place value are lined up vertically.\n2. Add the digits in the ones place: 4 + 0 = 4. Write down 4.\n3. Add the digits in the tens place: 6 + 6 = 12. Write down 2 and carry over 1 to the hundreds place.\n4. Add the digits in the hundreds place: 5 + 4 + 1 (carried over) = 10. Write down 0 and carry over 1 to the thousands place.\n5. Continue this process for each place value until you reach the leftmost digit.\n\nHere's how it looks:\n\n```\n  345631564\n+ 734746160\n----------\n```\n\nNow, let's add the digits in each place value:\n\n```\n  345631564\n+ 734746160\n----------\n  1080377724\n```\n\nSo, the sum of 345631564 and 734746160 is 1080377724.\n</think>\n<answer>\n1080377724\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 433,
+    "completion_tokens": 327,
+    "prompt_tokens_details": null
+  }
+}
+success id:  462
+response:  {
+  "id": "cmpl-a22583d46e6d4bc28560442a211ef01b",
+  "object": "text_completion",
+  "created": 1753957341,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 815066450 and 518824319, we can follow these steps:\n\n1. Align the numbers by their place values, making sure that the digits in the same place value are lined up vertically.\n2. Add the digits in the ones place: 5 + 9 = 14. Write down the 4 and carry over the 1 to the tens place.\n3. Add the digits in the tens place, including the carried-over 1: 6 + 4 + 1 = 11. Write down the 1 and carry over the 1 to the hundreds place.\n4. Continue this process for each place value, carrying over any extra digits as needed.\n\nHere's how it looks:\n\n```\n  815066450\n+  518824319\n----------\n```\n\nNow, let's add the digits in each place value:\n\n- Ones place: 5 + 9 = 14 (write down 4, carry over 1)\n- Tens place: 6 + 4 + 1 = 11 (write down 1, carry over 1)\n- Hundreds place: 6 + 3 + 1 = 10 (write down 0, carry over 1)\n- Thousands place: 0 + 8 + 1 = 9 (write down 9)\n- Ten-thousands place: 5 + 8 + 1 = 14 (write down 4, carry over 1)\n- Hundred-thousands place: 1 + 1 + 1 = 3 (write down 3)\n- Millions place: 1 + 5 = 6 (write down 6)\n- Ten-millions place: 8 + 0 = 8 (write down 8)\n- Hundred-millions place: 0 + 0 = 0 (write down 0)\n\nSo, the sum of 815066450 and 518824319 is 1333890769.\n</think>\n<answer>\n1333890769\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 585,
+    "completion_tokens": 479,
+    "prompt_tokens_details": null
+  }
+}
+success id:  463
+response:  {
+  "id": "cmpl-7b5a17b6d10e4f6ba19556231fbe330d",
+  "object": "text_completion",
+  "created": 1753957343,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 426061938 and 263283883, we can follow these steps:\n\n1. Align the numbers by their place values, starting from the rightmost digit (units place).\n2. Add the digits in the units place: 8 + 3 = 11. Write down 1 and carry over 1 to the next column.\n3. Add the digits in the tens place: 9 + 8 + 1 (carried over) = 18. Write down 8 and carry over 1 to the next column.\n4. Continue this process for each column, carrying over any extra digits as needed.\n5. Finally, add the digits in the millions place: 6 + 2 + 1 (carried over) = 9.\n\nSo, the sum of 426061938 and 263283883 is 689345821.\n</think>\n<answer>\n689345821\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 342,
+    "completion_tokens": 236,
+    "prompt_tokens_details": null
+  }
+}
+success id:  464
+response:  {
+  "id": "cmpl-15e6c358832646a9971a2a469cca3e59",
+  "object": "text_completion",
+  "created": 1753957344,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 192843870 and 571331461, we can follow these steps:\n\n1. Align the numbers by their place values, starting from the rightmost digit (units place).\n2. Add the digits in the units place: 0 + 6 = 6.\n3. Move to the next column (tens place): 7 + 4 = 11. Write down 1 and carry over 1 to the next column.\n4. Continue adding the digits in each column, including the carried-over value:\n   - Hundreds place: 8 + 3 + 1 = 12. Write down 2 and carry over 1.\n   - Thousands place: 3 + 1 + 1 = 5.\n   - Ten-thousands place: 4 + 3 + 0 = 7.\n   - Hundred-thousands place: 2 + 5 + 0 = 7.\n   - Millions place: 1 + 0 + 0 = 1.\n5. Combine all the results from each column to get the final sum.\n\nThe sum of 192843870 and 571331461 is 764175331.\n</think>\n<answer>\n764175331\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 404,
+    "completion_tokens": 298,
+    "prompt_tokens_details": null
+  }
+}
+success id:  465
+response:  {
+  "id": "cmpl-6a3966fd98ba476f8128a5069b32be8c",
+  "object": "text_completion",
+  "created": 1753957346,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 689774096 and 368671483, we can follow these steps:\n\n1. Align the numbers by their place values, starting from the rightmost digit (units place).\n2. Add the digits in the units place: 6 + 3 = 9.\n3. Move to the next place value (tens place): 0 + 8 = 8.\n4. Continue adding the digits in each place value, carrying over any excess to the next place value if necessary.\n5. Finally, add the digits in the leftmost place value (billions place): 6 + 3 = 9.\n\nBy following these steps, we can determine the sum of 689774096 and 368671483.\n</think>\n<answer>\nThe sum of 689774096 and 368671483 is 1058445579.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 333,
+    "completion_tokens": 227,
+    "prompt_tokens_details": null
+  }
+}
+success id:  466
+response:  {
+  "id": "cmpl-d3dad89cc51c4c80903558162d10c63a",
+  "object": "text_completion",
+  "created": 1753957347,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 468661171 and 551957985, we can follow these steps:\n\n1. Align the numbers by their place values, making sure that the ones, tens, hundreds, thousands, etc., are in the same columns.\n2. Add the digits in each column, starting from the rightmost column (the ones place).\n3. If the sum of the digits in any column is greater than 9, carry over the extra digit to the next column to the left.\n4. Continue adding the digits in each column, including any carried-over digits, until you reach the leftmost column (the thousands place).\n\nLet's perform the addition:\n\n```\n  468661171\n+ 551957985\n----------\n```\n\nStarting from the rightmost column (the ones place):\n\n1. 1 + 5 = 6\n2. 7 + 8 = 15 (write down 5 and carry over 1)\n3. 1 + 9 + 1 (carried over) = 11 (write down 1 and carry over 1)\n4. 6 + 5 + 1 (carried over) = 12 (write down 2 and carry over 1)\n5. 6 + 1 + 1 (carried over) = 8\n6. 8 + 5 = 13 (write down 3 and carry over 1)\n7. 6 + 5 + 1 (carried over) = 12 (write down 2 and carry over 1)\n8. 4 + 5 + 1 (carried over) = 10 (write down 0 and carry over 1)\n9. 4 + 5 + 1 (carried over) = 10 (write down 0 and carry over 1)\n\nNow, we have the sum of the two numbers:\n\n```\n  468661171\n+ 551957985\n----------\n 1020619156\n```\n\nSo, the sum of 468661171 and 551957985 is 1020619156.\n</think>\n<answer>\n1020619156\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 632,
+    "completion_tokens": 526,
+    "prompt_tokens_details": null
+  }
+} 94%|█████████▎| 468/500 [30:46<00:54,  1.70s/it] 94%|█████████▍| 469/500 [30:48<00:49,  1.59s/it] 94%|█████████▍| 470/500 [30:50<00:53,  1.78s/it] 94%|█████████▍| 471/500 [30:52<00:55,  1.91s/it] 94%|█████████▍| 472/500 [30:53<00:48,  1.73s/it] 95%|█████████▍| 473/500 [30:55<00:43,  1.63s/it]
+success id:  467
+response:  {
+  "id": "cmpl-7c94a9fc580a44b4b69b9ef3a091739a",
+  "object": "text_completion",
+  "created": 1753957349,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 378659453 and 755413704, we can follow these steps:\n\n1. Align the numbers by their place values, making sure that the digits in the same place value are lined up vertically.\n2. Add the digits in the ones place: 5 + 4 = 9\n3. Add the digits in the tens place: 5 + 7 = 12. Write down 2 and carry over 1 to the hundreds place.\n4. Add the digits in the hundreds place: 9 + 3 + 1 (carried over) = 13. Write down 3 and carry over 1 to the thousands place.\n5. Continue this process for each place value, carrying over any extra digits as needed.\n\nHere's how it looks when we add the numbers:\n\n```\n  378659453\n+ 755413704\n----------\n 1133073157\n```\n\nSo, the sum of 378659453 and 755413704 is 1133073157.\n</think>\n<answer>\n1133073157\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 392,
+    "completion_tokens": 286,
+    "prompt_tokens_details": null
+  }
+}
+success id:  468
+response:  {
+  "id": "cmpl-060ea51ee7dd4faa9a71c51776b09df5",
+  "object": "text_completion",
+  "created": 1753957350,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 510548739 and 961904936, we can follow these steps:\n\n1. Align the numbers by their place values, making sure that the ones, tens, hundreds, thousands, etc., are in the same columns.\n2. Add the digits in each column, starting from the rightmost column (the ones place).\n3. If the sum of the digits in any column is greater than 9, carry over the extra digit to the next column to the left.\n4. Continue adding the digits in each column, including any carried-over digits, until you reach the leftmost column (the millions place).\n\nLet's perform the addition:\n\n```\n  510548739\n+ 961904936\n----------\n```\n\nStarting from the rightmost column (the ones place):\n\n1. 9 + 6 = 15. Write down 5 and carry over 1.\n2. 8 + 9 + 1 (carried over) = 18. Write down 8 and carry over 1.\n3. 7 + 4 + 1 (carried over) = 12. Write down 2 and carry over 1.\n4. 4 + 9 + 1 (carried over) = 14. Write down 4 and carry over 1.\n5. 5 + 1 + 1 (carried over) = 7.\n6. 1 + 0 = 1.\n7. 0 + 6 = 6.\n8. 1 + 5 = 6.\n9. 5 + 9 = 14. Write down 4 and carry over 1.\n10. 5 + 9 + 1 (carried over) = 15. Write down 5 and carry over 1.\n11. 1 + 1 = 2.\n\nSo, the sum of 510548739 and 961904936 is 1472453675.\n</think>\n<answer>\n1472453675\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 585,
+    "completion_tokens": 479,
+    "prompt_tokens_details": null
+  }
+}
+success id:  469
+response:  {
+  "id": "cmpl-2ef038db1476480890f17f09574841ba",
+  "object": "text_completion",
+  "created": 1753957353,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 524018511 and 824671125, we can follow these steps:\n\n1. Align the numbers by their place values, starting from the rightmost digit (units place).\n2. Add the digits in the units place: 1 + 5 = 6. Write down 6.\n3. Move to the next column (tens place): 8 + 1 = 9. Write down 9.\n4. Continue this process for each column, moving from right to left.\n5. If the sum of any column is greater than 9, carry over the extra digit to the next column.\n\nLet's perform the addition:\n\n```\n  524018511\n+ 824671125\n----------\n```\n\nStarting from the rightmost column:\n\n- Units place: 1 + 5 = 6\n- Tens place: 8 + 1 = 9\n- Hundreds place: 5 + 1 = 6\n- Thousands place: 1 + 2 = 3\n- Ten-thousands place: 0 + 7 = 7\n- Hundred-thousands place: 1 + 4 = 5\n- Millions place: 4 + 2 = 6\n- Ten-millions place: 2 + 8 = 10 (carry over 1 to the next column)\n- Hundred-millions place: 5 + 8 = 13 (carry over 1 to the next column)\n\nNow, add the carried-over digits:\n\n- Ten-millions place: 1 + 1 = 2\n- Hundred-millions place: 1 + 1 = 2\n\nSo, the final sum is:\n\n```\n  524018511\n+ 824671125\n----------\n 1348689636\n```\n\nTherefore, the sum of 524018511 and 824671125 is 1348689636.\n</think>\n<answer>\n1348689636\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 585,
+    "completion_tokens": 479,
+    "prompt_tokens_details": null
+  }
+}
+success id:  470
+response:  {
+  "id": "cmpl-60ae408cf62b4301bd7371b87ae728e5",
+  "object": "text_completion",
+  "created": 1753957355,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 612185691 and 437648576, we can follow these steps:\n\n1. Align the numbers by their place values, starting from the rightmost digit (units place).\n2. Add the digits in the units place: 1 + 6 = 7.\n3. Move to the next place value (tens place): 9 + 5 = 14. Write down 4 and carry over 1 to the hundreds place.\n4. Continue adding the digits in the hundreds place: 6 + 8 + 1 (carried over) = 15. Write down 5 and carry over 1 to the thousands place.\n5. Repeat this process for the thousands, ten-thousands, hundred-thousands, and millions places.\n\nHere's the addition:\n\n```\n  612185691\n+ 437648576\n----------\n 1049834267\n```\n\nSo, the sum of 612185691 and 437648576 is 1049834267.\n</think>\n<answer>\n1049834267\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 388,
+    "completion_tokens": 282,
+    "prompt_tokens_details": null
+  }
+}
+success id:  471
+response:  {
+  "id": "cmpl-1a8879cc6b374d5699bf48d486231389",
+  "object": "text_completion",
+  "created": 1753957356,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 783944466 and 473642303, we can follow these steps:\n\n1. Align the numbers by their place values, making sure that the digits in the same place value are lined up vertically.\n2. Add the digits in the ones place: 6 + 3 = 9. Write down the 9 in the ones place of the sum.\n3. Move to the tens place: 4 + 0 = 4. Write down the 4 in the tens place of the sum.\n4. Continue this process for each place value, moving from right to left.\n5. If the sum of any column is greater than 9, carry over the extra digit to the next column to the left.\n6. Finally, add the digits in the thousands place: 4 + 3 = 7. Write down the 7 in the thousands place of the sum.\n7. Repeat this process for each place value until you reach the leftmost column.\n\nBy following these steps, we can find the sum of 783944466 and 473642303.\n</think>\n<answer>\nThe sum of 783944466 and 473642303 is 1257586769.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 403,
+    "completion_tokens": 297,
+    "prompt_tokens_details": null
+  }
+}
+success id:  472
+response:  {
+  "id": "cmpl-5f51a4d0065f4fa1b674c72ad813c9f0",
+  "object": "text_completion",
+  "created": 1753957358,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 961425548 and 920096753, we can follow these steps:\n\n1. Align the numbers by their place values, starting from the rightmost digit (units place).\n2. Add the digits in the units place: 8 + 3 = 11. Write down 1 and carry over 1 to the next column.\n3. Add the digits in the tens place: 5 + 7 + 1 (carried over) = 13. Write down 3 and carry over 1 to the next column.\n4. Continue this process for each column, carrying over any excess to the next column.\n5. Finally, add the digits in the millions place: 9 + 9 + 1 (carried over) = 19. Write down 9 and carry over 1 to the next column.\n\nThe sum of 961425548 and 920096753 is 1881522301.\n</think>\n<answer>\n1881522301\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 358,
+    "completion_tokens": 252,
+    "prompt_tokens_details": null
+  }
+} 95%|█████████▍| 474/500 [30:56<00:38,  1.49s/it] 95%|█████████▌| 475/500 [30:57<00:35,  1.40s/it] 95%|█████████▌| 476/500 [31:00<00:42,  1.76s/it] 95%|█████████▌| 477/500 [31:01<00:39,  1.70s/it] 96%|█████████▌| 478/500 [31:04<00:41,  1.89s/it] 96%|█████████▌| 479/500 [31:05<00:36,  1.74s/it]
+success id:  473
+response:  {
+  "id": "cmpl-72f2f465567d49b49e430f73820269f9",
+  "object": "text_completion",
+  "created": 1753957359,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 369382736 and 993734297, we can follow these steps:\n\n1. Align the numbers by their place values, starting from the rightmost digit (units place).\n2. Add the digits in the units place: 6 + 7 = 13. Write down 3 and carry over 1 to the next column.\n3. Add the digits in the tens place: 2 + 9 + 1 (carried over) = 12. Write down 2 and carry over 1 to the next column.\n4. Continue this process for each column, carrying over any excess to the next column.\n5. Finally, add the digits in the millions place: 3 + 9 + 1 (carried over) = 13. Write down 3 and carry over 1 to the next column.\n\nThe final sum is 1363117033.\n</think>\n<answer>\nThe sum of 369382736 and 993734297 is 1363117033.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 363,
+    "completion_tokens": 257,
+    "prompt_tokens_details": null
+  }
+}
+success id:  474
+response:  {
+  "id": "cmpl-718df15c13aa4d1cbf75c3ac976b4379",
+  "object": "text_completion",
+  "created": 1753957360,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 393373861 and 434079364, we can follow these steps:\n\n1. Align the numbers by their place values, making sure that the ones, tens, hundreds, thousands, etc., are in the same columns.\n2. Add the digits in each column, starting from the rightmost column (the ones place).\n3. If the sum of the digits in any column is greater than 9, carry over the extra digit to the next column to the left.\n4. Continue adding the digits in each column, including any carried-over digits, until you reach the leftmost column (the thousands place).\n\nLet's perform the addition:\n\n```\n  393373861\n+ 434079364\n----------\n```\n\nStarting from the rightmost column (the ones place):\n\n1. 1 + 4 = 5\n2. 6 + 6 = 12 (write down 2 and carry over 1)\n3. 8 + 9 + 1 (carried over) = 18 (write down 8 and carry over 1)\n4. 3 + 7 + 1 (carried over) = 11 (write down 1 and carry over 1)\n5. 7 + 0 + 1 (carried over) = 8\n6. 3 + 4 = 7\n7. 9 + 3 = 12 (write down 2 and carry over 1)\n8. 3 + 4 + 1 (carried over) = 8\n9. 3 + 4 = 7\n\nNow, let's add the digits in the thousands place:\n\n1. 1 + 3 = 4\n2. 3 + 4 = 7\n3. 3 + 0 = 3\n4. 7 + 4 = 11 (write down 1 and carry over 1)\n5. 3 + 3 = 6\n6. 3 + 4 = 7\n7. 3 + 4 = 7\n8. 3 + 4 = 7\n\nFinally, let's add the digits in the millions place:\n\n1. 3 + 4 = 7\n\nSo, the sum of 393373861 and 434079364 is 827453225.\n</think>\n<answer>\n827453225\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 663,
+    "completion_tokens": 557,
+    "prompt_tokens_details": null
+  }
+}
+success id:  475
+response:  {
+  "id": "cmpl-5029146ca92049ef8598dc0275686381",
+  "object": "text_completion",
+  "created": 1753957363,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 120305506 and 166917337, we can follow these steps:\n\n1. Align the numbers by their place values, making sure that the digits in the same place value are lined up vertically.\n2. Add the digits in the ones place: 6 + 7 = 13. Write down 3 and carry over 1 to the tens place.\n3. Add the digits in the tens place, including the carried-over 1: 5 + 3 + 1 = 9. Write down 9.\n4. Add the digits in the hundreds place: 0 + 7 = 7. Write down 7.\n5. Add the digits in the thousands place: 5 + 1 = 6. Write down 6.\n6. Add the digits in the ten-thousands place: 3 + 6 = 9. Write down 9.\n7. Add the digits in the hundred-thousands place: 0 + 6 = 6. Write down 6.\n8. Add the digits in the millions place: 2 + 1 = 3. Write down 3.\n9. Finally, add the digits in the ten-millions place: 1 + 1 = 2. Write down 2.\n\nThe sum of 120305506 and 166917337 is 287222843.\n</think>\n<answer>\n287222843\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 443,
+    "completion_tokens": 337,
+    "prompt_tokens_details": null
+  }
+}
+success id:  476
+response:  {
+  "id": "cmpl-0d417184f7e04488bb8d247f9ed1b1a8",
+  "object": "text_completion",
+  "created": 1753957364,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 831100114 and 359223061, we can follow these steps:\n\n1. Align the numbers by their place values, starting from the rightmost digit (units place). This will help us add the numbers correctly.\n\n2. Add the digits in the units place: 1 + 6 = 7. Write down 7 in the units place of the sum.\n\n3. Move to the next place value (tens place). Add the digits: 1 + 0 = 1. Write down 1 in the tens place of the sum.\n\n4. Continue this process for each place value, moving from right to left. Add the digits in the hundreds place: 0 + 3 = 3. Write down 3 in the hundreds place of the sum.\n\n5. Add the digits in the thousands place: 0 + 2 = 2. Write down 2 in the thousands place of the sum.\n\n6. Add the digits in the ten-thousands place: 1 + 2 = 3. Write down 3 in the ten-thousands place of the sum.\n\n7. Add the digits in the hundred-thousands place: 1 + 5 = 6. Write down 6 in the hundred-thousands place of the sum.\n\n8. Add the digits in the millions place: 3 + 8 = 11. Write down 1 in the millions place of the sum and carry over 1 to the next place value (ten-millions place).\n\n9. Add the digits in the ten-millions place, including the carried-over 1: 1 + 3 + 1 = 5. Write down 5 in the ten-millions place of the sum.\n\n10. Finally, add the digits in the hundred-millions place: 8 + 0 = 8. Write down 8 in the hundred-millions place of the sum.\n\nNow, let's put all the digits together to get the final sum:\n\n831100114 + 359223061 = 1190323175\n</think>\n<answer>\nThe sum of 831100114 and 359223061 is 1190323175.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 611,
+    "completion_tokens": 505,
+    "prompt_tokens_details": null
+  }
+}
+success id:  477
+response:  {
+  "id": "cmpl-2c50848f62e641a8b1db2d9cc262dc50",
+  "object": "text_completion",
+  "created": 1753957366,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 466035865 and 223146761, we can follow these steps:\n\n1. Align the numbers by their place values, making sure that the digits in the same place value are lined up vertically.\n2. Add the digits in the ones place: 5 + 6 = 11. Write down 1 and carry over 1 to the tens place.\n3. Add the digits in the tens place, including the carried-over 1: 8 + 7 + 1 = 16. Write down 6 and carry over 1 to the hundreds place.\n4. Continue this process for each place value, carrying over any extra digits as needed.\n\nHere's how it looks:\n\n```\n  466035865\n+ 223146761\n----------\n```\n\nAfter performing the addition, we get:\n\n```\n  466035865\n+ 223146761\n----------\n  689182626\n```\n\nSo, the sum of 466035865 and 223146761 is 689182626.\n</think>\n<answer>\n689182626\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 405,
+    "completion_tokens": 299,
+    "prompt_tokens_details": null
+  }
+}
+success id:  478
+response:  {
+  "id": "cmpl-69a14a4c8ed241b891989d4d4500dcdb",
+  "object": "text_completion",
+  "created": 1753957368,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 742273914 and 875550950, we can follow these steps:\n\n1. Align the numbers by their place values, making sure that the ones, tens, hundreds, thousands, etc., are in the same columns.\n2. Add the digits in each column, starting from the rightmost column (the ones place).\n3. If the sum of the digits in any column is greater than 9, carry over the extra digit to the next column to the left.\n4. Continue adding the digits in each column, including any carried-over digits, until you reach the leftmost column (the billions place).\n\nLet's perform the addition:\n\n```\n  742273914\n+ 875550950\n----------\n```\n\nStarting from the rightmost column (the ones place):\n\n1. 4 + 0 = 4\n2. 1 + 5 = 6\n3. 9 + 9 = 18 (write down 8 and carry over 1)\n4. 3 + 5 + 1 = 9\n5. 7 + 0 = 7\n6. 2 + 5 = 7\n7. 4 + 7 = 11 (write down 1 and carry over 1)\n8. 2 + 8 + 1 = 11 (write down 1 and carry over 1)\n9. 7 + 8 + 1 = 16 (write down 6 and carry over 1)\n10. 1 + 1 = 2\n\nSo, the sum of 742273914 and 875550950 is 1617824864.\n</think>\n<answer>\n1617824864\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 520,
+    "completion_tokens": 414,
+    "prompt_tokens_details": null
+  }
+} 96%|█████████▌| 480/500 [31:07<00:35,  1.80s/it] 96%|█████████▌| 481/500 [31:09<00:37,  1.97s/it] 96%|█████████▋| 482/500 [31:12<00:39,  2.17s/it] 97%|█████████▋| 483/500 [31:13<00:32,  1.90s/it] 97%|█████████▋| 484/500 [31:16<00:33,  2.10s/it]
+success id:  479
+response:  {
+  "id": "cmpl-44517bd4b8ee404f8e86abbef65261ff",
+  "object": "text_completion",
+  "created": 1753957370,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 110874933 and 475219168, we can follow these steps:\n\n1. Align the numbers by their place values, making sure that the ones, tens, hundreds, thousands, etc., are in the same columns.\n2. Add the digits in each column, starting from the rightmost column (the ones place).\n3. If the sum of the digits in any column is greater than 9, carry over the extra digit to the next column to the left.\n4. Continue adding the digits in each column, including any carried-over digits, until you reach the leftmost column (the millions place).\n\nLet's perform the addition:\n\n```\n  110874933\n+ 475219168\n-----------\n```\n\nStarting from the rightmost column (the ones place):\n\n3 + 8 = 11 (write down 1 and carry over 1 to the tens place)\n\nNext column (tens place):\n\n9 + 6 + 1 (carried over) = 16 (write down 6 and carry over 1 to the hundreds place)\n\nNext column (hundreds place):\n\n4 + 1 + 1 (carried over) = 6 (write down 6)\n\nNext column (thousands place):\n\n7 + 9 + 1 (carried over) = 17 (write down 7 and carry over 1 to the ten-thousands place)\n\nNext column (ten-thousands place):\n\n8 + 5 + 1 (carried over) = 14 (write down 4 and carry over 1 to the hundred-thousands place)\n\nNext column (hundred-thousands place):\n\n0 + 7 + 1 (carried over) = 8 (write down 8)\n\nNext column (million place):\n\n1 + 4 = 5 (write down 5)\n\nFinally, we have the sum:\n\n```\n  110874933\n+ 475219168\n-----------\n  586094101\n```\n\nSo, the sum of 110874933 and 475219168 is 586094101.\n</think>\n<answer>\n586094101\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 621,
+    "completion_tokens": 515,
+    "prompt_tokens_details": null
+  }
+}
+success id:  480
+response:  {
+  "id": "cmpl-68df3a97d61e4108b0e9394fc18eaeaa",
+  "object": "text_completion",
+  "created": 1753957372,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 874747711 and 960954509, we can follow these steps:\n\n1. Align the numbers by their place values, making sure that the ones, tens, hundreds, thousands, etc., are in the same columns.\n2. Add the digits in each column, starting from the rightmost column (the ones place).\n3. If the sum of the digits in any column is greater than 9, carry over the extra digit to the next column to the left.\n4. Continue adding the digits in each column, including any carried-over digits, until you reach the leftmost column (the billions place).\n\nLet's perform the addition:\n\n```\n  874747711\n+ 960954509\n----------\n```\n\nStarting from the rightmost column (the ones place):\n\n1. 1 + 9 = 10. Write down 0 and carry over 1.\n2. 7 + 5 + 1 (carried over) = 13. Write down 3 and carry over 1.\n3. 4 + 4 + 1 (carried over) = 9.\n4. 7 + 0 + 1 (carried over) = 8.\n5. 7 + 9 = 16. Write down 6 and carry over 1.\n6. 4 + 6 + 1 (carried over) = 11. Write down 1 and carry over 1.\n7. 7 + 0 + 1 (carried over) = 8.\n8. 7 + 9 = 16. Write down 6 and carry over 1.\n9. 8 + 9 + 1 (carried over) = 18. Write down 8 and carry over 1.\n10. 8 + 9 + 1 (carried over) = 18. Write down 8 and carry over 1.\n11. 8 + 9 + 1 (carried over) = 18. Write down 8 and carry over 1.\n12. 8 + 9 + 1 (carried over) = 18. Write down 8 and carry over 1.\n\nNow, we have all the digits in their respective columns. The sum of 874747711 and 960954509 is 1835702220.\n</think>\n<answer>\n1835702220\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 672,
+    "completion_tokens": 566,
+    "prompt_tokens_details": null
+  }
+}
+success id:  481
+response:  {
+  "id": "cmpl-658da9570037401b8ee5d9f31c4735c3",
+  "object": "text_completion",
+  "created": 1753957375,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 187369043 and 980443654, we can follow these steps:\n\n1. Align the numbers by their place values, starting from the rightmost digit (units place).\n2. Add the digits in the units place: 3 + 4 = 7.\n3. Move to the next place value (tens place): 0 + 5 = 5.\n4. Continue adding the digits in each place value, carrying over any excess to the next place value if necessary.\n5. Finally, add the digits in the leftmost place value (billions place): 1 + 9 = 10. Write down 0 and carry over 1 to the next place value.\n6. Add the carried-over 1 to the next place value: 7 + 4 + 1 = 12. Write down 2 and carry over 1 to the next place value.\n7. Repeat this process until all place values have been added.\n\nThe sum of 187369043 and 980443654 is 1167812697.\n</think>\n<answer>\n1167812697\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 382,
+    "completion_tokens": 276,
+    "prompt_tokens_details": null
+  }
+}
+success id:  482
+response:  {
+  "id": "cmpl-5d811070e3df4f76bea72af68c3853c5",
+  "object": "text_completion",
+  "created": 1753957376,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 285765286 and 494196212, we can follow these steps:\n\n1. Align the numbers by their place values, making sure that the digits in the same place value are lined up vertically.\n2. Add the digits in the ones place: 6 + 2 = 8. Write down the 8 in the ones place of the sum.\n3. Add the digits in the tens place: 8 + 1 = 9. Write down the 9 in the tens place of the sum.\n4. Add the digits in the hundreds place: 5 + 6 = 11. Write down the 1 in the hundreds place of the sum and carry over the 1 to the thousands place.\n5. Add the digits in the thousands place along with the carried-over 1: 2 + 9 + 1 = 12. Write down the 2 in the thousands place of the sum and carry over the 1 to the ten-thousands place.\n6. Add the digits in the ten-thousands place along with the carried-over 1: 7 + 4 + 1 = 12. Write down the 2 in the ten-thousands place of the sum and carry over the 1 to the hundred-thousands place.\n7. Add the digits in the hundred-thousands place along with the carried-over 1: 6 + 9 + 1 = 16. Write down the 6 in the hundred-thousands place of the sum and carry over the 1 to the millions place.\n8. Add the digits in the millions place along with the carried-over 1: 5 + 4 + 1 = 10. Write down the 0 in the millions place of the sum and carry over the 1 to the ten-millions place.\n9. Add the digits in the ten-millions place along with the carried-over 1: 8 + 9 + 1 = 18. Write down the 8 in the ten-millions place of the sum and carry over the 1 to the hundred-millions place.\n10. Add the digits in the hundred-millions place along with the carried-over 1: 2 + 4 + 1 = 7. Write down the 7 in the hundred-millions place of the sum.\n\nThe sum of 285765286 and 494196212 is 779961508.\n</think>\n<answer>\n779961508\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 662,
+    "completion_tokens": 556,
+    "prompt_tokens_details": null
+  }
+}
+success id:  483
+response:  {
+  "id": "cmpl-1e8caa8e0b454b0e8a75268a4cad7592",
+  "object": "text_completion",
+  "created": 1753957379,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 174641570 and 279819878, we can follow these steps:\n\n1. Align the numbers by their place values, making sure that the digits in the same place value are lined up vertically.\n2. Add the digits in the ones place: 0 + 8 = 8\n3. Add the digits in the tens place: 7 + 7 = 14. Write down 4 and carry over 1 to the hundreds place.\n4. Add the digits in the hundreds place: 5 + 9 + 1 (carried over) = 15. Write down 5 and carry over 1 to the thousands place.\n5. Continue this process for each place value until you reach the leftmost digit.\n\nHere's how it looks:\n\n```\n  174641570\n+ 279819878\n----------\n  454461448\n```\n\nSo, the sum of 174641570 and 279819878 is 454461448.\n</think>\n<answer>\n454461448\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 384,
+    "completion_tokens": 278,
+    "prompt_tokens_details": null
+  }
+} 97%|█████████▋| 485/500 [31:17<00:27,  1.86s/it] 97%|█████████▋| 486/500 [31:21<00:32,  2.35s/it] 97%|█████████▋| 487/500 [31:23<00:30,  2.31s/it] 98%|█████████▊| 488/500 [31:24<00:23,  1.99s/it] 98%|█████████▊| 489/500 [31:26<00:20,  1.86s/it]
+success id:  484
+response:  {
+  "id": "cmpl-fe393f8df57c47a3bda964cc24b87577",
+  "object": "text_completion",
+  "created": 1753957380,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 226778339 and 711290426, we can follow these steps:\n\n1. Align the numbers by their place values, making sure that the ones, tens, hundreds, thousands, etc., are in the same columns.\n2. Add the digits in each column, starting from the rightmost column (the ones place).\n3. If the sum of the digits in any column is greater than 9, carry over the extra digit to the next column to the left.\n4. Continue adding the digits in each column, including any carried-over digits, until you reach the leftmost column (the millions place).\n\nLet's perform the addition:\n\n```\n  226778339\n+ 711290426\n----------\n```\n\nStarting from the rightmost column (the ones place):\n\n```\n9 + 6 = 15\n```\nWrite down 5 and carry over 1 to the next column.\n\n```\n  226778339\n+ 711290426\n----------\n      5\n```\n\nNext column (the tens place):\n\n```\n3 + 2 + 1 (carried over) = 6\n```\nWrite down 6.\n\n```\n  226778339\n+ 711290426\n----------\n     65\n```\n\nNext column (the hundreds place):\n\n```\n8 + 9 = 17\n```\nWrite down 7 and carry over 1 to the next column.\n\n```\n  226778339\n+ 711290426\n----------\n    765\n```\n\nNext column (the thousands place):\n\n```\n7 + 0 + 1 (carried over) = 8\n```\nWrite down 8.\n\n```\n  226778339\n+ 711290426\n----------\n   8765\n```\n\nNext column (the ten-thousands place):\n\n```\n7 + 9 = 16\n```\nWrite down 6 and carry over 1 to the next column.\n\n```\n  226778339\n+ 711290426\n----------\n  68765\n```\n\nNext column (the hundred-thousands place):\n\n```\n6 + 1 + 1 (carried over) = 8\n```\nWrite down 8.\n\n```\n  226778339\n+ 711290426\n----------\n  868765\n```\n\nNext column (the millions place):\n\n```\n2 + 1 + 1 (carried over) = 4\n```\nWrite down 4.\n\n```\n  226778339\n+ 711290426\n----------\n 4868765\n```\n\nFinally, we have reached the leftmost column (the ten-millions place), where there are no additional digits to add. The sum of 226778339 and 711290426 is 938068765.\n</think>\n<answer>\n938068765\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 855,
+    "completion_tokens": 749,
+    "prompt_tokens_details": null
+  }
+}
+success id:  485
+response:  {
+  "id": "cmpl-2539615c16964828b491268d4bf32fff",
+  "object": "text_completion",
+  "created": 1753957383,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 211964427 and 444376874, we can follow these steps:\n\n1. Align the numbers by their place values, making sure that the ones, tens, hundreds, thousands, etc., are in the same columns.\n2. Add the digits in each column, starting from the rightmost column (the ones place).\n3. If the sum of the digits in any column is greater than 9, carry over the extra digit to the next column to the left.\n4. Continue adding the digits in each column, including any carried-over digits, until you reach the leftmost column (the millions place).\n\nLet's perform the addition:\n\n```\n  211964427\n+ 444376874\n----------\n```\n\nStarting from the rightmost column (the ones place):\n\n1. 7 + 4 = 11. Write down 1 and carry over 1 to the next column.\n2. 2 + 7 + 1 (carried over) = 10. Write down 0 and carry over 1 to the next column.\n3. 4 + 8 + 1 (carried over) = 13. Write down 3 and carry over 1 to the next column.\n4. 6 + 6 + 1 (carried over) = 13. Write down 3 and carry over 1 to the next column.\n5. 9 + 7 + 1 (carried over) = 17. Write down 7 and carry over 1 to the next column.\n6. 1 + 4 + 1 (carried over) = 6. Write down 6.\n7. 1 + 4 = 5. Write down 5.\n8. 2 + 4 = 6. Write down 6.\n9. 1 + 2 = 3. Write down 3.\n\nSo, the sum of 211964427 and 444376874 is 656341301.\n</think>\n<answer>\n656341301\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 588,
+    "completion_tokens": 482,
+    "prompt_tokens_details": null
+  }
+}
+success id:  486
+response:  {
+  "id": "cmpl-f45a9c292c4545a89caea93e892f62b0",
+  "object": "text_completion",
+  "created": 1753957386,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 395520983 and 794083008, we can follow these steps:\n\n1. Align the numbers by their place values, making sure that the digits in the same place value are lined up vertically.\n2. Add the digits in the ones place: 8 + 8 = 16. Write down 6 and carry over 1 to the tens place.\n3. Add the digits in the tens place: 9 + 0 + 1 (carried over) = 10. Write down 0 and carry over 1 to the hundreds place.\n4. Continue this process for each place value, carrying over any extra digits as needed.\n5. Finally, add the digits in the millions place: 5 + 4 + 1 (carried over) = 10. Write down 0 and carry over 1 to the ten millions place.\n\nThe final sum is 1189604091.\n</think>\n<answer>\nThe sum of 395520983 and 794083008 is 1189604091.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 369,
+    "completion_tokens": 263,
+    "prompt_tokens_details": null
+  }
+}
+success id:  487
+response:  {
+  "id": "cmpl-f8dc8a4d75334fa19106e738afa3ddac",
+  "object": "text_completion",
+  "created": 1753957387,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 943032949 and 763365080, we can follow these steps:\n\n1. Align the numbers by their place values, starting from the rightmost digit (units place).\n2. Add the digits in the units place: 9 + 0 = 9.\n3. Move to the next place value (tens place): 4 + 8 = 12. Write down 2 and carry over 1 to the hundreds place.\n4. Continue adding the digits in the hundreds place: 3 + 5 + 1 (carried over) = 9.\n5. Move to the thousands place: 2 + 0 = 2.\n6. Continue adding the digits in the ten-thousands place: 0 + 3 = 3.\n7. Move to the hundred-thousands place: 3 + 6 = 9.\n8. Continue adding the digits in the millions place: 0 + 3 = 3.\n9. Finally, add the digits in the ten-millions place: 9 + 7 = 16. Write down 6 and carry over 1 to the hundred-millions place.\n10. Since there are no more digits to add, we can stop here.\n\nThe sum of 943032949 and 763365080 is 1706398029.\n</think>\n<answer>\n1706398029\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 439,
+    "completion_tokens": 333,
+    "prompt_tokens_details": null
+  }
+}
+success id:  488
+response:  {
+  "id": "cmpl-0512e03c69f4462dacb6501617681aaa",
+  "object": "text_completion",
+  "created": 1753957388,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 800133575 and 440823201, we can follow these steps:\n\n1. Align the numbers by their place values, starting from the rightmost digit (units place).\n2. Add the digits in the units place: 5 + 1 = 6. Write down 6.\n3. Move to the next column (tens place): 7 + 0 = 7. Write down 7.\n4. Continue this process for each column, moving from right to left.\n5. If the sum of any column is greater than 9, carry over the extra digit to the next column.\n\nLet's perform the addition:\n\n```\n  800133575\n+  440823201\n----------\n```\n\nStarting from the rightmost column:\n\n- Units place: 5 + 1 = 6\n- Tens place: 7 + 0 = 7\n- Hundreds place: 5 + 0 = 5\n- Thousands place: 3 + 2 = 5\n- Ten-thousands place: 3 + 3 = 6\n- Hundred-thousands place: 1 + 8 = 9\n- Millions place: 0 + 4 = 4\n- Ten-millions place: 0 + 0 = 0\n- Hundred-millions place: 8 + 4 = 12 (write down 2 and carry over 1)\n\nNow, add the carried-over 1 to the next column:\n\n- Bens-millions place: 1 + 1 = 2\n\nSo, the final sum is:\n\n```\n  800133575\n+  440823201\n----------\n 1240956776\n```\n\nTherefore, the sum of 800133575 and 440823201 is 1240956776.\n</think>\n<answer>\n1240956776\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 569,
+    "completion_tokens": 463,
+    "prompt_tokens_details": null
+  }
+} 98%|█████████▊| 490/500 [31:28<00:19,  1.94s/it] 98%|█████████▊| 491/500 [31:29<00:17,  1.89s/it] 98%|█████████▊| 492/500 [31:31<00:14,  1.86s/it] 99%|█████████▊| 493/500 [31:33<00:12,  1.73s/it] 99%|█████████▉| 494/500 [31:34<00:09,  1.60s/it] 99%|█████████▉| 495/500 [31:35<00:07,  1.50s/it]
+success id:  489
+response:  {
+  "id": "cmpl-013ca9993eb54557b8a4efee3b907f9d",
+  "object": "text_completion",
+  "created": 1753957391,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 682332529 and 315228599, we can follow these steps:\n\n1. Align the numbers by their place values, making sure that the ones, tens, hundreds, thousands, etc., are in the same columns.\n2. Add the digits in each column, starting from the rightmost column (the ones place).\n3. If the sum of the digits in any column is greater than 9, carry over the extra digit to the next column to the left.\n4. Continue adding the digits in each column, including any carried-over digits, until you reach the leftmost column (the billions place).\n\nLet's perform the addition:\n\n```\n  682332529\n+ 315228599\n-----------\n```\n\nStarting from the rightmost column:\n\n- 9 + 9 = 18 (write down 8 and carry over 1)\n- 2 + 5 + 1 (carried over) = 8\n- 5 + 8 = 13 (write down 3 and carry over 1)\n- 2 + 2 + 1 (carried over) = 5\n- 3 + 5 = 8\n- 3 + 1 = 4\n- 8 + 3 = 11 (write down 1 and carry over 1)\n- 2 + 1 = 3\n- 6 + 3 = 9\n\nSo, the sum of 682332529 and 315228599 is 997561128.\n</think>\n<answer>\n997561128\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 489,
+    "completion_tokens": 383,
+    "prompt_tokens_details": null
+  }
+}
+success id:  490
+response:  {
+  "id": "cmpl-42d2afdf2f0548b5ae9c359bf4cd121c",
+  "object": "text_completion",
+  "created": 1753957392,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 716710305 and 790916440, we can follow these steps:\n\n1. Align the numbers by their place values, making sure that the digits in the same place value are lined up vertically.\n2. Add the digits in the ones place: 5 + 0 = 5. Write down 5.\n3. Add the digits in the tens place: 3 + 4 = 7. Write down 7.\n4. Add the digits in the hundreds place: 0 + 6 = 6. Write down 6.\n5. Add the digits in the thousands place: 1 + 1 = 2. Write down 2.\n6. Add the digits in the ten-thousands place: 7 + 9 = 16. Write down 6 and carry over 1 to the hundred-thousands place.\n7. Add the digits in the hundred-thousands place: 1 + 7 + 1 (carried over) = 9. Write down 9.\n8. Add the digits in the millions place: 6 + 0 = 6. Write down 6.\n9. Add the digits in the ten-millions place: 7 + 7 = 14. Write down 4 and carry over 1 to the hundred-millions place.\n10. Add the digits in the hundred-millions place: 1 + 1 (carried over) = 2. Write down 2.\n\nThe sum of 716710305 and 790916440 is 1507626745.\n</think>\n<answer>\n1507626745\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 487,
+    "completion_tokens": 381,
+    "prompt_tokens_details": null
+  }
+}
+success id:  491
+response:  {
+  "id": "cmpl-e07e5bbba1de410abe58b1c939652716",
+  "object": "text_completion",
+  "created": 1753957394,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 855250767 and 760147977, we can follow these steps:\n\n1. Align the numbers by their place values, making sure that the digits in the same place value are lined up vertically.\n2. Add the digits in the ones place: 7 + 7 = 14. Write down the 4 and carry over the 1 to the tens place.\n3. Add the digits in the tens place, including the carried-over 1: 0 + 9 + 1 = 10. Write down the 0 and carry over the 1 to the hundreds place.\n4. Continue this process for each place value, carrying over any extra digits as needed.\n\nHere's how it looks:\n\n```\n  855250767\n+ 760147977\n----------\n```\n\nAfter performing the addition, we get:\n\n```\n  855250767\n+ 760147977\n----------\n 1615398744\n```\n\nSo, the sum of 855250767 and 760147977 is 1615398744.\n</think>\n<answer>\n1615398744\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 411,
+    "completion_tokens": 305,
+    "prompt_tokens_details": null
+  }
+}
+success id:  492
+response:  {
+  "id": "cmpl-4e76f99b37854dfd9db93b1278ed1ebd",
+  "object": "text_completion",
+  "created": 1753957396,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 684869491 and 993616165, we can follow these steps:\n\n1. Align the numbers by their place values, starting from the rightmost digit (units place).\n2. Add the digits in the units place: 1 + 5 = 6.\n3. Move to the next place value (tens place): 9 + 6 = 15. Write down 5 and carry over 1 to the hundreds place.\n4. Continue adding the digits in the hundreds place: 4 + 1 (carried over) + 6 = 11. Write down 1 and carry over 1 to the thousands place.\n5. Repeat this process for the thousands, ten-thousands, hundred-thousands, and millions places.\n\nHere's the addition:\n\n```\n  684869491\n+ 993616165\n----------\n 1678485656\n```\n\nSo, the sum of 684869491 and 993616165 is 1678485656.\n</think>\n<answer>\n1678485656\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 388,
+    "completion_tokens": 282,
+    "prompt_tokens_details": null
+  }
+}
+success id:  493
+response:  {
+  "id": "cmpl-3032049ff93844a49ed6727e9704dd02",
+  "object": "text_completion",
+  "created": 1753957397,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 789658324 and 207374479, we can follow these steps:\n\n1. Align the numbers by their place values, starting from the rightmost digit (units place).\n2. Add the digits in the units place: 4 + 9 = 13. Write down 3 and carry over 1 to the next column.\n3. Add the digits in the tens place: 2 + 4 + 1 (carried over) = 7. Write down 7.\n4. Continue this process for each column, moving from right to left, until you reach the leftmost column.\n5. The final sum will be the result of adding all the digits together, including any carried over values.\n\nLet's perform the addition:\n\n```\n  789658324\n+ 207374479\n----------\n  996032703\n```\n\nSo, the sum of 789658324 and 207374479 is 996032703.\n</think>\n<answer>\n996032703\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 378,
+    "completion_tokens": 272,
+    "prompt_tokens_details": null
+  }
+}
+success id:  494
+response:  {
+  "id": "cmpl-e0adbf56b085456384419607747a9a62",
+  "object": "text_completion",
+  "created": 1753957398,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 728931477 and 913273174, we can follow these steps:\n\n1. Align the numbers by their place values, starting from the rightmost digit (units place).\n2. Add the digits in the units place: 7 + 7 = 14. Write down 4 and carry over 1 to the next column.\n3. Add the digits in the tens place: 1 (carried over) + 4 + 1 = 6. Write down 6.\n4. Continue this process for each column, moving from right to left, until you reach the leftmost column.\n5. The final sum will be the result of adding all the digits together, including any carried over values.\n\nLet's perform the addition:\n\n```\n  728931477\n+ 913273174\n---------\n```\n\nStarting from the rightmost column:\n\n- Units place: 7 + 7 = 14 (write down 4, carry over 1)\n- Tens place: 1 + 1 + 4 = 6\n- Hundreds place: 7 + 3 = 10 (write down 0, carry over 1)\n- Thousands place: 3 + 2 + 1 = 6\n- Ten-thousands place: 9 + 3 = 12 (write down 2, carry over 1)\n- Hundred-thousands place: 8 + 1 + 1 = 10 (write down 0, carry over 1)\n- Millions place: 2 + 9 + 1 = 12 (write down 2, carry over 1)\n- Ten-millions place: 7 + 1 = 8\n\nSo, the sum of 728931477 and 913273174 is 1642204651.\n</think>\n<answer>\n1642204651\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 553,
+    "completion_tokens": 447,
+    "prompt_tokens_details": null
+  }
+} 99%|█████████▉| 496/500 [31:37<00:06,  1.67s/it] 99%|█████████▉| 497/500 [31:39<00:05,  1.68s/it]100%|█████████▉| 498/500 [31:40<00:02,  1.50s/it]100%|█████████▉| 499/500 [31:42<00:01,  1.57s/it]100%|██████████| 500/500 [31:44<00:00,  1.76s/it]100%|██████████| 500/500 [31:44<00:00,  3.81s/it]
+
+success id:  495
+response:  {
+  "id": "cmpl-311a4b099cb948d79eaf4e8527d97da2",
+  "object": "text_completion",
+  "created": 1753957400,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 714801253 and 964876380, we can follow these steps:\n\n1. Align the numbers by their place values, starting from the rightmost digit (units place). This will help us add the numbers correctly.\n\n2. Add the digits in the units place: 3 + 0 = 3. Write down 3 in the units place of the sum.\n\n3. Move to the next place value (tens place). Add the digits: 2 + 8 = 10. Write down 0 in the tens place of the sum and carry over 1 to the hundreds place.\n\n4. Continue adding the digits in the hundreds place: 1 (carried over) + 1 + 6 = 8. Write down 8 in the hundreds place of the sum.\n\n5. Repeat this process for the thousands, ten-thousands, hundred-thousands, and so on, until you reach the leftmost digit.\n\n6. Finally, add the digits in the leftmost place value (billions place): 7 + 9 = 16. Write down 6 in the billions place of the sum and carry over 1 to the leftmost place value (trillions place).\n\n7. Since there are no more digits to add, the sum of 714801253 and 964876380 is 1679677633.\n\n</think>\n<answer>\nThe sum of 714801253 and 964876380 is 1679677633.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 469,
+    "completion_tokens": 363,
+    "prompt_tokens_details": null
+  }
+}
+success id:  496
+response:  {
+  "id": "cmpl-25c4eb1e0b7d42ebb7fa1904dd72d87d",
+  "object": "text_completion",
+  "created": 1753957402,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 899541032 and 864642763, we can follow these steps:\n\n1. Align the numbers by their place values, starting from the rightmost digit (units place).\n2. Add the digits in the units place: 2 + 3 = 5.\n3. Move to the next place value (tens place): 0 + 7 = 7.\n4. Continue adding the digits in each place value, carrying over any excess to the next place value if necessary.\n5. Finally, add the digits in the highest place value (billions place): 9 + 6 = 15. Since we have a carry-over from the previous step, we add 1 to the sum, resulting in 16.\n\nSo, the sum of 899541032 and 864642763 is 1764183795.\n</think>\n<answer>\n1764183795\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 338,
+    "completion_tokens": 232,
+    "prompt_tokens_details": null
+  }
+}
+success id:  497
+response:  {
+  "id": "cmpl-f0b6890d83e34c16b6f8a1a7ef438293",
+  "object": "text_completion",
+  "created": 1753957403,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 963134105 and 821767453, we can follow these steps:\n\n1. Align the numbers by their place values, starting from the rightmost digit (units place).\n2. Add the digits in the units place: 5 + 3 = 8. Write down 8.\n3. Move to the next place value (tens place): 0 + 4 = 4. Write down 4.\n4. Continue adding the digits in each place value, moving from right to left:\n   - Hundreds place: 1 + 7 = 8\n   - Thousands place: 4 + 6 = 10 (write down 0 and carry over 1)\n   - Ten-thousands place: 3 + 1 + 1 (carry over) = 5\n   - Hundred-thousands place: 1 + 2 = 3\n   - Millions place: 9 + 8 = 17 (write down 7 and carry over 1)\n   - Ten-millions place: 0 + 0 + 1 (carry over) = 1\n5. Finally, add the digits in the ten-millions place: 1 + 0 = 1.\n\nNow, let's put it all together:\n\n963134105\n+ 821767453\n----------\n1784901558\n\nSo, the sum of 963134105 and 821767453 is 1784901558.\n</think>\n<answer>\n1784901558\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 482,
+    "completion_tokens": 376,
+    "prompt_tokens_details": null
+  }
+}
+success id:  498
+response:  {
+  "id": "cmpl-2786b68977414493a0595c9e1d055159",
+  "object": "text_completion",
+  "created": 1753957405,
+  "model": "Qwen2.5-3B-GRPO-2000",
+  "choices": [
+    {
+      "index": 0,
+      "text": " <think>\nTo find the sum of 534280104 and 651658122, we can follow these steps:\n\n1. Align the numbers by their place values, starting from the rightmost digit (units place). This will help us add the numbers correctly.\n\n2. Add the digits in the units place: 4 + 2 = 6. Write down 6 in the units place of the sum.\n\n3. Move to the next place value (tens place). Add the digits: 0 + 1 = 1. Write down 1 in the tens place of the sum.\n\n4. Continue this process for each place value, moving from right to left. Add the digits in the hundreds place: 1 + 8 = 9. Write down 9 in the hundreds place of the sum.\n\n5. Add the digits in the thousands place: 8 + 5 = 13. Write down 3 in the thousands place of the sum and carry over 1 to the ten-thousands place.\n\n6. Add the digits in the ten-thousands place, including the carry-over: 2 + 6 + 1 = 9. Write down 9 in the ten-thousands place of the sum.\n\n7. Repeat this process for each place value until you reach the leftmost digit (billions place). Add the digits in the billions place: 5 + 6 = 11. Write down 1 in the billions place of the sum and carry over 1 to the trillions place.\n\n8. Finally, add the digits in the trillions place, including the carry-over: 0 + 0 + 1 = 1. Write down 1 in the trillions place of the sum.\n\nNow, let's put all the digits together to get the final sum:\n\n534280104 + 651658122 = 1185938226\n\nSo, the sum of 534280104 and 651658122 is 1185938226.\n</think>\n<answer>\n1185938226\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 106,
+    "total_tokens": 583,
+    "completion_tokens": 477,
+    "prompt_tokens_details": null
+  }
+}
+success id:  499
+acc_newdirectbase.math teacher: 0.79 (395/500)
+Write 500 items into exp_cot/output/output.Addition_9.newdirectbase.math_teacher.Qwen2.5-3B-GRPO-2000.json
