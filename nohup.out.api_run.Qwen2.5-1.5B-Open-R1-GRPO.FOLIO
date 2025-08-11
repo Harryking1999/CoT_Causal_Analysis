@@ -1,0 +1,4993 @@
+Dataset is FOLIO. Ignore the nsamples argument.
+Mon Aug 11 01:32:41 PM CST 2025, Evaluating 600 samples from FOLIO using prompts newdirect ...
+/home/fuzhizhang.fzz/CoT_Causal_Analysis/scripts/api_run.py:92: SyntaxWarning: invalid escape sequence '\{'
+  fields = re.findall('\{\{\w+\}\}', full_prompt)
+/home/fuzhizhang.fzz/CoT_Causal_Analysis/scripts/api_run.py:176: SyntaxWarning: invalid escape sequence '\d'
+  output = [line for line in output if len(re.findall('\d+', line)) > 0]
+/home/fuzhizhang.fzz/CoT_Causal_Analysis/scripts/api_run.py:184: SyntaxWarning: invalid escape sequence '\d'
+  answer = re.findall('\d+', answer)
+http://localhost:8081/v1
+123
+OpenAI API with http://localhost:8081/v1, Qwen2.5-1.5B-Open-R1-GRPO, ####, 20000
+Output to: exp_cot/output/output.FOLIO.newdirect.math_teacher.Qwen2.5-1.5B-Open-R1-GRPO.json
+  0%|          | 0/204 [00:00<?, ?it/s]  0%|          | 1/204 [00:00<00:37,  5.35it/s]  1%|          | 2/204 [00:00<00:49,  4.10it/s]  1%|▏         | 3/204 [00:00<00:45,  4.45it/s]  2%|▏         | 4/204 [00:00<00:44,  4.52it/s]  2%|▏         | 5/204 [00:01<00:47,  4.23it/s]  3%|▎         | 6/204 [00:01<00:47,  4.15it/s]  3%|▎         | 7/204 [00:01<00:45,  4.29it/s]  4%|▍         | 8/204 [00:01<00:46,  4.21it/s]  4%|▍         | 9/204 [00:02<00:45,  4.27it/s]  5%|▍         | 10/204 [00:02<00:47,  4.05it/s]response:  {
+  "id": "cmpl-e79622c6ffd5456b8b07f248873b5451",
+  "object": "text_completion",
+  "created": 1754890361,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if Djokovic lives in a tax haven, we need to analyze the given information step by step.\n</think>\n<answer>\n$\\text{C) Uncertain}$\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 177,
+    "total_tokens": 222,
+    "completion_tokens": 45,
+    "prompt_tokens_details": null
+  }
+}
+([A-C])\)\s*(True|False|Unknown|Uncertain)
+final_ans:  C
+success id:  0
+response:  {
+  "id": "cmpl-b868604db2e6460ea6b6a98701dcf20f",
+  "object": "text_completion",
+  "created": 1754890362,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"James either takes the database course or has a part-time job offered by the university\" is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement \"James either takes the database course or has a part-time job offered by the university\" is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 187,
+    "total_tokens": 265,
+    "completion_tokens": 78,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  1
+response:  {
+  "id": "cmpl-68261adfcf904fcfb0f9d39d41eaa9df",
+  "object": "text_completion",
+  "created": 1754890362,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Aurochs are extinct\" is true, false, or uncertain, we need to analyze the given context and the information provided.\n</think>\n<answer>\nThe statement \"Aurochs are extinct\" is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 146,
+    "total_tokens": 203,
+    "completion_tokens": 57,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  2
+response:  {
+  "id": "cmpl-6ccb2833ad98459bbe4806ce3fc4db00",
+  "object": "text_completion",
+  "created": 1754890362,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine the truth value of the statement \"Rock is either cute or skittish,\" we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement \"Rock is either cute or skittish\" is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 138,
+    "total_tokens": 195,
+    "completion_tokens": 57,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  3
+response:  {
+  "id": "cmpl-5a5dd7dd46534d288c8353ce4a71e29b",
+  "object": "text_completion",
+  "created": 1754890362,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Dried Thai chilies are not a product of Baked by Melissa\" is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement \"Dried Thai chilies are not a product of Baked by Melissa\" is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 140,
+    "total_tokens": 214,
+    "completion_tokens": 74,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  4
+response:  {
+  "id": "cmpl-d8e9dd35650b4d0a85c397de1424aa3b",
+  "object": "text_completion",
+  "created": 1754890363,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"If George will not compose, George can not compose\" is true, false, or uncertain, we need to analyze the given context and the logical reasoning step by step.\n</think>\n<answer>\nThe statement \"If George will not compose, George can not compose\" is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 119,
+    "total_tokens": 189,
+    "completion_tokens": 70,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  5
+response:  {
+  "id": "cmpl-842cac4c73fa4af5a3db75bd899e4049",
+  "object": "text_completion",
+  "created": 1754890363,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Rose is a human or a manager\" is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement \"Rose is a human or a manager\" is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 124,
+    "total_tokens": 184,
+    "completion_tokens": 60,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  6
+response:  {
+  "id": "cmpl-cd294eb729a645a486a32ffb72890e9d",
+  "object": "text_completion",
+  "created": 1754890363,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Ailton was not loaned out to a football club\" is true, false, or uncertain, we need to analyze the given context and the information provided.\n</think>\n<answer>\nThe statement \"Ailton was not loaned out to a football club\" is false.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 155,
+    "total_tokens": 224,
+    "completion_tokens": 69,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  7
+response:  {
+  "id": "cmpl-f0b12494b1a1448b83ad9eea38f6de9c",
+  "object": "text_completion",
+  "created": 1754890363,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Roderick Strong leads a professional wrestling stable\" is true, false, or uncertain, we need to analyze the given context and the information provided.\n</think>\n<answer>\nThe statement \"Roderick Strong leads a professional wrestling stable\" is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 123,
+    "total_tokens": 188,
+    "completion_tokens": 65,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  8
+response:  {
+  "id": "cmpl-81d59c0b1776433bbd3381f1c651ede8",
+  "object": "text_completion",
+  "created": 1754890363,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"It is not true that Rose is a student and Jerry is a human\" is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement \"It is not true that Rose is a student and Jerry is a human\" is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 131,
+    "total_tokens": 205,
+    "completion_tokens": 74,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  9
+response:  {
+  "id": "cmpl-b31d53a483c04ff287dedb50798d82d7",
+  "object": "text_completion",
+  "created": 1754890364,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Dried Thai chilies are cupcakes and a product of Baked by Melissa\" is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement \"Dried Thai chilies are cupcakes and a product of Baked by Melissa\" is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 141,
+    "total_tokens": 217,
+    "completion_tokens": 76,
+    "prompt_tokens_details": null
+  }
+}  5%|▌         | 11/204 [00:02<00:48,  3.94it/s]  6%|▌         | 12/204 [00:02<00:43,  4.43it/s]  6%|▋         | 13/204 [00:03<00:43,  4.36it/s]  7%|▋         | 14/204 [00:03<00:42,  4.49it/s]  7%|▋         | 15/204 [00:03<00:42,  4.48it/s]  8%|▊         | 16/204 [00:03<00:41,  4.57it/s]  8%|▊         | 17/204 [00:03<00:36,  5.11it/s]  9%|▉         | 18/204 [00:03<00:35,  5.27it/s]  9%|▉         | 19/204 [00:04<00:38,  4.85it/s] 10%|▉         | 20/204 [00:04<00:36,  4.98it/s] 10%|█         | 21/204 [00:04<00:39,  4.68it/s]
+final_ans:  None
+success id:  10
+response:  {
+  "id": "cmpl-70b719ba759d4c2990205744806e8523",
+  "object": "text_completion",
+  "created": 1754890364,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if Karen will share \"Black Mirror\" to Lisa, we need to analyze the given information step by step.\n</think>\n<answer>\nThe correct answer is B) False.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 157,
+    "total_tokens": 202,
+    "completion_tokens": 45,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  B
+success id:  11
+response:  {
+  "id": "cmpl-16fdc76e6e1446ad9b004e72e4d084eb",
+  "object": "text_completion",
+  "created": 1754890364,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"A design by Max is evocative and dreamy\" is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement \"A design by Max is evocative and dreamy\" is false.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 171,
+    "total_tokens": 239,
+    "completion_tokens": 68,
+    "prompt_tokens_details": null
+  }
+}
+[^A-Za-z0-9]([A-D])\)?\s
+final_ans:  A
+success id:  12
+response:  {
+  "id": "cmpl-0b605ce214e342f4951cf9045e53b061",
+  "object": "text_completion",
+  "created": 1754890364,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Beethoven is a composer\" is true, false, or uncertain, we need to analyze the given context and the information provided about Beethoven and the Vienna Music Society.\n</think>\n<answer>\nThe correct answer is B) False.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 140,
+    "total_tokens": 201,
+    "completion_tokens": 61,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  B
+success id:  13
+response:  {
+  "id": "cmpl-ba5090b9644c459d8790f55e5a21efae",
+  "object": "text_completion",
+  "created": 1754890365,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"A Greyhound is a Boeing 707\" is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement \"A Greyhound is a Boeing 707\" is false.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 135,
+    "total_tokens": 201,
+    "completion_tokens": 66,
+    "prompt_tokens_details": null
+  }
+}
+[^A-Za-z0-9]([A-D])\)?\s
+final_ans:  A
+success id:  14
+response:  {
+  "id": "cmpl-a7039f98e46145d18f7e43e2f0baeb2a",
+  "object": "text_completion",
+  "created": 1754890365,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine the truth value of the statement \"Colorectal cancer is a bile duct cancer or a Cholangiocarcinoma,\" we need to analyze the given information step by step.\n</think>\n<answer>\nThe correct answer is B) False.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 189,
+    "total_tokens": 248,
+    "completion_tokens": 59,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  B
+success id:  15
+response:  {
+  "id": "cmpl-523419c6f8bf4213935f3817fb607699",
+  "object": "text_completion",
+  "created": 1754890365,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if Taylor visits the gym at least once a day, we need to analyze the given information step by step.\n</think>\n<answer>\n$C$.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 235,
+    "total_tokens": 276,
+    "completion_tokens": 41,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  16
+response:  {
+  "id": "cmpl-2b0e9b3198ad4ce396f00576ffb60967",
+  "object": "text_completion",
+  "created": 1754890365,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if FIFA 22 is made by a Japanese video game company, we need to analyze the given information step by step.\n</think>\n<answer>\nThe correct answer is C) Uncertain.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 151,
+    "total_tokens": 200,
+    "completion_tokens": 49,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  C
+success id:  17
+response:  {
+  "id": "cmpl-084f105d210b4641adccb1d9592ca874",
+  "object": "text_completion",
+  "created": 1754890365,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Mary needs to earn money to help pay for her college tuition\" is true, false, or uncertain, we need to analyze the given context step by step.\n</think>\n<answer>\nThe statement \"Mary needs to earn money to help pay for her college tuition\" is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 233,
+    "total_tokens": 303,
+    "completion_tokens": 70,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  18
+response:  {
+  "id": "cmpl-ad2992013640489abc0dab6da4732366",
+  "object": "text_completion",
+  "created": 1754890366,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the Legend of Zelda is in the Top 10 list, we need to analyze the given information step by step.\n</think>\n<answer>\nThe Legend of Zelda is in the Top 10 list.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 151,
+    "total_tokens": 204,
+    "completion_tokens": 53,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  19
+response:  {
+  "id": "cmpl-3eca89a2274c445390e0fee11e25c080",
+  "object": "text_completion",
+  "created": 1754890366,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Dried Thai chilies are a product of Baked by Melissa\" is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement \"Dried Thai chilies are a product of Baked by Melissa\" is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 139,
+    "total_tokens": 211,
+    "completion_tokens": 72,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  20
+response:  {
+  "id": "cmpl-524ca95eec624bd9ba76891b281348c1",
+  "object": "text_completion",
+  "created": 1754890366,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if Tom is a grumpy person, we need to analyze the given information step by step.\n</think>\n<answer>\n$C$.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 124,
+    "total_tokens": 162,
+    "completion_tokens": 38,
+    "prompt_tokens_details": null
+  }
+} 11%|█         | 22/204 [00:04<00:34,  5.23it/s] 11%|█▏        | 23/204 [00:04<00:32,  5.55it/s] 12%|█▏        | 24/204 [00:05<00:29,  6.02it/s] 12%|█▏        | 25/204 [00:05<00:33,  5.40it/s] 13%|█▎        | 26/204 [00:05<00:30,  5.77it/s] 13%|█▎        | 27/204 [00:05<00:33,  5.36it/s] 14%|█▎        | 28/204 [00:05<00:35,  5.01it/s] 14%|█▍        | 29/204 [00:06<00:36,  4.79it/s] 15%|█▍        | 30/204 [00:06<00:37,  4.65it/s] 15%|█▌        | 31/204 [00:06<00:39,  4.42it/s] 16%|█▌        | 32/204 [00:06<00:41,  4.13it/s]
+final_ans:  None
+success id:  21
+response:  {
+  "id": "cmpl-061386d345f44c0b9a2f8861cdf074db",
+  "object": "text_completion",
+  "created": 1754890366,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if Sir Digby's nemesis loses, we need to analyze the given information step by step.\n</think>\n<answer>\nThe correct answer is B) False.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 187,
+    "total_tokens": 230,
+    "completion_tokens": 43,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  B
+success id:  22
+response:  {
+  "id": "cmpl-54d79b6003da4609847862bfd327524d",
+  "object": "text_completion",
+  "created": 1754890366,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if Yuri is an American basketball player, we need to analyze the given information step by step.\n</think>\n<answer>\n$C$.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 123,
+    "total_tokens": 161,
+    "completion_tokens": 38,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  23
+response:  {
+  "id": "cmpl-8a23291d5b8e4a17b7745f3dc666b3c2",
+  "object": "text_completion",
+  "created": 1754890366,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine the truth value of the statement \"Some evergreens are not objects of worship,\" we need to analyze the given information and the logical reasoning involved.\n</think>\n<answer>\nThe statement \"Some evergreens are not objects of worship\" is true based on the given information.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 97,
+    "total_tokens": 161,
+    "completion_tokens": 64,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  24
+response:  {
+  "id": "cmpl-eb203944bad94febbc5f2ca649d48134",
+  "object": "text_completion",
+  "created": 1754890367,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if Djokovic lives in a tax haven, we need to analyze the given information step by step.\n</think>\n<answer>\n$A$.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 179,
+    "total_tokens": 219,
+    "completion_tokens": 40,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  25
+response:  {
+  "id": "cmpl-511f12dac8eb4b19a805b0a34127a2e7",
+  "object": "text_completion",
+  "created": 1754890367,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine the truth value of the statement \"Juan de Onate visited a mountain range in Texas,\" we need to analyze the given context and the information provided.\n</think>\n<answer>\nThe statement \"Juan de Onate visited a mountain range in Texas\" is false.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 143,
+    "total_tokens": 205,
+    "completion_tokens": 62,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  26
+response:  {
+  "id": "cmpl-b18f17008c42427ab1337ff0dc94d963",
+  "object": "text_completion",
+  "created": 1754890367,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"The Legend of Zelda is not in the Top 10 list\" is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\nThe Legend of Zelda is not in the Top 10 list.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 152,
+    "total_tokens": 218,
+    "completion_tokens": 66,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  27
+response:  {
+  "id": "cmpl-9c741f3a8a654ed1895fff127bf6abd7",
+  "object": "text_completion",
+  "created": 1754890367,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Tom is an Ocellated wild turkey\" is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement \"Tom is an Ocellated wild turkey\" is false.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 175,
+    "total_tokens": 237,
+    "completion_tokens": 62,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  28
+response:  {
+  "id": "cmpl-1c30affdb4f8485e91609ac29557f80e",
+  "object": "text_completion",
+  "created": 1754890368,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Beethoven is not a conductor\" is true, false, or uncertain, we need to analyze the given context and the information provided about Beethoven and the Vienna Music Society.\n</think>\n<answer>\nThe correct answer is B) False.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 141,
+    "total_tokens": 203,
+    "completion_tokens": 62,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  B
+success id:  29
+response:  {
+  "id": "cmpl-abd09f09142041b8becff69249e345c9",
+  "object": "text_completion",
+  "created": 1754890368,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine the truth value of the statement \"Rock is cute and still, then Rock is a turtle and skittish,\" we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement \"Rock is cute and still, then Rock is a turtle and skittish\" is false.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 134,
+    "total_tokens": 205,
+    "completion_tokens": 71,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  30
+response:  {
+  "id": "cmpl-0ed8f06b9eb24573a12c495ccac6a5c6",
+  "object": "text_completion",
+  "created": 1754890368,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Yale University has the largest university endowment of any educational institution\" is true, false, or uncertain, we need to compare the endowment value of Yale University with other educational institutions.\n</think>\n<answer>\nThe statement \"Yale University has the largest university endowment of any educational institution\" is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 225,
+    "total_tokens": 302,
+    "completion_tokens": 77,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  31
+response:  {
+  "id": "cmpl-88617cdb4f4444e6b5489f12329cfa77",
+  "object": "text_completion",
+  "created": 1754890368,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Some affection is positive\" is true, false, or uncertain, we need to analyze the given context and the statement itself.\n</think>\n<answer>\nThe statement \"Some affection is positive\" is true based on the given context.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 88,
+    "total_tokens": 148,
+    "completion_tokens": 60,
+    "prompt_tokens_details": null
+  }
+} 16%|█▌        | 33/204 [00:07<00:39,  4.30it/s] 17%|█▋        | 34/204 [00:07<00:39,  4.26it/s] 17%|█▋        | 35/204 [00:07<00:36,  4.65it/s] 18%|█▊        | 36/204 [00:07<00:32,  5.10it/s] 18%|█▊        | 37/204 [00:08<01:16,  2.19it/s] 19%|█▊        | 38/204 [00:08<01:03,  2.60it/s] 19%|█▉        | 39/204 [00:09<00:50,  3.25it/s] 20%|█▉        | 40/204 [00:09<00:45,  3.64it/s]
+final_ans:  None
+success id:  32
+response:  {
+  "id": "cmpl-8a3f4a7974644b948f68f56e28592118",
+  "object": "text_completion",
+  "created": 1754890368,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Machine translation is a language understanding task\" is true, false, or uncertain, we need to analyze the given context and the definition of natural language processing tasks.\n</think>\n<answer>\nThe statement \"Machine translation is a language understanding task\" is false.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 139,
+    "total_tokens": 204,
+    "completion_tokens": 65,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  33
+response:  {
+  "id": "cmpl-49c00aed2e0342f29922b55c9e53a583",
+  "object": "text_completion",
+  "created": 1754890369,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if James does not have a part-time job offered by the university, we need to analyze the given information step by step.\n</think>\n<answer>\nThe correct answer is B) False.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 183,
+    "total_tokens": 231,
+    "completion_tokens": 48,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  B
+success id:  34
+response:  {
+  "id": "cmpl-8dcd9ee88afb4806bb18490db10959a0",
+  "object": "text_completion",
+  "created": 1754890369,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if Tom is an Eastern wild turkey, we need to analyze the given information step by step.\n</think>\n<answer>\nThe correct answer is B) False.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 173,
+    "total_tokens": 215,
+    "completion_tokens": 42,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  B
+success id:  35
+response:  {
+  "id": "cmpl-1f0467fd71ef49bc9960b0b178217540",
+  "object": "text_completion",
+  "created": 1754890369,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if Jack takes the database course, we need to analyze the given information step by step.\n</think>\n<answer>\nLet's break down the information step by step:\n\n1. No students who work in the library are from the computer science department.\n2. All students who have part-time jobs offered by the university are students who work in the library.\n3. All students who take the database course are from the computer science department.\n4. All students instructed by professor David are taking the database course.\n5. All students working in the lab are instructed by professor David.\n6. James is a student working in the lab.\n7. Jack neither has a part-time job offered by the university nor works in the lab.\n\nFrom the information given:\n- James is a student working in the lab.\n- James is not from the computer science department (since he works in the lab).\n- James is not taking the database course (since he works in the lab).\n- James is not instructed by professor David (since he works in the lab).\n- Jack is not working in the lab (since he is not working in the lab).\n- Jack is not taking the database course (since he is not working in the lab).\n- Jack is not instructed by professor David (since he is not working in the lab).\n\nGiven these points, we can conclude that Jack does not take the database course.\nTherefore, the statement \"Jack takes the database course\" is false.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 176,
+    "total_tokens": 478,
+    "completion_tokens": 302,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  36
+response:  {
+  "id": "cmpl-72a737e8254941a383c5b549afe06402",
+  "object": "text_completion",
+  "created": 1754890370,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Rock is a turtle or cute\" is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement \"Rock is a turtle or cute\" is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 124,
+    "total_tokens": 182,
+    "completion_tokens": 58,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  37
+response:  {
+  "id": "cmpl-dc5821870aec4fc1bb2d782c1583a3c7",
+  "object": "text_completion",
+  "created": 1754890370,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if Ted is a pet, we need to analyze the given information step by step.\n</think>\n<answer>\n$A$.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 117,
+    "total_tokens": 153,
+    "completion_tokens": 36,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  38
+response:  {
+  "id": "cmpl-b0ed4de1b0f74be7887900c5480b8ca4",
+  "object": "text_completion",
+  "created": 1754890370,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if there is at least one cove in Antarctica named after a place in Bulgaria, we need to analyze the given context and the statement in question.\n</think>\n<answer>\nThe correct answer is B) False.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 167,
+    "total_tokens": 220,
+    "completion_tokens": 53,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  B
+success id:  39
+response:  {
+  "id": "cmpl-f44a368ebef649d09c7cc940666fa378",
+  "object": "text_completion",
+  "created": 1754890371,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if James has a part-time job offered by the university, we need to analyze the given information step by step.\n</think>\n<answer>\nLet's break down the information step by step:\n\n1. No students who work in the library are from the computer science department.\n2. All students who have part-time jobs offered by the university are students who work in the library.\n3. All students who take the database course are from the computer science department.\n4. All students instructed by professor David are taking the database course.\n5. All students working in the lab are instructed by professor David.\n6. James is a student working in the lab.\n7. Jack neither has a part-time job offered by the university nor works in the lab.\n\nFrom the information given:\n- James is a student working in the lab.\n- Since James is working in the lab, he must be instructed by professor David (from step 5).\n- Since all students instructed by professor David are taking the database course (from step 4), James must be taking the database course.\n- Since all students taking the database course are from the computer science department (from step 3), James must be from the computer science department.\n- Since no students who work in the library are from the computer science department (from step 1), James cannot be from the computer science department.\n\nTherefore, James cannot be working in the lab and taking the database course simultaneously.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 181,
+    "total_tokens": 479,
+    "completion_tokens": 298,
+    "prompt_tokens_details": null
+  }
+} 20%|██        | 41/204 [00:10<01:22,  1.97it/s] 21%|██        | 42/204 [00:10<01:07,  2.41it/s] 21%|██        | 43/204 [00:10<00:53,  2.99it/s] 22%|██▏       | 44/204 [00:10<00:48,  3.31it/s] 22%|██▏       | 45/204 [00:11<00:43,  3.67it/s] 23%|██▎       | 46/204 [00:11<00:38,  4.06it/s] 23%|██▎       | 47/204 [00:11<00:34,  4.61it/s] 24%|██▎       | 48/204 [00:11<00:33,  4.67it/s] 24%|██▍       | 49/204 [00:11<00:33,  4.56it/s] 25%|██▍       | 50/204 [00:12<00:47,  3.23it/s] 25%|██▌       | 51/204 [00:12<00:39,  3.83it/s]
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  40
+response:  {
+  "id": "cmpl-b075cbee5b1e474795772e00da8e09b2",
+  "object": "text_completion",
+  "created": 1754890372,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine the truth value of the statement \"The last Olympic games were not in Tokyo,\" we need to analyze the given context and the information provided.\n</think>\n<answer>\nThe correct answer is B) False.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 111,
+    "total_tokens": 162,
+    "completion_tokens": 51,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  B
+success id:  41
+response:  {
+  "id": "cmpl-6ffdf9ec1b494a4fa29153053fc217e4",
+  "object": "text_completion",
+  "created": 1754890372,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if Windy is a great shooter, we need to analyze the given information step by step.\n</think>\n<answer>\n$C$.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 186,
+    "total_tokens": 224,
+    "completion_tokens": 38,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  42
+response:  {
+  "id": "cmpl-99d7af40487d4ebda9885f6cfc6e4185",
+  "object": "text_completion",
+  "created": 1754890372,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"All squares are shapes\" is true, false, or uncertain based on the given context, we need to analyze the information provided.\n</think>\n<answer>\nThe statement \"All squares are shapes\" is true based on the given context.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 91,
+    "total_tokens": 152,
+    "completion_tokens": 61,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  43
+response:  {
+  "id": "cmpl-bdac18f033bf40c5991f64a397237ca5",
+  "object": "text_completion",
+  "created": 1754890372,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Rock is not a turtle\" is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement \"Rock is not a turtle\" is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 123,
+    "total_tokens": 179,
+    "completion_tokens": 56,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  44
+response:  {
+  "id": "cmpl-5a4c8dd036584d238b8b17eb280de3bc",
+  "object": "text_completion",
+  "created": 1754890372,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if Luke spends a lot of time hanging out and playing with his siblings, we need to analyze the given information step by step.\n</think>\n<answer>\nThe correct answer is C) Uncertain.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 228,
+    "total_tokens": 278,
+    "completion_tokens": 50,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  C
+success id:  45
+response:  {
+  "id": "cmpl-69f94d9324b145c7a808a1873d348653",
+  "object": "text_completion",
+  "created": 1754890373,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if Marvin is neither a human nor from Mars, we need to analyze the given information step by step.\n</think>\n<answer>\n$A$.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 138,
+    "total_tokens": 178,
+    "completion_tokens": 40,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  46
+response:  {
+  "id": "cmpl-3f1c1d532d374151a4d68d204efc407c",
+  "object": "text_completion",
+  "created": 1754890373,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if Tom can apply for financial aid from ETS to take the GRE test, we need to analyze the given context and the conditions under which ETS provides financial aid.\n</think>\n<answer>\nThe correct answer is B) False.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 152,
+    "total_tokens": 209,
+    "completion_tokens": 57,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  B
+success id:  47
+response:  {
+  "id": "cmpl-0ce742f9ce07415cb6fd11751175dec4",
+  "object": "text_completion",
+  "created": 1754890373,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Rose is a human or Jerry is a manager\" is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement \"Rose is a human or Jerry is a manager\" is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 126,
+    "total_tokens": 190,
+    "completion_tokens": 64,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  48
+response:  {
+  "id": "cmpl-46ec2a155a2d432ebb41d384abbb8be1",
+  "object": "text_completion",
+  "created": 1754890373,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if James does not have lunch in the company, we need to analyze the given information step by step.\n</think>\n<answer>\nLet's break down the information step by step:\n\n1. **All employees who schedule a meeting with their customers will appear in the company today.**\n   - **Everyone who has lunch in the company schedules meetings with their customers.**\n   - **Employees will either have lunch in the company or have lunch at home.**\n   - **If an employee has lunch at home, then he/she is working remotely from home.**\n   - **All employees who are in other countries work remotely from home.**\n   - **No managers work remotely from home.**\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 183,
+    "total_tokens": 332,
+    "completion_tokens": 149,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  49
+response:  {
+  "id": "cmpl-5ceb8176908d4d12858eade6dea56fb1",
+  "object": "text_completion",
+  "created": 1754890374,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if Coco Gauff has lost to Rafael Nadal, we need to analyze the given information step by step.\n</think>\n<answer>\n$C$.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 241,
+    "total_tokens": 282,
+    "completion_tokens": 41,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  50
+response:  {
+  "id": "cmpl-9f4e77957c35481b91e7511a8487051f",
+  "object": "text_completion",
+  "created": 1754890374,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine the truth value of the statement \"Colorectal cancer is a bile duct cancer and a mild flu,\" we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement \"Colorectal cancer is a bile duct cancer and a mild flu\" is false.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 185,
+    "total_tokens": 252,
+    "completion_tokens": 67,
+    "prompt_tokens_details": null
+  }
+} 25%|██▌       | 52/204 [00:12<00:38,  3.92it/s] 26%|██▌       | 53/204 [00:12<00:35,  4.22it/s] 26%|██▋       | 54/204 [00:14<01:12,  2.06it/s] 27%|██▋       | 55/204 [00:14<00:57,  2.60it/s] 27%|██▋       | 56/204 [00:14<00:49,  3.00it/s] 28%|██▊       | 57/204 [00:14<00:43,  3.37it/s] 28%|██▊       | 58/204 [00:14<00:37,  3.90it/s] 29%|██▉       | 59/204 [00:15<00:36,  3.96it/s] 29%|██▉       | 60/204 [00:15<00:35,  4.01it/s]
+final_ans:  None
+success id:  51
+response:  {
+  "id": "cmpl-7101d035cbdc4ab8b1070d11b2177252",
+  "object": "text_completion",
+  "created": 1754890374,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Subway does not provide take-out service\" is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\n$\\boxed{\\text{C}}$\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 161,
+    "total_tokens": 216,
+    "completion_tokens": 55,
+    "prompt_tokens_details": null
+  }
+}
+\{([A-D])\}
+final_ans:  C
+success id:  52
+response:  {
+  "id": "cmpl-8ad350e50f0742ed98dd628480073cb5",
+  "object": "text_completion",
+  "created": 1754890374,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Ben is loved by children\" is true, false, or uncertain, we need to analyze the given conditions step by step.\n</think>\n<answer>\nLet's analyze the conditions:\n\n1. If a cartoon character is funny, then it is popular.\n2. If a cartoon character is ugly, then it is not popular.\n3. If a cartoon character is loved by children, then it is funny.\n4. If a cartoon character is from The Simpsons, then it is loved by children.\n5. If a cartoon character is yellow, then it is from The Simpsons.\n6. Ben is either from The Simpsons or funny.\n\nFrom these conditions, we can deduce the following:\n\n- If Ben is from The Simpsons, then he is loved by children (Condition 4).\n- If Ben is funny, then he is loved by children (Condition 3).\n- If Ben is funny and from The Simpsons, then he is loved by children (Condition 4 and 5 combined).\n- If Ben is funny and not from The Simpsons, then he is not loved by children (Condition 3 and 6 combined).\n\nGiven that Ben is either from The Simpsons or funny, we can conclude that if he is from The Simpsons, he is loved by children. However, if he is funny, he is also loved by children. Therefore, the statement \"Ben is loved by children\" is true based on the given conditions.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 157,
+    "total_tokens": 457,
+    "completion_tokens": 300,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  53
+response:  {
+  "id": "cmpl-d97bb8fb4d3c43309e3c915baf278912",
+  "object": "text_completion",
+  "created": 1754890375,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if Family Secrets is a novel, we need to analyze the given information step by step.\n</think>\n<answer>\nThe correct answer is B) False.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 173,
+    "total_tokens": 214,
+    "completion_tokens": 41,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  B
+success id:  54
+response:  {
+  "id": "cmpl-24eeb3774e694807b7d3bb38a4444bc3",
+  "object": "text_completion",
+  "created": 1754890376,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Robert Lewandowski is a star\" is true, false, or uncertain, we need to analyze the given context and the information provided.\n</think>\n<answer>\nThe statement \"Robert Lewandowski is a star\" is false.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 125,
+    "total_tokens": 186,
+    "completion_tokens": 61,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  55
+response:  {
+  "id": "cmpl-041b90c750d945e5bb3d430071e3dea2",
+  "object": "text_completion",
+  "created": 1754890376,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Koalas love to sleep\" is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement \"Koalas love to sleep\" is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 152,
+    "total_tokens": 212,
+    "completion_tokens": 60,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  56
+response:  {
+  "id": "cmpl-2dae0691a3554ba29952b034bb224e41",
+  "object": "text_completion",
+  "created": 1754890376,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if Dani Shapiro was born in Boston, we need to analyze the given information step by step.\n</think>\n<answer>\nThe correct answer is C) Uncertain.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 174,
+    "total_tokens": 217,
+    "completion_tokens": 43,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  C
+success id:  57
+response:  {
+  "id": "cmpl-3de7bd99c6044d74b2940485a72365f4",
+  "object": "text_completion",
+  "created": 1754890376,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Barutin is named after all islands in Antarctica\" is true, false, or uncertain, we need to analyze the given context and the logical reasoning provided.\n</think>\n<answer>\nThe statement \"Barutin is named after all islands in Antarctica\" is false.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 162,
+    "total_tokens": 230,
+    "completion_tokens": 68,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  58
+response:  {
+  "id": "cmpl-e7e2c2104c764fda8cffb4dfd644556a",
+  "object": "text_completion",
+  "created": 1754890376,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"No politicians are part of the Nazi Reichstag\" is true, false, or uncertain, we need to analyze the given context and the information provided.\n</think>\n<answer>\nThe statement \"No politicians are part of the Nazi Reichstag\" is false.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 116,
+    "total_tokens": 181,
+    "completion_tokens": 65,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  59
+response:  {
+  "id": "cmpl-2c9a6e4aaa214ed49187f18a5e0741e3",
+  "object": "text_completion",
+  "created": 1754890377,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if Joey is a wild turkey, we need to analyze the given information step by step.\n</think>\n<answer>\nFirst, let's identify the there are six types of wild turkeys: Eastern wild turkey, Osceola wild turkey, Gould\u2019s wild turkey, Merriam\u2019s wild turkey, Rio Grande wild turkey, and Ocellated wild turkey. Tom is not an Eastern wild turkey. Tom is not an Osceola wild turkey. Tom is also not a Gould's wild turkey, or a Merriam's wild turkey, or a Rio Grande wild turkey. Tom is a wild turkey.\n\nFrom the information given, we can deduce that Tom is not an Eastern wild turkey, Osceola wild turkey, Gould's wild turkey, Merriam's wild turkey, or Rio Grande wild turkey. This leaves us with only one type of wild turkey that Tom could be, which is the Ocellated wild turkey.\n\nTherefore, the statement \"Joey is a wild turkey\" is false.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 172,
+    "total_tokens": 385,
+    "completion_tokens": 213,
+    "prompt_tokens_details": null
+  }
+} 30%|██▉       | 61/204 [00:16<00:57,  2.50it/s] 30%|███       | 62/204 [00:16<00:50,  2.83it/s] 31%|███       | 63/204 [00:16<00:44,  3.18it/s] 31%|███▏      | 64/204 [00:16<00:36,  3.82it/s] 32%|███▏      | 65/204 [00:16<00:35,  3.91it/s] 32%|███▏      | 66/204 [00:17<00:30,  4.53it/s] 33%|███▎      | 67/204 [00:17<00:28,  4.80it/s] 33%|███▎      | 68/204 [00:17<00:29,  4.54it/s] 34%|███▍      | 69/204 [00:17<00:28,  4.79it/s] 34%|███▍      | 70/204 [00:17<00:28,  4.75it/s] 35%|███▍      | 71/204 [00:18<00:28,  4.65it/s]
+final_ans:  None
+success id:  60
+response:  {
+  "id": "cmpl-15962a52c96f4c568ae8edd94e1d98f4",
+  "object": "text_completion",
+  "created": 1754890377,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Some orchestras premiered music pieces\" is true, false, or uncertain, we need to analyze the given context and the information provided about the Vienna Music Society and Beethoven.\n</think>\n<answer>\nThe statement \"Some orchestras premiered music pieces\" is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 141,
+    "total_tokens": 208,
+    "completion_tokens": 67,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  61
+response:  {
+  "id": "cmpl-0595c2425712477398d6e78ee155f528",
+  "object": "text_completion",
+  "created": 1754890378,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Imperium doesn't have a feud with a professional wrestling stable that includes Ivy Nile\" is true, false, or uncertain, we need to analyze the given context and the information provided.\n</think>\n<answer>\nThe statement is false.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 130,
+    "total_tokens": 192,
+    "completion_tokens": 62,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  62
+response:  {
+  "id": "cmpl-5a7b959813b14788be496bc2ee18b84f",
+  "object": "text_completion",
+  "created": 1754890378,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if John has at least one child, we need to analyze the given information step by step.\n</think>\n<answer>\n$C$.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 194,
+    "total_tokens": 232,
+    "completion_tokens": 38,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  63
+response:  {
+  "id": "cmpl-d476c01eb806408da1f1931497d15039",
+  "object": "text_completion",
+  "created": 1754890378,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Unsupervised learning is used to train the state-of-the-art text summarization model\" is true, false, or uncertain, we need to analyze the given context and the information provided.\n</think>\n<answer>\nThe correct answer is B) False.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 168,
+    "total_tokens": 233,
+    "completion_tokens": 65,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  B
+success id:  64
+response:  {
+  "id": "cmpl-4f1cee9dc5714c75a1cc92ef6997c3f8",
+  "object": "text_completion",
+  "created": 1754890378,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if KiKi is terricolous, we need to analyze the given conditions step by step.\n</think>\n<answer>\n$C$.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 153,
+    "total_tokens": 191,
+    "completion_tokens": 38,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  65
+response:  {
+  "id": "cmpl-9f7e04d906354674814685d961439b2e",
+  "object": "text_completion",
+  "created": 1754890378,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if Tom is allowed to move in an apartment with Fluffy, we need to analyze the given conditions and the information provided.\n</think>\n<answer>\nThe correct answer is B) False.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 213,
+    "total_tokens": 261,
+    "completion_tokens": 48,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  B
+success id:  66
+response:  {
+  "id": "cmpl-2a7508bb4a824d699e56e6dcce562620",
+  "object": "text_completion",
+  "created": 1754890379,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if Coco Gauff is among the most active players in major tennis, we need to analyze the given information step by step.\n</think>\n<answer>\n$C$.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 244,
+    "total_tokens": 288,
+    "completion_tokens": 44,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  67
+response:  {
+  "id": "cmpl-ec3ffe7dead043c3a97db355e668af67",
+  "object": "text_completion",
+  "created": 1754890379,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine the truth value of the statement \"John flies to LGA airport,\" we need to analyze the given context and the information provided.\n</think>\n<answer>\nThe correct answer is B) False.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 105,
+    "total_tokens": 154,
+    "completion_tokens": 49,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  B
+success id:  68
+response:  {
+  "id": "cmpl-6e861993cc25472d8c8dd7f1a04425f1",
+  "object": "text_completion",
+  "created": 1754890379,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if Harry is smarter than before after reading \"Walden\" by Henry Thoreau, we need to analyze the given context and the statement step by step.\n</think>\n<answer>\nThe correct answer is C) Uncertain.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 131,
+    "total_tokens": 188,
+    "completion_tokens": 57,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  C
+success id:  69
+response:  {
+  "id": "cmpl-601db190d99d4c57a6d5d187af46139a",
+  "object": "text_completion",
+  "created": 1754890379,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Colorectal cancer is a severe cancer\" is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement \"Colorectal cancer is a severe cancer\" is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 162,
+    "total_tokens": 224,
+    "completion_tokens": 62,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  70
+response:  {
+  "id": "cmpl-95e1dc62619d4177969e750691a2ae59",
+  "object": "text_completion",
+  "created": 1754890379,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Yuri does not wear large shoes, then Yuri is an American basketball player\" is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement \"Yuri does not wear large shoes, then Yuri is an American basketball player\" is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 132,
+    "total_tokens": 208,
+    "completion_tokens": 76,
+    "prompt_tokens_details": null
+  }
+} 35%|███▌      | 72/204 [00:18<00:30,  4.28it/s] 36%|███▌      | 73/204 [00:18<00:33,  3.90it/s] 36%|███▋      | 74/204 [00:18<00:32,  4.03it/s] 37%|███▋      | 75/204 [00:19<00:28,  4.56it/s] 37%|███▋      | 76/204 [00:19<00:27,  4.73it/s] 38%|███▊      | 77/204 [00:19<00:23,  5.31it/s] 38%|███▊      | 78/204 [00:19<00:24,  5.10it/s] 39%|███▊      | 79/204 [00:19<00:22,  5.51it/s] 39%|███▉      | 80/204 [00:19<00:21,  5.85it/s] 40%|███▉      | 81/204 [00:20<00:22,  5.42it/s] 40%|████      | 82/204 [00:20<00:24,  5.06it/s]
+final_ans:  None
+success id:  71
+response:  {
+  "id": "cmpl-faefa63cb4d948d09c49fb1561b70f79",
+  "object": "text_completion",
+  "created": 1754890380,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"John has neither a wedding that is well-attended nor does he travel to Paris for his honeymoon\" is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement \"John has neither a wedding that is well-attended nor does he travel to Paris for his honeymoon\" is false.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 207,
+    "total_tokens": 291,
+    "completion_tokens": 84,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  72
+response:  {
+  "id": "cmpl-064b4aec96a4433f821529f318cd8b9f",
+  "object": "text_completion",
+  "created": 1754890380,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Something is a household appliance, it sucks\" is true, false, or uncertain, we need to analyze the given context and the statement itself.\n</think>\n<answer>\nThe statement \"Something is a household appliance, it sucks\" is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 115,
+    "total_tokens": 178,
+    "completion_tokens": 63,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  73
+response:  {
+  "id": "cmpl-b96ca0f921b84fe3a2a3c22b90dd4889",
+  "object": "text_completion",
+  "created": 1754890380,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if Basque is a Romance language, we need to analyze the given information step by step.\n</think>\n<answer>\nThe correct answer is B) False.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 132,
+    "total_tokens": 174,
+    "completion_tokens": 42,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  B
+success id:  74
+response:  {
+  "id": "cmpl-3ed49349d60b44a2bd73669f0e7539f5",
+  "object": "text_completion",
+  "created": 1754890380,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Rock is a monkey\" is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement \"Rock is a monkey\" is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 134,
+    "total_tokens": 188,
+    "completion_tokens": 54,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  75
+response:  {
+  "id": "cmpl-cab0c04625824b6dafd6a1fa8e3236b3",
+  "object": "text_completion",
+  "created": 1754890381,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if Taylor eats salads regularly, we need to analyze the given information step by step.\n</think>\n<answer>\n$C$.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 230,
+    "total_tokens": 266,
+    "completion_tokens": 36,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  76
+response:  {
+  "id": "cmpl-5d9d1c9a42f9419dba98e50e065001a2",
+  "object": "text_completion",
+  "created": 1754890381,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Machine translation is a language generation task\" is true, false, or uncertain, we need to analyze the given context and the definition provided.\n</think>\n<answer>\nThe statement \"Machine translation is a language generation task\" is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 139,
+    "total_tokens": 200,
+    "completion_tokens": 61,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  77
+response:  {
+  "id": "cmpl-16210ff075c349e0a4ad7620cf362f06",
+  "object": "text_completion",
+  "created": 1754890381,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if Remy visits the office supply store regularly, we need to analyze the given information step by step.\n</think>\n<answer>\n$C$.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 256,
+    "total_tokens": 296,
+    "completion_tokens": 40,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  78
+response:  {
+  "id": "cmpl-fb533ea796b4481291eeddbfaa93d580",
+  "object": "text_completion",
+  "created": 1754890381,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if James's favorite season is summer, we need to analyze the given information step by step.\n</think>\n<answer>\nThe correct answer is B) False.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 141,
+    "total_tokens": 183,
+    "completion_tokens": 42,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  B
+success id:  79
+response:  {
+  "id": "cmpl-4c2e394d0575442baf34a62bee9a86d6",
+  "object": "text_completion",
+  "created": 1754890381,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Mike has an F1 visa\" is true, false, or uncertain, we need to analyze the given context and the information provided about Mike's visa status.\n</think>\n<answer>\nThe correct answer is B) False.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 146,
+    "total_tokens": 205,
+    "completion_tokens": 59,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  B
+success id:  80
+response:  {
+  "id": "cmpl-1b8804ff207340f5b2956359a41326b7",
+  "object": "text_completion",
+  "created": 1754890381,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Heinrich Schmidt was either German or Russian\" is true, false, or uncertain, we need to analyze the given context and the information provided.\n</think>\n<answer>\nThe statement \"Heinrich Schmidt was either German or Russian\" is false.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 114,
+    "total_tokens": 179,
+    "completion_tokens": 65,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  81
+response:  {
+  "id": "cmpl-bc78779f3fce4083bc61a147fb6bd2e7",
+  "object": "text_completion",
+  "created": 1754890382,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if French is an Indo-European language, we need to analyze the given context and the information provided.\n</think>\n<answer>\nThe correct answer is B) False.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 132,
+    "total_tokens": 175,
+    "completion_tokens": 43,
+    "prompt_tokens_details": null
+  }
+} 41%|████      | 83/204 [00:20<00:22,  5.39it/s] 41%|████      | 84/204 [00:20<00:24,  4.96it/s] 42%|████▏     | 85/204 [00:20<00:23,  5.15it/s] 42%|████▏     | 86/204 [00:21<00:22,  5.22it/s] 43%|████▎     | 87/204 [00:21<00:24,  4.79it/s] 43%|████▎     | 88/204 [00:21<00:26,  4.44it/s] 44%|████▎     | 89/204 [00:21<00:25,  4.48it/s] 44%|████▍     | 90/204 [00:22<00:26,  4.37it/s] 45%|████▍     | 91/204 [00:22<00:25,  4.48it/s] 45%|████▌     | 92/204 [00:22<00:22,  4.97it/s] 46%|████▌     | 93/204 [00:22<00:23,  4.63it/s]
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  B
+success id:  82
+response:  {
+  "id": "cmpl-56585c956a9348d8b7d6156a741bcb00",
+  "object": "text_completion",
+  "created": 1754890382,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Tom is not a grumpy person and mean to animals\" is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement \"Tom is not a grumpy person and mean to animals\" is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 129,
+    "total_tokens": 197,
+    "completion_tokens": 68,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  83
+response:  {
+  "id": "cmpl-c7f2f83e13824be2adfbd42a6bee99c9",
+  "object": "text_completion",
+  "created": 1754890382,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if KO is a company stock based on the given information, we need to analyze the logical reasoning step by step.\n</think>\n<answer>\n$ \\text{A) True}$\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 134,
+    "total_tokens": 181,
+    "completion_tokens": 47,
+    "prompt_tokens_details": null
+  }
+}
+([A-C])\)\s*(True|False|Unknown|Uncertain)
+final_ans:  A
+success id:  84
+response:  {
+  "id": "cmpl-d63b6f5f315241fba1119b5c9440c8b8",
+  "object": "text_completion",
+  "created": 1754890382,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine the truth value of the statement \"All birds land,\" we need to analyze the given context and the question step by step.\n</think>\n<answer>\nThe statement \"All birds land\" is false.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 88,
+    "total_tokens": 138,
+    "completion_tokens": 50,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  85
+response:  {
+  "id": "cmpl-0708e82ac2d0473191bae21e0ba9b73e",
+  "object": "text_completion",
+  "created": 1754890382,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Ailton Silva does not play for a football club\" is true, false, or uncertain, we need to analyze the given context and the information provided about Ailton Silva.\n</think>\n<answer>\nThe statement \"Ailton Silva does not play for a football club\" is false.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 154,
+    "total_tokens": 225,
+    "completion_tokens": 71,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  86
+response:  {
+  "id": "cmpl-e019ee0695924212b812ba14955304c2",
+  "object": "text_completion",
+  "created": 1754890383,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Luke is neither a twin nor triplet nor complains often about annoying siblings\" is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement \"Luke is neither a twin nor triplet nor complains often about annoying siblings\" is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 228,
+    "total_tokens": 300,
+    "completion_tokens": 72,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  87
+response:  {
+  "id": "cmpl-248690c71586454cbcd8b0f3a2c9c38f",
+  "object": "text_completion",
+  "created": 1754890383,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"1984 is printed text\" is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement \"1984 is printed text\" is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 137,
+    "total_tokens": 197,
+    "completion_tokens": 60,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  88
+response:  {
+  "id": "cmpl-69749b6c64d04f11b81f362c3611bf8e",
+  "object": "text_completion",
+  "created": 1754890383,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Tom is neither a grumpy person nor an Animal Lover\" is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement \"Tom is neither a grumpy person nor an Animal Lover\" is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 143,
+    "total_tokens": 211,
+    "completion_tokens": 68,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  89
+response:  {
+  "id": "cmpl-f36f687bfcf34348a555b9819be47e75",
+  "object": "text_completion",
+  "created": 1754890383,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Some Heck cattle are artificially selected\" is true, false, or uncertain, we need to analyze the given context and the information provided.\n</think>\n<answer>\nThe statement \"Some Heck cattle are artificially selected\" is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 147,
+    "total_tokens": 206,
+    "completion_tokens": 59,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  90
+response:  {
+  "id": "cmpl-3a2933d1a7a34ed18d485a6cbeb0a9bb",
+  "object": "text_completion",
+  "created": 1754890384,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine the truth value of the statement, we need to analyze the given information step by step.\n</think>\n<answer>\n$\\boxed{\\text{C}}$\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 132,
+    "total_tokens": 173,
+    "completion_tokens": 41,
+    "prompt_tokens_details": null
+  }
+}
+\{([A-D])\}
+final_ans:  C
+success id:  91
+response:  {
+  "id": "cmpl-6ed604765af844fdb512fff6f73ec71f",
+  "object": "text_completion",
+  "created": 1754890384,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine the truth value of the statement \"Subway provides take-out service and receives many negative reviews, then its rating is greater than 9 and it does not provide take-out service,\" we need to analyze the given information step by step.\n</think>\n<answer>\n$\\boxed{\\text{C}}$\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 182,
+    "total_tokens": 252,
+    "completion_tokens": 70,
+    "prompt_tokens_details": null
+  }
+}
+\{([A-D])\}
+final_ans:  C
+success id:  92
+response:  {
+  "id": "cmpl-d20491b84ce844f1bdbe8cfbfe6dcb9b",
+  "object": "text_completion",
+  "created": 1754890384,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Ailton Silva was loaned out to a football club\" is true, false, or uncertain, we need to analyze the given context and the information provided.\n</think>\n<answer>\nThe statement \"Ailton Silva was loaned out to a football club\" is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 155,
+    "total_tokens": 224,
+    "completion_tokens": 69,
+    "prompt_tokens_details": null
+  }
+} 46%|████▌     | 94/204 [00:22<00:24,  4.43it/s] 47%|████▋     | 95/204 [00:23<00:23,  4.62it/s] 47%|████▋     | 96/204 [00:23<00:21,  4.94it/s] 48%|████▊     | 97/204 [00:23<00:23,  4.54it/s] 48%|████▊     | 98/204 [00:23<00:23,  4.52it/s] 49%|████▊     | 99/204 [00:23<00:23,  4.44it/s] 49%|████▉     | 100/204 [00:24<00:23,  4.36it/s] 50%|████▉     | 101/204 [00:24<00:23,  4.44it/s] 50%|█████     | 102/204 [00:24<00:23,  4.34it/s] 50%|█████     | 103/204 [00:24<00:21,  4.69it/s] 51%|█████     | 104/204 [00:25<00:22,  4.53it/s]
+final_ans:  None
+success id:  93
+response:  {
+  "id": "cmpl-54f04266e0ad4b62acf9e05f9f836afc",
+  "object": "text_completion",
+  "created": 1754890384,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine the truth value of the statement \"Susan flies from LGA airport,\" we need to analyze the given context and the question step by step.\n</think>\n<answer>\nThe correct answer is B) False.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 105,
+    "total_tokens": 156,
+    "completion_tokens": 51,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  B
+success id:  94
+response:  {
+  "id": "cmpl-ba85a52b3c3d428eba40de15a49d4452",
+  "object": "text_completion",
+  "created": 1754890384,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine the truth value of the statement \"No pets are cats,\" we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement \"No pets are cats\" is false.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 89,
+    "total_tokens": 138,
+    "completion_tokens": 49,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  95
+response:  {
+  "id": "cmpl-8860205a163442198b5a5b2a8c2da045",
+  "object": "text_completion",
+  "created": 1754890385,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine the truth value of the statement \"KO is neither a company's stock nor is its price volatile,\" we need to analyze the given context and the statement step by step.\n</think>\n<answer>\nThe statement \"KO is neither a company's stock nor is its price volatile\" is true based on the given information.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 157,
+    "total_tokens": 230,
+    "completion_tokens": 73,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  96
+response:  {
+  "id": "cmpl-b9add9ed785e4c9f9582e151492aff9a",
+  "object": "text_completion",
+  "created": 1754890385,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Platypus are reptiles\" is true, false, or uncertain, we need to analyze the given context and the information provided.\n</think>\n<answer>\nThe statement \"Platypus are reptiles\" is false.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 105,
+    "total_tokens": 166,
+    "completion_tokens": 61,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  97
+response:  {
+  "id": "cmpl-4cf056627b3f44fc8dee228276895c2e",
+  "object": "text_completion",
+  "created": 1754890385,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"No one playing for Nautico is Brazilian\" is true, false, or uncertain, we need to analyze the given context and the information provided.\n</think>\n<answer>\nThe statement \"No one playing for Nautico is Brazilian\" is false.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 153,
+    "total_tokens": 218,
+    "completion_tokens": 65,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  98
+response:  {
+  "id": "cmpl-c648d6bbb39948b28630868d040f73c1",
+  "object": "text_completion",
+  "created": 1754890385,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"1984 is not a streaming service\" is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement \"1984 is not a streaming service\" is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 139,
+    "total_tokens": 203,
+    "completion_tokens": 64,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  99
+response:  {
+  "id": "cmpl-d36abb2fba634078b36c89a934cae893",
+  "object": "text_completion",
+  "created": 1754890386,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Humans are mammals\" is true, false, or uncertain based on the given context, we need to analyze the information provided.\n</think>\n<answer>\nThe statement \"Humans are mammals\" is true based on the given context.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 102,
+    "total_tokens": 161,
+    "completion_tokens": 59,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  100
+response:  {
+  "id": "cmpl-ed7e8d2119d4494386cec5a6b1e55bfc",
+  "object": "text_completion",
+  "created": 1754890386,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"No members of Pappy's have starred for a show piloting on BBC Two or BBC Three\" is true, false, or uncertain, we need to analyze the given context and the information provided.\n</think>\n<answer>\nThe correct answer is B) False.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 153,
+    "total_tokens": 220,
+    "completion_tokens": 67,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  B
+success id:  101
+response:  {
+  "id": "cmpl-b7c332847c154f4e9529d5571b3a471e",
+  "object": "text_completion",
+  "created": 1754890386,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement is true, false, or uncertain, we need to analyze the given context and the working title of the series.\n</think>\n<answer>\nThe statement is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 152,
+    "total_tokens": 198,
+    "completion_tokens": 46,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  102
+response:  {
+  "id": "cmpl-c49fde94652c463d9e45396f73fe9f89",
+  "object": "text_completion",
+  "created": 1754890386,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Palace of Flies was translated from Italian\" is true, false, or uncertain, we need to analyze the given context and the information provided about the books published by New Vessel Press.\n</think>\n<answer>\nThe correct answer is B) False.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 149,
+    "total_tokens": 215,
+    "completion_tokens": 66,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  B
+success id:  103
+response:  {
+  "id": "cmpl-946ae56cedde456ba999a0c900718061",
+  "object": "text_completion",
+  "created": 1754890386,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine the truth value of the statement \"If a koala is a quokka, then the koala either loves to sleep or is very fluffy,\" we need to analyze the given information step by step.\n</think>\n<answer>\n$\\boxed{\\text{C}}$\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 168,
+    "total_tokens": 232,
+    "completion_tokens": 64,
+    "prompt_tokens_details": null
+  }
+} 51%|█████▏    | 105/204 [00:25<00:22,  4.39it/s] 52%|█████▏    | 106/204 [00:25<00:20,  4.86it/s] 52%|█████▏    | 107/204 [00:25<00:21,  4.51it/s] 53%|█████▎    | 108/204 [00:25<00:21,  4.54it/s] 53%|█████▎    | 109/204 [00:26<00:22,  4.29it/s] 54%|█████▍    | 110/204 [00:26<00:20,  4.65it/s] 54%|█████▍    | 111/204 [00:26<00:21,  4.24it/s] 55%|█████▍    | 112/204 [00:26<00:19,  4.75it/s] 55%|█████▌    | 113/204 [00:27<00:18,  4.82it/s] 56%|█████▌    | 114/204 [00:27<00:17,  5.22it/s] 56%|█████▋    | 115/204 [00:27<00:16,  5.55it/s] 57%|█████▋    | 116/204 [00:27<00:14,  5.94it/s]
+\{([A-D])\}
+final_ans:  C
+success id:  104
+response:  {
+  "id": "cmpl-4f1f133a770e450d9babe0e319982f7e",
+  "object": "text_completion",
+  "created": 1754890387,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 280,
+    "total_tokens": 322,
+    "completion_tokens": 42,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  105
+response:  {
+  "id": "cmpl-a931ab5872544c668d38b3dbb82b7e56",
+  "object": "text_completion",
+  "created": 1754890387,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"If Marvin is not from Mars, then Marvin is a human\" is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement \"If Marvin is not from Mars, then Marvin is a human\" is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 142,
+    "total_tokens": 212,
+    "completion_tokens": 70,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  106
+response:  {
+  "id": "cmpl-abdc6e461e2a4fa6a78c46db26b62572",
+  "object": "text_completion",
+  "created": 1754890387,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Ted is a pet and a cow\" is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement \"Ted is a pet and a cow\" is false.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 120,
+    "total_tokens": 180,
+    "completion_tokens": 60,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  107
+response:  {
+  "id": "cmpl-7d2eeb87ae184f8c8ccca3ea5b02dbec",
+  "object": "text_completion",
+  "created": 1754890387,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Peter is either a foodie who goes out frequently to find new food restaurants to try or belongs to a household with a high net income\" is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 274,
+    "total_tokens": 345,
+    "completion_tokens": 71,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  108
+response:  {
+  "id": "cmpl-f0fee874ce1f47e180c976df306a4747",
+  "object": "text_completion",
+  "created": 1754890388,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if Karen will share \"Stranger Things\" to Lisa, we need to analyze the given information step by step.\n</think>\n<answer>\nThe correct answer is B) False.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 158,
+    "total_tokens": 204,
+    "completion_tokens": 46,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  B
+success id:  109
+response:  {
+  "id": "cmpl-0c759c0cdb10446aa87cba6ed3e063d3",
+  "object": "text_completion",
+  "created": 1754890388,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Dried Thai chilies are neither a product of Baked by Melissa nor a bakery\" is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement \"Dried Thai chilies are neither a product of Baked by Melissa nor a bakery\" is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 143,
+    "total_tokens": 223,
+    "completion_tokens": 80,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  110
+response:  {
+  "id": "cmpl-6f7c76198e7d4f64b5518acf0e1eabf4",
+  "object": "text_completion",
+  "created": 1754890388,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if Yuri is not an American basketball player, we need to analyze the given information step by step.\n</think>\n<answer>\nThe correct answer is B) False.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 124,
+    "total_tokens": 167,
+    "completion_tokens": 43,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  B
+success id:  111
+response:  {
+  "id": "cmpl-b7da3fb1bcb44d6badf04fc952ed9be3",
+  "object": "text_completion",
+  "created": 1754890388,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine the truth value of the statement \"Some Greeks are mortal,\" we need to analyze the given context and the logical reasoning involved.\n</think>\n<answer>\nThe statement \"Some Greeks are mortal\" is true based on the given context.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 88,
+    "total_tokens": 144,
+    "completion_tokens": 56,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  112
+response:  {
+  "id": "cmpl-1c2e4749fa39431ea670d79fa59fb327",
+  "object": "text_completion",
+  "created": 1754890388,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if Neapolitan Chronicles is an English book, we need to analyze the given information step by step.\n</think>\n<answer>\nThe correct answer is B) False.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 149,
+    "total_tokens": 193,
+    "completion_tokens": 44,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  B
+success id:  113
+response:  {
+  "id": "cmpl-2fc4fdac53474294a1979e7838db53ce",
+  "object": "text_completion",
+  "created": 1754890389,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 254,
+    "total_tokens": 296,
+    "completion_tokens": 42,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  114
+response:  {
+  "id": "cmpl-c211c85d5aac48988b097c5314452be7",
+  "object": "text_completion",
+  "created": 1754890389,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if Jerry is not young, we need to analyze the given information step by step.\n</think>\n<answer>\n$C$.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 121,
+    "total_tokens": 157,
+    "completion_tokens": 36,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  115
+response:  {
+  "id": "cmpl-20855cdf16db4699badc28035e8fa018",
+  "object": "text_completion",
+  "created": 1754890389,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"A person who is smarter has gained knowledge\" is true, false, or uncertain, we need to analyze the given context and the logical reasoning step by step.\n</think>\n<answer>\nThe statement \"A person who is smarter has gained knowledge\" is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 134,
+    "total_tokens": 200,
+    "completion_tokens": 66,
+    "prompt_tokens_details": null
+  }
+} 57%|█████▋    | 117/204 [00:27<00:16,  5.27it/s] 58%|█████▊    | 118/204 [00:27<00:17,  4.89it/s] 58%|█████▊    | 119/204 [00:28<00:16,  5.25it/s] 59%|█████▉    | 120/204 [00:28<00:15,  5.39it/s] 59%|█████▉    | 121/204 [00:29<00:31,  2.60it/s] 60%|█████▉    | 122/204 [00:29<00:28,  2.92it/s] 60%|██████    | 123/204 [00:29<00:24,  3.34it/s] 61%|██████    | 124/204 [00:29<00:21,  3.74it/s] 61%|██████▏   | 125/204 [00:30<00:20,  3.91it/s] 62%|██████▏   | 126/204 [00:30<00:17,  4.34it/s]
+[^A-Za-z0-9]([A-D])\)?\s
+final_ans:  A
+success id:  116
+response:  {
+  "id": "cmpl-6e89b1b9e1f2493792d11c2cce5ff9e2",
+  "object": "text_completion",
+  "created": 1754890389,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"A design by Max is a mass product design\" is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement \"A design by Max is a mass product design\" is false.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 169,
+    "total_tokens": 233,
+    "completion_tokens": 64,
+    "prompt_tokens_details": null
+  }
+}
+[^A-Za-z0-9]([A-D])\)?\s
+final_ans:  A
+success id:  117
+response:  {
+  "id": "cmpl-f8856884afd04496a44a34251ca87f6a",
+  "object": "text_completion",
+  "created": 1754890389,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if Dani Shapiro is a novel writer, we need to analyze the given information step by step.\n</think>\n<answer>\nThe correct answer is B) False.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 174,
+    "total_tokens": 216,
+    "completion_tokens": 42,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  B
+success id:  118
+response:  {
+  "id": "cmpl-b9aa619e6b174fcb9cd4b7851d0e5439",
+  "object": "text_completion",
+  "created": 1754890389,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if Montana is home to the city of Missoula, we need to analyze the given context and the statement in question.\n</think>\n<answer>\nThe correct answer is B) False.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 141,
+    "total_tokens": 189,
+    "completion_tokens": 48,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  B
+success id:  119
+response:  {
+  "id": "cmpl-f63926de206c456e86985f21a8614a2c",
+  "object": "text_completion",
+  "created": 1754890390,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if James has lunch in the company, we need to analyze the given information step by step.\n</think>\n<answer>\nLet's break down the information:\n\n1. All employees who schedule a meeting with their customers will appear in the company today.\n2. Everyone who has lunch in the company schedules meetings with their customers.\n3. Employees will either have lunch in the company or have lunch at home.\n4. If an employee has lunch at home, then he/she is working remotely from home.\n5. All employees who are in other countries work remotely from home.\n6. No managers work remotely from home.\n7. James is either a manager and appears in the company today or neither a manager nor appears in the company today.\n\nFrom this, we can infer:\n\n- James is not a manager (since no managers work remotely from home).\n- James appears in the company today (since he is either a manager or appears in the company today).\n- James has lunch at home (since he appears in the company today and all employees who have lunch in the company schedule meetings with their customers).\n\nTherefore, James has lunch in the company.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 181,
+    "total_tokens": 418,
+    "completion_tokens": 237,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  120
+response:  {
+  "id": "cmpl-04ea19fd79414f00897adab5b5bc5fb5",
+  "object": "text_completion",
+  "created": 1754890391,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Platypus are mammals with no teeth\" is true, false, or uncertain, we need to analyze the given context and the statement step by step.\n</think>\n<answer>\nThe statement \"Platypus are mammals with no teeth\" is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 107,
+    "total_tokens": 174,
+    "completion_tokens": 67,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  121
+response:  {
+  "id": "cmpl-01d3dfc4c2b14ad4b9956fc28e554314",
+  "object": "text_completion",
+  "created": 1754890391,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Space is a vampire\" is true, false, or uncertain, we need to analyze the given context and the information provided.\n</think>\n<answer>\nThe statement \"Space is a vampire\" is false.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 110,
+    "total_tokens": 165,
+    "completion_tokens": 55,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  122
+response:  {
+  "id": "cmpl-910d9cb9d5df4747bb8ffa9befd79925",
+  "object": "text_completion",
+  "created": 1754890391,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine the truth value of the statement \"Some humans are horses,\" we need to analyze the given context and the logical reasoning involved.\n</think>\n<answer>\nThe statement \"Some humans are horses\" is false.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 90,
+    "total_tokens": 141,
+    "completion_tokens": 51,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  123
+response:  {
+  "id": "cmpl-bef0373cec9142ac813b6c9ee999f57a",
+  "object": "text_completion",
+  "created": 1754890391,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"1984 is a streaming service\" is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement \"1984 is a streaming service\" is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 138,
+    "total_tokens": 200,
+    "completion_tokens": 62,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  124
+response:  {
+  "id": "cmpl-1be8d3c27b9e44a7ab88cfeea98c7583",
+  "object": "text_completion",
+  "created": 1754890391,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if there is no financial aid available for the GRE test, we need to analyze the given context and the statement provided.\n</think>\n<answer>\nThe correct answer is B) False.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 148,
+    "total_tokens": 195,
+    "completion_tokens": 47,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  B
+success id:  125
+response:  {
+  "id": "cmpl-d70b545288ff480e831bc553556d3179",
+  "object": "text_completion",
+  "created": 1754890392,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine the truth value of the statement \"A private Ivy League research university moved to New Haven,\" we need to analyze the given context and the information provided.\n</think>\n<answer>\nThe statement \"A private Ivy League research university moved to New Haven\" is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 223,
+    "total_tokens": 285,
+    "completion_tokens": 62,
+    "prompt_tokens_details": null
+  }
+} 62%|██████▏   | 127/204 [00:30<00:17,  4.36it/s] 63%|██████▎   | 128/204 [00:30<00:18,  4.21it/s] 63%|██████▎   | 129/204 [00:30<00:15,  4.83it/s] 64%|██████▎   | 130/204 [00:31<00:15,  4.84it/s] 64%|██████▍   | 131/204 [00:31<00:14,  5.20it/s] 65%|██████▍   | 132/204 [00:31<00:13,  5.21it/s] 65%|██████▌   | 133/204 [00:31<00:12,  5.46it/s] 66%|██████▌   | 134/204 [00:31<00:14,  4.98it/s] 66%|██████▌   | 135/204 [00:31<00:14,  4.82it/s] 67%|██████▋   | 136/204 [00:33<00:33,  2.06it/s]
+[^A-Za-z0-9]([A-D])\)?\s
+final_ans:  A
+success id:  126
+response:  {
+  "id": "cmpl-aa3e78bf792c49629e973e37e51176c1",
+  "object": "text_completion",
+  "created": 1754890392,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"A design by Max is either evocative or dreamy\" is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement \"A design by Max is either evocative or dreamy\" is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 172,
+    "total_tokens": 242,
+    "completion_tokens": 70,
+    "prompt_tokens_details": null
+  }
+}
+[^A-Za-z0-9]([A-D])\)?\s
+final_ans:  A
+success id:  127
+response:  {
+  "id": "cmpl-f73764970e3c4155a091ffe71b9cff50",
+  "object": "text_completion",
+  "created": 1754890392,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if Marvin is an alien, we need to analyze the given information step by step.\n</think>\n<answer>\n$C$.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 134,
+    "total_tokens": 170,
+    "completion_tokens": 36,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  128
+response:  {
+  "id": "cmpl-f88d9e3ce3ff4b60b47d5c69e3b26496",
+  "object": "text_completion",
+  "created": 1754890392,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Breaking Bad is on Monday at 8 pm\" is true, false, or uncertain, we need to analyze the given context and the information provided.\n</think>\n<answer>\nThe correct answer is B) False.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 142,
+    "total_tokens": 199,
+    "completion_tokens": 57,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  B
+success id:  129
+response:  {
+  "id": "cmpl-04c47ef0cdac4bed93e1b0018ed721a6",
+  "object": "text_completion",
+  "created": 1754890392,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if \"Black Mirror\" is popular, we need to analyze the given information step by step.\n</think>\n<answer>\nThe correct answer is C) Uncertain.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 154,
+    "total_tokens": 197,
+    "completion_tokens": 43,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  C
+success id:  130
+response:  {
+  "id": "cmpl-b6893bc4b908419abd52646350aad532",
+  "object": "text_completion",
+  "created": 1754890393,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine the security deposit at the Olive Garden, we need to analyze the given conditions and the information provided.\n</think>\n<answer>\nThe security deposit at the Olive Garden is either $2000$ or more.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 214,
+    "total_tokens": 267,
+    "completion_tokens": 53,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  131
+response:  {
+  "id": "cmpl-5a29ee13cfc74d66b55999cc29dea309",
+  "object": "text_completion",
+  "created": 1754890393,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if Tom will rent an apartment in The Olive Garden, we need to analyze the given conditions and the information provided.\n</think>\n<answer>\nThe correct answer is B) False.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 207,
+    "total_tokens": 253,
+    "completion_tokens": 46,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  B
+success id:  132
+response:  {
+  "id": "cmpl-f0fc80bc37cc48dbbc4c4b3b2d68fe07",
+  "object": "text_completion",
+  "created": 1754890393,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Coco Gauff is not a player who lost to Iga \u015awi\u0105tek or one of the most active players in major tennis\" is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 257,
+    "total_tokens": 327,
+    "completion_tokens": 70,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  133
+response:  {
+  "id": "cmpl-51c1c88fc48f4e5ebe3615daf7530aa9",
+  "object": "text_completion",
+  "created": 1754890393,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Remy has a fully stocked and impressive home office and also visits the office supply store regularly\" is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 266,
+    "total_tokens": 328,
+    "completion_tokens": 62,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  134
+response:  {
+  "id": "cmpl-407e5c2a98554a6bad17f352662e4f28",
+  "object": "text_completion",
+  "created": 1754890393,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if Luke complains often about annoying siblings, we need to analyze the given information step by step.\n</think>\n<answer>\nLet's break down the information step by step:\n\n1. Luke is either a twin or triplet.\n2. Luke develops strong bonds with his family members.\n3. Luke does not live at home regularly.\n4. Luke spends a lot of time hanging out with and playing with his siblings.\n5. Luke does not develop strong bonds with his family members if he does not live at home regularly.\n6. If Luke spends a lot of time hanging out with and playing with his siblings, then he does not live at home regularly.\n\nFrom the above information, we can deduce that Luke does not live at home regularly. This means he does not develop strong bonds with his family members. However, we are not given any direct information about whether he spends a lot of time with his siblings or if he complains about them.\n\nGiven that Luke is either a twin or triplet, and he does not live at home regularly, we can infer that he does not develop strong bonds with his family members. This means he does not spend a lot of time with his siblings, as stated in point 4. Therefore, we can conclude that Luke does not spend a lot of time with his siblings.\n\nSince Luke does not live at home regularly and does not spend a lot of time with his siblings, the only logical conclusion is that he does not complain about annoying siblings. Therefore, the statement \"Luke complains often about annoying siblings\" is false.\n\nThe correct answer is B) False.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 221,
+    "total_tokens": 549,
+    "completion_tokens": 328,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  B
+success id:  135
+response:  {
+  "id": "cmpl-48ea0861aa1e4b449002566cf1d13ac6",
+  "object": "text_completion",
+  "created": 1754890394,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Mike has a J1 visa\" is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement \"Mike has a J1 visa\" is false.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 146,
+    "total_tokens": 204,
+    "completion_tokens": 58,
+    "prompt_tokens_details": null
+  }
+} 67%|██████▋   | 137/204 [00:33<00:26,  2.48it/s] 68%|██████▊   | 138/204 [00:33<00:21,  3.05it/s] 68%|██████▊   | 139/204 [00:33<00:18,  3.42it/s] 69%|██████▊   | 140/204 [00:34<00:29,  2.14it/s] 69%|██████▉   | 141/204 [00:34<00:24,  2.59it/s] 70%|██████▉   | 142/204 [00:34<00:20,  3.02it/s] 70%|███████   | 143/204 [00:35<00:16,  3.59it/s] 71%|███████   | 144/204 [00:35<00:16,  3.72it/s] 71%|███████   | 145/204 [00:35<00:13,  4.38it/s] 72%|███████▏  | 146/204 [00:35<00:13,  4.29it/s]
+final_ans:  None
+success id:  136
+response:  {
+  "id": "cmpl-cc7b4effed124f4fb6b3e1805177c519",
+  "object": "text_completion",
+  "created": 1754890395,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if Greyhound is an airline, we need to analyze the given information step by step.\n</think>\n<answer>\n$\\boxed{\\text{C}}$\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 130,
+    "total_tokens": 171,
+    "completion_tokens": 41,
+    "prompt_tokens_details": null
+  }
+}
+\{([A-D])\}
+final_ans:  C
+success id:  137
+response:  {
+  "id": "cmpl-a81bedaf8b914a4687e68819fd102a77",
+  "object": "text_completion",
+  "created": 1754890395,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Symptons of Monkeypox include coughing\" is true, false, or uncertain, we need to analyze the given context and the information provided.\n</think>\n<answer>\nThe correct answer is B) False.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 153,
+    "total_tokens": 211,
+    "completion_tokens": 58,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  B
+success id:  138
+response:  {
+  "id": "cmpl-75ad9c54d3d441a098b0fe852c2eedc7",
+  "object": "text_completion",
+  "created": 1754890395,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Harry is kind or a CEO\" is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\nLet's break down the information given:\n\n1. A man is either kind or evil.\n2. No ugly person is handsome.\n3. All evil people are ugly.\n4. All gentlemen are handsome.\n5. All CEOs are gentlemen.\n6. Harry is a gentleman.\n\nFrom the information provided, we can deduce the following:\n\n- Harry is a gentleman (from point 5).\n- Since Harry is a gentleman, he is handsome (from point 4).\n- Since Harry is handsome, he cannot be ugly (from point 2).\n- Since Harry is not ugly, he cannot be evil (from point 1).\n- Since Harry is not evil, he must be kind (from point 1).\n\nTherefore, Harry is kind and handsome. Given that all CEOs are gentlemen (from point 5), Harry cannot be a CEO (since he is a gentleman).\n\nSo, based on the given information, Harry is kind and not a CEO. Therefore, the statement \"Harry is kind or a CEO\" is false.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 115,
+    "total_tokens": 367,
+    "completion_tokens": 252,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  139
+response:  {
+  "id": "cmpl-839b3ce2f7d0488189812ab6279459a0",
+  "object": "text_completion",
+  "created": 1754890396,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Ailton Silva played for Fluminense\" is true, false, or uncertain, we need to analyze the given context and the information provided.\n</think>\n<answer>\nThe correct answer is B) False.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 152,
+    "total_tokens": 208,
+    "completion_tokens": 56,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  B
+success id:  140
+response:  {
+  "id": "cmpl-92c5201106c749b9b3769c65916d8917",
+  "object": "text_completion",
+  "created": 1754890396,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Rock does not have wings\" is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement \"Rock does not have wings\" is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 135,
+    "total_tokens": 191,
+    "completion_tokens": 56,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  141
+response:  {
+  "id": "cmpl-fec41c77417f448190ba5835394271a4",
+  "object": "text_completion",
+  "created": 1754890396,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if KO is a growth company's stock, we need to analyze the given information step by step.\n</think>\n<answer>\n$ \\text{A) True}$\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 140,
+    "total_tokens": 184,
+    "completion_tokens": 44,
+    "prompt_tokens_details": null
+  }
+}
+([A-C])\)\s*(True|False|Unknown|Uncertain)
+final_ans:  A
+success id:  142
+response:  {
+  "id": "cmpl-3cc08ed7ae6849a581b70cc5ae047adb",
+  "object": "text_completion",
+  "created": 1754890396,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Mary is not a picky eater and spends a lot of her time eating and catching up with friends in the campus dining halls\" is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 246,
+    "total_tokens": 315,
+    "completion_tokens": 69,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  143
+response:  {
+  "id": "cmpl-eb0d401157c04bd89e7ab761748b7a0e",
+  "object": "text_completion",
+  "created": 1754890397,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine the correct answer, let's analyze the given information step by step.\n</think>\n<answer>\nThe correct answer is B) False.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 141,
+    "total_tokens": 178,
+    "completion_tokens": 37,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  B
+success id:  144
+response:  {
+  "id": "cmpl-9a0ee8704f1d433f9b5527004f54ddfc",
+  "object": "text_completion",
+  "created": 1754890397,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"John does not have a wedding that is well-attended\" is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement \"John does not have a wedding that is well-attended\" is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 199,
+    "total_tokens": 267,
+    "completion_tokens": 68,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  145
+response:  {
+  "id": "cmpl-bf034eac44aa44858f1a8b672ebeb901",
+  "object": "text_completion",
+  "created": 1754890397,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Some Nazi German politician was part of both the Prussian State Parliament and the Nazi Reichstag\" is true, false, or uncertain, we need to analyze the given context and the information provided.\n</think>\n<answer>\nThe statement is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 124,
+    "total_tokens": 187,
+    "completion_tokens": 63,
+    "prompt_tokens_details": null
+  }
+} 72%|███████▏  | 147/204 [00:35<00:13,  4.36it/s] 73%|███████▎  | 148/204 [00:36<00:12,  4.32it/s] 73%|███████▎  | 149/204 [00:36<00:12,  4.41it/s] 74%|███████▎  | 150/204 [00:36<00:12,  4.39it/s] 74%|███████▍  | 151/204 [00:36<00:10,  4.86it/s] 75%|███████▍  | 152/204 [00:36<00:09,  5.24it/s] 75%|███████▌  | 153/204 [00:37<00:09,  5.16it/s] 75%|███████▌  | 154/204 [00:37<00:10,  4.79it/s] 76%|███████▌  | 155/204 [00:37<00:10,  4.75it/s] 76%|███████▋  | 156/204 [00:37<00:10,  4.56it/s] 77%|███████▋  | 157/204 [00:38<00:09,  4.91it/s]
+final_ans:  None
+success id:  146
+response:  {
+  "id": "cmpl-8a010dc90fca46e0b41437fa95ac49d7",
+  "object": "text_completion",
+  "created": 1754890397,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"John has a wedding that is well-attended\" is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement \"John has a wedding that is well-attended\" is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 197,
+    "total_tokens": 261,
+    "completion_tokens": 64,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  147
+response:  {
+  "id": "cmpl-462d4fe96e5b4ea3831e4a8d74b0324c",
+  "object": "text_completion",
+  "created": 1754890398,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Subway provides take-out service and does not receive many negative reviews\" is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\n$\\boxed{\\text{C}}$\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 166,
+    "total_tokens": 226,
+    "completion_tokens": 60,
+    "prompt_tokens_details": null
+  }
+}
+\{([A-D])\}
+final_ans:  C
+success id:  148
+response:  {
+  "id": "cmpl-df2c7dd6d9184f4f95eccf50024b4bcd",
+  "object": "text_completion",
+  "created": 1754890398,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"KiKi neither barks nor is a dog\" is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement \"KiKi neither barks nor is a dog\" is false.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 156,
+    "total_tokens": 220,
+    "completion_tokens": 64,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  149
+response:  {
+  "id": "cmpl-517b3383279240808a06e1379699018e",
+  "object": "text_completion",
+  "created": 1754890398,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if Tom's license plate is from Istanbul, we need to analyze the given information step by step.\n</think>\n<answer>\nThe correct answer is B) False.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 159,
+    "total_tokens": 202,
+    "completion_tokens": 43,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  B
+success id:  150
+response:  {
+  "id": "cmpl-6559f971af84475b9f8cd053d44a2c4c",
+  "object": "text_completion",
+  "created": 1754890398,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if James's favorite season is fall, we need to analyze the given information step by step.\n</think>\n<answer>\nThe correct answer is B) False.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 141,
+    "total_tokens": 183,
+    "completion_tokens": 42,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  B
+success id:  151
+response:  {
+  "id": "cmpl-ff212d6abdf4486cb23db5d0589c3b6c",
+  "object": "text_completion",
+  "created": 1754890398,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Beijing is located in southern China\" is true, false, or uncertain, we need to analyze the given context and the information provided.\n</think>\n<answer>\nThe correct answer is B) False.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 175,
+    "total_tokens": 230,
+    "completion_tokens": 55,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  B
+success id:  152
+response:  {
+  "id": "cmpl-36229b56a22a4ca4b9baa3faed35f756",
+  "object": "text_completion",
+  "created": 1754890399,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Ben is either yellow and ugly or neither yellow nor ugly\" is true, false, or uncertain, we need to analyze the given conditions step by step.\n</think>\n<answer>\nThe statement \"Ben is either yellow and ugly or neither yellow nor ugly\" is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 163,
+    "total_tokens": 231,
+    "completion_tokens": 68,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  153
+response:  {
+  "id": "cmpl-ac3a9e2b740042ffb768341ab9b59b94",
+  "object": "text_completion",
+  "created": 1754890399,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"It cost below US $300 to take the GRE test\" is true, false, or uncertain, we need to analyze the given context and the information provided.\n</think>\n<answer>\nThe correct answer is B) False.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 151,
+    "total_tokens": 212,
+    "completion_tokens": 61,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  B
+success id:  154
+response:  {
+  "id": "cmpl-84529426f8104c48ae87a12d017b3e6d",
+  "object": "text_completion",
+  "created": 1754890399,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Taylor neither grew up in a health-conscious childhood home nor does she visit the gym at least once a day\" is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 247,
+    "total_tokens": 312,
+    "completion_tokens": 65,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  155
+response:  {
+  "id": "cmpl-8dc52bfe1ff44d8699d78044afcb58be",
+  "object": "text_completion",
+  "created": 1754890399,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if Joe's license plate begins with the number 34, we need to analyze the given information step by step.\n</think>\n<answer>\nThe correct answer is B) False.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 163,
+    "total_tokens": 210,
+    "completion_tokens": 47,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  B
+success id:  156
+response:  {
+  "id": "cmpl-c3b745343d96405e8db0d5a9104aa8ce",
+  "object": "text_completion",
+  "created": 1754890399,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if Peter can block Windy's shooting, we need to analyze the given information step by step.\n</think>\n<answer>\n$C$.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 187,
+    "total_tokens": 226,
+    "completion_tokens": 39,
+    "prompt_tokens_details": null
+  }
+} 77%|███████▋  | 158/204 [00:38<00:08,  5.36it/s] 78%|███████▊  | 159/204 [00:38<00:09,  4.91it/s] 78%|███████▊  | 160/204 [00:38<00:09,  4.48it/s] 79%|███████▉  | 161/204 [00:38<00:10,  4.28it/s] 79%|███████▉  | 162/204 [00:39<00:09,  4.33it/s] 80%|███████▉  | 163/204 [00:39<00:15,  2.60it/s] 80%|████████  | 164/204 [00:40<00:12,  3.13it/s] 81%|████████  | 165/204 [00:40<00:11,  3.35it/s] 81%|████████▏ | 166/204 [00:40<00:09,  3.86it/s] 82%|████████▏ | 167/204 [00:40<00:08,  4.20it/s]
+final_ans:  None
+success id:  157
+response:  {
+  "id": "cmpl-0795e1c061ca40359d3e192c6e0c1a78",
+  "object": "text_completion",
+  "created": 1754890400,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Breaking Bad is a TV show in which roses are given out on Monday at 8 pm\" is true, false, or uncertain, we need to analyze the given context and the information provided.\n</think>\n<answer>\nThe correct answer is B) False.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 151,
+    "total_tokens": 217,
+    "completion_tokens": 66,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  B
+success id:  158
+response:  {
+  "id": "cmpl-7fe52e3e0deb4072a33aeb297bd40fad",
+  "object": "text_completion",
+  "created": 1754890400,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"If George likes music and has access to a program, he will compose\" is true, false, or uncertain, we need to analyze the given context and the conditions provided.\n</think>\n<answer>\nThe statement \"If George likes music and has access to a program, he will compose\" is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 123,
+    "total_tokens": 198,
+    "completion_tokens": 75,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  159
+response:  {
+  "id": "cmpl-9caf43f4e1dc4e5fa555456893e5e269",
+  "object": "text_completion",
+  "created": 1754890400,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Walden contains knowledge\" is true, false, or uncertain, we need to analyze the given context and the information provided about Harry reading the book \"Walden\" by Henry Thoreau.\n</think>\n<answer>\nThe statement \"Walden contains knowledge\" is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 130,
+    "total_tokens": 202,
+    "completion_tokens": 72,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  160
+response:  {
+  "id": "cmpl-ba00a1d7c7da40d8b0778ca93ed3dabc",
+  "object": "text_completion",
+  "created": 1754890400,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if Pierre and Bismarck are in the same state, we need to analyze the given information step by step.\n</think>\n<answer>\nFirst, let's identify the there are $3 \\times 3 = 9$ cities in Montana. \n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 142,
+    "total_tokens": 204,
+    "completion_tokens": 62,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  161
+response:  {
+  "id": "cmpl-3d9f903e26eb442794aac84dc8276489",
+  "object": "text_completion",
+  "created": 1754890401,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Ben is ugly or yellow\" is true, false, or uncertain, we need to analyze the given conditions step by step.\n</think>\n<answer>\nLet's break down the conditions:\n\n1. A cartoon character is funny, then it is popular.\n2. If a cartoon character is ugly, then it is not popular.\n3. If a cartoon character is loved by children, then it is funny.\n4. If a cartoon character is from The Simpsons, then it is loved by children.\n5. If a cartoon character is yellow, then it is from The Simpsons.\n6. Ben is either from The Simpsons or funny.\n\nFrom these conditions, we can infer the following:\n\n- Ben is either from The Simpsons or funny.\n- If Ben is from The Simpsons, then it is loved by children.\n- If Ben is funny, then it is popular.\n- If Ben is yellow, then it is from The Simpsons.\n\nNow, let's consider the statement \"Ben is ugly or yellow.\"\n\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 157,
+    "total_tokens": 370,
+    "completion_tokens": 213,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  162
+response:  {
+  "id": "cmpl-957a5d8e757743df9022fd19e10cc282",
+  "object": "text_completion",
+  "created": 1754890401,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if KiKi barks and is a dog, we need to analyze the given information step by step.\n</think>\n<answer>\nThe correct answer is C) Uncertain.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 155,
+    "total_tokens": 200,
+    "completion_tokens": 45,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  C
+success id:  163
+response:  {
+  "id": "cmpl-abd9df9b830641cbaa60c973bc1ab4d0",
+  "object": "text_completion",
+  "created": 1754890401,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine the truth value of the statement \"Juan de Onate visited a mountain range in New Mexico,\" we need to analyze the given context and the statement itself.\n</think>\n<answer>\nThe statement \"Juan de Onate visited a mountain range in New Mexico\" is true based on the given context.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 144,
+    "total_tokens": 213,
+    "completion_tokens": 69,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  164
+response:  {
+  "id": "cmpl-6d52cf80c44b400e842f5b32ef125295",
+  "object": "text_completion",
+  "created": 1754890402,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if Robert Lewandowski plays for Bayern Munich, we need to analyze the given context and the statement provided.\n</think>\n<answer>\nThe correct answer is B) False.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 128,
+    "total_tokens": 173,
+    "completion_tokens": 45,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  B
+success id:  165
+response:  {
+  "id": "cmpl-04404abb53fe4be0b6e0239eb1572bf5",
+  "object": "text_completion",
+  "created": 1754890402,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Space sucks\" is true, false, or uncertain, we need to analyze the given context and the information provided.\n</think>\n<answer>\nThe statement \"Space sucks\" is false.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 108,
+    "total_tokens": 159,
+    "completion_tokens": 51,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  166
+response:  {
+  "id": "cmpl-5ff486f6387c4bcf9f6b4dac37ff4250",
+  "object": "text_completion",
+  "created": 1754890402,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"The world championships is a sporting event\" is true, false, or uncertain based on the given context, we need to analyze the information provided.\n</think>\n<answer>\nThe statement \"The world championships is a sporting event\" is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 110,
+    "total_tokens": 172,
+    "completion_tokens": 62,
+    "prompt_tokens_details": null
+  }
+} 82%|████████▏ | 168/204 [00:40<00:08,  4.27it/s] 83%|████████▎ | 169/204 [00:41<00:07,  4.69it/s] 83%|████████▎ | 170/204 [00:41<00:07,  4.59it/s] 84%|████████▍ | 171/204 [00:41<00:07,  4.26it/s] 84%|████████▍ | 172/204 [00:41<00:06,  4.72it/s] 85%|████████▍ | 173/204 [00:42<00:07,  4.32it/s] 85%|████████▌ | 174/204 [00:42<00:06,  4.56it/s] 86%|████████▌ | 175/204 [00:42<00:05,  4.85it/s] 86%|████████▋ | 176/204 [00:42<00:05,  5.33it/s] 87%|████████▋ | 177/204 [00:42<00:04,  5.78it/s] 87%|████████▋ | 178/204 [00:42<00:05,  5.17it/s]
+final_ans:  None
+success id:  167
+response:  {
+  "id": "cmpl-4ad2485f24c8455ca6bc66c18d760498",
+  "object": "text_completion",
+  "created": 1754890402,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if Peter tidies his space consistently and enjoys the process of cleaning, we need to analyze the given information step by step.\n</think>\n<answer>\n$C$.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 259,
+    "total_tokens": 303,
+    "completion_tokens": 44,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  168
+response:  {
+  "id": "cmpl-9020972cb0e94686b84966cd588541c6",
+  "object": "text_completion",
+  "created": 1754890402,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Robert Lewandowski is a soccer player\" is true, false, or uncertain, we need to analyze the given context and the information provided.\n</think>\n<answer>\nThe statement \"Robert Lewandowski is a soccer player\" is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 126,
+    "total_tokens": 189,
+    "completion_tokens": 63,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  169
+response:  {
+  "id": "cmpl-348c2659031746c4a95d796a8847c754",
+  "object": "text_completion",
+  "created": 1754890403,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Yuri is not an American basketball player, then Yuri is a basketball player\" is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement \"Yuri is not an American basketball player, then Yuri is a basketball player\" is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 132,
+    "total_tokens": 208,
+    "completion_tokens": 76,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  170
+response:  {
+  "id": "cmpl-4bd277ab66e64094848551fb3bd5803f",
+  "object": "text_completion",
+  "created": 1754890403,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 266,
+    "total_tokens": 308,
+    "completion_tokens": 42,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  171
+response:  {
+  "id": "cmpl-2242bdf38c9648eb9dbb4adbfd2deac8",
+  "object": "text_completion",
+  "created": 1754890403,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Supervised learning is used to train the state-of-the-art text summarization model\" is true, false, or uncertain, we need to analyze the given context and the information provided.\n</think>\n<answer>\nThe statement \"Supervised learning is used to train the state-of-the-art text summarization model\" is false.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 167,
+    "total_tokens": 246,
+    "completion_tokens": 79,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  172
+response:  {
+  "id": "cmpl-5e4f18bbd8d34deba7f5b767f07c6861",
+  "object": "text_completion",
+  "created": 1754890403,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine the truth value of the statement \"All events are sad,\" we need to analyze the given context and the question step by step.\n</think>\n<answer>\nThe statement \"All events are sad\" is false.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 92,
+    "total_tokens": 144,
+    "completion_tokens": 52,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  173
+response:  {
+  "id": "cmpl-29e3f87e55b1429bbcd627e25549fd21",
+  "object": "text_completion",
+  "created": 1754890404,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine the truth value of the statement \"There is an animal,\" we need to analyze the given context and the information provided.\n</think>\n<answer>\nThe correct answer is B) False.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 147,
+    "total_tokens": 194,
+    "completion_tokens": 47,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  B
+success id:  174
+response:  {
+  "id": "cmpl-84db27313e8e419aad5370b11d17929b",
+  "object": "text_completion",
+  "created": 1754890404,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine the truth value of the statement, we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 211,
+    "total_tokens": 249,
+    "completion_tokens": 38,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  175
+response:  {
+  "id": "cmpl-573db8ab45f14dd899b95a84084e90b1",
+  "object": "text_completion",
+  "created": 1754890404,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if Yuri is an American, we need to analyze the given information step by step.\n</think>\n<answer>\n$C$.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 121,
+    "total_tokens": 157,
+    "completion_tokens": 36,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  176
+response:  {
+  "id": "cmpl-d56c7b0087014974b699e1edfa7d5e8b",
+  "object": "text_completion",
+  "created": 1754890404,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Dried Thai chilies are a hotpot\" is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement \"Dried Thai chilies are a hotpot\" is false.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 135,
+    "total_tokens": 199,
+    "completion_tokens": 64,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  177
+response:  {
+  "id": "cmpl-4ef4d3ed441c4293ad08d98654706709",
+  "object": "text_completion",
+  "created": 1754890404,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Beijing is the second largest Chinese city by urban population\" is true, false, or uncertain, we need to analyze the given context and the information provided.\n</think>\n<answer>\nThe correct answer is B) False.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 179,
+    "total_tokens": 238,
+    "completion_tokens": 59,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D]) 88%|████████▊ | 179/204 [00:43<00:06,  3.93it/s] 88%|████████▊ | 180/204 [00:43<00:06,  3.68it/s] 89%|████████▊ | 181/204 [00:43<00:06,  3.55it/s] 89%|████████▉ | 182/204 [00:44<00:07,  3.05it/s] 90%|████████▉ | 183/204 [00:44<00:07,  2.70it/s] 90%|█████████ | 184/204 [00:45<00:08,  2.32it/s] 91%|█████████ | 185/204 [00:45<00:07,  2.61it/s] 91%|█████████ | 186/204 [00:45<00:06,  2.76it/s] 92%|█████████▏| 187/204 [00:46<00:05,  2.88it/s] 92%|█████████▏| 188/204 [00:48<00:12,  1.28it/s]
+final_ans:  B
+success id:  178
+response:  {
+  "id": "cmpl-58dc0dba31a848febc3d0654b2ddd2b3",
+  "object": "text_completion",
+  "created": 1754890405,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if Harry Potter was published by New Vessel Press, we need to analyze the given information step by step.\n</think>\n<answer>\nThe correct answer is B) False.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 150,
+    "total_tokens": 195,
+    "completion_tokens": 45,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  B
+success id:  179
+response:  {
+  "id": "cmpl-ee02ac4ab28945ad84f2812fb25617f7",
+  "object": "text_completion",
+  "created": 1754890405,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if Butte and Pierre are in the same state, we need to analyze the given information step by step.\n</think>\n<answer>\nThe correct answer is B) False.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 140,
+    "total_tokens": 185,
+    "completion_tokens": 45,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  B
+success id:  180
+response:  {
+  "id": "cmpl-75c020c70583467ebe455a76f2529668",
+  "object": "text_completion",
+  "created": 1754890405,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Pierson College is a residential college at Yale\" is true, false, or uncertain, we need to analyze the given information about Yale University.\n</think>\n<answer>\nThe statement \"Pierson College is a residential college at Yale\" is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 222,
+    "total_tokens": 286,
+    "completion_tokens": 64,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  181
+response:  {
+  "id": "cmpl-683fa8a5ef0c40b69ddb8d45ba08dc15",
+  "object": "text_completion",
+  "created": 1754890406,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine the truth value of the statement \"The Harding Pegmatite Mine is not located in a mountain range in New Mexico,\" we need to analyze the given context and the statement itself.\n</think>\n<answer>\nThe Harding Pegmatite Mine is not located in a mountain range in New Mexico.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 149,
+    "total_tokens": 217,
+    "completion_tokens": 68,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  182
+response:  {
+  "id": "cmpl-82f268266d094c26a8516068c8395cd5",
+  "object": "text_completion",
+  "created": 1754890406,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine the truth value of the statement \"The United States won the most medals in the last Olympic games,\" we need to analyze the given context and the information provided.\n</think>\n<answer>\nThe United States won the most medals in Tokyo, which was the last Olympic games.\nTherefore, the statement \"The United States won the most medals in the last Olympic games\" is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 115,
+    "total_tokens": 200,
+    "completion_tokens": 85,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  183
+response:  {
+  "id": "cmpl-2fe89f0822134ca09b40e072d0208810",
+  "object": "text_completion",
+  "created": 1754890407,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if Bonnie performs in school talent shows often, we need to analyze the given information step by step.\n</think>\n<answer>\n$C$.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 220,
+    "total_tokens": 259,
+    "completion_tokens": 39,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  184
+response:  {
+  "id": "cmpl-00dde0ca6e924f55bac67e298bea8bd4",
+  "object": "text_completion",
+  "created": 1754890407,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\n$\\boxed{\\text{B}}$\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 297,
+    "total_tokens": 342,
+    "completion_tokens": 45,
+    "prompt_tokens_details": null
+  }
+}
+\{([A-D])\}
+final_ans:  B
+success id:  185
+response:  {
+  "id": "cmpl-54c029b3204643cd950eeb64cb35613c",
+  "object": "text_completion",
+  "created": 1754890407,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\n$\\boxed{\\text{C}}$\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 301,
+    "total_tokens": 346,
+    "completion_tokens": 45,
+    "prompt_tokens_details": null
+  }
+}
+\{([A-D])\}
+final_ans:  C
+success id:  186
+response:  {
+  "id": "cmpl-d70b0a381d0946e5912e65e32ac3b36e",
+  "object": "text_completion",
+  "created": 1754890408,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if Harry is a CEO, we need to analyze the given information step by step.\n</think>\n<answer>\nLet's break down the information step by step:\n\n1. A man is either kind or evil.\n2. No ugly person is handsome.\n3. All evil people are ugly.\n4. All gentlemen are handsome.\n5. All CEOs are gentlemen.\n6. Harry is a gentleman.\n\nFrom the information given:\n- Harry is a gentleman (Statement 5).\n- All gentlemen are handsome (Statement 4).\n- No ugly person is handsome (Statement 2).\n- All evil people are ugly (Statement 3).\n- No ugly person is handsome (Statement 2).\n\nFrom Statement 5, we know Harry is a gentleman.\nFrom Statement 4, we know that if Harry is a gentleman, he must be handsome.\nFrom Statement 3, we know that if Harry is a gentleman, he must be ugly (since all gentlemen are handsome and no ugly person is handsome).\nFrom Statement 2, we know that if Harry is a gentleman, he must be handsome (since no ugly person is handsome).\n\nTherefore, Harry is a gentleman and he is not ugly. Since all CEOs are gentlemen (Statement 5), and Harry is a gentleman (Statement 5), Harry must be a CEO.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 113,
+    "total_tokens": 386,
+    "completion_tokens": 273,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  187
+response:  {
+  "id": "cmpl-ebe7465ff6d6483aa0af11864bd21546",
+  "object": "text_completion",
+  "created": 1754890409,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"No one gets flu\" is true, false, or uncertain based on the given context, we need to analyze the information provided.\n</think>\n<answer>\nThe statement \"No one gets flu\" is false.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 147,
+    "total_tokens": 203,
+    "completion_tokens": 56,
+    "prompt_tokens_details": null
+  }
+} 93%|█████████▎| 189/204 [00:48<00:09,  1.52it/s] 93%|█████████▎| 190/204 [00:48<00:08,  1.67it/s] 94%|█████████▎| 191/204 [00:49<00:07,  1.81it/s] 94%|█████████▍| 192/204 [00:49<00:05,  2.13it/s] 95%|█████████▍| 193/204 [00:50<00:05,  2.12it/s] 95%|█████████▌| 194/204 [00:50<00:04,  2.19it/s] 96%|█████████▌| 195/204 [00:50<00:03,  2.43it/s] 96%|█████████▌| 196/204 [00:51<00:03,  2.66it/s] 97%|█████████▋| 197/204 [00:51<00:02,  2.67it/s] 97%|█████████▋| 198/204 [00:51<00:02,  2.71it/s] 98%|█████████▊| 199/204 [00:52<00:01,  2.94it/s] 98%|█████████▊| 200/204 [00:52<00:01,  2.64it/s]
+final_ans:  None
+success id:  188
+response:  {
+  "id": "cmpl-35de96826dbe4de8b04d1f327d917429",
+  "object": "text_completion",
+  "created": 1754890410,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"A Greyhound is not a Boeing 707\" is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement \"A Greyhound is not a Boeing 707\" is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 136,
+    "total_tokens": 204,
+    "completion_tokens": 68,
+    "prompt_tokens_details": null
+  }
+}
+[^A-Za-z0-9]([A-D])\)?\s
+final_ans:  A
+success id:  189
+response:  {
+  "id": "cmpl-e62fe3704d044279a46bf7d441bd8e1b",
+  "object": "text_completion",
+  "created": 1754890410,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Beijing has hosted both the 2008 Summer Olympics and a winter Olympics\" is true, false, or uncertain, we need to analyze the given context and the information provided.\n</think>\n<answer>\nThe correct answer is B) False.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 187,
+    "total_tokens": 252,
+    "completion_tokens": 65,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  B
+success id:  190
+response:  {
+  "id": "cmpl-4ecf268537a94995a133ea657303ffba",
+  "object": "text_completion",
+  "created": 1754890411,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if German is a Romance language, we need to analyze the given information step by step.\n</think>\n<answer>\nThe correct answer is B) False.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 131,
+    "total_tokens": 172,
+    "completion_tokens": 41,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  B
+success id:  191
+response:  {
+  "id": "cmpl-636b273c0b7c455b845747be2c4de75f",
+  "object": "text_completion",
+  "created": 1754890411,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Koalas love to sleep and are quokka\" is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement \"Koalas love to sleep and are quokka\" is false.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 157,
+    "total_tokens": 227,
+    "completion_tokens": 70,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  192
+response:  {
+  "id": "cmpl-94f65e6d801a4bff9b48665257379e0f",
+  "object": "text_completion",
+  "created": 1754890411,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine the truth value of the statement \"Roses are given out during Breaking Bad, then it is on Monday at 8 pm,\" we need to analyze the given context and the information provided.\n</think>\n<answer>\nThe correct answer is C) Uncertain.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 151,
+    "total_tokens": 213,
+    "completion_tokens": 62,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  C
+success id:  193
+response:  {
+  "id": "cmpl-19b66abcaef0428c85f8c90c4187cba0",
+  "object": "text_completion",
+  "created": 1754890412,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if Barutin is not located in Antarctica, we need to analyze the given information step by step.\n</think>\n<answer>\nThe correct answer is B) False.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 160,
+    "total_tokens": 204,
+    "completion_tokens": 44,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  B
+success id:  194
+response:  {
+  "id": "cmpl-74fab1cb59f34596a42c0e066b5630d5",
+  "object": "text_completion",
+  "created": 1754890412,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if Peter is shorter than a man in Michael's class, we need to analyze the given information step by step.\n</think>\n<answer>\n$C$.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 190,
+    "total_tokens": 232,
+    "completion_tokens": 42,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  195
+response:  {
+  "id": "cmpl-6c2ca8d0cd774cb488174eb7ac849bfa",
+  "object": "text_completion",
+  "created": 1754890412,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if Steinhauer was not the winner of the 1992 du Maurier Classic, we need to analyze the given information step by step.\n</think>\n<answer>\nThe correct answer is B) False.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 199,
+    "total_tokens": 253,
+    "completion_tokens": 54,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  B
+success id:  196
+response:  {
+  "id": "cmpl-fdb5d37f6378426ba2baa82c708b7abe",
+  "object": "text_completion",
+  "created": 1754890413,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Rock has wings\" is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement \"Rock has wings\" is false.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 133,
+    "total_tokens": 185,
+    "completion_tokens": 52,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  197
+response:  {
+  "id": "cmpl-b4ac6186a88f42ac8af563fa6810ce6d",
+  "object": "text_completion",
+  "created": 1754890413,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if Djokovic is a Grand Slam champion, we need to analyze the given information step by step.\n</think>\n<answer>\n$A$.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 177,
+    "total_tokens": 217,
+    "completion_tokens": 40,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  198
+response:  {
+  "id": "cmpl-a9d301935480436e9ef7e024cd980409",
+  "object": "text_completion",
+  "created": 1754890413,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Ted is a cow, then Ted is not a pet\" is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement \"Ted is a cow, then Ted is not a pet\" is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 125,
+    "total_tokens": 193,
+    "completion_tokens": 68,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  199
+response:  {
+  "id": "cmpl-58dbc658f9ef4e35a8a7dc6181fe1c97",
+  "object": "text_completion",
+  "created": 1754890414,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Rock is a turtle\" is true, false, or uncertain, we need to analyze the given information step by step.\n</think>\n<answer>\nThe statement \"Rock is a turtle\" is false.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 122,
+    "total_tokens": 176,
+    "completion_tokens": 54,
+    "prompt_tokens_details": null
+  }
+} 99%|█████████▊| 201/204 [00:52<00:01,  2.65it/s] 99%|█████████▉| 202/204 [00:53<00:00,  2.61it/s]100%|█████████▉| 203/204 [00:55<00:00,  1.32it/s]100%|██████████| 204/204 [00:55<00:00,  1.52it/s]100%|██████████| 204/204 [00:55<00:00,  3.68it/s]
+
+final_ans:  None
+success id:  200
+response:  {
+  "id": "cmpl-833f21fc83584fe28138f7da9e076d4e",
+  "object": "text_completion",
+  "created": 1754890414,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if Descampe is in the six-way tie in the leaderboard of the 1992 du Maurier Classic, we need to analyze the given information step by step.\n</think>\n<answer>\nThe correct answer is B) False.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 204,
+    "total_tokens": 263,
+    "completion_tokens": 59,
+    "prompt_tokens_details": null
+  }
+}
+correct \w+ is:?\s*[*]*\s*([A-D])
+final_ans:  B
+success id:  201
+response:  {
+  "id": "cmpl-5c80f4f077dd4cd19bfdb9748cdadc49",
+  "object": "text_completion",
+  "created": 1754890415,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if Jerry is young, we need to analyze the given information step by step.\n</think>\n<answer>\nLet's break down the information step by step:\n\n1. All students are humans.\n2. If someone studies, then they are a student.\n3. A person either studies or teaches.\n4. No young person teaches.\n5. Rose is young or a student.\n\nFrom the context, we know:\n- Jerry neither teaches nor is a manager.\n- Rose is young or a student.\n\nFrom the second point, we can infer that if someone studies, they are a student. This means that if Jerry studies, he would be a student.\n- From the third point, we know that if someone teaches, they are not young.\n- From the fourth point, we know that if someone teaches, they are not young.\n- From the fifth point, we know that if someone is young, they are a student.\n\nNow, let's consider Jerry:\n- Jerry is neither a student nor a manager.\n- Jerry is either a student or young.\n- Since Jerry is not a student, he must be young.\n\nTherefore, the statement \"Jerry is young\" is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 120,
+    "total_tokens": 366,
+    "completion_tokens": 246,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  202
+response:  {
+  "id": "cmpl-42be8480e1d141448a0b3b04888a1e0a",
+  "object": "text_completion",
+  "created": 1754890416,
+  "model": "Qwen2.5-1.5B-Open-R1-GRPO",
+  "choices": [
+    {
+      "index": 0,
+      "text": "<think>\nTo determine if the statement \"Roderick Strong leads the Creed Brothers\" is true, false, or uncertain, we need to analyze the given context and the information provided.\n</think>\n<answer>\nThe statement \"Roderick Strong leads the Creed Brothers\" is true.\n</answer>",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 122,
+    "total_tokens": 185,
+    "completion_tokens": 63,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  203
+acc_newdirect.math teacher: 0.14215686274509803 (29/204)
+Write 204 items into exp_cot/output/output.FOLIO.newdirect.math_teacher.Qwen2.5-1.5B-Open-R1-GRPO.json

@@ -1,0 +1,3 @@
+nohup sh interfere.sh DeepSeekR1-Qwen-7B MATH500 newdirect defaultreason strongbias defaultrole 1 1 > nohup.out.DeepSeekR1-Qwen-7B.MATH500.defaultreason.strongbias.defaultrole.X1 &
+nohup sh interfere.sh DeepSeekR1-Qwen-7B MATH500 newdirect randomreason nobias defaultrole 1 1 > nohup.out.DeepSeekR1-Qwen-7B.MATH500.randomreason.nobias.defaultrole.X1 &
+nohup sh interfere.sh DeepSeekR1-Qwen-7B MATH500 newdirect defaultreason nobias defaultrole 1 1 > nohup.out.DeepSeekR1-Qwen-7B.MATH500.defaultreason.nobias.defaultrole.X1 &
