@@ -28,7 +28,7 @@ def recal_extract_answer_item(args, item, prompt):
     output = item[output_key]
     
     # Extract answer using the new logic
-    if args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B']:
+    if args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B', 'Qwen2.5-3B-Distill-22000']:
         # For models with thinking output, use the thinking part for extraction
         thinking_key = f'{prompt}_thinking'
         if thinking_key in item and item[thinking_key]:
