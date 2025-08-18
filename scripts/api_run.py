@@ -72,7 +72,7 @@ def load_prompt(dataset, prompt, do_role='match teacher', do_bias='nobias'):
         role = do_role
         full_prompt = full_prompt.replace('{{role}}', role)
     # add bias prompt for random intervention
-    is_math = dataset in ['Addition', 'Product', 'GSM8K', 'MATH500']
+    is_math = dataset in ['Addition', 'Product', 'GSM8K', 'MATH500', 'MATH500_noop']
     if do_bias == 'strongbias':
         bias_sentence = 'I think the correct answer is: {{biasanswer}}' \
                         if is_math else 'I think the correct option is: {{biasoption}}'
@@ -114,7 +114,7 @@ def load_dataset(dataset, nsamples):
             item['answer'] = str(int(parts[1].strip().replace(',', '')))  # expect integer only
         random.shuffle(items)
         return items[:nsamples] if nsamples > 0 else items[:500]  # default 500 samples
-    elif dataset == "MATH500":
+    elif dataset in ["MATH500", "MATH500_noop"]:
         data_file = f'./data/{dataset}/test.jsonl'
         with open(data_file, 'r') as fin:
             items = [json.loads(line) for line in fin]
@@ -185,7 +185,7 @@ def extract_answer(output, item, dataset, interfere_mode=0):
             answer = gold if gold in answer else answer[-1]
             answer = answer.strip()
             return str(int(answer))  # expect integer only
-        elif dataset.startswith('MATH500'):
+        elif dataset.startswith('MATH500') or dataset.startswith('MATH500_noop'):
             return ""
         else:
             if(interfere_mode in [5,6,8,9]):
