@@ -17,6 +17,33 @@ def extract_final_answer(model_resp: str) -> float:
     # Use float to ensure 3.0 and 3 are the same.
     return float(extracted_num)
 
+# class VLLMModel:
+#     def __init__(self, api_base, model_name, max_new_tokens=2000):
+#         self.api_base = api_base
+#         self.model_name = model_name
+#         self.max_new_tokens = max_new_tokens
+        
+#         # Configure OpenAI client to connect to local vLLM service
+#         openai.api_base = api_base
+#         openai.api_key = "EMPTY"  # vLLM doesn't need real API key
+        
+#         print(f'VLLM API with {api_base}, {model_name}, {max_new_tokens}')
+    
+#     def generate(self, prompt, temperature=0.0):
+#         """Generate response using vLLM API."""
+#         try:
+#             response = openai.Completion.create(
+#                 model=self.model_name,
+#                 prompt=prompt,
+#                 temperature=temperature,
+#                 max_tokens=self.max_new_tokens,
+#                 stop=None,
+#                 stream=False
+#             )
+#             return response.choices[0].text.strip()
+#         except Exception as e:
+#             print(f"Generation error: {e}")
+#             return ""
 class VLLMModel:
     def __init__(self, api_base, model_name, max_new_tokens=2000):
         self.api_base = api_base
@@ -27,20 +54,98 @@ class VLLMModel:
         openai.api_base = api_base
         openai.api_key = "EMPTY"  # vLLM doesn't need real API key
         
+        # Define models that need system prompt
+        # self.models_with_system_prompt = ['Qwen2.5-3B-Distill-22000']
+        self.models_with_system_prompt_distill = ['Qwen2.5-3B-Distill-22000']
+        self.models_with_system_prompt_RL_openr1 = ['Qwen2.5-3B-GRPO-2000', 'Qwen2.5-3B-SFT-GRPO-2000']
+        
+        # System prompt for specific models
+        self.system_prompt_distill = (
+            "You are Open-R1, a language model trained by Hugging Face to help users. Your role as an assistant involves thoroughly exploring questions through a systematic thinking process before providing the final precise and accurate solutions. This requires engaging in a comprehensive cycle of analysis, summarizing, exploration, reassessment, reflection, backtracing, and iteration to develop well-considered thinking process. Please structure your response into two main sections: Thought and Solution using the specified format: <think> Thought section </think> Solution section. In the Thought section, detail your reasoning process in steps. Each step should include detailed considerations such as analysing questions, summarizing relevant findings, brainstorming new ideas, verifying the accuracy of the current steps, refining any errors, and revisiting previous steps. In the Solution section, based on various attempts, explorations, and reflections from the Thought section, systematically present the final solution that you deem correct. The Solution section should be logical, accurate, and concise and detail necessary steps needed to reach the conclusion. Now, try to solve the following question through the above guidelines."
+        )
+        self.system_prompt_RL_openr1 = (
+            "You are a helpful AI Assistant that provides well-reasoned and detailed responses. You first think about the reasoning process as an internal monologue and then provide the user with the answer. Respond in the following format: <think>\n...\n</think>\n<answer>\n...\n</answer>"
+        )
+        
         print(f'VLLM API with {api_base}, {model_name}, {max_new_tokens}')
     
     def generate(self, prompt, temperature=0.0):
         """Generate response using vLLM API."""
         try:
-            response = openai.Completion.create(
-                model=self.model_name,
-                prompt=prompt,
-                temperature=temperature,
-                max_tokens=self.max_new_tokens,
-                stop=None,
-                stream=False
-            )
-            return response.choices[0].text.strip()
+            # Check if this model needs system prompt
+            if self.model_name in self.models_with_system_prompt_distill:
+                # Use Chat Completion API for models with system prompt
+                messages = [
+                    {"role": "system", "content": self.models_with_system_prompt_distill},
+                    {"role": "user", "content": prompt}
+                ]
+                
+                response = openai.ChatCompletion.create(
+                    model=self.model_name,
+                    messages=messages,
+                    temperature=temperature,
+                    max_tokens=self.max_new_tokens,
+                    stop=None,
+                    stream=False
+                )
+                return response.choices[0].message.content.strip()
+            elif self.model_name in self.models_with_system_prompt_RL_openr1:
+                messages = [
+                    {"role": "system", "content": self.system_prompt_RL_openr1},
+                    {"role": "user", "content": prompt}
+                ]
+                
+                response = openai.ChatCompletion.create(
+                    model=self.model_name,
+                    messages=messages,
+                    temperature=temperature,
+                    max_tokens=self.max_new_tokens,
+                    stop=None,
+                    stream=False
+                )
+                return response.choices[0].message.content.strip()
+            elif self.model_name in ['Qwen2.5-3B']:
+                messages = [
+                    {"role": "system", "content": "You are a helpful assistant."},
+                    {"role": "user", "content": prompt}
+                ]
+                
+                response = openai.ChatCompletion.create(
+                    model=self.model_name,
+                    messages=messages,
+                    temperature=temperature,
+                    max_tokens=self.max_new_tokens,
+                    stop=None,
+                    stream=False
+                )
+                return response.choices[0].message.content.strip()
+            elif self.model_name in ['Qwen2.5-3B-Instruct']:
+                messages = [
+                    {"role": "system", "content": "You are Qwen, created by Alibaba Cloud. You are a helpful assistant."},
+                    {"role": "user", "content": prompt}
+                ]
+                
+                response = openai.ChatCompletion.create(
+                    model=self.model_name,
+                    messages=messages,
+                    temperature=temperature,
+                    max_tokens=self.max_new_tokens,
+                    stop=None,
+                    stream=False
+                )
+                return response.choices[0].message.content.strip()
+            else:
+                # Use original Completion API for other models
+                response = openai.Completion.create(
+                    model=self.model_name,
+                    prompt=prompt,
+                    temperature=temperature,
+                    max_tokens=self.max_new_tokens,
+                    stop=None,
+                    stream=False
+                )
+                return response.choices[0].text.strip()
+                
         except Exception as e:
             print(f"Generation error: {e}")
             return ""
@@ -213,6 +318,7 @@ def main():
             print("Test mode: evaluating only 3 cases for original GSM")
         
         # Evaluate on original GSM data
+        ls_done = []
         if original_gsm_items:
             print("\n=== Evaluating Original GSM Data ===")
             
@@ -222,6 +328,10 @@ def main():
             # Process each item individually
             for i, item in enumerate(tqdm(original_gsm_items, desc="Processing Original GSM")):
                 # Generate response for this item
+                if(item['question'] in ls_done):
+                    continue
+                else:
+                    ls_done.append(item['question'])
                 prompt = format_prompt(item['question'])
                 response = model.generate(prompt)
                 
