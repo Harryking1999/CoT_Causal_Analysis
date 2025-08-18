@@ -440,7 +440,12 @@ def full_process(file_path, model_name, index=-1, mode=0):
         key_prefix = "newdirect." + prompt
     else:
         key_prefix = "cot0shot." + prompt
-    
+
+    flag_X1 = False
+    if('modeX1' in file_path):
+        flag_X1 = True
+        print('flag_X1: ', flag_X1)
+
     # Read JSON file as list of dictionaries
     with open(file_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
@@ -458,6 +463,9 @@ def full_process(file_path, model_name, index=-1, mode=0):
             try:
                 # if(model_name in ['Qwen2.5-3B-SFT-GRPO-4000', 'Qwen2.5-3B-GRPO-2000', 'Qwen2.5-3B-GRPO-4000', 'Qwen2.5-3B-GRPO-8000']):
                 #     raw_response.split("</think>")[0]
+                if(flag_X1):
+                    raw_response = raw_response.split("Wait")[0]
+                    # print("raw_response: ", raw_response)
                 extracted_answer = openai_extract_simple_answer(model_name, raw_response, correct_answer, api_key)
                 print("final extracted_answer: ", extracted_answer)
                 if extracted_answer is not None:
