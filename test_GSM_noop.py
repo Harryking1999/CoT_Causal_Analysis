@@ -76,7 +76,7 @@ class VLLMModel:
             if self.model_name in self.models_with_system_prompt_distill:
                 # Use Chat Completion API for models with system prompt
                 messages = [
-                    {"role": "system", "content": self.models_with_system_prompt_distill},
+                    {"role": "system", "content": self.system_prompt_distill},
                     {"role": "user", "content": prompt}
                 ]
                 
