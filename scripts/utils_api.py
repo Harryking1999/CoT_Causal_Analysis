@@ -6,6 +6,8 @@ from typing import Any
 
 @backoff.on_exception(backoff.expo, openai.error.RateLimitError)
 def completions_with_backoff(**kwargs):
+    # print(f"completions_with_backoff收到的完整参数: {kwargs}")
+    # print(f"其中max_tokens: {kwargs.get('max_tokens', 'None')}")
     return openai.Completion.create(**kwargs)
 
 @backoff.on_exception(backoff.expo, openai.error.RateLimitError)
@@ -152,7 +154,6 @@ class OpenAIModel:
                     prompt = f'<|im_start|>user\n{question}<|im_end|>\n<|im_start|>assistant\n'
                 elif (self.model_name in ['Qwen2.5-3B-Distill-22000', 'Qwen2.5-1.5B-Open-R1-Distill', 'Qwen2.5-1.5B-Open-R1-Distill-v2']):
                     prompt = f'<|im_start|>system\n{system_prompt_distill}<|im_end|>\n<|im_start|>user\n{question}<|im_end|>\n<|im_start|>assistant\n'
-            
             response = completions_with_backoff(
                 model=self.model_name,
                 prompt=prompt,
@@ -169,15 +170,14 @@ class OpenAIModel:
                     stop=self.stop_words
                     # top_p = 0.95
                 )
-            request_params = {
-                "model": self.model_name,
-                "messages": messages,
-                "max_completion_tokens": self.max_new_tokens,
-                "stop": self.stop_words,
-                "temperature": temperature
-            }
+            # request_params = {
+            #     "model": self.model_name,
+            #     "max_completion_tokens": self.max_new_tokens,
+            #     "stop": self.stop_words,
+            #     "temperature": temperature
+            # }
             print('response: ', response)
-            print('request_params', request_params)
+            # print('request_params', request_params)
         else:
             response = chat_completions_with_backoff(
                     model = self.model_name,
@@ -195,7 +195,7 @@ class OpenAIModel:
             generated_text = response['choices'][0]['message']['content'].strip()
             return generated_text
         else:#reasoning models
-            if(self.model_name in ['DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B', 'DeepSeekR1-Llama-8B', 'Qwen2.5-3B-Distill-22000', 'DeepScaleR-1_5B-Preview']):#vllm reasoning models: parsing by hand
+            if(self.model_name in ['DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B', 'DeepSeekR1-Llama-8B', 'Qwen2.5-3B-Distill-22000', 'DeepScaleR-1_5B-Preview', 'Qwen2.5-1.5B-Open-R1-Distill', 'Qwen2.5-1.5B-Open-R1-Distill-v2']):#vllm reasoning models: parsing by hand
                 generated_content = response['choices'][0]['text'].strip()
                 # generated_content = 3000 * "1" + 3000 * "2"
                 # generated_thinking = generated_content.split("</think>")[0]
@@ -235,7 +235,7 @@ class OpenAIModel:
                 # elif(interfere_mode == 4):
                 #     generated_text = generated_content
                 #     generated_thinking = ""
-            elif (self.model_name in ['Qwen2.5-7B-Instruct', 'Qwen2.5-32B-Instruct', 'Qwen2.5-3B-Instruct', 'Qwen2.5-3B-GRPO-16000', 'Qwen2.5-3B-GRPO', 'Qwen2.5-3B-Distill-22000', 'Qwen2.5-3B-Base', 'Qwen2.5-3B-GRPO-2000', 'Qwen2.5-3B-GRPO-4000', 'Qwen2.5-3B-GRPO-8000', 'Qwen2.5-3B-SFT-GRPO-4000', 'Qwen2.5-3B-SFT-GRPO-200', 'Qwen2.5-3B-SFT-GRPO-400', 'Qwen2.5-3B-SFT-GRPO-1000', 'Qwen2.5-3B-SFT-GRPO-2000', 'Qwen2.5-3B-GRPO-600', 'Qwen2.5-3B-GRPO-800', 'Qwen2.5-3B-GRPO-1400', 'Qwen2.5-3B-GRPO-1000', 'Qwen2.5-1.5B-Open-R1-GRPO', 'Qwen2.5-1.5B-Open-R1-Distill', 'Qwen2.5-1.5B-Open-R1-Distill-v2']):
+            elif (self.model_name in ['Qwen2.5-7B-Instruct', 'Qwen2.5-32B-Instruct', 'Qwen2.5-3B-Instruct', 'Qwen2.5-3B-GRPO-16000', 'Qwen2.5-3B-GRPO', 'Qwen2.5-3B-Base', 'Qwen2.5-3B-GRPO-2000', 'Qwen2.5-3B-GRPO-4000', 'Qwen2.5-3B-GRPO-8000', 'Qwen2.5-3B-SFT-GRPO-4000', 'Qwen2.5-3B-SFT-GRPO-200', 'Qwen2.5-3B-SFT-GRPO-400', 'Qwen2.5-3B-SFT-GRPO-1000', 'Qwen2.5-3B-SFT-GRPO-2000', 'Qwen2.5-3B-GRPO-600', 'Qwen2.5-3B-GRPO-800', 'Qwen2.5-3B-GRPO-1400', 'Qwen2.5-3B-GRPO-1000', 'Qwen2.5-1.5B-Open-R1-GRPO']):
                 return response['choices'][0]['text'].strip()
             else:##commercial api: parsing with content&reasoning_content
                 if(response['choices'][0]['message']['content'] is not None):
@@ -251,7 +251,7 @@ class OpenAIModel:
             return [generated_text, generated_thinking]
     
     # used for text/code-davinci
-    def prompt_generate(self, input_string, temperature = 0.0):
+    def prompt_generate(self, input_string, temperature = 0.6):
         response = completions_with_backoff(
             model = self.model_name,
             prompt = input_string,
@@ -265,7 +265,7 @@ class OpenAIModel:
         generated_text = response['choices'][0]['text'].strip()
         return generated_text
 
-    def generate(self, input_string, temperature = 0.0, interfere_mode=0):
+    def generate(self, input_string, temperature = 0.6, interfere_mode=0):
         if self.model_name in ['text-davinci-002', 'code-davinci-002', 'text-davinci-003', 'gpt-3.5-turbo-instruct']:
             return self.prompt_generate(input_string, temperature)
         elif self.model_name in ['gpt-4', 'gpt-3.5-turbo','gpt-4-turbo-preview','gpt-4-0125-preview','gpt-4-1106-preview',
