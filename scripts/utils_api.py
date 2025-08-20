@@ -169,7 +169,15 @@ class OpenAIModel:
                     stop=self.stop_words
                     # top_p = 0.95
                 )
+            request_params = {
+                "model": self.model_name,
+                "messages": messages,
+                "max_completion_tokens": self.max_new_tokens,
+                "stop": self.stop_words,
+                "temperature": temperature
+            }
             print('response: ', response)
+            print('request_params', request_params)
         else:
             response = chat_completions_with_backoff(
                     model = self.model_name,
