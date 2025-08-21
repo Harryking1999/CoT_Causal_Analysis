@@ -265,7 +265,7 @@ class OpenAIModel:
         generated_text = response['choices'][0]['text'].strip()
         return generated_text
 
-    def generate(self, input_string, temperature = 0.6, interfere_mode=0):
+    def generate(self, input_string, temperature = 0.0, interfere_mode=0):
         if self.model_name in ['text-davinci-002', 'code-davinci-002', 'text-davinci-003', 'gpt-3.5-turbo-instruct']:
             return self.prompt_generate(input_string, temperature)
         elif self.model_name in ['gpt-4', 'gpt-3.5-turbo','gpt-4-turbo-preview','gpt-4-0125-preview','gpt-4-1106-preview',
