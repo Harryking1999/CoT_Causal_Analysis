@@ -130,13 +130,13 @@ class OpenAIModel:
             )
             print('response: ', response)
             # print('messages: ', messages)
-        elif self.model_name in ['DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B', 'Qwen2.5-7B-Instruct', 'DeepSeekR1-Llama-8B', 'Qwen2.5-32B-Instruct', 'Qwen2.5-3B-Instruct', 'Qwen2.5-3B-GRPO-16000', 'Qwen2.5-3B-GRPO', 'Qwen2.5-3B-Base', 'Qwen2.5-3B-Distill-22000', 'Qwen2.5-3B-GRPO-2000', 'Qwen2.5-3B-GRPO-4000', 'Qwen2.5-3B-GRPO-8000', 'Qwen2.5-3B-SFT-GRPO-4000', 'Qwen2.5-3B-SFT-GRPO-200', 'Qwen2.5-3B-SFT-GRPO-400', 'Qwen2.5-3B-SFT-GRPO-1000', 'Qwen2.5-3B-SFT-GRPO-2000', 'Qwen2.5-3B-GRPO-600', 'Qwen2.5-3B-GRPO-800', 'Qwen2.5-3B-GRPO-1400', 'Qwen2.5-3B-GRPO-1000', 'Qwen2.5-3B-Distill-22000', 'Qwen2.5-1.5B-Open-R1-GRPO', 'Qwen2.5-1.5B-Open-R1-Distill', 'Qwen2.5-1.5B-Open-R1-Distill-v2', 'DeepScaleR-1_5B-Preview']:
+        elif self.model_name in ['DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B', 'Qwen2.5-7B-Instruct', 'DeepSeekR1-Llama-8B', 'Qwen2.5-32B-Instruct', 'Qwen2.5-3B-Instruct', 'Qwen2.5-3B-GRPO-16000', 'Qwen2.5-3B-GRPO', 'Qwen2.5-3B-Base', 'Qwen2.5-3B-Distill-22000', 'Qwen2.5-3B-GRPO-2000', 'Qwen2.5-3B-GRPO-4000', 'Qwen2.5-3B-GRPO-8000', 'Qwen2.5-3B-SFT-GRPO-4000', 'Qwen2.5-3B-SFT-GRPO-200', 'Qwen2.5-3B-SFT-GRPO-400', 'Qwen2.5-3B-SFT-GRPO-1000', 'Qwen2.5-3B-SFT-GRPO-2000', 'Qwen2.5-3B-GRPO-600', 'Qwen2.5-3B-GRPO-800', 'Qwen2.5-3B-GRPO-1400', 'Qwen2.5-3B-GRPO-1000', 'Qwen2.5-1.5B-Open-R1-GRPO', 'Qwen2.5-1.5B-Open-R1-Distill', 'Qwen2.5-1.5B-Open-R1-Distill-v2', 'DeepScaleR-1_5B-Preview', 'Qwen2.5-3B-Distill']:
             # Special handling for local API
             if isinstance(input_string, list):
                 question = input_string[0]
                 answer_prefix = input_string[1]
                 prompt = f"<｜User｜>{question}<｜Assistant｜>{answer_prefix}"
-                if (self.model_name in ['Qwen2.5-32B-Instruct', 'Qwen2.5-7B-Instruct', 'Qwen2.5-3B-Instruct', 'Qwen2.5-3B-Base', 'Qwen2.5-3B-Distill-22000', 'Qwen2.5-1.5B-Open-R1-GRPO', 'Qwen2.5-1.5B-Open-R1-Distill', 'Qwen2.5-1.5B-Open-R1-Distill-v2']):
+                if (self.model_name in ['Qwen2.5-32B-Instruct', 'Qwen2.5-7B-Instruct', 'Qwen2.5-3B-Instruct', 'Qwen2.5-3B-Base', 'Qwen2.5-3B-Distill-22000', 'Qwen2.5-1.5B-Open-R1-GRPO', 'Qwen2.5-1.5B-Open-R1-Distill', 'Qwen2.5-1.5B-Open-R1-Distill-v2', 'Qwen2.5-3B-Distill']):
                     prompt = f'<|im_start|>user\n{question}<|im_end|>\n<|im_start|>assistant\n{answer_prefix}'
                 elif (self.model_name in ['Qwen2.5-3B-GRPO-16000', 'Qwen2.5-3B-GRPO', 'Qwen2.5-3B-GRPO-2000', 'Qwen2.5-3B-GRPO-4000', 'Qwen2.5-3B-GRPO-8000', 'Qwen2.5-3B-SFT-GRPO-4000', 'Qwen2.5-3B-SFT-GRPO-200', 'Qwen2.5-3B-SFT-GRPO-400', 'Qwen2.5-3B-SFT-GRPO-1000', 'Qwen2.5-3B-SFT-GRPO-2000', 'Qwen2.5-3B-GRPO-600', 'Qwen2.5-3B-GRPO-800', 'Qwen2.5-3B-GRPO-1400', 'Qwen2.5-3B-GRPO-1000']):
                     # For Qwen2.5-3B-GRPO models, use chat_template format
@@ -152,7 +152,7 @@ class OpenAIModel:
                 elif (self.model_name in ['Qwen2.5-1.5B-Open-R1-GRPO']):
                     # For Qwen2.5-3B-distill, use <|im_start|> format with system prompt
                     prompt = f'<|im_start|>user\n{question}<|im_end|>\n<|im_start|>assistant\n'
-                elif (self.model_name in ['Qwen2.5-3B-Distill-22000', 'Qwen2.5-1.5B-Open-R1-Distill', 'Qwen2.5-1.5B-Open-R1-Distill-v2']):
+                elif (self.model_name in ['Qwen2.5-3B-Distill-22000', 'Qwen2.5-1.5B-Open-R1-Distill', 'Qwen2.5-1.5B-Open-R1-Distill-v2', 'Qwen2.5-3B-Distill']):
                     prompt = f'<|im_start|>system\n{system_prompt_distill}<|im_end|>\n<|im_start|>user\n{question}<|im_end|>\n<|im_start|>assistant\n'
             response = completions_with_backoff(
                 model=self.model_name,
@@ -190,12 +190,12 @@ class OpenAIModel:
                     stop = self.stop_words
             )
 
-        if(self.model_name not in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B','Qwen2.5-7B-Instruct', 'DeepSeekR1-Llama-8B', 'Qwen2.5-32B-Instruct', 'Qwen2.5-3B-Instruct', 'Qwen2.5-3B-GRPO-16000', 'Qwen2.5-3B-GRPO', 'Qwen2.5-3B-Distill-22000', 'Qwen2.5-3B-Base', 'Qwen2.5-3B-GRPO-2000', 'Qwen2.5-3B-GRPO-4000', 'Qwen2.5-3B-GRPO-8000', 'Qwen2.5-3B-SFT-GRPO-4000', 'Qwen2.5-3B-SFT-GRPO-200', 'Qwen2.5-3B-SFT-GRPO-400', 'Qwen2.5-3B-SFT-GRPO-1000', 'Qwen2.5-3B-SFT-GRPO-2000', 'Qwen2.5-3B-GRPO-600', 'Qwen2.5-3B-GRPO-800', 'Qwen2.5-3B-GRPO-1400', 'Qwen2.5-3B-GRPO-1000', 'Qwen2.5-3B-Distill-22000', 'Qwen2.5-1.5B-Open-R1-GRPO', 'Qwen2.5-1.5B-Open-R1-Distill', 'Qwen2.5-1.5B-Open-R1-Distill-v2', 'DeepScaleR-1_5B-Preview']):
+        if(self.model_name not in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B','Qwen2.5-7B-Instruct', 'DeepSeekR1-Llama-8B', 'Qwen2.5-32B-Instruct', 'Qwen2.5-3B-Instruct', 'Qwen2.5-3B-GRPO-16000', 'Qwen2.5-3B-GRPO', 'Qwen2.5-3B-Distill-22000', 'Qwen2.5-3B-Base', 'Qwen2.5-3B-GRPO-2000', 'Qwen2.5-3B-GRPO-4000', 'Qwen2.5-3B-GRPO-8000', 'Qwen2.5-3B-SFT-GRPO-4000', 'Qwen2.5-3B-SFT-GRPO-200', 'Qwen2.5-3B-SFT-GRPO-400', 'Qwen2.5-3B-SFT-GRPO-1000', 'Qwen2.5-3B-SFT-GRPO-2000', 'Qwen2.5-3B-GRPO-600', 'Qwen2.5-3B-GRPO-800', 'Qwen2.5-3B-GRPO-1400', 'Qwen2.5-3B-GRPO-1000', 'Qwen2.5-3B-Distill-22000', 'Qwen2.5-1.5B-Open-R1-GRPO', 'Qwen2.5-1.5B-Open-R1-Distill', 'Qwen2.5-1.5B-Open-R1-Distill-v2', 'DeepScaleR-1_5B-Preview', 'Qwen2.5-3B-Distill']):
             #non-reasoning models
             generated_text = response['choices'][0]['message']['content'].strip()
             return generated_text
         else:#reasoning models
-            if(self.model_name in ['DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B', 'DeepSeekR1-Llama-8B', 'Qwen2.5-3B-Distill-22000', 'DeepScaleR-1_5B-Preview', 'Qwen2.5-1.5B-Open-R1-Distill', 'Qwen2.5-1.5B-Open-R1-Distill-v2']):#vllm reasoning models: parsing by hand
+            if(self.model_name in ['DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B', 'DeepSeekR1-Llama-8B', 'Qwen2.5-3B-Distill-22000', 'DeepScaleR-1_5B-Preview', 'Qwen2.5-1.5B-Open-R1-Distill', 'Qwen2.5-1.5B-Open-R1-Distill-v2', 'Qwen2.5-3B-Distill']):#vllm reasoning models: parsing by hand
                 generated_content = response['choices'][0]['text'].strip()
                 # generated_content = 3000 * "1" + 3000 * "2"
                 # generated_thinking = generated_content.split("</think>")[0]
@@ -271,7 +271,7 @@ class OpenAIModel:
         elif self.model_name in ['gpt-4', 'gpt-3.5-turbo','gpt-4-turbo-preview','gpt-4-0125-preview','gpt-4-1106-preview',
                                  'llama2-70b-chat', 'llama2-7b-chat', 'mistral-base', 'mistral-sft', 'mistral-dpo', 'o1-mini', 
                                  'o1', 'deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'DeepSeekR1-Qwen-1_5B',
-                                 'DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B', 'DeepSeekR1-Llama-8B', 'Qwen2.5-3B-GRPO-16000', 'Qwen2.5-3B-GRPO', 'Qwen2.5-3B-GRPO-2000', 'Qwen2.5-3B-GRPO-4000', 'Qwen2.5-3B-GRPO-8000', 'Qwen2.5-3B-SFT-GRPO-4000', 'Qwen2.5-3B-SFT-GRPO-200', 'Qwen2.5-3B-SFT-GRPO-400', 'Qwen2.5-3B-SFT-GRPO-1000', 'Qwen2.5-3B-SFT-GRPO-2000', 'Qwen2.5-3B-GRPO-600', 'Qwen2.5-3B-GRPO-800', 'Qwen2.5-3B-GRPO-1400', 'Qwen2.5-3B-GRPO-1000', 'Qwen2.5-3B-Distill-22000', 'Qwen2.5-1.5B-Open-R1-GRPO', 'Qwen2.5-1.5B-Open-R1-Distill', 'Qwen2.5-1.5B-Open-R1-Distill-v2', 'DeepScaleR-1_5B-Preview']:
+                                 'DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B', 'DeepSeekR1-Llama-8B', 'Qwen2.5-3B-GRPO-16000', 'Qwen2.5-3B-GRPO', 'Qwen2.5-3B-GRPO-2000', 'Qwen2.5-3B-GRPO-4000', 'Qwen2.5-3B-GRPO-8000', 'Qwen2.5-3B-SFT-GRPO-4000', 'Qwen2.5-3B-SFT-GRPO-200', 'Qwen2.5-3B-SFT-GRPO-400', 'Qwen2.5-3B-SFT-GRPO-1000', 'Qwen2.5-3B-SFT-GRPO-2000', 'Qwen2.5-3B-GRPO-600', 'Qwen2.5-3B-GRPO-800', 'Qwen2.5-3B-GRPO-1400', 'Qwen2.5-3B-GRPO-1000', 'Qwen2.5-3B-Distill-22000', 'Qwen2.5-1.5B-Open-R1-GRPO', 'Qwen2.5-1.5B-Open-R1-Distill', 'Qwen2.5-1.5B-Open-R1-Distill-v2', 'DeepScaleR-1_5B-Preview', 'Qwen2.5-3B-Distill']:
             
             return self.chat_generate(input_string, temperature, interfere_mode)
         else:
