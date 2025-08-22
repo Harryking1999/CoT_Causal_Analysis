@@ -257,7 +257,11 @@ def api_run(args):
             while True:
                 if(cnt_exp > 3):
                     # Fix: Set batch_outputs to match the expected format for different model types
+<<<<<<< HEAD
                     if args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B', 'DeepSeekR1-Llama-8B', 'Qwen2.5-3B-Distill-22000', 'DeepScaleR-1_5B-Preview', 'Qwen2.5-3B-Distill']:
+=======
+                    if args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B', 'DeepSeekR1-Llama-8B', 'Qwen2.5-3B-Distill-22000', 'DeepScaleR-1_5B-Preview', 'Qwen2.5-3B-Distill-18000', 'Qwen2.5-3B-Distill']:
+>>>>>>> bfbe06a263df0ba524157925690891b4a69f2bdd
                         batch_outputs = [['', ''] for _ in chunk]  # [output, thinking] format
                     else:
                         batch_outputs = [''] * len(chunk)  # Simple string format
@@ -270,7 +274,11 @@ def api_run(args):
                         batch_outputs = [openai_api.generate(message) for message in messages]
                         # print('batch_output: ', batch_outputs)
                     # extract the answer and regenerate if the output format is out of expectation
+<<<<<<< HEAD
                     if(args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B','DeepSeekR1-Llama-8B', 'Qwen2.5-3B-Distill-22000', 'DeepScaleR-1_5B-Preview', 'Qwen2.5-3B-Distill']):
+=======
+                    if(args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B','DeepSeekR1-Llama-8B', 'Qwen2.5-3B-Distill-22000', 'DeepScaleR-1_5B-Preview', 'Qwen2.5-3B-Distill-18000', 'Qwen2.5-3B-Distill']):
+>>>>>>> bfbe06a263df0ba524157925690891b4a69f2bdd
                         preds = []
                         for sample, output in zip(chunk, batch_outputs):
                             if(output[0] != ""):
@@ -294,7 +302,11 @@ def api_run(args):
                 record_item[f'{prompt}_input'] = message
                 print("#####################")
                 print("output: ", output)
+<<<<<<< HEAD
                 if(args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B', 'DeepSeekR1-Llama-8B', 'Qwen2.5-3B-Distill-22000', 'DeepScaleR-1_5B-Preview', 'Qwen2.5-3B-Distill']):
+=======
+                if(args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B', 'DeepSeekR1-Llama-8B', 'Qwen2.5-3B-Distill-22000', 'DeepScaleR-1_5B-Preview', 'Qwen2.5-3B-Distill-18000', 'Qwen2.5-3B-Distill']):
+>>>>>>> bfbe06a263df0ba524157925690891b4a69f2bdd
                     record_item[f'{prompt}_output'] = output[0]
                     record_item[f'{prompt}_thinking'] = output[1]
                 else:
