@@ -294,7 +294,7 @@ def api_run(args):
                 record_item[f'{prompt}_input'] = message
                 print("#####################")
                 print("output: ", output)
-                if(args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B', 'DeepSeekR1-Llama-8B', 'Qwen2.5-3B-Distill-22000', 'DeepScaleR-1_5B-Preview', 'Qwen2.5-3B-Distill-18000', 'Qwen2.5-3B-Distill'):
+                if(args.model_name in ['deepseek-reasoner', 'deepseek-r1', 'Pro/deepseek-ai/DeepSeek-R1', 'DeepSeekR1-Qwen-1_5B','DeepSeekR1-Qwen-7B', 'DeepSeekR1-Qwen-14B', 'DeepSeekR1-Qwen-32B', 'QwQ-32B', 'DeepSeekR1-Llama-8B', 'Qwen2.5-3B-Distill-22000', 'DeepScaleR-1_5B-Preview', 'Qwen2.5-3B-Distill-18000', 'Qwen2.5-3B-Distill']):
                     record_item[f'{prompt}_output'] = output[0]
                     record_item[f'{prompt}_thinking'] = output[1]
                 else:
