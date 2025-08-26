@@ -1,0 +1,5503 @@
+Dataset is FOLIO. Ignore the nsamples argument.
+Mon Aug 25 10:38:40 PM CST 2025, Evaluating 600 samples from FOLIO using prompts newdirect ...
+/home/fuzhizhang.fzz/CoT_Causal_Analysis/scripts/api_run.py:92: SyntaxWarning: invalid escape sequence '\{'
+  fields = re.findall('\{\{\w+\}\}', full_prompt)
+/home/fuzhizhang.fzz/CoT_Causal_Analysis/scripts/api_run.py:176: SyntaxWarning: invalid escape sequence '\d'
+  output = [line for line in output if len(re.findall('\d+', line)) > 0]
+/home/fuzhizhang.fzz/CoT_Causal_Analysis/scripts/api_run.py:184: SyntaxWarning: invalid escape sequence '\d'
+  answer = re.findall('\d+', answer)
+http://localhost:8080/v1
+123
+OpenAI API with http://localhost:8080/v1, X-R1-3B-4-FLAN-COT-FS-KL001, ####, 24000
+Output to: exp_cot/output/output.FOLIO.newdirect.math_teacher.X-R1-3B-4-FLAN-COT-FS-KL001.json
+  0%|          | 0/204 [00:00<?, ?it/s]  3%|▎         | 6/204 [00:00<00:03, 56.62it/s]  6%|▋         | 13/204 [00:00<00:03, 61.13it/s]response:  {
+  "id": "cmpl-75ff4045230f48fe81e43c9b660e17f5",
+  "object": "text_completion",
+  "created": 1756132720,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "A",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 235,
+    "total_tokens": 237,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  0
+#####################
+output:  A
+response:  {
+  "id": "cmpl-de9043a8eb0c43428c4d4584fee4d67e",
+  "object": "text_completion",
+  "created": 1756132720,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 245,
+    "total_tokens": 247,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  1
+#####################
+output:  B
+response:  {
+  "id": "cmpl-2d4310f709234229aae94b69f10e0be5",
+  "object": "text_completion",
+  "created": 1756132720,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "A",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 204,
+    "total_tokens": 206,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  2
+#####################
+output:  A
+response:  {
+  "id": "cmpl-48f7775ecd2841d1a6271f5f9aab0977",
+  "object": "text_completion",
+  "created": 1756132720,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 196,
+    "total_tokens": 198,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  3
+#####################
+output:  B
+response:  {
+  "id": "cmpl-f8465c0b4e4146afbc7f04ccec78085c",
+  "object": "text_completion",
+  "created": 1756132720,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 198,
+    "total_tokens": 200,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  4
+#####################
+output:  B
+response:  {
+  "id": "cmpl-01821f67425344f28dcb60e121be95f4",
+  "object": "text_completion",
+  "created": 1756132720,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 177,
+    "total_tokens": 179,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  5
+#####################
+output:  B
+response:  {
+  "id": "cmpl-8bb2ddca886647c88c63fb083785cca1",
+  "object": "text_completion",
+  "created": 1756132720,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "C",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 182,
+    "total_tokens": 184,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  C
+success id:  6
+#####################
+output:  C
+response:  {
+  "id": "cmpl-fabebb6581ad4a24a7ff5f789beb5415",
+  "object": "text_completion",
+  "created": 1756132720,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 213,
+    "total_tokens": 215,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  7
+#####################
+output:  B
+response:  {
+  "id": "cmpl-996c1ac88cf045ab8facde9de80fab33",
+  "object": "text_completion",
+  "created": 1756132720,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "A",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 181,
+    "total_tokens": 183,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  8
+#####################
+output:  A
+response:  {
+  "id": "cmpl-7d7df57823a4427c8fe82f7b1fad0ed8",
+  "object": "text_completion",
+  "created": 1756132720,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 189,
+    "total_tokens": 191,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  9
+#####################
+output:  B
+response:  {
+  "id": "cmpl-a72817c4e6ad442c99928d711142d634",
+  "object": "text_completion",
+  "created": 1756132720,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 199,
+    "total_tokens": 201,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  10
+#####################
+output:  B
+response:  {
+  "id": "cmpl-9ca96bc468014c1da0f195d2ba2785ba",
+  "object": "text_completion",
+  "created": 1756132720,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 215,
+    "total_tokens": 217,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  11
+#####################
+output:  B
+response:  {
+  "id": "cmpl-d6bbeb932bd84741ad0eb6228d516b55",
+  "object": "text_completion",
+  "created": 1756132720,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "True",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 229,
+    "total_tokens": 231,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  A
+success id:  12
+#####################
+output:  True
+response:  {
+  "id": "cmpl-7443071a05b34edf82493f9085533d42",
+  "object": "text_completion",
+  "created": 1756132720,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "A",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 198,
+    "total_tokens": 200,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  13
+#####################
+output:  A
+response:  {
+  "id": "cmpl-7a7ef8301fd0462688eca1ef13176238",
+  "object": "text_completion",
+  "created": 1756132720,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 193,
+    "total_tokens": 195,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+} 10%|▉         | 20/204 [00:00<00:02, 62.05it/s] 13%|█▎        | 27/204 [00:00<00:02, 63.28it/s]
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  14
+#####################
+output:  B
+response:  {
+  "id": "cmpl-cba8256eb7904dbbb4057751904be6e6",
+  "object": "text_completion",
+  "created": 1756132720,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "True",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 247,
+    "total_tokens": 249,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  A
+success id:  15
+#####################
+output:  True
+response:  {
+  "id": "cmpl-32fac654983e41739f30c349563563ca",
+  "object": "text_completion",
+  "created": 1756132720,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "C",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 293,
+    "total_tokens": 295,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  C
+success id:  16
+#####################
+output:  C
+response:  {
+  "id": "cmpl-0bf73db346b64beebaf5048bf0a52e75",
+  "object": "text_completion",
+  "created": 1756132720,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "C",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 209,
+    "total_tokens": 211,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  C
+success id:  17
+#####################
+output:  C
+response:  {
+  "id": "cmpl-deb5cf55cb4c47b6ad90baac195ed1b5",
+  "object": "text_completion",
+  "created": 1756132720,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "A",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 291,
+    "total_tokens": 293,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  18
+#####################
+output:  A
+response:  {
+  "id": "cmpl-448377e6a7e6438492f3c71648948593",
+  "object": "text_completion",
+  "created": 1756132720,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "A",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 209,
+    "total_tokens": 211,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  19
+#####################
+output:  A
+response:  {
+  "id": "cmpl-1784adf94a5843e5bf140eabafe8886a",
+  "object": "text_completion",
+  "created": 1756132720,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 197,
+    "total_tokens": 199,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  20
+#####################
+output:  B
+response:  {
+  "id": "cmpl-4a41454379484a199dd2ac9ce8fa6009",
+  "object": "text_completion",
+  "created": 1756132720,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "C",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 182,
+    "total_tokens": 184,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  C
+success id:  21
+#####################
+output:  C
+response:  {
+  "id": "cmpl-9f19ef41a23a45d4b8755a5ff61ed4fd",
+  "object": "text_completion",
+  "created": 1756132720,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "A",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 245,
+    "total_tokens": 247,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  22
+#####################
+output:  A
+response:  {
+  "id": "cmpl-1be04fc960fd4ed4b99faf48f43c2f4e",
+  "object": "text_completion",
+  "created": 1756132720,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 181,
+    "total_tokens": 183,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  23
+#####################
+output:  B
+response:  {
+  "id": "cmpl-0b29cb9cec064ec88209245557672762",
+  "object": "text_completion",
+  "created": 1756132720,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 155,
+    "total_tokens": 157,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  24
+#####################
+output:  B
+response:  {
+  "id": "cmpl-147d3f0d07cb4951b02cba7b50debe89",
+  "object": "text_completion",
+  "created": 1756132720,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 237,
+    "total_tokens": 239,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  25
+#####################
+output:  B
+response:  {
+  "id": "cmpl-fee2385dd41b44878021613a353fb66d",
+  "object": "text_completion",
+  "created": 1756132720,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 201,
+    "total_tokens": 203,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  26
+#####################
+output:  B
+response:  {
+  "id": "cmpl-8c37a93d9a9a4a72accd70a1aeddd1b0",
+  "object": "text_completion",
+  "created": 1756132720,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 210,
+    "total_tokens": 212,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  27
+#####################
+output:  B
+response:  {
+  "id": "cmpl-c3875faf70db48a9b41292d3351bed5b",
+  "object": "text_completion",
+  "created": 1756132720,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "A",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 233,
+    "total_tokens": 235,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  28
+#####################
+output:  A
+response:  {
+  "id": "cmpl-e6b4fcff9e924928b01949b50fbfe629",
+  "object": "text_completion",
+  "created": 1756132720,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 199,
+    "total_tokens": 201,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+} 17%|█▋        | 34/204 [00:00<00:02, 64.09it/s] 20%|██        | 41/204 [00:00<00:02, 64.96it/s]
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  29
+#####################
+output:  B
+response:  {
+  "id": "cmpl-564e7b7931754d6cba619c9c3003a76a",
+  "object": "text_completion",
+  "created": 1756132720,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 192,
+    "total_tokens": 194,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  30
+#####################
+output:  B
+response:  {
+  "id": "cmpl-aef44ada508f48afb5b7e20e8aaa16a0",
+  "object": "text_completion",
+  "created": 1756132720,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 283,
+    "total_tokens": 285,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  31
+#####################
+output:  B
+response:  {
+  "id": "cmpl-14ab0d6cac0b42ef9ec7f12098541eed",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "A",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 146,
+    "total_tokens": 148,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  32
+#####################
+output:  A
+response:  {
+  "id": "cmpl-48a6ada0e32a4a93b3f9c5211879b9cb",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 197,
+    "total_tokens": 199,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  33
+#####################
+output:  B
+response:  {
+  "id": "cmpl-c61122d6bbc3480ba40eab49551c306e",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 241,
+    "total_tokens": 243,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  34
+#####################
+output:  B
+response:  {
+  "id": "cmpl-132dfcc2fe7a4d9687787b702067cb7b",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 231,
+    "total_tokens": 233,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  35
+#####################
+output:  B
+response:  {
+  "id": "cmpl-77af683aa9fe405eb8e1b78c17b90558",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "C",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 234,
+    "total_tokens": 236,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  C
+success id:  36
+#####################
+output:  C
+response:  {
+  "id": "cmpl-c5d9ea238c5d4b51b613529715097071",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "C",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 182,
+    "total_tokens": 184,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  C
+success id:  37
+#####################
+output:  C
+response:  {
+  "id": "cmpl-528ef6d94699439d9082b0e9a4cc7fad",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 175,
+    "total_tokens": 177,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  38
+#####################
+output:  B
+response:  {
+  "id": "cmpl-912efc194d804d9a936fad17aa7ac82b",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "True",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 225,
+    "total_tokens": 227,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  A
+success id:  39
+#####################
+output:  True
+response:  {
+  "id": "cmpl-a9259e71d9054d539067e23f40332eca",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 239,
+    "total_tokens": 241,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  40
+#####################
+output:  B
+response:  {
+  "id": "cmpl-0c1b11488e8d4957acfecfabd46f3fa1",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "No",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 169,
+    "total_tokens": 171,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  None
+success id:  41
+#####################
+output:  No
+response:  {
+  "id": "cmpl-af26a16c674d4678937fa06685942a3f",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "C",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 244,
+    "total_tokens": 246,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  C
+success id:  42
+#####################
+output:  C
+response:  {
+  "id": "cmpl-dfc088da50d6463b85d1651492eb02b7",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "A",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 149,
+    "total_tokens": 151,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  43
+#####################
+output:  A
+response:  {
+  "id": "cmpl-bb2c25b893e74190a663d34d75f03978",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 181,
+    "total_tokens": 183,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+} 24%|██▎       | 48/204 [00:00<00:02, 64.91it/s] 27%|██▋       | 55/204 [00:00<00:02, 64.82it/s]
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  44
+#####################
+output:  B
+response:  {
+  "id": "cmpl-13f4ccd6e42c416c90131e44500cde9f",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 286,
+    "total_tokens": 288,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  45
+#####################
+output:  B
+response:  {
+  "id": "cmpl-c9622f500d704950a322448aa14dbbcd",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 196,
+    "total_tokens": 198,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  46
+#####################
+output:  B
+response:  {
+  "id": "cmpl-444d8e6f48054646977e3e4d977bff8d",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "True",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 210,
+    "total_tokens": 212,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  A
+success id:  47
+#####################
+output:  True
+response:  {
+  "id": "cmpl-b7be8f0116714d7ab3a10422736f0c28",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 184,
+    "total_tokens": 186,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  48
+#####################
+output:  B
+response:  {
+  "id": "cmpl-f89488013c1e4612a54a59d05cecbc04",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 241,
+    "total_tokens": 243,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  49
+#####################
+output:  B
+response:  {
+  "id": "cmpl-0ff3c37885c444c39408ee49707c0f9d",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "A",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 299,
+    "total_tokens": 301,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  50
+#####################
+output:  A
+response:  {
+  "id": "cmpl-d7112e1ade924554a1d0ed39e8c59d99",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 243,
+    "total_tokens": 245,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  51
+#####################
+output:  B
+response:  {
+  "id": "cmpl-3e5b0060e0b245a181334c893841b474",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "C",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 219,
+    "total_tokens": 221,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  C
+success id:  52
+#####################
+output:  C
+response:  {
+  "id": "cmpl-2837183cb2a944baa3b75e825866342c",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "A",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 215,
+    "total_tokens": 217,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  53
+#####################
+output:  A
+response:  {
+  "id": "cmpl-a21d32cae7e5465fa8713e5c90e72e3c",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "A",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 231,
+    "total_tokens": 233,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  54
+#####################
+output:  A
+response:  {
+  "id": "cmpl-4c1fec3f53ab47948e6d9089ff913f61",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "True",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 183,
+    "total_tokens": 185,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  A
+success id:  55
+#####################
+output:  True
+response:  {
+  "id": "cmpl-1d34aa0069884a32bc94f6e010492345",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "True",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 210,
+    "total_tokens": 212,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  A
+success id:  56
+#####################
+output:  True
+response:  {
+  "id": "cmpl-f6b2281412e944a7a7ca405c4821e1c4",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "C",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 232,
+    "total_tokens": 234,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  C
+success id:  57
+#####################
+output:  C
+response:  {
+  "id": "cmpl-d783a1db20aa45f6a24abc4679ba687c",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 220,
+    "total_tokens": 222,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  58
+#####################
+output:  B
+response:  {
+  "id": "cmpl-151f8bc46c62465ca49049b95abc318a",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 174,
+    "total_tokens": 176,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+} 30%|███       | 62/204 [00:00<00:02, 65.26it/s] 34%|███▍      | 69/204 [00:01<00:02, 64.78it/s]
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  59
+#####################
+output:  B
+response:  {
+  "id": "cmpl-ec5c6f92a2214f93b74aa3d06ffb155a",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "A",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 230,
+    "total_tokens": 232,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  60
+#####################
+output:  A
+response:  {
+  "id": "cmpl-3cd5fb9179654b65be117e61838cf00e",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "True",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 199,
+    "total_tokens": 201,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  A
+success id:  61
+#####################
+output:  True
+response:  {
+  "id": "cmpl-d5a8e4b044bd444bbfb9a2f18cfe6d14",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 188,
+    "total_tokens": 190,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  62
+#####################
+output:  B
+response:  {
+  "id": "cmpl-a75d36c344d549ceac948ef56ac3333d",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "C",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 252,
+    "total_tokens": 254,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  C
+success id:  63
+#####################
+output:  C
+response:  {
+  "id": "cmpl-9a4439e2c38b4f7f82de920334173db9",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 226,
+    "total_tokens": 228,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  64
+#####################
+output:  B
+response:  {
+  "id": "cmpl-d0356515d2534721aedd7f1df6f4598d",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "C",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 211,
+    "total_tokens": 213,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  C
+success id:  65
+#####################
+output:  C
+response:  {
+  "id": "cmpl-57bb94b6a686472c9724e5f296a4e2e7",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "C",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 271,
+    "total_tokens": 273,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  C
+success id:  66
+#####################
+output:  C
+response:  {
+  "id": "cmpl-0c01f269c6db4f538816945706b2fa6f",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "True",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 302,
+    "total_tokens": 304,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  A
+success id:  67
+#####################
+output:  True
+response:  {
+  "id": "cmpl-ce32432d06ca4af994b59df112889637",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 163,
+    "total_tokens": 165,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  68
+#####################
+output:  B
+response:  {
+  "id": "cmpl-5a977535e7c84906be5328e19585dbc8",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "True",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 189,
+    "total_tokens": 191,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  A
+success id:  69
+#####################
+output:  True
+response:  {
+  "id": "cmpl-eb3a8bf9ffec43e19630fd3b33c99e9f",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "A",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 220,
+    "total_tokens": 222,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  70
+#####################
+output:  A
+response:  {
+  "id": "cmpl-5e6378159a354b8a861e451de9675578",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 190,
+    "total_tokens": 192,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  71
+#####################
+output:  B
+response:  {
+  "id": "cmpl-23e3af5b807642009e32bdadfc0130cb",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 265,
+    "total_tokens": 267,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  72
+#####################
+output:  B
+response:  {
+  "id": "cmpl-a8b6496671d2483c8e3c389ddf9a9162",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 173,
+    "total_tokens": 175,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  73
+#####################
+output:  B
+response:  {
+  "id": "cmpl-1ed9f26d869141bdaa92896658d2d0b5",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 190,
+    "total_tokens": 192,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+} 37%|███▋      | 76/204 [00:01<00:01, 65.09it/s] 41%|████      | 83/204 [00:01<00:01, 65.28it/s]
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  74
+#####################
+output:  B
+response:  {
+  "id": "cmpl-d2b9e71d379a49209bf055803bb91e26",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 192,
+    "total_tokens": 194,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  75
+#####################
+output:  B
+response:  {
+  "id": "cmpl-a92d84e7175e4062b1d86052e18d9789",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "C",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 288,
+    "total_tokens": 290,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  C
+success id:  76
+#####################
+output:  C
+response:  {
+  "id": "cmpl-278c420db442458a873748cf46f2fadd",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "A",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 197,
+    "total_tokens": 199,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  77
+#####################
+output:  A
+response:  {
+  "id": "cmpl-d985fc52cd474761b8467bb51d15f9c2",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "A",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 314,
+    "total_tokens": 316,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  78
+#####################
+output:  A
+response:  {
+  "id": "cmpl-41173c11fa2d4a7a86ecd33a12701ead",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 199,
+    "total_tokens": 201,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  79
+#####################
+output:  B
+response:  {
+  "id": "cmpl-90617c4788f742809ae4bbdda87360ae",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "A",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 204,
+    "total_tokens": 206,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  80
+#####################
+output:  A
+response:  {
+  "id": "cmpl-ab7a36e5d0994863b0a515bc022af3d1",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 172,
+    "total_tokens": 174,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  81
+#####################
+output:  B
+response:  {
+  "id": "cmpl-eb18717ea30a427fba82c3fe21856a99",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "A",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 190,
+    "total_tokens": 192,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  82
+#####################
+output:  A
+response:  {
+  "id": "cmpl-e7db4a9c6ab94a16a60f57b014d27143",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 187,
+    "total_tokens": 189,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  83
+#####################
+output:  B
+response:  {
+  "id": "cmpl-e4a742f2b8a24c839575f2fcf9674688",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "True",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 192,
+    "total_tokens": 194,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  A
+success id:  84
+#####################
+output:  True
+response:  {
+  "id": "cmpl-f97d9015a1944cf59ffaa840b70d5839",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 146,
+    "total_tokens": 148,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  85
+#####################
+output:  B
+response:  {
+  "id": "cmpl-838228169074494dae0ececb4cded805",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "False",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 212,
+    "total_tokens": 214,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  B
+success id:  86
+#####################
+output:  False
+response:  {
+  "id": "cmpl-d26f0729a2d0405482ace0b9563da282",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 286,
+    "total_tokens": 288,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  87
+#####################
+output:  B
+response:  {
+  "id": "cmpl-706333582bf640b6830cb00742592d90",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "A",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 195,
+    "total_tokens": 197,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  88
+#####################
+output:  A
+response:  {
+  "id": "cmpl-864c77886f6849c88ade539be244e842",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 201,
+    "total_tokens": 203,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+} 44%|████▍     | 90/204 [00:01<00:01, 65.74it/s] 48%|████▊     | 97/204 [00:01<00:01, 66.08it/s] 51%|█████     | 104/204 [00:01<00:01, 66.19it/s]
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  89
+#####################
+output:  B
+response:  {
+  "id": "cmpl-a1dab9073b0249ee834d9aca9c693431",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "A",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 205,
+    "total_tokens": 207,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  90
+#####################
+output:  A
+response:  {
+  "id": "cmpl-9caed88a62d944f7b46cee82f498928e",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 190,
+    "total_tokens": 192,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  91
+#####################
+output:  B
+response:  {
+  "id": "cmpl-af1908ce610e411f8a83bf95da36447f",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 240,
+    "total_tokens": 242,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  92
+#####################
+output:  B
+response:  {
+  "id": "cmpl-0fc1808f2be04352940aca750bc6e225",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "True",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 213,
+    "total_tokens": 215,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  A
+success id:  93
+#####################
+output:  True
+response:  {
+  "id": "cmpl-4f4addddbb86460ba7f9ecfdb923b268",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "A",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 163,
+    "total_tokens": 165,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  94
+#####################
+output:  A
+response:  {
+  "id": "cmpl-b63776f44b6e4a888168be0dbd12961d",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 147,
+    "total_tokens": 149,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  95
+#####################
+output:  B
+response:  {
+  "id": "cmpl-6caab1b49e254aeca5eb9210059c0826",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 215,
+    "total_tokens": 217,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  96
+#####################
+output:  B
+response:  {
+  "id": "cmpl-af0b504c4fc94e80b4356ea14fe786fb",
+  "object": "text_completion",
+  "created": 1756132721,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 163,
+    "total_tokens": 165,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  97
+#####################
+output:  B
+response:  {
+  "id": "cmpl-4f998707998743a4a1c0873d934dc5a5",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 211,
+    "total_tokens": 213,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  98
+#####################
+output:  B
+response:  {
+  "id": "cmpl-e1c62ac9f88e4ceda03b31b4290848d0",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 197,
+    "total_tokens": 199,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  99
+#####################
+output:  B
+response:  {
+  "id": "cmpl-c574a51364eb4e689ada05483e32a1ad",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "A",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 160,
+    "total_tokens": 162,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  100
+#####################
+output:  A
+response:  {
+  "id": "cmpl-81875e3e9a5848a092e3d085130ad7a0",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 211,
+    "total_tokens": 213,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  101
+#####################
+output:  B
+response:  {
+  "id": "cmpl-bd6db6b70b8142a386ed1ed8fb90e5a9",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "A",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 210,
+    "total_tokens": 212,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  102
+#####################
+output:  A
+response:  {
+  "id": "cmpl-76c030897ae446069d315660b9354d0f",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "A",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 207,
+    "total_tokens": 209,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  103
+#####################
+output:  A
+response:  {
+  "id": "cmpl-bb686f0163e04fbea5cd69b74e74a990",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 226,
+    "total_tokens": 228,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+} 54%|█████▍    | 111/204 [00:01<00:01, 65.50it/s] 58%|█████▊    | 118/204 [00:01<00:01, 66.11it/s]
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  104
+#####################
+output:  B
+response:  {
+  "id": "cmpl-908217dba8ba43f889262233405864c5",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 338,
+    "total_tokens": 340,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  105
+#####################
+output:  B
+response:  {
+  "id": "cmpl-650acc27dd48437bad0b1d91dc56b594",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 200,
+    "total_tokens": 202,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  106
+#####################
+output:  B
+response:  {
+  "id": "cmpl-49f70a188fdb44ea96fbd6fe03595205",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 178,
+    "total_tokens": 180,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  107
+#####################
+output:  B
+response:  {
+  "id": "cmpl-72abda8e9d644ba2b2c939434573679d",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "C",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 332,
+    "total_tokens": 334,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  C
+success id:  108
+#####################
+output:  C
+response:  {
+  "id": "cmpl-2e18c023c9214ed297ef7b1fdfbe0a9b",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "True",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 216,
+    "total_tokens": 218,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  A
+success id:  109
+#####################
+output:  True
+response:  {
+  "id": "cmpl-2ad039d55c4c4441984253e41c853d17",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 201,
+    "total_tokens": 203,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  110
+#####################
+output:  B
+response:  {
+  "id": "cmpl-b4e3a6efcb114ed2b33306ce6d38c758",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 182,
+    "total_tokens": 184,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  111
+#####################
+output:  B
+response:  {
+  "id": "cmpl-4edc475c203f40e0965ad1d2d3880148",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "A",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 146,
+    "total_tokens": 148,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  112
+#####################
+output:  A
+response:  {
+  "id": "cmpl-3d46cdbf48954bbd8a3f727bdb487d9b",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "A",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 207,
+    "total_tokens": 209,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  113
+#####################
+output:  A
+response:  {
+  "id": "cmpl-f02d5411393f4d5bbb52e7a643c13b9f",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 312,
+    "total_tokens": 314,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  114
+#####################
+output:  B
+response:  {
+  "id": "cmpl-88fc469d52774a12b891cb696aca20ed",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 179,
+    "total_tokens": 181,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  115
+#####################
+output:  B
+response:  {
+  "id": "cmpl-9ba37f5f5efc4b74a02453c55151a68a",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "True",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 192,
+    "total_tokens": 194,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  A
+success id:  116
+#####################
+output:  True
+response:  {
+  "id": "cmpl-56bd11878d6345ac90fa197d60b384e9",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 227,
+    "total_tokens": 229,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  117
+#####################
+output:  B
+response:  {
+  "id": "cmpl-b89bf59aa33242608f8e78328500054a",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "A",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 232,
+    "total_tokens": 234,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  118
+#####################
+output:  A
+response:  {
+  "id": "cmpl-8afe12dd28da4801b6c69edf5ca7446f",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "A",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 199,
+    "total_tokens": 201,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+} 61%|██████▏   | 125/204 [00:01<00:01, 66.31it/s] 65%|██████▍   | 132/204 [00:02<00:01, 66.40it/s]
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  119
+#####################
+output:  A
+response:  {
+  "id": "cmpl-8d0804fce12d4fb7acd2434e2667cff6",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "C",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 239,
+    "total_tokens": 241,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  C
+success id:  120
+#####################
+output:  C
+response:  {
+  "id": "cmpl-f97e34135bed4ef9a4f32f4d19892613",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 165,
+    "total_tokens": 167,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  121
+#####################
+output:  B
+response:  {
+  "id": "cmpl-dcd30ac41025467d881b199d1838f1b1",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 168,
+    "total_tokens": 170,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  122
+#####################
+output:  B
+response:  {
+  "id": "cmpl-1dd05eb85d23488f9fdd0b1d4808b576",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 148,
+    "total_tokens": 150,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  123
+#####################
+output:  B
+response:  {
+  "id": "cmpl-eca2e8c6519d422f9e53fb8f51bd8153",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 196,
+    "total_tokens": 198,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  124
+#####################
+output:  B
+response:  {
+  "id": "cmpl-5bf62ef93ea14e33a7e59de9fe77a525",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 206,
+    "total_tokens": 208,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  125
+#####################
+output:  B
+response:  {
+  "id": "cmpl-e46bde66473640c696a1b4677a1e2cd1",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "A",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 281,
+    "total_tokens": 283,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  126
+#####################
+output:  A
+response:  {
+  "id": "cmpl-a9fa9c7741dd464592168b89c6f0ec47",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "True",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 230,
+    "total_tokens": 232,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  A
+success id:  127
+#####################
+output:  True
+response:  {
+  "id": "cmpl-fcd5e3ee1c804f16ab5ab0bc59669ef0",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "A",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 192,
+    "total_tokens": 194,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  128
+#####################
+output:  A
+response:  {
+  "id": "cmpl-27e6c64b939744de94ec3db998267567",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 200,
+    "total_tokens": 202,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  129
+#####################
+output:  B
+response:  {
+  "id": "cmpl-59760415ec0c42e7900458b583fee4b1",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "A",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 212,
+    "total_tokens": 214,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  130
+#####################
+output:  A
+response:  {
+  "id": "cmpl-7347cf7052bb47ce980ecfaf8bedb075",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 272,
+    "total_tokens": 274,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  131
+#####################
+output:  B
+response:  {
+  "id": "cmpl-e7a29e40222e4b99bee5058ced43f5d4",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 265,
+    "total_tokens": 267,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  132
+#####################
+output:  B
+response:  {
+  "id": "cmpl-febdb0b4c7fa4ce58a531fb6c2a870e8",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 315,
+    "total_tokens": 317,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  133
+#####################
+output:  B
+response:  {
+  "id": "cmpl-62aa2d80c4d24959b534a30a0cc82de6",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "A",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 324,
+    "total_tokens": 326,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+} 68%|██████▊   | 139/204 [00:02<00:00, 66.45it/s] 72%|███████▏  | 146/204 [00:02<00:00, 66.73it/s]
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  134
+#####################
+output:  A
+response:  {
+  "id": "cmpl-6293852ef7cd421abe6b4f33c488f163",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "C",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 279,
+    "total_tokens": 281,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  C
+success id:  135
+#####################
+output:  C
+response:  {
+  "id": "cmpl-1eb15da79aa84bbba559c6db00ad1fe9",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "C",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 204,
+    "total_tokens": 206,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  C
+success id:  136
+#####################
+output:  C
+response:  {
+  "id": "cmpl-8ffb669131754e758a4483d29ae1730a",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 188,
+    "total_tokens": 190,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  137
+#####################
+output:  B
+response:  {
+  "id": "cmpl-d595f9c307454747b6207686cd1b9ad0",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 211,
+    "total_tokens": 213,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  138
+#####################
+output:  B
+response:  {
+  "id": "cmpl-d4335b628ccf412788fc62febba6c86d",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 173,
+    "total_tokens": 175,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  139
+#####################
+output:  B
+response:  {
+  "id": "cmpl-ce59f5f6b8ae4642ae6246e86c012f84",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 210,
+    "total_tokens": 212,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  140
+#####################
+output:  B
+response:  {
+  "id": "cmpl-6524548feb1245968a02009fd5c680d1",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "True",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 193,
+    "total_tokens": 195,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  A
+success id:  141
+#####################
+output:  True
+response:  {
+  "id": "cmpl-c32695d3292b4003aa5e08e560698658",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "C",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 198,
+    "total_tokens": 200,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  C
+success id:  142
+#####################
+output:  C
+response:  {
+  "id": "cmpl-c2abcaeb2e3b4f309239926f72057b2b",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 304,
+    "total_tokens": 306,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  143
+#####################
+output:  B
+response:  {
+  "id": "cmpl-5367430e96574f58a247b284374172ed",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "C",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 199,
+    "total_tokens": 201,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  C
+success id:  144
+#####################
+output:  C
+response:  {
+  "id": "cmpl-c8f965c67a604deca66ccf5cb4d712a3",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "C",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 257,
+    "total_tokens": 259,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  C
+success id:  145
+#####################
+output:  C
+response:  {
+  "id": "cmpl-d78019475d8d467c8c40b92a9e49ad1b",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "A",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 182,
+    "total_tokens": 184,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  146
+#####################
+output:  A
+response:  {
+  "id": "cmpl-b2b60a8421364c9f8ff4fdb1bc21b1ea",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "C",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 255,
+    "total_tokens": 257,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  C
+success id:  147
+#####################
+output:  C
+response:  {
+  "id": "cmpl-dd15cecfc6df441c9b5ffd95acc2abe6",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "C",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 224,
+    "total_tokens": 226,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  C
+success id:  148
+#####################
+output:  C
+response:  {
+  "id": "cmpl-6c96c67557884be9b8720c45b6ff7a5c",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "C",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 214,
+    "total_tokens": 216,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+} 75%|███████▌  | 153/204 [00:02<00:00, 66.45it/s] 78%|███████▊  | 160/204 [00:02<00:00, 66.72it/s]
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  C
+success id:  149
+#####################
+output:  C
+response:  {
+  "id": "cmpl-9301707dc74e4c2ba2c1dad4287b6062",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 217,
+    "total_tokens": 219,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  150
+#####################
+output:  B
+response:  {
+  "id": "cmpl-a881f108ee6b41b0a69a4e25601fd926",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "C",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 199,
+    "total_tokens": 201,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  C
+success id:  151
+#####################
+output:  C
+response:  {
+  "id": "cmpl-0d58f18d63084427bad40128709485d1",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 233,
+    "total_tokens": 235,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  152
+#####################
+output:  B
+response:  {
+  "id": "cmpl-33110df6cbfa4f8187c6256ec444665d",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 221,
+    "total_tokens": 223,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  153
+#####################
+output:  B
+response:  {
+  "id": "cmpl-59677a82b83f4f6a8f72e69e1d77b30f",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 209,
+    "total_tokens": 211,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  154
+#####################
+output:  B
+response:  {
+  "id": "cmpl-a2c4174379404aa7a3d6253204643a40",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 305,
+    "total_tokens": 307,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  155
+#####################
+output:  B
+response:  {
+  "id": "cmpl-cf2397a5ac584656b210915b5fb9a125",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 221,
+    "total_tokens": 223,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  156
+#####################
+output:  B
+response:  {
+  "id": "cmpl-96a74d0e999a4c20b3e8dec715f794c2",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "C",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 245,
+    "total_tokens": 247,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  C
+success id:  157
+#####################
+output:  C
+response:  {
+  "id": "cmpl-2aea4f8f8179408aafe7114e66b477fb",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 209,
+    "total_tokens": 211,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  158
+#####################
+output:  B
+response:  {
+  "id": "cmpl-13f426fadd354fce8321f6ef989d7049",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "A",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 181,
+    "total_tokens": 183,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  159
+#####################
+output:  A
+response:  {
+  "id": "cmpl-d2a37012dc63486381794f242d910c91",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "A",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 188,
+    "total_tokens": 190,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  160
+#####################
+output:  A
+response:  {
+  "id": "cmpl-d9a3902c73574fda92d033c24295c96a",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 200,
+    "total_tokens": 202,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  161
+#####################
+output:  B
+response:  {
+  "id": "cmpl-c01ce81a069c4631bd496a480c098161",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "C",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 215,
+    "total_tokens": 217,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  C
+success id:  162
+#####################
+output:  C
+response:  {
+  "id": "cmpl-eeb4eddfe01c4f38b7c5b8107b47fa1f",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "C",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 213,
+    "total_tokens": 215,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  C
+success id:  163
+#####################
+output:  C
+response:  {
+  "id": "cmpl-2bbbed72e94f40afb7da9873cc65d1a9",
+  "object": "text_completion",
+  "created": 1756132722,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "A",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 202,
+    "total_tokens": 204,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+} 82%|████████▏ | 167/204 [00:02<00:00, 66.70it/s] 85%|████████▌ | 174/204 [00:02<00:00, 66.87it/s]
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  164
+#####################
+output:  A
+response:  {
+  "id": "cmpl-bf7c26d418614fa792cbe01bcc4075cd",
+  "object": "text_completion",
+  "created": 1756132723,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 186,
+    "total_tokens": 188,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  165
+#####################
+output:  B
+response:  {
+  "id": "cmpl-cf6471b539e44f0ca84682f59c54470b",
+  "object": "text_completion",
+  "created": 1756132723,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 166,
+    "total_tokens": 168,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  166
+#####################
+output:  B
+response:  {
+  "id": "cmpl-fd483ce0b63b4c35a788201fa4e20555",
+  "object": "text_completion",
+  "created": 1756132723,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "True",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 168,
+    "total_tokens": 170,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  A
+success id:  167
+#####################
+output:  True
+response:  {
+  "id": "cmpl-ea4adeb6e4fc42ee91a91894dee6604b",
+  "object": "text_completion",
+  "created": 1756132723,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "C",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 317,
+    "total_tokens": 319,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  C
+success id:  168
+#####################
+output:  C
+response:  {
+  "id": "cmpl-4fe04c2ec4ac4dcbb2ab59135c34010b",
+  "object": "text_completion",
+  "created": 1756132723,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "A",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 184,
+    "total_tokens": 186,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  169
+#####################
+output:  A
+response:  {
+  "id": "cmpl-c97fee498edd4fe7adb3225fd3506384",
+  "object": "text_completion",
+  "created": 1756132723,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "True",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 190,
+    "total_tokens": 192,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+final_ans:  A
+success id:  170
+#####################
+output:  True
+response:  {
+  "id": "cmpl-2b72e1f1e0254f77bde0af2071d8466b",
+  "object": "text_completion",
+  "created": 1756132723,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 324,
+    "total_tokens": 326,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  171
+#####################
+output:  B
+response:  {
+  "id": "cmpl-6c238525783f413fb9101d962db4000e",
+  "object": "text_completion",
+  "created": 1756132723,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "A",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 225,
+    "total_tokens": 227,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  172
+#####################
+output:  A
+response:  {
+  "id": "cmpl-552577bdca2f4fd684b865a84134446f",
+  "object": "text_completion",
+  "created": 1756132723,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 150,
+    "total_tokens": 152,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  173
+#####################
+output:  B
+response:  {
+  "id": "cmpl-8b6138447f414d8cbda26f9791fa33b5",
+  "object": "text_completion",
+  "created": 1756132723,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "A",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 205,
+    "total_tokens": 207,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  174
+#####################
+output:  A
+response:  {
+  "id": "cmpl-246975cf5b5246b1bd7cba647b9d2d2b",
+  "object": "text_completion",
+  "created": 1756132723,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 269,
+    "total_tokens": 271,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  175
+#####################
+output:  B
+response:  {
+  "id": "cmpl-18d11b536dd548a687a3a2cb827e97b8",
+  "object": "text_completion",
+  "created": 1756132723,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 179,
+    "total_tokens": 181,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  176
+#####################
+output:  B
+response:  {
+  "id": "cmpl-f1e0cea8bb16477d90b246fce3820033",
+  "object": "text_completion",
+  "created": 1756132723,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 193,
+    "total_tokens": 195,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  177
+#####################
+output:  B
+response:  {
+  "id": "cmpl-06898c5fec7347eab1ca1b720bf75a39",
+  "object": "text_completion",
+  "created": 1756132723,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 237,
+    "total_tokens": 239,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  178
+#####################
+output:  B
+response:  {
+  "id": "cmpl-cabb7a8a4f9a4123be0942275565fea2",
+  "object": "text_completion",
+  "created": 1756132723,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 208,
+    "total_tokens": 210,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+} 89%|████████▊ | 181/204 [00:02<00:00, 67.10it/s] 92%|█████████▏| 188/204 [00:02<00:00, 67.01it/s]
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  179
+#####################
+output:  B
+response:  {
+  "id": "cmpl-e9750c28c9d146b7b6849d1a32c25ad9",
+  "object": "text_completion",
+  "created": 1756132723,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 198,
+    "total_tokens": 200,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  180
+#####################
+output:  B
+response:  {
+  "id": "cmpl-83a5c4d57cc8491aa3e5f53fbf65d6ab",
+  "object": "text_completion",
+  "created": 1756132723,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "A",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 280,
+    "total_tokens": 282,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  181
+#####################
+output:  A
+response:  {
+  "id": "cmpl-529503f572104aecafed5952bd30f659",
+  "object": "text_completion",
+  "created": 1756132723,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 207,
+    "total_tokens": 209,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  182
+#####################
+output:  B
+response:  {
+  "id": "cmpl-3ffd0fc93d3c47a7bfc27c0e32c65547",
+  "object": "text_completion",
+  "created": 1756132723,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "A",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 173,
+    "total_tokens": 175,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  183
+#####################
+output:  A
+response:  {
+  "id": "cmpl-ee0402196d9d4d5faffecfd854cbd211",
+  "object": "text_completion",
+  "created": 1756132723,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "A",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 278,
+    "total_tokens": 280,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  184
+#####################
+output:  A
+response:  {
+  "id": "cmpl-1e801f9c73b74bfaa9c36a4c08af4bce",
+  "object": "text_completion",
+  "created": 1756132723,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 355,
+    "total_tokens": 357,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  185
+#####################
+output:  B
+response:  {
+  "id": "cmpl-d05db086c7cc404bab3a84107ea0baf9",
+  "object": "text_completion",
+  "created": 1756132723,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "C",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 359,
+    "total_tokens": 361,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  C
+success id:  186
+#####################
+output:  C
+response:  {
+  "id": "cmpl-d335b37a29b44b949b1e325924cfb7fd",
+  "object": "text_completion",
+  "created": 1756132723,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "C",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 171,
+    "total_tokens": 173,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  C
+success id:  187
+#####################
+output:  C
+response:  {
+  "id": "cmpl-fd89857d12ca4d04b2af3e9b5692f572",
+  "object": "text_completion",
+  "created": 1756132723,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 205,
+    "total_tokens": 207,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  188
+#####################
+output:  B
+response:  {
+  "id": "cmpl-0531a7c518504f66a7fade1b11dbafb0",
+  "object": "text_completion",
+  "created": 1756132723,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 194,
+    "total_tokens": 196,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  189
+#####################
+output:  B
+response:  {
+  "id": "cmpl-66b1e14a6ab046589882a403bf851429",
+  "object": "text_completion",
+  "created": 1756132723,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "A",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 245,
+    "total_tokens": 247,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  190
+#####################
+output:  A
+response:  {
+  "id": "cmpl-e491fc63ec414622b67071efcdf332b0",
+  "object": "text_completion",
+  "created": 1756132723,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 189,
+    "total_tokens": 191,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  191
+#####################
+output:  B
+response:  {
+  "id": "cmpl-97b984128ab442a18c0f25a36405a25f",
+  "object": "text_completion",
+  "created": 1756132723,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 215,
+    "total_tokens": 217,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  192
+#####################
+output:  B
+response:  {
+  "id": "cmpl-f75913564f184599965edf0019e5dd52",
+  "object": "text_completion",
+  "created": 1756132723,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 209,
+    "total_tokens": 211,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  193
+#####################
+output:  B
+response:  {
+  "id": "cmpl-dfd7a5c38691416797d9b4b2f4558692",
+  "object": "text_completion",
+  "created": 1756132723,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "No",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 218,
+    "total_tokens": 220,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+} 96%|█████████▌| 195/204 [00:02<00:00, 67.24it/s] 99%|█████████▉| 202/204 [00:03<00:00, 67.08it/s]100%|██████████| 204/204 [00:03<00:00, 65.76it/s]
+
+final_ans:  None
+success id:  194
+#####################
+output:  No
+response:  {
+  "id": "cmpl-9f9126d087754a5dac0dd309b0df0fe5",
+  "object": "text_completion",
+  "created": 1756132723,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 248,
+    "total_tokens": 250,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  195
+#####################
+output:  B
+response:  {
+  "id": "cmpl-6f08e6aa127f49b3937394b8a7aa5070",
+  "object": "text_completion",
+  "created": 1756132723,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 257,
+    "total_tokens": 259,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  196
+#####################
+output:  B
+response:  {
+  "id": "cmpl-aabc7ea81255424fa5cd8b1b2eb58f3e",
+  "object": "text_completion",
+  "created": 1756132723,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "C",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 191,
+    "total_tokens": 193,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  C
+success id:  197
+#####################
+output:  C
+response:  {
+  "id": "cmpl-c0b35b8d82434efc84e50fa4926b744f",
+  "object": "text_completion",
+  "created": 1756132723,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "A",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 235,
+    "total_tokens": 237,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  198
+#####################
+output:  A
+response:  {
+  "id": "cmpl-812835cc4a754aefa5c5273500566c20",
+  "object": "text_completion",
+  "created": 1756132723,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 183,
+    "total_tokens": 185,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  199
+#####################
+output:  B
+response:  {
+  "id": "cmpl-a87fa146fda947b88e542f3e4ba02913",
+  "object": "text_completion",
+  "created": 1756132723,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 180,
+    "total_tokens": 182,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  200
+#####################
+output:  B
+response:  {
+  "id": "cmpl-f090bcb404d14c67bd5efc42389a29be",
+  "object": "text_completion",
+  "created": 1756132723,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "A",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 262,
+    "total_tokens": 264,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  A
+success id:  201
+#####################
+output:  A
+response:  {
+  "id": "cmpl-b5357317b32e478b8846197029431739",
+  "object": "text_completion",
+  "created": 1756132723,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 178,
+    "total_tokens": 180,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  202
+#####################
+output:  B
+response:  {
+  "id": "cmpl-a572d9b3b7874ba6baf9552cdb9b4567",
+  "object": "text_completion",
+  "created": 1756132723,
+  "model": "X-R1-3B-4-FLAN-COT-FS-KL001",
+  "choices": [
+    {
+      "index": 0,
+      "text": "B",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 180,
+    "total_tokens": 182,
+    "completion_tokens": 2,
+    "prompt_tokens_details": null
+  }
+}
+(?:^|\n|\.)\s*([A-D])[)\s\.]?
+final_ans:  B
+success id:  203
+#####################
+output:  B
+acc_newdirect.math teacher: 0.4362745098039216 (89/204)
+Write 204 items into exp_cot/output/output.FOLIO.newdirect.math_teacher.X-R1-3B-4-FLAN-COT-FS-KL001.json
