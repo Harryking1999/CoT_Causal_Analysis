@@ -1,0 +1,10 @@
+# 多模型参数变化时序分析报告
+基础模型: /home/fuzhizhang.fzz/model/DeepSeek-R1-Distill-Qwen-1.5B
+新模型列表:
+  1. /home/fuzhizhang.fzz/model/DeepScaleR-1.5B-Preview
+分析指标: 相对L2差异 (Relative L2 Difference)
+
+## 模型 1 统计
+总参数量: 1,543,714,304
+加权平均相对L2差异: 0.001152
+最大相对L2差异: 0.002742

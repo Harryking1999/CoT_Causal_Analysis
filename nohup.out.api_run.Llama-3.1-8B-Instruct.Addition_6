@@ -1,12 +1,0 @@
-Thu Jul 3 09:14:14 PM CST 2025, Evaluating -1 samples from Addition:6 using prompts newdirectbase ...
-/home/fuzhizhang.fzz/CoT_Causal_Analysis/scripts/api_run.py:92: SyntaxWarning: invalid escape sequence '\{'
-  fields = re.findall('\{\{\w+\}\}', full_prompt)
-/home/fuzhizhang.fzz/CoT_Causal_Analysis/scripts/api_run.py:176: SyntaxWarning: invalid escape sequence '\d'
-  output = [line for line in output if len(re.findall('\d+', line)) > 0]
-/home/fuzhizhang.fzz/CoT_Causal_Analysis/scripts/api_run.py:184: SyntaxWarning: invalid escape sequence '\d'
-  answer = re.findall('\d+', answer)
-http://localhost:8080/v1
-123
-OpenAI API with http://localhost:8080/v1, Llama-3.1-8B-Instruct, ####, 15000
-Output to: exp_cot/output/output.Addition_6.newdirectbase.math_teacher.Llama-3.1-8B-Instruct.json
-  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [01:48<16:20, 108.91s/it]

@@ -1,1794 +1,0 @@
-Dataset is ProofWriter. Ignore the nsamples argument.
-Sat Jul 12 12:12:34 AM CST 2025, Evaluating 600 samples from ProofWriter using prompts newdirectbase ...
-/home/fuzhizhang.fzz/CoT_Causal_Analysis/scripts/api_run.py:92: SyntaxWarning: invalid escape sequence '\{'
-  fields = re.findall('\{\{\w+\}\}', full_prompt)
-/home/fuzhizhang.fzz/CoT_Causal_Analysis/scripts/api_run.py:176: SyntaxWarning: invalid escape sequence '\d'
-  output = [line for line in output if len(re.findall('\d+', line)) > 0]
-/home/fuzhizhang.fzz/CoT_Causal_Analysis/scripts/api_run.py:184: SyntaxWarning: invalid escape sequence '\d'
-  answer = re.findall('\d+', answer)
-http://localhost:8080/v1
-123
-OpenAI API with http://localhost:8080/v1, Qwen2.5-3B-Instruct, ####, 15000
-Output to: exp_cot/output/output.ProofWriter.newdirectbase.math_teacher.Qwen2.5-3B-Instruct.json
-  0%|          | 0/600 [00:00<?, ?it/s]  0%|          | 1/600 [00:02<24:32,  2.46s/it]  0%|          | 2/600 [00:05<25:15,  2.53s/it]  0%|          | 3/600 [00:06<21:54,  2.20s/it]  1%|          | 4/600 [00:11<31:23,  3.16s/it]  1%|          | 5/600 [00:14<31:16,  3.15s/it]  1%|          | 6/600 [00:16<26:38,  2.69s/it]  1%|          | 7/600 [00:19<28:20,  2.87s/it]  1%|▏         | 8/600 [00:21<25:39,  2.60s/it]  2%|▏         | 9/600 [00:24<26:16,  2.67s/it]  2%|▏         | 10/600 [00:28<29:18,  2.98s/it]  2%|▏         | 11/600 [00:29<24:08,  2.46s/it]  2%|▏         | 12/600 [00:31<23:02,  2.35s/it]  2%|▏         | 13/600 [00:33<21:45,  2.22s/it]  2%|▏         | 14/600 [00:34<18:20,  1.88s/it]  2%|▎         | 15/600 [00:36<17:36,  1.81s/it]  3%|▎         | 16/600 [00:38<19:41,  2.02s/it]  3%|▎         | 17/600 [00:41<20:42,  2.13s/it]  3%|▎         | 18/600 [00:42<18:50,  1.94s/it]  3%|▎         | 19/600 [00:44<19:30,  2.01s/it]  3%|▎         | 20/600 [00:46<18:01,  1.87s/it]  4%|▎         | 21/600 [00:48<19:34,  2.03s/it]  4%|▎         | 22/600 [00:50<18:14,  1.89s/it]  4%|▍         | 23/600 [00:53<23:04,  2.40s/it]  4%|▍         | 24/600 [00:55<20:58,  2.18s/it]  4%|▍         | 25/600 [00:57<20:18,  2.12s/it]  4%|▍         | 26/600 [00:58<17:52,  1.87s/it]  4%|▍         | 27/600 [01:01<19:16,  2.02s/it]  5%|▍         | 28/600 [01:02<18:30,  1.94s/it]  5%|▍         | 29/600 [01:04<18:32,  1.95s/it]  5%|▌         | 30/600 [01:07<20:35,  2.17s/it]  5%|▌         | 31/600 [01:09<20:17,  2.14s/it]  5%|▌         | 32/600 [01:12<23:01,  2.43s/it]  6%|▌         | 33/600 [01:15<24:10,  2.56s/it]  6%|▌         | 34/600 [01:17<23:05,  2.45s/it]  6%|▌         | 35/600 [01:20<23:53,  2.54s/it]  6%|▌         | 36/600 [01:22<21:36,  2.30s/it]  6%|▌         | 37/600 [01:23<18:49,  2.01s/it]  6%|▋         | 38/600 [03:00<4:45:17, 30.46s/it]  6%|▋         | 39/600 [03:02<3:24:03, 21.82s/it]  7%|▋         | 40/600 [03:05<2:30:44, 16.15s/it]  7%|▋         | 41/600 [03:06<1:50:30, 11.86s/it]  7%|▋         | 42/600 [03:08<1:21:51,  8.80s/it]  7%|▋         | 43/600 [03:11<1:05:18,  7.03s/it]  7%|▋         | 44/600 [03:13<51:43,  5.58s/it]    8%|▊         | 45/600 [03:15<41:12,  4.46s/it]  8%|▊         | 46/600 [03:17<35:29,  3.84s/it]  8%|▊         | 47/600 [03:20<31:07,  3.38s/it]  8%|▊         | 48/600 [03:22<27:01,  2.94s/it]  8%|▊         | 49/600 [03:24<25:24,  2.77s/it]  8%|▊         | 50/600 [03:25<21:10,  2.31s/it]  8%|▊         | 51/600 [03:26<17:34,  1.92s/it]  9%|▊         | 52/600 [03:28<17:22,  1.90s/it]  9%|▉         | 53/600 [03:30<16:19,  1.79s/it]  9%|▉         | 54/600 [03:31<15:50,  1.74s/it]  9%|▉         | 55/600 [03:32<14:02,  1.55s/it]  9%|▉         | 56/600 [03:33<12:50,  1.42s/it] 10%|▉         | 57/600 [03:36<14:44,  1.63s/it] 10%|▉         | 58/600 [03:39<19:50,  2.20s/it] 10%|▉         | 59/600 [03:41<19:15,  2.14s/it] 10%|█         | 60/600 [03:44<22:04,  2.45s/it] 10%|█         | 61/600 [03:46<20:43,  2.31s/it] 10%|█         | 62/600 [03:48<18:52,  2.11s/it] 10%|█         | 63/600 [03:49<16:51,  1.88s/it] 11%|█         | 64/600 [03:51<17:36,  1.97s/it] 11%|█         | 65/600 [03:53<17:39,  1.98s/it] 11%|█         | 66/600 [03:56<18:14,  2.05s/it] 11%|█         | 67/600 [03:57<17:13,  1.94s/it] 11%|█▏        | 68/600 [04:00<19:48,  2.23s/it] 12%|█▏        | 69/600 [04:02<18:39,  2.11s/it] 12%|█▏        | 70/600 [04:05<20:30,  2.32s/it] 12%|█▏        | 71/600 [04:07<21:04,  2.39s/it] 12%|█▏        | 72/600 [04:09<18:16,  2.08s/it] 12%|█▏        | 73/600 [04:11<18:37,  2.12s/it] 12%|█▏        | 74/600 [04:14<20:31,  2.34s/it] 12%|█▎        | 75/600 [04:15<18:33,  2.12s/it] 13%|█▎        | 76/600 [04:17<17:53,  2.05s/it] 13%|█▎        | 77/600 [04:20<18:10,  2.09s/it] 13%|█▎        | 78/600 [04:21<17:15,  1.98s/it] 13%|█▎        | 79/600 [04:23<16:52,  1.94s/it] 13%|█▎        | 80/600 [04:24<14:55,  1.72s/it] 14%|█▎        | 81/600 [04:26<15:47,  1.83s/it] 14%|█▎        | 82/600 [04:28<16:20,  1.89s/it] 14%|█▍        | 83/600 [04:31<18:13,  2.11s/it] 14%|█▍        | 84/600 [04:33<18:12,  2.12s/it] 14%|█▍        | 85/600 [04:36<20:45,  2.42s/it] 14%|█▍        | 86/600 [04:38<17:44,  2.07s/it] 14%|█▍        | 87/600 [04:39<17:14,  2.02s/it] 15%|█▍        | 88/600 [04:43<21:11,  2.48s/it] 15%|█▍        | 89/600 [04:46<22:29,  2.64s/it] 15%|█▌        | 90/600 [04:48<20:21,  2.40s/it] 15%|█▌        | 91/600 [04:50<19:06,  2.25s/it] 15%|█▌        | 92/600 [04:52<18:39,  2.20s/it] 16%|█▌        | 93/600 [04:54<17:50,  2.11s/it] 16%|█▌        | 94/600 [04:57<19:19,  2.29s/it] 16%|█▌        | 95/600 [04:57<15:14,  1.81s/it] 16%|█▌        | 96/600 [05:00<16:38,  1.98s/it] 16%|█▌        | 97/600 [05:02<16:31,  1.97s/it] 16%|█▋        | 98/600 [05:04<18:22,  2.20s/it] 16%|█▋        | 99/600 [05:08<21:33,  2.58s/it] 17%|█▋        | 100/600 [05:10<21:40,  2.60s/it] 17%|█▋        | 101/600 [05:12<18:47,  2.26s/it] 17%|█▋        | 102/600 [05:15<21:02,  2.54s/it] 17%|█▋        | 103/600 [05:17<20:10,  2.44s/it] 17%|█▋        | 104/600 [05:19<18:15,  2.21s/it] 18%|█▊        | 105/600 [05:20<16:12,  1.96s/it] 18%|█▊        | 106/600 [05:22<16:32,  2.01s/it] 18%|█▊        | 107/600 [05:24<15:22,  1.87s/it] 18%|█▊        | 108/600 [05:26<14:36,  1.78s/it] 18%|█▊        | 109/600 [05:28<16:08,  1.97s/it] 18%|█▊        | 110/600 [05:29<13:47,  1.69s/it] 18%|█▊        | 111/600 [05:32<17:28,  2.14s/it] 19%|█▊        | 112/600 [05:35<18:43,  2.30s/it] 19%|█▉        | 113/600 [05:36<16:32,  2.04s/it] 19%|█▉        | 114/600 [05:38<14:59,  1.85s/it] 19%|█▉        | 115/600 [05:39<14:39,  1.81s/it] 19%|█▉        | 116/600 [05:41<15:10,  1.88s/it] 20%|█▉        | 117/600 [05:46<21:23,  2.66s/it]([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  0
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  1
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  2
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  3
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  4
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  5
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  6
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  7
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  8
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  9
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  10
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  11
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  B
-success id:  12
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  13
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  14
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  15
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  16
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  17
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  B
-success id:  18
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  B
-success id:  19
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  20
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  21
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  22
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  23
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  24
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  25
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  26
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  27
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  28
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  29
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  30
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  31
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  32
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  33
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  34
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  35
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  36
-final_ans:  None
-success id:  37
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  38
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  39
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  40
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  41
-final_ans:  None
-success id:  42
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  43
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  44
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  45
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  46
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  47
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  48
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  49
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  50
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  51
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  52
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  53
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  54
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  55
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  56
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  B
-success id:  57
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  58
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  59
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  60
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  61
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  62
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  63
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  64
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  65
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  66
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  67
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  68
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  69
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  70
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  B
-success id:  71
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  72
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  73
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  74
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  75
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  76
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  77
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  B
-success id:  78
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  79
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  80
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  81
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  82
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  83
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  84
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  85
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  86
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  87
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  88
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  89
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  90
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  91
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  92
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  93
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  94
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  95
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  96
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  97
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  98
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  99
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  100
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  101
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  102
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  B
-success id:  103
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  104
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  105
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  106
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  107
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  108
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  109
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  110
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  111
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  112
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  113
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  114
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  115
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  116
-([A-C])\)\s*(True|False|Unknown|Uncertain) 20%|█▉        | 118/600 [05:49<21:21,  2.66s/it] 20%|█▉        | 119/600 [05:51<20:52,  2.60s/it] 20%|██        | 120/600 [05:53<18:06,  2.26s/it] 20%|██        | 121/600 [05:55<19:26,  2.44s/it] 20%|██        | 122/600 [05:58<20:22,  2.56s/it] 20%|██        | 123/600 [06:00<18:30,  2.33s/it] 21%|██        | 124/600 [06:02<17:17,  2.18s/it] 21%|██        | 125/600 [06:04<17:37,  2.23s/it] 21%|██        | 126/600 [06:06<17:02,  2.16s/it] 21%|██        | 127/600 [06:08<16:33,  2.10s/it] 21%|██▏       | 128/600 [06:10<17:07,  2.18s/it] 22%|██▏       | 129/600 [06:14<19:36,  2.50s/it] 22%|██▏       | 130/600 [06:17<21:51,  2.79s/it] 22%|██▏       | 131/600 [06:19<20:13,  2.59s/it] 22%|██▏       | 132/600 [06:22<19:51,  2.55s/it] 22%|██▏       | 133/600 [06:24<19:30,  2.51s/it] 22%|██▏       | 134/600 [06:26<17:43,  2.28s/it] 22%|██▎       | 135/600 [06:28<16:23,  2.11s/it] 23%|██▎       | 136/600 [06:29<14:46,  1.91s/it] 23%|██▎       | 137/600 [06:31<14:08,  1.83s/it] 23%|██▎       | 138/600 [06:33<14:47,  1.92s/it] 23%|██▎       | 139/600 [08:09<3:52:57, 30.32s/it] 23%|██▎       | 140/600 [08:13<2:49:50, 22.15s/it] 24%|██▎       | 141/600 [08:14<2:01:31, 15.89s/it] 24%|██▎       | 142/600 [08:16<1:29:43, 11.75s/it] 24%|██▍       | 143/600 [08:17<1:06:03,  8.67s/it] 24%|██▍       | 144/600 [08:20<52:47,  6.95s/it]   24%|██▍       | 145/600 [08:23<42:24,  5.59s/it] 24%|██▍       | 146/600 [08:25<34:12,  4.52s/it] 24%|██▍       | 147/600 [08:26<27:37,  3.66s/it] 25%|██▍       | 148/600 [08:28<22:02,  2.93s/it] 25%|██▍       | 149/600 [08:30<21:35,  2.87s/it] 25%|██▌       | 150/600 [08:33<20:45,  2.77s/it] 25%|██▌       | 151/600 [08:34<17:59,  2.40s/it] 25%|██▌       | 152/600 [08:37<18:23,  2.46s/it] 26%|██▌       | 153/600 [08:39<17:35,  2.36s/it] 26%|██▌       | 154/600 [08:41<15:47,  2.13s/it] 26%|██▌       | 155/600 [08:42<14:45,  1.99s/it] 26%|██▌       | 156/600 [08:44<13:26,  1.82s/it] 26%|██▌       | 157/600 [08:45<12:41,  1.72s/it] 26%|██▋       | 158/600 [08:48<13:45,  1.87s/it] 26%|██▋       | 159/600 [08:50<13:59,  1.90s/it] 27%|██▋       | 160/600 [08:51<13:29,  1.84s/it] 27%|██▋       | 161/600 [08:54<14:46,  2.02s/it] 27%|██▋       | 162/600 [08:56<15:05,  2.07s/it] 27%|██▋       | 163/600 [08:58<14:18,  1.97s/it] 27%|██▋       | 164/600 [08:59<12:53,  1.78s/it] 28%|██▊       | 165/600 [09:00<10:53,  1.50s/it] 28%|██▊       | 166/600 [09:02<11:47,  1.63s/it] 28%|██▊       | 167/600 [09:03<10:47,  1.49s/it] 28%|██▊       | 168/600 [09:05<11:46,  1.63s/it] 28%|██▊       | 169/600 [09:07<12:12,  1.70s/it] 28%|██▊       | 170/600 [09:09<13:25,  1.87s/it] 28%|██▊       | 171/600 [09:11<12:51,  1.80s/it] 29%|██▊       | 172/600 [09:13<13:35,  1.90s/it] 29%|██▉       | 173/600 [09:14<12:28,  1.75s/it] 29%|██▉       | 174/600 [09:18<16:04,  2.26s/it] 29%|██▉       | 175/600 [09:20<16:59,  2.40s/it] 29%|██▉       | 176/600 [09:22<15:55,  2.25s/it] 30%|██▉       | 177/600 [09:25<17:17,  2.45s/it] 30%|██▉       | 178/600 [09:27<15:37,  2.22s/it] 30%|██▉       | 179/600 [09:29<15:45,  2.25s/it] 30%|███       | 180/600 [09:31<14:58,  2.14s/it] 30%|███       | 181/600 [09:34<16:06,  2.31s/it] 30%|███       | 182/600 [09:35<14:34,  2.09s/it] 30%|███       | 183/600 [09:37<12:52,  1.85s/it] 31%|███       | 184/600 [09:39<13:57,  2.01s/it] 31%|███       | 185/600 [09:42<15:09,  2.19s/it] 31%|███       | 186/600 [09:44<15:19,  2.22s/it] 31%|███       | 187/600 [09:46<15:01,  2.18s/it] 31%|███▏      | 188/600 [09:48<14:14,  2.08s/it] 32%|███▏      | 189/600 [09:52<17:56,  2.62s/it] 32%|███▏      | 190/600 [09:55<18:16,  2.68s/it] 32%|███▏      | 191/600 [09:57<17:41,  2.59s/it] 32%|███▏      | 192/600 [09:59<15:56,  2.34s/it] 32%|███▏      | 193/600 [10:00<13:21,  1.97s/it] 32%|███▏      | 194/600 [10:03<16:29,  2.44s/it] 32%|███▎      | 195/600 [11:40<3:26:44, 30.63s/it] 33%|███▎      | 196/600 [11:41<2:27:26, 21.90s/it] 33%|███▎      | 197/600 [11:44<1:48:08, 16.10s/it] 33%|███▎      | 198/600 [11:45<1:16:59, 11.49s/it] 33%|███▎      | 199/600 [11:46<57:34,  8.61s/it]   33%|███▎      | 200/600 [11:49<45:28,  6.82s/it] 34%|███▎      | 201/600 [11:51<35:06,  5.28s/it] 34%|███▎      | 202/600 [11:54<30:10,  4.55s/it] 34%|███▍      | 203/600 [11:55<23:49,  3.60s/it] 34%|███▍      | 204/600 [11:57<19:37,  2.97s/it] 34%|███▍      | 205/600 [12:01<21:39,  3.29s/it] 34%|███▍      | 206/600 [12:03<19:01,  2.90s/it] 34%|███▍      | 207/600 [12:04<16:54,  2.58s/it] 35%|███▍      | 208/600 [12:07<17:00,  2.60s/it] 35%|███▍      | 209/600 [12:09<16:33,  2.54s/it] 35%|███▌      | 210/600 [12:12<15:39,  2.41s/it] 35%|███▌      | 211/600 [12:14<16:20,  2.52s/it] 35%|███▌      | 212/600 [12:18<18:16,  2.82s/it] 36%|███▌      | 213/600 [12:21<18:03,  2.80s/it] 36%|███▌      | 214/600 [12:23<16:39,  2.59s/it] 36%|███▌      | 215/600 [12:24<13:24,  2.09s/it] 36%|███▌      | 216/600 [12:27<15:12,  2.38s/it] 36%|███▌      | 217/600 [12:27<12:12,  1.91s/it] 36%|███▋      | 218/600 [12:30<12:45,  2.00s/it] 36%|███▋      | 219/600 [12:33<14:59,  2.36s/it] 37%|███▋      | 220/600 [12:35<15:17,  2.42s/it] 37%|███▋      | 221/600 [12:38<15:39,  2.48s/it] 37%|███▋      | 222/600 [12:39<13:35,  2.16s/it] 37%|███▋      | 223/600 [12:42<13:28,  2.14s/it] 37%|███▋      | 224/600 [12:44<13:15,  2.12s/it] 38%|███▊      | 225/600 [12:46<14:02,  2.25s/it] 38%|███▊      | 226/600 [12:48<12:53,  2.07s/it] 38%|███▊      | 227/600 [12:50<13:14,  2.13s/it] 38%|███▊      | 228/600 [12:52<12:26,  2.01s/it] 38%|███▊      | 229/600 [12:56<17:06,  2.77s/it] 38%|███▊      | 230/600 [12:59<17:34,  2.85s/it] 38%|███▊      | 231/600 [13:01<15:22,  2.50s/it] 39%|███▊      | 232/600 [13:03<14:07,  2.30s/it] 39%|███▉      | 233/600 [13:06<14:46,  2.42s/it] 39%|███▉      | 234/600 [13:07<12:47,  2.10s/it]
-final_ans:  C
-success id:  117
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  118
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  119
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  120
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  121
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  122
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  123
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  124
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  125
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  126
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  127
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  128
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  129
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  130
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  131
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  132
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  133
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  134
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  135
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  136
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  137
-final_ans:  None
-success id:  138
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  139
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  140
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  141
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  B
-success id:  142
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  143
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  144
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  145
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  146
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  147
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  148
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  149
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  150
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  151
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  152
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  153
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  154
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  155
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  156
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  157
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  158
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  159
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  160
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  161
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  162
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  B
-success id:  163
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  B
-success id:  164
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  165
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  B
-success id:  166
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  167
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  168
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  169
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  170
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  171
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  172
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  173
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  174
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  175
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  176
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  177
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  178
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  179
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  180
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  181
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  182
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  183
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  184
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  185
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  186
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  187
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  188
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  189
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  190
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  191
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  192
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  193
-final_ans:  None
-success id:  194
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  195
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  196
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  197
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  198
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  199
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  B
-success id:  200
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  201
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  202
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  203
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  204
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  205
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  206
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  207
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  208
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  209
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  210
-final_ans:  None
-success id:  211
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  212
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  213
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  214
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  215
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  216
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  217
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  218
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  219
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  220
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  221
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  222
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  223
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  224
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  225
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  226
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  B
-success id:  227
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  228
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  229
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  230
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  231
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  232
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  233
-final_ans:  39%|███▉      | 235/600 [14:45<3:07:42, 30.85s/it] 39%|███▉      | 236/600 [14:47<2:14:45, 22.21s/it] 40%|███▉      | 237/600 [14:48<1:35:36, 15.80s/it] 40%|███▉      | 238/600 [14:49<1:09:28, 11.52s/it] 40%|███▉      | 239/600 [14:52<53:41,  8.92s/it]   40%|████      | 240/600 [14:55<43:06,  7.18s/it] 40%|████      | 241/600 [14:57<32:42,  5.47s/it] 40%|████      | 242/600 [16:35<3:18:10, 33.21s/it] 40%|████      | 243/600 [16:38<2:23:23, 24.10s/it] 41%|████      | 244/600 [16:39<1:42:34, 17.29s/it] 41%|████      | 245/600 [16:40<1:14:08, 12.53s/it] 41%|████      | 246/600 [16:46<1:01:17, 10.39s/it] 41%|████      | 247/600 [16:48<46:58,  7.98s/it]   41%|████▏     | 248/600 [16:50<36:27,  6.21s/it] 42%|████▏     | 249/600 [16:52<28:36,  4.89s/it] 42%|████▏     | 250/600 [16:54<22:56,  3.93s/it] 42%|████▏     | 251/600 [16:56<19:36,  3.37s/it] 42%|████▏     | 252/600 [16:59<19:08,  3.30s/it] 42%|████▏     | 253/600 [17:01<17:22,  3.00s/it] 42%|████▏     | 254/600 [17:03<15:45,  2.73s/it] 42%|████▎     | 255/600 [17:06<15:08,  2.63s/it] 43%|████▎     | 256/600 [17:09<15:24,  2.69s/it] 43%|████▎     | 257/600 [17:10<13:31,  2.37s/it] 43%|████▎     | 258/600 [17:12<13:16,  2.33s/it] 43%|████▎     | 259/600 [17:15<13:28,  2.37s/it] 43%|████▎     | 260/600 [17:17<13:46,  2.43s/it] 44%|████▎     | 261/600 [17:20<13:25,  2.38s/it] 44%|████▎     | 262/600 [17:22<13:45,  2.44s/it] 44%|████▍     | 263/600 [17:23<11:13,  2.00s/it] 44%|████▍     | 264/600 [17:25<10:42,  1.91s/it] 44%|████▍     | 265/600 [17:27<11:01,  1.98s/it] 44%|████▍     | 266/600 [17:29<11:39,  2.10s/it] 44%|████▍     | 267/600 [17:33<14:38,  2.64s/it] 45%|████▍     | 268/600 [17:36<13:51,  2.50s/it] 45%|████▍     | 269/600 [17:37<11:38,  2.11s/it] 45%|████▌     | 270/600 [17:40<12:45,  2.32s/it] 45%|████▌     | 271/600 [17:41<10:51,  1.98s/it] 45%|████▌     | 272/600 [17:43<11:29,  2.10s/it] 46%|████▌     | 273/600 [17:45<10:15,  1.88s/it] 46%|████▌     | 274/600 [17:47<11:25,  2.10s/it] 46%|████▌     | 275/600 [17:49<10:58,  2.03s/it] 46%|████▌     | 276/600 [17:51<11:23,  2.11s/it] 46%|████▌     | 277/600 [17:54<11:51,  2.20s/it] 46%|████▋     | 278/600 [17:56<11:52,  2.21s/it] 46%|████▋     | 279/600 [18:00<14:04,  2.63s/it] 47%|████▋     | 280/600 [18:01<12:30,  2.35s/it] 47%|████▋     | 281/600 [18:04<12:37,  2.37s/it] 47%|████▋     | 282/600 [18:06<11:59,  2.26s/it] 47%|████▋     | 283/600 [18:08<11:48,  2.24s/it] 47%|████▋     | 284/600 [18:11<13:47,  2.62s/it] 48%|████▊     | 285/600 [18:13<12:43,  2.42s/it] 48%|████▊     | 286/600 [18:15<11:51,  2.26s/it] 48%|████▊     | 287/600 [18:16<09:41,  1.86s/it] 48%|████▊     | 288/600 [18:19<10:38,  2.05s/it] 48%|████▊     | 289/600 [18:22<12:03,  2.33s/it] 48%|████▊     | 290/600 [18:23<09:56,  1.92s/it] 48%|████▊     | 291/600 [18:24<09:06,  1.77s/it] 49%|████▊     | 292/600 [18:25<08:19,  1.62s/it] 49%|████▉     | 293/600 [18:28<10:26,  2.04s/it] 49%|████▉     | 294/600 [20:05<2:35:09, 30.42s/it] 49%|████▉     | 295/600 [20:08<1:53:22, 22.30s/it] 49%|████▉     | 296/600 [20:11<1:23:14, 16.43s/it] 50%|████▉     | 297/600 [20:15<1:03:34, 12.59s/it] 50%|████▉     | 298/600 [20:16<46:47,  9.30s/it]   50%|████▉     | 299/600 [20:18<35:01,  6.98s/it] 50%|█████     | 300/600 [20:21<29:08,  5.83s/it] 50%|█████     | 301/600 [20:24<24:40,  4.95s/it] 50%|█████     | 302/600 [20:26<20:46,  4.18s/it] 50%|█████     | 303/600 [22:03<2:37:43, 31.86s/it] 51%|█████     | 304/600 [22:04<1:51:59, 22.70s/it] 51%|█████     | 305/600 [22:06<1:21:25, 16.56s/it] 51%|█████     | 306/600 [22:07<58:23, 11.92s/it]   51%|█████     | 307/600 [22:08<42:19,  8.67s/it] 51%|█████▏    | 308/600 [22:10<31:38,  6.50s/it] 52%|█████▏    | 309/600 [22:12<24:45,  5.10s/it] 52%|█████▏    | 310/600 [22:14<20:37,  4.27s/it] 52%|█████▏    | 311/600 [22:17<18:50,  3.91s/it] 52%|█████▏    | 312/600 [22:19<16:00,  3.33s/it] 52%|█████▏    | 313/600 [22:22<15:06,  3.16s/it] 52%|█████▏    | 314/600 [22:24<13:02,  2.74s/it] 52%|█████▎    | 315/600 [22:26<12:23,  2.61s/it] 53%|█████▎    | 316/600 [22:28<11:21,  2.40s/it] 53%|█████▎    | 317/600 [22:30<10:44,  2.28s/it] 53%|█████▎    | 318/600 [22:31<09:28,  2.02s/it] 53%|█████▎    | 319/600 [22:33<09:14,  1.97s/it] 53%|█████▎    | 320/600 [22:34<08:09,  1.75s/it] 54%|█████▎    | 321/600 [22:35<07:05,  1.53s/it] 54%|█████▎    | 322/600 [22:37<07:03,  1.52s/it] 54%|█████▍    | 323/600 [22:38<06:04,  1.32s/it] 54%|█████▍    | 324/600 [22:40<07:04,  1.54s/it] 54%|█████▍    | 325/600 [22:41<06:56,  1.51s/it] 54%|█████▍    | 326/600 [22:43<07:22,  1.61s/it] 55%|█████▍    | 327/600 [22:46<09:03,  1.99s/it] 55%|█████▍    | 328/600 [22:48<09:45,  2.15s/it] 55%|█████▍    | 329/600 [22:50<08:56,  1.98s/it] 55%|█████▌    | 330/600 [22:51<07:59,  1.78s/it] 55%|█████▌    | 331/600 [22:53<07:54,  1.76s/it] 55%|█████▌    | 332/600 [22:54<07:02,  1.58s/it] 56%|█████▌    | 333/600 [22:56<07:25,  1.67s/it] 56%|█████▌    | 334/600 [22:59<08:41,  1.96s/it] 56%|█████▌    | 335/600 [23:01<09:29,  2.15s/it] 56%|█████▌    | 336/600 [23:02<07:45,  1.76s/it] 56%|█████▌    | 337/600 [23:04<08:15,  1.88s/it] 56%|█████▋    | 338/600 [23:07<08:32,  1.96s/it] 56%|█████▋    | 339/600 [23:08<08:13,  1.89s/it] 57%|█████▋    | 340/600 [23:10<08:12,  1.89s/it] 57%|█████▋    | 341/600 [23:11<07:01,  1.63s/it] 57%|█████▋    | 342/600 [23:13<07:21,  1.71s/it] 57%|█████▋    | 343/600 [23:14<06:44,  1.58s/it] 57%|█████▋    | 344/600 [23:17<08:26,  1.98s/it] 57%|█████▊    | 345/600 [23:19<08:02,  1.89s/it] 58%|█████▊    | 346/600 [23:21<08:07,  1.92s/it] 58%|█████▊    | 347/600 [23:24<09:00,  2.13s/it] 58%|█████▊    | 348/600 [23:26<09:09,  2.18s/it] 58%|█████▊    | 349/600 [23:28<08:58,  2.15s/it] 58%|█████▊    | 350/600 [23:30<08:54,  2.14s/it] 58%|█████▊    | 351/600 [23:32<08:57,  2.16s/it] 59%|█████▊    | 352/600 [23:34<08:34,  2.07s/it] 59%|█████▉    | 353/600 [23:36<08:34,  2.08s/it] None
-success id:  234
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  235
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  B
-success id:  236
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  237
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  238
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  239
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  240
-final_ans:  None
-success id:  241
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  242
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  B
-success id:  243
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  244
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  B
-success id:  245
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  246
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  247
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  248
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  B
-success id:  249
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  250
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  251
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  252
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  253
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  254
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  255
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  B
-success id:  256
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  257
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  258
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  259
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  260
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  261
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  262
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  263
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  264
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  265
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  266
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  267
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  268
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  269
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  270
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  271
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  B
-success id:  272
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  273
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  274
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  275
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  276
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  277
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  278
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  279
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  280
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  281
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  282
-final_ans:  None
-success id:  283
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  284
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  285
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  286
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  287
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  B
-success id:  288
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  289
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  290
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  291
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  292
-final_ans:  None
-success id:  293
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  B
-success id:  294
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  B
-success id:  295
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  296
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  297
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  298
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  299
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  300
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  301
-final_ans:  None
-success id:  302
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  B
-success id:  303
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  304
-final_ans:  None
-success id:  305
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  306
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  307
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  308
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  309
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  310
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  311
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  312
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  313
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  314
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  315
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  316
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  317
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  318
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  B
-success id:  319
-final_ans:  None
-success id:  320
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  321
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  322
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  323
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  324
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  325
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  326
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  327
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  328
-final_ans:  None
-success id:  329
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  330
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  331
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  332
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  333
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  334
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  B
-success id:  335
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  336
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  337
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  338
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  339
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  B
-success id:  340
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  341
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  342
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  343
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  344
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  345
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  346
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  347
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  348
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  349
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  350
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  351
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  352
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  59%|█████▉    | 354/600 [23:38<07:58,  1.95s/it] 59%|█████▉    | 355/600 [23:42<10:28,  2.57s/it] 59%|█████▉    | 356/600 [23:43<09:01,  2.22s/it] 60%|█████▉    | 357/600 [23:45<08:24,  2.08s/it] 60%|█████▉    | 358/600 [23:47<08:13,  2.04s/it] 60%|█████▉    | 359/600 [23:49<08:06,  2.02s/it] 60%|██████    | 360/600 [23:51<07:48,  1.95s/it] 60%|██████    | 361/600 [23:54<09:09,  2.30s/it] 60%|██████    | 362/600 [23:55<07:50,  1.97s/it] 60%|██████    | 363/600 [23:58<08:34,  2.17s/it] 61%|██████    | 364/600 [23:59<08:00,  2.04s/it] 61%|██████    | 365/600 [24:03<10:19,  2.63s/it] 61%|██████    | 366/600 [24:05<08:49,  2.26s/it] 61%|██████    | 367/600 [24:07<08:10,  2.10s/it] 61%|██████▏   | 368/600 [24:08<07:56,  2.05s/it] 62%|██████▏   | 369/600 [25:43<1:55:12, 29.92s/it] 62%|██████▏   | 370/600 [25:45<1:22:31, 21.53s/it] 62%|██████▏   | 371/600 [25:48<1:00:11, 15.77s/it] 62%|██████▏   | 372/600 [25:49<43:33, 11.46s/it]   62%|██████▏   | 373/600 [25:51<32:01,  8.47s/it] 62%|██████▏   | 374/600 [25:52<24:22,  6.47s/it] 62%|██████▎   | 375/600 [25:53<17:43,  4.73s/it] 63%|██████▎   | 376/600 [25:56<16:02,  4.29s/it] 63%|██████▎   | 377/600 [25:58<12:59,  3.50s/it] 63%|██████▎   | 378/600 [26:00<11:00,  2.98s/it] 63%|██████▎   | 379/600 [26:02<10:14,  2.78s/it] 63%|██████▎   | 380/600 [26:04<09:24,  2.57s/it] 64%|██████▎   | 381/600 [26:07<09:20,  2.56s/it] 64%|██████▎   | 382/600 [26:09<09:10,  2.52s/it] 64%|██████▍   | 383/600 [26:11<08:37,  2.39s/it] 64%|██████▍   | 384/600 [26:13<07:31,  2.09s/it] 64%|██████▍   | 385/600 [26:15<07:22,  2.06s/it] 64%|██████▍   | 386/600 [26:17<07:55,  2.22s/it] 64%|██████▍   | 387/600 [26:19<07:52,  2.22s/it] 65%|██████▍   | 388/600 [26:22<07:46,  2.20s/it] 65%|██████▍   | 389/600 [26:24<07:46,  2.21s/it] 65%|██████▌   | 390/600 [26:26<07:43,  2.21s/it] 65%|██████▌   | 391/600 [26:27<06:11,  1.78s/it] 65%|██████▌   | 392/600 [26:28<06:03,  1.75s/it] 66%|██████▌   | 393/600 [26:30<06:04,  1.76s/it] 66%|██████▌   | 394/600 [26:32<06:05,  1.78s/it] 66%|██████▌   | 395/600 [26:36<07:49,  2.29s/it] 66%|██████▌   | 396/600 [26:37<07:18,  2.15s/it] 66%|██████▌   | 397/600 [26:39<06:48,  2.01s/it] 66%|██████▋   | 398/600 [26:41<06:47,  2.02s/it] 66%|██████▋   | 399/600 [26:43<06:54,  2.06s/it] 67%|██████▋   | 400/600 [26:45<06:53,  2.07s/it] 67%|██████▋   | 401/600 [26:47<06:35,  1.99s/it] 67%|██████▋   | 402/600 [26:49<06:25,  1.95s/it] 67%|██████▋   | 403/600 [26:51<06:30,  1.98s/it] 67%|██████▋   | 404/600 [26:53<06:12,  1.90s/it] 68%|██████▊   | 405/600 [26:54<05:30,  1.69s/it] 68%|██████▊   | 406/600 [26:56<06:03,  1.88s/it] 68%|██████▊   | 407/600 [26:58<05:27,  1.70s/it] 68%|██████▊   | 408/600 [27:00<06:29,  2.03s/it] 68%|██████▊   | 409/600 [27:01<05:35,  1.76s/it] 68%|██████▊   | 410/600 [27:03<05:29,  1.73s/it] 68%|██████▊   | 411/600 [27:05<05:27,  1.73s/it] 69%|██████▊   | 412/600 [27:06<04:53,  1.56s/it] 69%|██████▉   | 413/600 [27:09<06:06,  1.96s/it] 69%|██████▉   | 414/600 [27:11<05:52,  1.89s/it] 69%|██████▉   | 415/600 [27:13<06:24,  2.08s/it] 69%|██████▉   | 416/600 [27:15<06:28,  2.11s/it] 70%|██████▉   | 417/600 [27:18<07:18,  2.40s/it] 70%|██████▉   | 418/600 [27:21<07:46,  2.57s/it] 70%|██████▉   | 419/600 [27:25<08:30,  2.82s/it] 70%|███████   | 420/600 [27:27<07:30,  2.51s/it] 70%|███████   | 421/600 [27:29<07:32,  2.53s/it] 70%|███████   | 422/600 [27:31<07:08,  2.41s/it] 70%|███████   | 423/600 [27:32<05:56,  2.01s/it] 71%|███████   | 424/600 [27:34<05:45,  1.96s/it] 71%|███████   | 425/600 [27:36<05:11,  1.78s/it] 71%|███████   | 426/600 [27:38<05:19,  1.84s/it] 71%|███████   | 427/600 [27:39<04:45,  1.65s/it] 71%|███████▏  | 428/600 [27:40<04:25,  1.54s/it] 72%|███████▏  | 429/600 [27:41<03:37,  1.27s/it] 72%|███████▏  | 430/600 [27:43<04:41,  1.66s/it] 72%|███████▏  | 431/600 [29:15<1:20:57, 28.74s/it] 72%|███████▏  | 432/600 [29:17<57:37, 20.58s/it]   72%|███████▏  | 433/600 [29:19<42:04, 15.12s/it] 72%|███████▏  | 434/600 [29:21<31:06, 11.24s/it] 72%|███████▎  | 435/600 [29:24<23:28,  8.54s/it] 73%|███████▎  | 436/600 [29:27<18:58,  6.94s/it] 73%|███████▎  | 437/600 [29:28<14:20,  5.28s/it] 73%|███████▎  | 438/600 [29:29<10:44,  3.98s/it] 73%|███████▎  | 439/600 [29:30<08:18,  3.09s/it] 73%|███████▎  | 440/600 [29:32<07:39,  2.87s/it] 74%|███████▎  | 441/600 [29:35<07:08,  2.70s/it] 74%|███████▎  | 442/600 [29:37<07:04,  2.69s/it] 74%|███████▍  | 443/600 [29:40<06:37,  2.53s/it] 74%|███████▍  | 444/600 [29:41<05:47,  2.23s/it] 74%|███████▍  | 445/600 [29:43<05:12,  2.02s/it] 74%|███████▍  | 446/600 [29:44<04:38,  1.81s/it] 74%|███████▍  | 447/600 [29:45<04:20,  1.70s/it] 75%|███████▍  | 448/600 [29:47<04:34,  1.80s/it] 75%|███████▍  | 449/600 [29:49<04:15,  1.69s/it] 75%|███████▌  | 450/600 [29:51<04:41,  1.87s/it] 75%|███████▌  | 451/600 [29:53<04:51,  1.96s/it] 75%|███████▌  | 452/600 [29:55<04:36,  1.87s/it] 76%|███████▌  | 453/600 [29:57<04:22,  1.78s/it] 76%|███████▌  | 454/600 [30:00<05:13,  2.15s/it] 76%|███████▌  | 455/600 [30:01<04:38,  1.92s/it] 76%|███████▌  | 456/600 [30:03<04:54,  2.04s/it] 76%|███████▌  | 457/600 [30:05<04:28,  1.88s/it] 76%|███████▋  | 458/600 [30:06<04:14,  1.79s/it] 76%|███████▋  | 459/600 [30:09<05:04,  2.16s/it] 77%|███████▋  | 460/600 [30:12<05:09,  2.21s/it] 77%|███████▋  | 461/600 [30:14<04:59,  2.15s/it] 77%|███████▋  | 462/600 [30:15<04:37,  2.01s/it] 77%|███████▋  | 463/600 [30:17<04:33,  1.99s/it] 77%|███████▋  | 464/600 [30:19<04:19,  1.91s/it] 78%|███████▊  | 465/600 [30:22<04:44,  2.11s/it] 78%|███████▊  | 466/600 [30:24<04:48,  2.15s/it] 78%|███████▊  | 467/600 [30:26<04:32,  2.05s/it] 78%|███████▊  | 468/600 [30:28<04:21,  1.98s/it] 78%|███████▊  | 469/600 [30:29<04:15,  1.95s/it] 78%|███████▊  | 470/600 [30:32<04:43,  2.18s/it] 353
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  354
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  355
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  356
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  357
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  358
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  359
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  360
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  B
-success id:  361
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  362
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  363
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  364
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  365
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  366
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  367
-final_ans:  None
-success id:  368
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  369
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  370
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  371
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  372
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  373
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  B
-success id:  374
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  375
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  B
-success id:  376
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  377
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  378
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  379
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  380
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  381
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  382
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  383
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  384
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  385
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  386
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  387
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  388
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  389
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  390
-final_ans:  None
-success id:  391
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  392
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  393
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  394
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  395
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  396
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  397
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  398
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  399
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  400
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  401
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  402
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  403
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  404
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  405
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  406
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  407
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  408
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  409
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  410
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  411
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  412
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  413
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  414
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  415
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  416
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  417
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  B
-success id:  418
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  419
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  420
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  421
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  422
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  423
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  424
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  425
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  426
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  427
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  B
-success id:  428
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  429
-final_ans:  None
-success id:  430
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  431
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  432
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  433
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  434
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  435
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  B
-success id:  436
-final_ans:  None
-success id:  437
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  B
-success id:  438
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  439
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  440
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  441
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  442
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  443
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  444
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  445
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  446
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  447
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  448
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  449
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  450
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  451
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  B
-success id:  452
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  453
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  454
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  455
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  456
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  457
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  458
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  459
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  B
-success id:  460
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  461
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  462
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  463
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  464
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  465
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  466
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  B
-success id:  467
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  468
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  469
-([A-C])\)\s*(True|False|Unknown|Uncertain) 78%|███████▊  | 471/600 [30:36<05:26,  2.53s/it] 79%|███████▊  | 472/600 [30:36<04:16,  2.01s/it] 79%|███████▉  | 473/600 [30:37<03:42,  1.76s/it] 79%|███████▉  | 474/600 [30:39<03:34,  1.70s/it] 79%|███████▉  | 475/600 [30:41<04:01,  1.93s/it] 79%|███████▉  | 476/600 [30:43<03:30,  1.70s/it] 80%|███████▉  | 477/600 [30:44<03:15,  1.59s/it] 80%|███████▉  | 478/600 [30:46<03:13,  1.58s/it] 80%|███████▉  | 479/600 [30:48<03:56,  1.96s/it] 80%|████████  | 480/600 [30:49<03:09,  1.58s/it] 80%|████████  | 481/600 [30:50<03:00,  1.51s/it] 80%|████████  | 482/600 [30:52<03:13,  1.64s/it] 80%|████████  | 483/600 [30:54<03:14,  1.66s/it] 81%|████████  | 484/600 [30:57<03:46,  1.95s/it] 81%|████████  | 485/600 [30:59<03:59,  2.09s/it] 81%|████████  | 486/600 [31:02<04:09,  2.19s/it] 81%|████████  | 487/600 [31:04<04:04,  2.17s/it] 81%|████████▏ | 488/600 [31:06<03:52,  2.08s/it] 82%|████████▏ | 489/600 [31:09<04:29,  2.43s/it] 82%|████████▏ | 490/600 [31:10<03:51,  2.11s/it] 82%|████████▏ | 491/600 [31:12<03:54,  2.15s/it] 82%|████████▏ | 492/600 [31:15<03:53,  2.16s/it] 82%|████████▏ | 493/600 [31:17<04:04,  2.29s/it] 82%|████████▏ | 494/600 [32:49<51:35, 29.21s/it] 82%|████████▎ | 495/600 [32:51<36:36, 20.92s/it] 83%|████████▎ | 496/600 [32:54<26:50, 15.48s/it] 83%|████████▎ | 497/600 [32:55<19:33, 11.39s/it] 83%|████████▎ | 498/600 [32:57<14:27,  8.51s/it] 83%|████████▎ | 499/600 [33:00<11:14,  6.68s/it] 83%|████████▎ | 500/600 [33:03<09:21,  5.61s/it] 84%|████████▎ | 501/600 [33:05<07:39,  4.65s/it] 84%|████████▎ | 502/600 [33:07<06:06,  3.74s/it] 84%|████████▍ | 503/600 [33:08<04:40,  2.89s/it] 84%|████████▍ | 504/600 [33:11<04:48,  3.01s/it] 84%|████████▍ | 505/600 [33:14<04:57,  3.13s/it] 84%|████████▍ | 506/600 [33:16<04:22,  2.79s/it] 84%|████████▍ | 507/600 [33:18<03:59,  2.57s/it] 85%|████████▍ | 508/600 [33:21<03:47,  2.47s/it] 85%|████████▍ | 509/600 [33:24<04:08,  2.73s/it] 85%|████████▌ | 510/600 [33:26<03:43,  2.48s/it] 85%|████████▌ | 511/600 [33:26<02:49,  1.91s/it] 85%|████████▌ | 512/600 [33:29<03:02,  2.08s/it] 86%|████████▌ | 513/600 [33:30<02:34,  1.78s/it] 86%|████████▌ | 514/600 [33:32<02:32,  1.77s/it] 86%|████████▌ | 515/600 [33:35<03:09,  2.23s/it] 86%|████████▌ | 516/600 [33:37<02:47,  2.00s/it] 86%|████████▌ | 517/600 [33:39<02:49,  2.04s/it] 86%|████████▋ | 518/600 [33:42<03:22,  2.47s/it] 86%|████████▋ | 519/600 [33:45<03:35,  2.66s/it] 87%|████████▋ | 520/600 [33:48<03:34,  2.68s/it] 87%|████████▋ | 521/600 [33:50<03:16,  2.49s/it] 87%|████████▋ | 522/600 [33:52<03:01,  2.33s/it] 87%|████████▋ | 523/600 [33:54<03:02,  2.37s/it] 87%|████████▋ | 524/600 [33:57<02:57,  2.33s/it] 88%|████████▊ | 525/600 [33:59<02:52,  2.30s/it] 88%|████████▊ | 526/600 [34:01<02:38,  2.14s/it] 88%|████████▊ | 527/600 [34:02<02:22,  1.95s/it] 88%|████████▊ | 528/600 [34:05<02:35,  2.16s/it] 88%|████████▊ | 529/600 [34:07<02:25,  2.05s/it] 88%|████████▊ | 530/600 [34:08<02:11,  1.88s/it] 88%|████████▊ | 531/600 [34:10<02:00,  1.75s/it] 89%|████████▊ | 532/600 [34:13<02:24,  2.12s/it] 89%|████████▉ | 533/600 [34:14<02:07,  1.90s/it] 89%|████████▉ | 534/600 [34:16<02:14,  2.04s/it] 89%|████████▉ | 535/600 [34:19<02:19,  2.14s/it] 89%|████████▉ | 536/600 [34:21<02:18,  2.16s/it] 90%|████████▉ | 537/600 [34:22<02:00,  1.91s/it] 90%|████████▉ | 538/600 [34:26<02:27,  2.39s/it] 90%|████████▉ | 539/600 [34:27<02:08,  2.10s/it] 90%|█████████ | 540/600 [34:30<02:12,  2.20s/it] 90%|█████████ | 541/600 [34:31<02:03,  2.09s/it] 90%|█████████ | 542/600 [34:33<01:58,  2.04s/it] 90%|█████████ | 543/600 [34:35<01:51,  1.95s/it] 91%|█████████ | 544/600 [34:37<01:50,  1.97s/it] 91%|█████████ | 545/600 [34:39<01:56,  2.11s/it] 91%|█████████ | 546/600 [34:43<02:14,  2.49s/it] 91%|█████████ | 547/600 [34:44<01:46,  2.02s/it] 91%|█████████▏| 548/600 [34:47<02:04,  2.39s/it] 92%|█████████▏| 549/600 [34:51<02:25,  2.86s/it] 92%|█████████▏| 550/600 [34:52<02:01,  2.44s/it] 92%|█████████▏| 551/600 [34:54<01:45,  2.15s/it] 92%|█████████▏| 552/600 [34:56<01:44,  2.18s/it] 92%|█████████▏| 553/600 [34:59<01:44,  2.23s/it] 92%|█████████▏| 554/600 [35:00<01:33,  2.04s/it] 92%|█████████▎| 555/600 [35:02<01:28,  1.97s/it] 93%|█████████▎| 556/600 [35:03<01:18,  1.78s/it] 93%|█████████▎| 557/600 [35:06<01:26,  2.02s/it] 93%|█████████▎| 558/600 [35:08<01:27,  2.08s/it] 93%|█████████▎| 559/600 [35:10<01:23,  2.05s/it] 93%|█████████▎| 560/600 [35:13<01:34,  2.36s/it] 94%|█████████▎| 561/600 [35:16<01:35,  2.44s/it] 94%|█████████▎| 562/600 [35:17<01:24,  2.23s/it] 94%|█████████▍| 563/600 [35:19<01:18,  2.11s/it] 94%|█████████▍| 564/600 [35:21<01:16,  2.12s/it] 94%|█████████▍| 565/600 [35:22<01:02,  1.78s/it] 94%|█████████▍| 566/600 [35:24<00:55,  1.63s/it] 94%|█████████▍| 567/600 [35:25<00:52,  1.61s/it] 95%|█████████▍| 568/600 [35:28<00:57,  1.79s/it] 95%|█████████▍| 569/600 [35:30<01:01,  1.98s/it] 95%|█████████▌| 570/600 [35:32<01:02,  2.07s/it] 95%|█████████▌| 571/600 [35:34<00:57,  1.97s/it] 95%|█████████▌| 572/600 [35:36<00:53,  1.93s/it] 96%|█████████▌| 573/600 [35:38<00:52,  1.96s/it] 96%|█████████▌| 574/600 [35:41<01:04,  2.47s/it] 96%|█████████▌| 575/600 [35:43<00:56,  2.25s/it] 96%|█████████▌| 576/600 [35:45<00:48,  2.02s/it] 96%|█████████▌| 577/600 [37:17<11:06, 29.00s/it] 96%|█████████▋| 578/600 [37:19<07:44, 21.10s/it] 96%|█████████▋| 579/600 [37:23<05:31, 15.78s/it] 97%|█████████▋| 580/600 [37:24<03:50, 11.52s/it] 97%|█████████▋| 581/600 [37:25<02:39,  8.40s/it] 97%|█████████▋| 582/600 [37:28<01:57,  6.53s/it] 97%|█████████▋| 583/600 [37:30<01:28,  5.21s/it] 97%|█████████▋| 584/600 [37:31<01:02,  3.91s/it] 98%|█████████▊| 585/600 [37:32<00:47,  3.14s/it] 98%|█████████▊| 586/600 [39:04<06:57, 29.79s/it]
-final_ans:  B
-success id:  470
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  471
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  472
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  473
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  474
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  475
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  476
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  477
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  478
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  B
-success id:  479
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  480
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  481
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  482
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  483
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  484
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  485
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  B
-success id:  486
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  487
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  488
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  489
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  490
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  491
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  492
-final_ans:  None
-success id:  493
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  494
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  495
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  496
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  497
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  498
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  499
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  500
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  501
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  502
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  503
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  504
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  505
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  506
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  507
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  508
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  509
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  510
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  511
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  512
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  513
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  514
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  515
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  516
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  517
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  518
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  519
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  520
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  521
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  522
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  523
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  524
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  525
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  526
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  527
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  528
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  529
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  530
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  531
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  B
-success id:  532
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  533
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  534
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  535
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  536
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  537
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  538
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  539
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  540
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  541
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  542
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  543
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  544
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  545
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  546
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  547
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  548
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  549
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  550
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  551
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  552
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  553
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  554
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  555
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  556
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  557
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  B
-success id:  558
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  559
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  560
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  561
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  562
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  563
-final_ans:  None
-success id:  564
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  565
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  566
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  567
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  568
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  569
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  570
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  571
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  572
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  573
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  574
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  575
-final_ans:  None
-success id:  576
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  577
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  578
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  579
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  580
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  581
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  582
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  583
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  B
-success id:  584
-final_ans:  None
-success id:  585
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  586 98%|█████████▊| 587/600 [39:05<04:35, 21.17s/it] 98%|█████████▊| 588/600 [39:07<03:06, 15.52s/it] 98%|█████████▊| 589/600 [39:09<02:05, 11.40s/it] 98%|█████████▊| 590/600 [39:11<01:24,  8.43s/it] 98%|█████████▊| 591/600 [39:13<00:59,  6.58s/it] 99%|█████████▊| 592/600 [39:15<00:41,  5.14s/it] 99%|█████████▉| 593/600 [39:16<00:27,  3.89s/it] 99%|█████████▉| 594/600 [39:17<00:18,  3.09s/it] 99%|█████████▉| 595/600 [39:19<00:13,  2.79s/it] 99%|█████████▉| 596/600 [39:21<00:10,  2.72s/it]100%|█████████▉| 597/600 [39:23<00:06,  2.31s/it]100%|█████████▉| 598/600 [39:24<00:04,  2.12s/it]100%|█████████▉| 599/600 [39:26<00:01,  1.92s/it]100%|██████████| 600/600 [39:27<00:00,  1.67s/it]100%|██████████| 600/600 [39:27<00:00,  3.95s/it]
-
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  587
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  588
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  589
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  590
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  A
-success id:  591
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  592
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  593
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  594
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  A
-success id:  595
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  596
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  B
-success id:  597
-([A-C])\)\s*(True|False|Unknown|Uncertain)
-final_ans:  C
-success id:  598
-correct \w+ is:?\s*[*]*\s*([A-D])
-final_ans:  C
-success id:  599
-acc_newdirectbase.math teacher: 0.5533333333333333 (332/600)
-Write 600 items into exp_cot/output/output.ProofWriter.newdirectbase.math_teacher.Qwen2.5-3B-Instruct.json
