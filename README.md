@@ -137,4 +137,10 @@ Please cite the paper in the following format if you find our work beneficial.
   pages={7831--7850},
   year={2025}
 }
+@article{fu2025correlation,
+  title={Correlation or Causation: Analyzing the Causal Structures of LLM and LRM Reasoning Process},
+  author={FU, Zhizhang and Bao, Guangsheng and Zhang, Hongbo and Hu, Chenkai and Zhang, Yue},
+  journal={arXiv preprint arXiv:2509.17380},
+  year={2025}
+}
 ```
