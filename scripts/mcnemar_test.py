@@ -26,8 +26,10 @@ def get_accuracy(output_file):
     if is_extracted:
         # For extracted files, use key_prefix format
         file_name = path.basename(output_file).replace('.extracted', '')
-        prompt = file_name.split(".")[3].replace("math_teacher", "math teacher")
-        key = "newdirect." + prompt
+        parts = file_name.split(".")
+        prompt_type = parts[2]  # cot0shot or newdirect
+        reason_type = parts[3].replace("math_teacher", "math teacher")
+        key = f"{prompt_type}.{reason_type}"
     else:
         # Original format
         key = path.basename(output_file).split('.')
@@ -52,10 +54,12 @@ def get_paired_results(group_a_file, group_b_file):
     if is_extracted_a:
         # For extracted files, use key_prefix format
         file_name_a = path.basename(group_a_file).replace('.extracted', '')
-        prompt_a = file_name_a.split(".")[3].replace("math_teacher", "math teacher")
-        key_a = "newdirect." + prompt_a
+        parts_a = file_name_a.split(".")
+        prompt_type_a = parts_a[2]  # cot0shot or newdirect
+        reason_type_a = parts_a[3].replace("math_teacher", "math teacher")
+        key_a = f"{prompt_type_a}.{reason_type_a}"
         if('newdirectbase' in file_name_a):
-            key_a = "newdirectbase." + prompt_a
+            key_a = f"newdirectbase.{reason_type_a}"
     else:
         # Original format
         key_a = path.basename(group_a_file).split('.')
@@ -64,12 +68,16 @@ def get_paired_results(group_a_file, group_b_file):
     if is_extracted_b:
         # For extracted files, use key_prefix format
         file_name_b = path.basename(group_b_file).replace('.extracted', '')
-        prompt_b = file_name_b.split(".")[3].replace("math_teacher", "math teacher")
-        print("file_name_b: ", file_name_b)
-        key_b = "newdirect." + prompt_b
+        parts_b = file_name_b.split(".")
+        prompt_type_b = parts_b[2]  # cot0shot or newdirect
+        reason_type_b = parts_b[3].replace("math_teacher", "math teacher")
+        key_b = f"{prompt_type_b}.{reason_type_b}"
         if('newdirectbase' in file_name_b):
-            key_b = "newdirectbase." + prompt_b
-        print("promtp_b: ", prompt_b)
+            key_b = f"newdirectbase.{reason_type_b}"
+        print("file_name_b: ", file_name_b)
+        print("prompt_type_b: ", prompt_type_b)
+        print("reason_type_b: ", reason_type_b)
+        print("key_b: ", key_b)
     else:
         # Original format
         key_b = path.basename(group_b_file).split('.')
