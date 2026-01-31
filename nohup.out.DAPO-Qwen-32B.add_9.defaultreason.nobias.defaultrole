@@ -1,0 +1,823 @@
+Sun Feb 1 12:42:48 AM CST 2026, Evaluating samples from Addition:9 using prompts newdirect with defaultreason and defaultrole and nobias and mode 0 and api_base_num 1 and seed ...
+/home/fuzhizhang.fzz/CoT_Causal_Analysis/scripts/interfere.py:36: SyntaxWarning: invalid escape sequence '\d'
+  parts = re.split('(\d+)', reason)
+0
+OpenAI API with http://localhost:8080/v1, DAPO-Qwen-32B, ####, 16384
+Loaded 500 items from exp_cot/output/output.Addition_9.newdirect.math_teacher.DAPO-Qwen-32B.thinking.json
+  0%|          | 0/500 [00:00<?, ?it/s]  0%|          | 1/500 [00:08<1:07:28,  8.11s/it]  0%|          | 2/500 [00:08<31:53,  3.84s/it]  messages:  [['Please solve the math problem.\nQuestion: What is the sum of 673436698 and 538327286?', '. Therefore, my final answer is: ']]
+response:  {
+  "id": "cmpl-d0384529163149ed8521f395cb62b526",
+  "object": "text_completion",
+  "created": 1769877769,
+  "model": "DAPO-Qwen-32B",
+  "choices": [
+    {
+      "index": 0,
+      "text": "1211763984.\n\nTo find the sum of 673436698 and 538327286, we perform the addition step by step.\n\n\\[ 673436698 + 538327286 \\]\n\nLet's add these numbers together:\n\n\\[\n\\begin{array}{c}\n  673436698 \\\\\n+ 538327286 \\\\\n\\hline\n\\end{array}\n\\]\n\nWe will add them column by column from right to left.\n\nStarting from the units place:\n\n- Units place: \\(8 + 6 = 14\\). Write down 4 and carry over 1.\n- Tens place: \\(9 + 8 = 17\\), plus the carried over 1 makes \\(18\\). Write down 8 and carry over 1.\n- Hundreds place: \\(6 + 2 = 8\\), plus the carried over 1 makes \\(9\\). Write down 9 and carry over 0.\n- Thousands place: \\(6 + 7 = 13\\). Write down 3 and carry over 1.\n- Ten-thousands place: \\(3 + 2 = 5\\), plus the carried over 1 makes \\(6\\). Write down 6 and carry over 0.\n- Hundred-thousands place: \\(4 + 3 = 7\\). Write down 7 and carry over 0.\n- Millions place: \\(3 + 8 = 11\\). Write down 1 and carry over 1.\n- Ten-millions place: \\(7 + 3 = 10\\), plus the carried over 1 makes \\(11\\). Write down 1 and carry over 1.\n- Hundred-millions place: \\(6 + 5 = 11\\), plus the carried over 1 makes \\(12\\). Write down 2 and carry over 1.\n\nSince there is a carry over from the hundred-millions place, we need to add the carried over 1 to the left of the number.\n\nSo the sum is:\n\n\\[ 1211763984 \\]\n\nThus, the sum of 673436698 and 538327286 is \\boxed{1211763984}.",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 52,
+    "total_tokens": 570,
+    "completion_tokens": 518,
+    "prompt_tokens_details": null
+  }
+}
+success id:  0
+messages:  [['Please solve the math problem.\nQuestion: What is the sum of 351943250 and 170139784?', "To solve the math problem, we need to find the sum of the two numbers 351943250 and 170139784.\n\nLet's add them step by step.\n\n\\[ 351943250 + 170139784 \\].\n\nWe will add these numbers directly:.\n\n\\[.\n\\begin{array}{c}.\n  351943250 \\\\.\n+ 170139784 \\\\.\n\\hline.\n\\end{array}.\n\\].\n\nLet's add them column by column from right to left.\n\nStarting from the units place:.\n\n- Units place: \\(0 + 4 = 4\\).\n- Tens place: \\(5 + 8 = 13\\). Write down 3 and carry over 1.\n- Hundreds place: \\(2 + 7 = 9\\), plus the carried over 1 makes it \\(10\\). Write down 0 and carry over 1.\n- Thousands place: \\(3 + 9 = 12\\), plus the carried over 1 makes it \\(13\\). Write down 3 and carry over 1.\n- Ten-thousands place: \\(4 + 3 = 7\\), plus the carried over 1 makes it \\(8\\).\n- Hundred-thousands place: \\(9 + 1 = 10\\). Write down 0 and carry over 1.\n- Millions place: \\(1 + 0 = 1\\), plus the carried over 1 makes it \\(2\\).\n- Ten-millions place: \\(5 + 7 = 12\\). Write down 2 and carry over 1.\n- Hundred-millions place: \\(3 + 1 = 4\\), plus the carried over 1 makes it \\(5\\).\n\nPutting it all together, we get:. Therefore, my final answer is: "]]
+response:  {
+  "id": "cmpl-c84a1edcdae54b4cac33ac784974d51a",
+  "object": "text_completion",
+  "created": 1769877777,
+  "model": "DAPO-Qwen-32B",
+  "choices": [
+    {
+      "index": 0,
+      "text": "522083034.\n\nSo the sum of 351943250 and 170139784 is \\(\\boxed{522083034}\\).",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 453,
+    "total_tokens": 505,
+    "completion_tokens": 52,
+    "prompt_tokens_details": null
+  }
+}
+success id:  1
+messages:    1%|          | 3/500 [00:09<20:37,  2.49s/it]  1%|          | 4/500 [00:10<15:20,  1.86s/it]  1%|1         | 5/500 [00:11<12:22,  1.50s/it][['Please solve the math problem.\nQuestion: What is the sum of 631529940 and 831901572?', "To solve the math problem, we need to find the sum of the two numbers 631529940 and 831901572.\n\nLet's add them step by step:.\n\n\\[ 631529940 + 831901572 \\].\n\nWe can add these numbers directly:.\n\n\\[ 631529940 \\].\n\\[ + 831901572 \\].\n\\[ \\overline{1463431512} \\]. Therefore, my final answer is: "]]
+response:  {
+  "id": "cmpl-6b9926151dff4c29aaf820e1084b3cdf",
+  "object": "text_completion",
+  "created": 1769877778,
+  "model": "DAPO-Qwen-32B",
+  "choices": [
+    {
+      "index": 0,
+      "text": "1463431512.\n\nSo the sum of 631529940 and 831901572 is \\(\\boxed{1463431512}\\).",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 175,
+    "total_tokens": 229,
+    "completion_tokens": 54,
+    "prompt_tokens_details": null
+  }
+}
+success id:  2
+messages:  [['Please solve the math problem.\nQuestion: What is the sum of 750287621 and 360102348?', "To solve the math problem, we need to add the two numbers 750287621 and 360102348 together.\n\nLet's perform the addition step by step:.\n\n\\[ 750287621 + 360102348 \\].\n\nWe will add these numbers directly:.\n\n\\[.\n\\begin{array}{c}.\n  750287621 \\\\.\n+ 360102348 \\\\.\n\\hline.\n\\end{array}.\n\\].\n\nLet's add them column by column from right to left.\n\n1. Add the units place: \\(1 + 8 = 9\\).\n2. Add the tens place: \\(2 + 4 = 6\\).\n3. Add the hundreds place: \\(6 + 3 = 9\\).\n4. Add the thousands place: \\(7 + 2 = 9\\).\n5. Add the ten-thousands place: \\(8 + 0 = 8\\).\n6. Add the hundred-thousands place: \\(2 + 1 = 3\\).\n7. Add the millions place: \\(0 + 0 = 0\\).\n8. Add the ten-millions place: \\(5 + 6 = 11\\). Write down 1 and carry over 1.\n9. Add the hundred-millions place: \\(7 + 3 = 10\\), plus the carried over 1 makes it \\(10 + 1 = 11\\). Write down 1 and carry over 1.\n\nPutting it all together, we get:.\n\n\\[.\n\\begin{array}{c}.\n  750287621 \\\\.\n+ 360102348 \\\\.\n\\hline.\n1110389969.\n\\end{array}.\n\\]. Therefore, my final answer is: "]]
+response:  {
+  "id": "cmpl-8ebf38360e0d48be9b8702adab9c4c7f",
+  "object": "text_completion",
+  "created": 1769877779,
+  "model": "DAPO-Qwen-32B",
+  "choices": [
+    {
+      "index": 0,
+      "text": "1110389969.\n\nSo, the sum of 750287621 and 360102348 is \\boxed{1110389969}.",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 456,
+    "total_tokens": 509,
+    "completion_tokens": 53,
+    "prompt_tokens_details": null
+  }
+}
+success id:  3
+messages:  [['Please solve the math problem.\nQuestion: What is the sum of 824190622 and 203514191?', "To solve the math problem, we need to find the sum of the two numbers 824190622 and 203514191.\n\nLet's add them step by step:.\n\n\\[ 824190622 + 203514191 \\].\n\nWe can add these numbers directly:. Therefore, my final answer is: "]]
+response:  {
+  "id": "cmpl-9414f37ce470454eb83d3d6fe6bcec9b",
+  "object": "text_completion",
+  "created": 1769877779,
+  "model": "DAPO-Qwen-32B",
+  "choices": [
+    {
+      "index": 0,
+      "text": "1027704813.\n\nSo the sum of 824190622 and 203514191 is \\(\\boxed{1027704813}\\).",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 129,
+    "total_tokens": 183,
+    "completion_tokens": 54,
+    "prompt_tokens_details": null
+  }
+}
+success id:  4
+messages:  [['Please solve the math problem.\nQuestion: What is the sum of 685497553 and 418270610?', "To solve the math problem, we need to add the two numbers 685497553 and 418270610 together.\n\nLet's perform the addition step by step:.\n\n\\[ 685497553 + 418270610 \\].\n\nWe will add these numbers directly:.\n\n\\[ 685497553 \\].\n\\[ + 418270610 \\].\n\\[ ---------- \\].\n\nAdding them together:.\n\n\\[ 685497553 + 418270610 = 1103768163 \\]. Therefore, my final answer is: "]]
+response:    1%|1         | 6/500 [00:12<10:35,  1.29s/it]  1%|1         | 7/500 [00:13<09:26,  1.15s/it]{
+  "id": "cmpl-41f48de2eb55400891c3396a75e9575d",
+  "object": "text_completion",
+  "created": 1769877780,
+  "model": "DAPO-Qwen-32B",
+  "choices": [
+    {
+      "index": 0,
+      "text": "1103768163.\n\nSo the sum of 685497553 and 418270610 is \\(\\boxed{1103768163}\\).",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 201,
+    "total_tokens": 255,
+    "completion_tokens": 54,
+    "prompt_tokens_details": null
+  }
+}
+success id:  5
+messages:  [['Please solve the math problem.\nQuestion: What is the sum of 522632563 and 870037450?', "To solve the math problem, we need to add the two numbers 522632563 and 870037450 together.\n\nLet's perform the addition step by step:.\n\n\\[ 522632563 + 870037450 \\].\n\nWe will add these numbers directly:.\n\n\\[ 522632563 + 870037450 \\].\n\nAlign the numbers by their place values and add them:.\n\n\\[.\n\\begin{array}{c}.\n  522632563 \\\\.\n+ 870037450 \\\\.\n\\hline.\n\\end{array}.\n\\].\n\nNow, let's add them column by column from right to left.\n\nStarting from the units place:.\n\n- Units place: \\(3 + 0 = 3\\).\n- Tens place: \\(6 + 5 = 11\\). Write down 1 and carry over 1.\n- Hundreds place: \\(5 + 4 = 9\\), plus the carried over 1 gives \\(10\\). Write down 0 and carry over 1.\n- Thousands place: \\(2 + 7 = 9\\), plus the carried over 1 gives \\(10\\). Write down 0 and carry over 1.\n- Ten-thousands place: \\(3 + 3 = 6\\), plus the carried over 1 gives \\(7\\).\n- Hundred-thousands place: \\(6 + 0 = 6\\).\n- Millions place: \\(2 + 0 = 2\\).\n- Ten-millions place: \\(5 + 7 = 12\\). Write down 2 and carry over 1.\n- Hundred-millions place: \\(0 + 8 = 8\\), plus the carried over 1 gives \\(9\\).\n\nPutting it all together, we get:.\n\n\\[.\n\\begin{array}{c}.\n  522632563 \\\\.\n+ 870037450 \\\\.\n\\hline.\n1392670013.\n\\end{array}.\n\\]. Therefore, my final answer is: "]]
+response:  {
+  "id": "cmpl-dbc912ea1603443594bca938e91a45e5",
+  "object": "text_completion",
+  "created": 1769877781,
+  "model": "DAPO-Qwen-32B",
+  "choices": [
+    {
+      "index": 0,
+      "text": "1392670013.\n\nSo, the sum of 522632563 and 870037450 is \\boxed{1392670013}.",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 521,
+    "total_tokens": 574,
+    "completion_tokens": 53,
+    "prompt_tokens_details": null
+  }
+}
+success id:  6
+messages:  [['Please solve the math problem.\nQuestion: What is the sum of 553233942 and 645157245?', "To solve the math problem, we need to add the two numbers 553233942 and 645157245 together.\n\nLet's perform the addition step by step:.\n\n\\[ 553233942 + 645157245 \\].\n\nWe will add these numbers digit by digit from right to left, carrying over as necessary.\n\nStarting from the rightmost digits:.\n\n1. Add the units place: \\(2 + 5 = 7\\).\n2. Add the tens place: \\(4 + 4 = 8\\).\n3. Add the hundreds place: \\(9 + 2 = 11\\). Write down 1 and carry over 1.\n4. Add the thousands place: \\(3 + 7 + 1 (carried over) = 11\\). Write down 1 and carry over 1.\n5. Add the ten-thousands place: \\(3 + 5 + 1 (carried over) = 9\\).\n6. Add the hundred-thousands place: \\(2 + 1 = 3\\).\n7. Add the millions place: \\(5 + 5 = 10\\). Write down 0 and carry over 1.\n8. Add the ten-millions place: \\(5 + 4 + 1 (carried over) = 10\\). Write down 0 and carry over 1.\n9. Add the hundred-millions place: \\(0 + 6 + 1 (carried over) = 7\\).\n\nPutting it all together, we get:. Therefore, my final answer is: "]]
+response:    2%|1         | 8/500 [00:14<08:42,  1.06s/it]  2%|1         | 9/500 [00:15<08:11,  1.00s/it]{
+  "id": "cmpl-ce4690b255f74cecb0460fc582865676",
+  "object": "text_completion",
+  "created": 1769877782,
+  "model": "DAPO-Qwen-32B",
+  "choices": [
+    {
+      "index": 0,
+      "text": "1198391187.\n\nSo, the sum of 553233942 and 645157245 is \\(\\boxed{1198391187}\\).",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 392,
+    "total_tokens": 447,
+    "completion_tokens": 55,
+    "prompt_tokens_details": null
+  }
+}
+success id:  7
+messages:  [['Please solve the math problem.\nQuestion: What is the sum of 999474677 and 507199088?', "To solve the math problem, we need to add the two numbers 999474677 and 507199088 together.\n\nLet's perform the addition step by step:.\n\n\\[ 999474677 + 507199088 \\].\n\nWe will add these numbers directly:.\n\n\\[.\n\\begin{array}{c}.\n  999474677 \\\\.\n+ 507199088 \\\\.\n\\hline.\n\\end{array}.\n\\].\n\nLet's add them column by column from right to left.\n\nStarting from the units place:.\n\n- Units place: \\(7 + 8 = 15\\). Write down 5 and carry over 1.\n- Tens place: \\(7 + 8 = 15\\), plus the carry-over 1 makes it 16. Write down 6 and carry over 1.\n- Hundreds place: \\(6 + 0 = 6\\), plus the carry-over 1 makes it 7. Write down 7 and no carry-over.\n- Thousands place: \\(4 + 9 = 13\\). Write down 3 and carry over 1.\n- Ten-thousands place: \\(7 + 1 = 8\\), plus the carry-over 1 makes it 9. Write down 9 and no carry-over.\n- Hundred-thousands place: \\(4 + 9 = 13\\). Write down 3 and carry over 1.\n- Millions place: \\(9 + 7 = 16\\), plus the carry-over 1 makes it 17. Write down 7 and carry over 1.\n- Ten-millions place: \\(9 + 0 = 9\\), plus the carry-over 1 makes it 10. Write down 0 and carry over 1.\n- Hundred-millions place: \\(9 + 5 = 14\\), plus the carry-over 1 makes it 15. Write down 5 and carry over 1.\n- Since there is a carry-over from the hundred-millions place, we need to add this 1 to the next place value, which is the billions place. So we have 1 in the billions place.\n\nPutting it all together, we get:. Therefore, my final answer is: "]]
+response:  {
+  "id": "cmpl-651957338ebd45fc8c2a018f2ab9bb02",
+  "object": "text_completion",
+  "created": 1769877783,
+  "model": "DAPO-Qwen-32B",
+  "choices": [
+    {
+      "index": 0,
+      "text": "1506673765.\n\nSo the sum of 999474677 and 507199088 is \\boxed{1506673765}.",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 544,
+    "total_tokens": 596,
+    "completion_tokens": 52,
+    "prompt_tokens_details": null
+  }
+}
+success id:  8
+messages:  [['Please solve the math problem.\nQuestion: What is the sum of 417264422 and 398148511?', "To solve the math problem, we need to add the two numbers 417264422 and 398148511 together.\n\nLet's perform the addition step by step:.\n\n\\[ 417264422 + 398148511 \\].\n\nWe will add these numbers digit by digit from right to left, carrying over as necessary.\n\nStarting from the rightmost digits:.\n\n1. Add the units place: \\(2 + 1 = 3\\).\n2. Add the tens place: \\(2 + 1 = 3\\).\n3. Add the hundreds place: \\(4 + 5 = 9\\).\n4. Add the thousands place: \\(4 + 8 = 12\\). Write down 2 and carry over 1.\n5. Add the ten-thousands place: \\(6 + 4 = 10\\), plus the carried over 1 makes it \\(11\\). Write down 1 and carry over 1.\n6. Add the hundred-thousands place: \\(2 + 1 = 3\\), plus the carried over 1 makes it \\(4\\).\n7. Add the millions place: \\(7 + 8 = 15\\). Write down 5 and carry over 1.\n8. Add the ten-millions place: \\(1 + 9 = 10\\), plus the carried over 1 makes it \\(11\\). Write down 1 and carry over 1.\n9. Add the hundred-millions place: \\(4 + 3 = 7\\), plus the carried over 1 makes it \\(8\\).\n\nPutting it all together, we get:. Therefore, my final answer is: "]]
+response:    2%|2         | 10/500 [00:15<07:49,  1.04it/s]  2%|2         | 11/500 [00:16<07:32,  1.08it/s]  2%|2         | 12/500 [00:17<06:34,  1.24it/s]{
+  "id": "cmpl-0ad4859405f54e729f85238148b10b3f",
+  "object": "text_completion",
+  "created": 1769877784,
+  "model": "DAPO-Qwen-32B",
+  "choices": [
+    {
+      "index": 0,
+      "text": "815412933.\n\nSo, the sum of 417264422 and 398148511 is \\(\\boxed{815412933}\\).",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 410,
+    "total_tokens": 463,
+    "completion_tokens": 53,
+    "prompt_tokens_details": null
+  }
+}
+success id:  9
+messages:  [['Please solve the math problem.\nQuestion: What is the sum of 850754945 and 991933270?', "To solve the math problem, we need to add the two numbers 850754945 and 991933270 together.\n\nLet's perform the addition step by step:.\n\n\\[ 850754945 + 991933270 \\].\n\nWe will add these numbers directly:.\n\n\\[ 850754945 + 991933270 \\].\n\nAdding them:.\n\n\\[ 850754945 + 991933270 = 1842688215 \\]. Therefore, my final answer is: "]]
+response:  {
+  "id": "cmpl-98eb67566b3247a1a695eaa09f1a969f",
+  "object": "text_completion",
+  "created": 1769877785,
+  "model": "DAPO-Qwen-32B",
+  "choices": [
+    {
+      "index": 0,
+      "text": "1842688215.\n\nSo the sum of 850754945 and 991933270 is \\(\\boxed{1842688215}\\).",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 193,
+    "total_tokens": 247,
+    "completion_tokens": 54,
+    "prompt_tokens_details": null
+  }
+}
+success id:  10
+messages:  [['Please solve the math problem.\nQuestion: What is the sum of 908835416 and 580931369?', "To solve the math problem, we need to add the two numbers 908835416 and 580931369 together.\n\nLet's perform the addition step by step:.\n\n\\[ 908835416 + 580931369 \\].\n\nWe will add these numbers digit by digit from right to left, carrying over as necessary.\n\nStarting from the rightmost digits:.\n\n1. Add the units place: \\(6 + 9 = 15\\). Write down 5 and carry over 1.\n2. Add the tens place: \\(1 + 6 + 1 (carried over) = 8\\). Write down 8.\n3. Add the hundreds place: \\(4 + 3 = 7\\). Write down 7.\n4. Add the thousands place: \\(5 + 1 = 6\\). Write down 6.\n5. Add the ten-thousands place: \\(3 + 3 = 6\\). Write down 6.\n6. Add the hundred-thousands place: \\(8 + 9 = 17\\). Write down 7 and carry over 1.\n7. Add the millions place: \\(0 + 0 + 1 (carried over) = 1\\). Write down 1.\n8. Add the ten-millions place: \\(8 + 8 = 16\\). Write down 6 and carry over 1.\n9. Add the hundred-millions place: \\(9 + 5 + 1 (carried over) = 15\\). Write down 5 and carry over 1.\n\nSince we have a carry-over from the hundred-millions place, we need to add this carry-over to the next place value, which is the one-billion place.\n\nSo, we have:.\n\n\\[ 1 \\text{ (from the carry-over)} \\].\n\nThus, the sum is \\(15 \\text{ (from the hundred-millions place with the carry-over)}\\) and the carry-over from the leftmost addition gives us 1 in the billions place.\n\nPutting it all together, the sum is:.\n\n\\[ 1489766785 \\].\n\nTherefore, the sum of 908835416 and 580931369 is:. Therefore, my final answer is: "]]
+response:  {
+  "id": "cmpl-a3045ec2e36e46058b2181fd9d492081",
+  "object": "text_completion",
+  "created": 1769877786,
+  "model": "DAPO-Qwen-32B",
+  "choices": [
+    {
+      "index": 0,
+      "text": "1489766785.\n\nSo the answer is \\(\\boxed{1489766785}\\).",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 548,
+    "total_tokens": 580,
+    "completion_tokens": 32,
+    "prompt_tokens_details": null
+  }
+}
+success id:  11
+messages:    3%|2         | 13/500 [00:18<06:36,  1.23it/s]  3%|2         | 14/500 [00:19<06:45,  1.20it/s][['Please solve the math problem.\nQuestion: What is the sum of 427852669 and 854724435?', "To solve the math problem, we need to add the two numbers 427852669 and 854724435 together.\n\nLet's perform the addition step by step:.\n\n\\[ 427852669 + 854724435 \\].\n\nWe will add these numbers directly:.\n\n\\[ 427852669 \\].\n\\[ + 854724435 \\].\n\\[ ---------- \\].\n\nAdding them together:.\n\n\\[ 427852669 + 854724435 = 1282577104 \\]. Therefore, my final answer is: "]]
+response:  {
+  "id": "cmpl-f9667e7fb2284062b4658124a03e7ee6",
+  "object": "text_completion",
+  "created": 1769877786,
+  "model": "DAPO-Qwen-32B",
+  "choices": [
+    {
+      "index": 0,
+      "text": "1282577104.\n\nSo the sum of 427852669 and 854724435 is \\boxed{1282577104}.",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 201,
+    "total_tokens": 253,
+    "completion_tokens": 52,
+    "prompt_tokens_details": null
+  }
+}
+success id:  12
+messages:  [['Please solve the math problem.\nQuestion: What is the sum of 796002456 and 864063871?', "To solve the math problem, we need to find the sum of the two numbers 796002456 and 864063871.\n\nLet's add them step by step:.\n\n\\[ 796002456 + 864063871 \\].\n\nWe will add these numbers directly:.\n\n\\[ 796002456 + 864063871 \\].\n\nLet's perform the addition:.\n\n\\[.\n\\begin{array}{c}.\n  796002456 \\\\.\n+ 864063871 \\\\.\n\\hline.\n\\end{array}.\n\\].\n\nAdding from the rightmost digit:.\n\n- Add the units place: \\(6 + 1 = 7\\).\n- Add the tens place: \\(5 + 7 = 12\\). Write down 2 and carry over 1.\n- Add the hundreds place: \\(4 + 8 = 12\\), plus the carry-over 1 makes it 13. Write down 3 and carry over 1.\n- Add the thousands place: \\(2 + 3 = 5\\), plus the carry-over 1 makes it 6.\n- Add the ten-thousands place: \\(0 + 6 = 6\\).\n- Add the hundred-thousands place: \\(0 + 0 = 0\\).\n- Add the millions place: \\(6 + 4 = 10\\). Write down 0 and carry over 1.\n- Add the ten-millions place: \\(9 + 6 = 15\\), plus the carry-over 1 makes it 16. Write down 6 and carry over 1.\n- Add the hundred-millions place: \\(7 + 8 = 15\\), plus the carry-over 1 makes it 16.\n\nSo, putting it all together, we get:. Therefore, my final answer is: "]]
+response:  {
+  "id": "cmpl-024988a510ce44fbb7cd1522ef74ca1d",
+  "object": "text_completion",
+  "created": 1769877787,
+  "model": "DAPO-Qwen-32B",
+  "choices": [
+    {
+      "index": 0,
+      "text": "1660066327.\n\nThus, the sum of 796002456 and 864063871 is \\(\\boxed{1660066327}\\).",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 469,
+    "total_tokens": 524,
+    "completion_tokens": 55,
+    "prompt_tokens_details": null
+  }
+}
+success id:  13
+messages:    3%|3         | 15/500 [00:19<06:47,  1.19it/s]  3%|3         | 16/500 [00:20<06:49,  1.18it/s][['Please solve the math problem.\nQuestion: What is the sum of 160261934 and 616579138?', "To solve the math problem, we need to add the two numbers 160261934 and 616579138 together.\n\nLet's perform the addition step by step:.\n\n\\[ 160261934 + 616579138 \\].\n\nWe will add these numbers directly:.\n\n\\[ 160261934 + 616579138 \\].\n\nAlign the numbers by their place values and add them:.\n\n\\[.\n\\begin{array}{c}.\n  160261934 \\\\.\n+ 616579138 \\\\.\n\\hline.\n\\end{array}.\n\\].\n\nNow, let's add them column by column from right to left.\n\nStarting from the units place:.\n\n- Units place: \\(4 + 8 = 12\\). Write down 2 and carry over 1.\n- Tens place: \\(3 + 3 = 6\\), plus the carry-over 1 gives \\(6 + 1 = 7\\). Write down 7.\n- Hundreds place: \\(9 + 1 = 10\\). Write down 0 and carry over 1.\n- Thousands place: \\(1 + 9 = 10\\), plus the carry-over 1 gives \\(10 + 1 = 11\\). Write down 1 and carry over 1.\n- Ten-thousands place: \\(6 + 7 = 13\\), plus the carry-over 1 gives \\(13 + 1 = 14\\). Write down 4 and carry over 1.\n- Hundred-thousands place: \\(0 + 5 = 5\\), plus the carry-over 1 gives \\(5 + 1 = 6\\). Write down 6.\n- Millions place: \\(6 + 6 = 12\\). Write down 2 and carry over 1.\n- Ten-millions place: \\(1 + 1 = 2\\), plus the carry-over 1 gives \\(2 + 1 = 3\\). Write down 3.\n\nPutting it all together, we get:. Therefore, my final answer is: "]]
+response:  {
+  "id": "cmpl-6e503b3cf8ef45ab830a6651a4da63e4",
+  "object": "text_completion",
+  "created": 1769877788,
+  "model": "DAPO-Qwen-32B",
+  "choices": [
+    {
+      "index": 0,
+      "text": "776841072.\n\nSo, the sum of 160261934 and 616579138 is \\(\\boxed{776841072}\\).",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 518,
+    "total_tokens": 571,
+    "completion_tokens": 53,
+    "prompt_tokens_details": null
+  }
+}
+success id:  14
+messages:  [['Please solve the math problem.\nQuestion: What is the sum of 282911059 and 281026748?', "To solve the math problem, we need to add the two numbers 282911059 and 281026748 together.\n\nLet's perform the addition step by step:.\n\n\\[ 282911059 + 281026748 \\].\n\nWe will add these numbers digit by digit from right to left, carrying over as necessary.\n\nStarting from the rightmost digits:.\n\n1. Add the units place: \\(9 + 8 = 17\\). Write down 7 and carry over 1.\n2. Add the tens place: \\(5 + 4 = 9\\), plus the carry-over 1 gives \\(10\\). Write down 0 and carry over 1.\n3. Add the hundreds place: \\(0 + 7 = 7\\), plus the carry-over 1 gives \\(8\\). Write down 8 and no carry-over.\n4. Add the thousands place: \\(1 + 6 = 7\\). Write down 7 and no carry-over.\n5. Add the ten-thousands place: \\(1 + 2 = 3\\). Write down 3 and no carry-over.\n6. Add the hundred-thousands place: \\(9 + 0 = 9\\). Write down 9 and no carry-over.\n7. Add the millions place: \\(2 + 1 = 3\\). Write down 3 and no carry-over.\n8. Add the ten-millions place: \\(8 + 8 = 16\\). Write down 6 and carry over 1.\n9. Add the hundred-millions place: \\(2 + 2 = 4\\), plus the carry-over 1 gives \\(5\\). Write down 5 and no carry-over.\n\nPutting it all together, the sum is:. Therefore, my final answer is: "]]
+response:  {
+  "id": "cmpl-88221da6cda548f190b9b21b8ee86e82",
+  "object": "text_completion",
+  "created": 1769877789,
+  "model": "DAPO-Qwen-32B",
+  "choices": [
+    {
+      "index": 0,
+      "text": "563937807.\n\nSo, the sum of 282911059 and 281026748 is \\(\\boxed{563937807}\\).",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 437,
+    "total_tokens": 490,
+    "completion_tokens": 53,
+    "prompt_tokens_details": null
+  }
+}
+success id:  15
+messages:    3%|3         | 17/500 [00:21<06:50,  1.18it/s]  4%|3         | 18/500 [00:22<06:48,  1.18it/s][['Please solve the math problem.\nQuestion: What is the sum of 591525997 and 397622729?', "To solve the math problem, we need to add the two numbers 591525997 and 397622729 together.\n\nLet's perform the addition step by step:.\n\n\\[ 591525997 + 397622729 \\].\n\nWe will add these numbers digit by digit from right to left, carrying over as necessary.\n\nStarting from the rightmost digits:.\n\n1. Add the units place: \\(7 + 9 = 16\\). Write down 6 and carry over 1.\n2. Add the tens place: \\(9 + 2 = 11\\), plus the carry-over 1 gives \\(12\\). Write down 2 and carry over 1.\n3. Add the hundreds place: \\(9 + 7 = 16\\), plus the carry-over 1 gives \\(17\\). Write down 7 and carry over 1.\n4. Add the thousands place: \\(5 + 2 = 7\\), plus the carry-over 1 gives \\(8\\). Write down 8 and carry over 0.\n5. Add the ten-thousands place: \\(2 + 7 = 9\\), plus the carry-over 0 gives \\(9\\). Write down 9 and carry over 0.\n6. Add the hundred-thousands place: \\(5 + 6 = 11\\). Write down 1 and carry over 1.\n7. Add the millions place: \\(1 + 7 = 8\\), plus the carry-over 1 gives \\(9\\). Write down 9 and carry over 0.\n8. Add the ten-millions place: \\(9 + 9 = 18\\). Write down 8 and carry over 1.\n9. Add the hundred-millions place: \\(5 + 3 = 8\\), plus the carry-over 1 gives \\(9\\). Write down 9 and carry over 0.\n\nPutting it all together, the sum is:. Therefore, my final answer is: "]]
+response:  {
+  "id": "cmpl-60f03369e42e4d038add260d3e0d12d5",
+  "object": "text_completion",
+  "created": 1769877789,
+  "model": "DAPO-Qwen-32B",
+  "choices": [
+    {
+      "index": 0,
+      "text": "989148726.\n\nSo, the sum of 591525997 and 397622729 is \\(\\boxed{989148726}\\).",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 480,
+    "total_tokens": 533,
+    "completion_tokens": 53,
+    "prompt_tokens_details": null
+  }
+}
+success id:  16
+messages:  [['Please solve the math problem.\nQuestion: What is the sum of 119427193 and 268540207?', "To solve the math problem, we need to find the sum of the two numbers 119427193 and 268540207.\n\nLet's add them step by step:.\n\n\\[ 119427193 + 268540207 \\].\n\nWe can add these numbers directly:.\n\n\\[ 119427193 + 268540207 \\].\n\nAlign the numbers by their place values and add them:.\n\n\\[.\n\\begin{array}{c}.\n  119427193 \\\\.\n+ 268540207 \\\\.\n\\hline.\n\\end{array}.\n\\].\n\nNow, let's add them column by column from right to left.\n\nStarting from the units place:.\n\n- Units place: \\(3 + 7 = 10\\). Write down 0 and carry over 1.\n- Tens place: \\(9 + 0 = 9\\), plus the carry-over 1 gives \\(10\\). Write down 0 and carry over 1.\n- Hundreds place: \\(1 + 2 = 3\\), plus the carry-over 1 gives \\(4\\). Write down 4.\n- Thousands place: \\(7 + 0 = 7\\). Write down 7.\n- Ten-thousands place: \\(2 + 4 = 6\\). Write down 6.\n- Hundred-thousands place: \\(4 + 5 = 9\\). Write down 9.\n- Millions place: \\(1 + 8 = 9\\). Write down 9.\n- Ten-millions place: \\(1 + 6 = 7\\). Write down 7.\n- Hundred-millions place: \\(0 + 2 = 2\\). Write down 2.\n\nPutting it all together, we get:. Therefore, my final answer is: "]]
+response:  {
+  "id": "cmpl-929f0603a8f8475a8ba01c06aba05704",
+  "object": "text_completion",
+  "created": 1769877790,
+  "model": "DAPO-Qwen-32B",
+  "choices": [
+    {
+      "index": 0,
+      "text": "387967400.\n\nSo the sum of 119427193 and 268540207 is \\(\\boxed{387967400}\\).",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 455,
+    "total_tokens": 507,
+    "completion_tokens": 52,
+    "prompt_tokens_details": null
+  }
+}
+success id:  17
+messages:    4%|3         | 19/500 [00:23<06:52,  1.16it/s]  4%|4         | 20/500 [00:24<06:47,  1.18it/s]  4%|4         | 21/500 [00:25<06:48,  1.17it/s][['Please solve the math problem.\nQuestion: What is the sum of 833931691 and 579314615?', "To solve the math problem, we need to add the two numbers 833931691 and 579314615 together.\n\nLet's perform the addition step by step:.\n\n\\[ 833931691 + 579314615 \\].\n\nWe will add these numbers digit by digit from right to left, carrying over as necessary.\n\nStarting from the rightmost digits:.\n\n1. Add the units place: \\(1 + 5 = 6\\).\n2. Add the tens place: \\(9 + 1 = 10\\). Write down 0 and carry over 1.\n3. Add the hundreds place: \\(6 + 6 = 12\\), plus the carried over 1 makes it 13. Write down 3 and carry over 1.\n4. Add the thousands place: \\(1 + 4 = 5\\), plus the carried over 1 makes it 6.\n5. Add the ten-thousands place: \\(3 + 1 = 4\\).\n6. Add the hundred-thousands place: \\(9 + 3 = 12\\). Write down 2 and carry over 1.\n7. Add the millions place: \\(3 + 9 = 12\\), plus the carried over 1 makes it 13. Write down 3 and carry over 1.\n8. Add the ten-millions place: \\(8 + 7 = 15\\), plus the carried over 1 makes it 16. Write down 6 and carry over 1.\n9. Add the hundred-millions place: There's a 0 carried over from the left, so we just add the digits in the hundred-millions place: \\(0 + 5 = 5\\), plus the carried over 1 makes it 6.\n\nPutting it all together, we get:. Therefore, my final answer is: "]]
+response:  {
+  "id": "cmpl-5481e96f6f244d9581cad1e7847a6f4a",
+  "object": "text_completion",
+  "created": 1769877791,
+  "model": "DAPO-Qwen-32B",
+  "choices": [
+    {
+      "index": 0,
+      "text": "1413246306.\n\nSo, the sum of 833931691 and 579314615 is \\(\\boxed{1413246306}\\).",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 453,
+    "total_tokens": 508,
+    "completion_tokens": 55,
+    "prompt_tokens_details": null
+  }
+}
+success id:  18
+messages:  [['Please solve the math problem.\nQuestion: What is the sum of 389136634 and 807826512?', "To solve the math problem, we need to add the two numbers 389136634 and 807826512 together.\n\nLet's perform the addition step by step:.\n\n\\[ 389136634 + 807826512 \\].\n\nWe will add these numbers directly:.\n\n\\[ 389136634 + 807826512 \\].\n\nAdding them:.\n\n\\[ 389136634 + 807826512 = 1196963146 \\]. Therefore, my final answer is: "]]
+response:  {
+  "id": "cmpl-6af7e62a1a3c43c9ad5ada66331c55bb",
+  "object": "text_completion",
+  "created": 1769877792,
+  "model": "DAPO-Qwen-32B",
+  "choices": [
+    {
+      "index": 0,
+      "text": "1196963146.\n\nSo the sum of 389136634 and 807826512 is \\boxed{1196963146}.",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 193,
+    "total_tokens": 245,
+    "completion_tokens": 52,
+    "prompt_tokens_details": null
+  }
+}
+success id:  19
+messages:  [['Please solve the math problem.\nQuestion: What is the sum of 544866269 and 813762923?', "To solve the math problem, we need to add the two numbers 544866269 and 813762923 together.\n\nLet's perform the addition step by step:.\n\n\\[ 544866269 + 813762923 \\].\n\nWe will add these numbers directly:.\n\n\\[ 544866269 \\].\n\\[ + 813762923 \\].\n\\[ ---------- \\].\n\nAdding them together:.\n\n\\[ 544866269 + 813762923 = 1358629192 \\]. Therefore, my final answer is: "]]
+response:  {
+  "id": "cmpl-3a6394e41e524083b1dc8406db308b96",
+  "object": "text_completion",
+  "created": 1769877793,
+  "model": "DAPO-Qwen-32B",
+  "choices": [
+    {
+      "index": 0,
+      "text": "1358629192.\n\nSo the sum of 544866269 and 813762923 is \\(\\boxed{1358629192}\\).",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 201,
+    "total_tokens": 255,
+    "completion_tokens": 54,
+    "prompt_tokens_details": null
+  }
+}
+success id:  20
+messages:    4%|4         | 22/500 [00:25<06:49,  1.17it/s]  5%|4         | 23/500 [00:26<06:47,  1.17it/s][['Please solve the math problem.\nQuestion: What is the sum of 372097062 and 864086435?', "To solve the math problem, we need to add the two numbers 372097062 and 864086435 together.\n\nLet's perform the addition step by step:.\n\n\\[ 372097062 + 864086435 \\].\n\nWe will add these numbers digit by digit from right to left, carrying over as necessary.\n\nStarting from the rightmost digits:.\n\n1. Add the units place: \\(2 + 5 = 7\\).\n2. Add the tens place: \\(6 + 3 = 9\\).\n3. Add the hundreds place: \\(0 + 4 = 4\\).\n4. Add the thousands place: \\(7 + 6 = 13\\). Write down 3 and carry over 1.\n5. Add the ten-thousands place: \\(0 + 8 + 1 \\,(\\text{carry}) = 9\\).\n6. Add the hundred-thousands place: \\(9 + 0 = 9\\).\n7. Add the millions place: \\(2 + 4 = 6\\).\n8. Add the ten-millions place: \\(7 + 6 = 13\\). Write down 3 and carry over 1.\n9. Add the hundred-millions place: \\(3 + 8 + 1 \\,(\\text{carry}) = 12\\). Write down 2 and carry over 1.\n\nNow let's put it all together:.\n\n\\[ .\n\\begin{array}{c}.\n  372097062 \\\\.\n+ 864086435 \\\\.\n\\hline.\n1236183497 .\n\\end{array}.\n\\]. Therefore, my final answer is: "]]
+response:  {
+  "id": "cmpl-bfb01dc2c5ab49fd8e2269ed5c1d902f",
+  "object": "text_completion",
+  "created": 1769877794,
+  "model": "DAPO-Qwen-32B",
+  "choices": [
+    {
+      "index": 0,
+      "text": "1236183497.\n\nSo the sum of 372097062 and 864086435 is \\(\\boxed{1236183497}\\).",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 427,
+    "total_tokens": 481,
+    "completion_tokens": 54,
+    "prompt_tokens_details": null
+  }
+}
+success id:  21
+messages:  [['Please solve the math problem.\nQuestion: What is the sum of 531992865 and 402099104?', "To solve the math problem, we need to add the two numbers 531992865 and 402099104 together.\n\nLet's perform the addition step by step:.\n\n\\[ 531992865 + 402099104 \\].\n\nWe will add these numbers digit by digit from right to left, carrying over as necessary.\n\nStarting from the rightmost digits:.\n\n1. Add the units place: \\(5 + 4 = 9\\).\n2. Add the tens place: \\(6 + 0 = 6\\).\n3. Add the hundreds place: \\(8 + 1 = 9\\).\n4. Add the thousands place: \\(2 + 9 = 11\\). Write down 1 and carry over 1.\n5. Add the ten-thousands place: \\(9 + 0 = 9\\), plus the carry-over 1 gives \\(10\\). Write down 0 and carry over 1.\n6. Add the hundred-thousands place: \\(9 + 9 = 18\\), plus the carry-over 1 gives \\(19\\). Write down 9 and carry over 1.\n7. Add the millions place: \\(1 + 2 = 3\\), plus the carry-over 1 gives \\(4\\).\n8. Add the ten-millions place: \\(3 + 0 = 3\\).\n9. Add the hundred-millions place: \\(5 + 4 = 9\\).\n\nPutting it all together, we get:. Therefore, my final answer is: "]]
+response:  {
+  "id": "cmpl-8efac94b5bf048749bcb6a1c177fc282",
+  "object": "text_completion",
+  "created": 1769877795,
+  "model": "DAPO-Qwen-32B",
+  "choices": [
+    {
+      "index": 0,
+      "text": "934091969.\n\nSo, the sum of 531992865 and 402099104 is \\(\\boxed{934091969}\\).",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 383,
+    "total_tokens": 436,
+    "completion_tokens": 53,
+    "prompt_tokens_details": null
+  }
+}
+success id:  22
+messages:    5%|4         | 24/500 [00:27<06:50,  1.16it/s]  5%|5         | 25/500 [00:28<06:45,  1.17it/s][['Please solve the math problem.\nQuestion: What is the sum of 838938177 and 603499126?', "To solve the math problem, we need to add the two numbers 838938177 and 603499126 together.\n\nLet's perform the addition step by step:.\n\n\\[ 838938177 + 603499126 \\].\n\nWe will add these numbers digit by digit from right to left, carrying over as necessary.\n\nStarting from the rightmost digits:.\n\n1. Add the units place: \\(7 + 6 = 13\\). Write down 3 and carry over 1.\n2. Add the tens place: \\(7 + 2 = 9\\), plus the carry-over 1 gives \\(10\\). Write down 0 and carry over 1.\n3. Add the hundreds place: \\(1 + 1 = 2\\), plus the carry-over 1 gives \\(3\\). Write down 3.\n4. Add the thousands place: \\(8 + 9 = 17\\). Write down 7 and carry over 1.\n5. Add the ten-thousands place: \\(3 + 4 = 7\\), plus the carry-over 1 gives \\(8\\). Write down 8.\n6. Add the hundred-thousands place: \\(9 + 9 = 18\\). Write down 8 and carry over 1.\n7. Add the millions place: \\(8 + 3 = 11\\), plus the carry-over 1 gives \\(12\\). Write down 2 and carry over 1.\n8. Add the ten-millions place: \\(3 + 0 = 3\\), plus the carry-over 1 gives \\(4\\). Write down 4.\n9. Add the hundred-millions place: \\(8 + 6 = 14\\). Write down 14.\n\nPutting it all together, we get:. Therefore, my final answer is: "]]
+response:  {
+  "id": "cmpl-e7342a48280145478131233c7c356e39",
+  "object": "text_completion",
+  "created": 1769877795,
+  "model": "DAPO-Qwen-32B",
+  "choices": [
+    {
+      "index": 0,
+      "text": "1442437303.\n\nSo the sum of 838938177 and 603499126 is \\(\\boxed{1442437303}\\).",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 449,
+    "total_tokens": 503,
+    "completion_tokens": 54,
+    "prompt_tokens_details": null
+  }
+}
+success id:  23
+messages:  [['Please solve the math problem.\nQuestion: What is the sum of 280983056 and 418768450?', "To solve the math problem, we need to find the sum of the two numbers 280983056 and 418768450.\n\nLet's add them step by step:.\n\n\\[ 280983056 + 418768450 \\].\n\nWe can add these numbers directly:.\n\n\\[ 280983056 + 418768450 = 699751506 \\]. Therefore, my final answer is: "]]
+response:  {
+  "id": "cmpl-1976b53d0ee444ac9e6e1e56f37f41b6",
+  "object": "text_completion",
+  "created": 1769877796,
+  "model": "DAPO-Qwen-32B",
+  "choices": [
+    {
+      "index": 0,
+      "text": "699751506.\n\nSo the sum of 280983056 and 418768450 is \\(\\boxed{699751506}\\).",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 165,
+    "total_tokens": 217,
+    "completion_tokens": 52,
+    "prompt_tokens_details": null
+  }
+}
+success id:  24
+messages:    5%|5         | 26/500 [00:29<06:44,  1.17it/s]  5%|5         | 27/500 [00:30<06:45,  1.17it/s][['Please solve the math problem.\nQuestion: What is the sum of 934723866 and 702753419?', "To solve the math problem, we need to add the two numbers 934723866 and 702753419 together.\n\nLet's perform the addition step by step:.\n\n\\[ 934723866 + 702753419 \\].\n\nWe will add these numbers directly:.\n\n\\[.\n\\begin{array}{c}.\n  934723866 \\\\.\n+ 702753419 \\\\.\n\\hline.\n\\end{array}.\n\\].\n\nLet's add them column by column from right to left.\n\nStarting from the units place:.\n\n- Units place: \\(6 + 9 = 15\\). Write down 5 and carry over 1.\n- Tens place: \\(6 + 1 = 7\\), plus the carried over 1 gives \\(7 + 1 = 8\\).\n- Hundreds place: \\(8 + 4 = 12\\). Write down 2 and carry over 1.\n- Thousands place: \\(3 + 3 = 6\\), plus the carried over 1 gives \\(6 + 1 = 7\\).\n- Ten-thousands place: \\(2 + 5 = 7\\).\n- Hundred-thousands place: \\(7 + 7 = 14\\). Write down 4 and carry over 1.\n- Millions place: \\(4 + 2 = 6\\), plus the carried over 1 gives \\(6 + 1 = 7\\).\n- Ten-millions place: \\(3 + 0 = 3\\).\n- Hundred-millions place: \\(9 + 7 = 16\\). Write down 6 and carry over 1.\n\nSince there is a carry over from the hundred-millions place, we need to add this carry over to the next place, which is the billions place. So we have 1 in the billions place from the carry over.\n\nPutting it all together, we get:.\n\n\\[ 1 \\ (from \\ carry \\ over) 6374728 \\].\n\nSo the sum is:. Therefore, my final answer is: "]]
+response:  {
+  "id": "cmpl-41047ca1deb84f5a9d32873c02e85027",
+  "object": "text_completion",
+  "created": 1769877797,
+  "model": "DAPO-Qwen-32B",
+  "choices": [
+    {
+      "index": 0,
+      "text": "1637477285.\n\nThus, the sum of 934723866 and 702753419 is \\boxed{1637477285}.",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 504,
+    "total_tokens": 557,
+    "completion_tokens": 53,
+    "prompt_tokens_details": null
+  }
+}
+success id:  25
+messages:  [['Please solve the math problem.\nQuestion: What is the sum of 977289657 and 122353274?', "To solve the math problem, we need to find the sum of 977289657 and 122353274.\n\nLet's add these two numbers together step by step.\n\n\\[ 977289657 + 122353274 \\].\n\nWe can add them directly:.\n\n\\[ 977289657 \\].\n\\[ + 122353274 \\].\n\\[ \\overline{1099642931} \\]. Therefore, my final answer is: "]]
+response:  {
+  "id": "cmpl-2454a62bac2445fb9410678f6467dd6e",
+  "object": "text_completion",
+  "created": 1769877798,
+  "model": "DAPO-Qwen-32B",
+  "choices": [
+    {
+      "index": 0,
+      "text": "1099642931.\n\nSo the sum of 977289657 and 122353274 is \\(\\boxed{1099642931}\\).",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 173,
+    "total_tokens": 227,
+    "completion_tokens": 54,
+    "prompt_tokens_details": null
+  }
+}
+success id:  26
+messages:    6%|5         | 28/500 [00:31<07:01,  1.12it/s]  6%|5         | 29/500 [00:32<06:55,  1.13it/s]  6%|6         | 30/500 [00:32<06:49,  1.15it/s][['Please solve the math problem.\nQuestion: What is the sum of 176827714 and 919473645?', "To solve the math problem, we need to add the two numbers 176827714 and 919473645 together.\n\nLet's perform the addition step by step:.\n\n\\[ 176827714 + 919473645 \\].\n\nWe will add these numbers directly:.\n\n\\[ 176827714 + 919473645 \\].\n\nAlign the numbers by their place values and add them:.\n\n\\[.\n\\begin{array}{c}.\n  176827714 \\\\.\n+ 919473645 \\\\.\n\\hline.\n\\end{array}.\n\\].\n\nNow, let's add them column by column from right to left.\n\nStarting from the units place:.\n\n- Units place: \\(4 + 5 = 9\\).\n- Tens place: \\(1 + 4 = 5\\).\n- Hundreds place: \\(7 + 6 = 13\\). Write down 3 and carry over 1.\n- Thousands place: \\(7 + 3 = 10\\), plus the carry-over 1 makes it 11. Write down 1 and carry over 1.\n- Ten-thousands place: \\(2 + 7 = 9\\), plus the carry-over 1 makes it 10. Write down 0 and carry over 1.\n- Hundred-thousands place: \\(8 + 4 = 12\\), plus the carry-over 1 makes it 13. Write down 3 and carry over 1.\n- Millions place: \\(6 + 9 = 15\\), plus the carry-over 1 makes it 16. Write down 6 and carry over 1.\n- Ten-millions place: \\(7 + 1 = 8\\), plus the carry-over 1 makes it 9.\n- Hundred-millions place: \\(1 + 9 = 10\\). Write down 0 and carry over 1.\n\nSo, putting it all together, we get:. Therefore, my final answer is: "]]
+response:  {
+  "id": "cmpl-ec081f1556d344b8a8b38d2ec6697b1a",
+  "object": "text_completion",
+  "created": 1769877799,
+  "model": "DAPO-Qwen-32B",
+  "choices": [
+    {
+      "index": 0,
+      "text": "1096301359.\n\nThus, the sum of 176827714 and 919473645 is \\(\\boxed{1096301359}\\).",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 501,
+    "total_tokens": 556,
+    "completion_tokens": 55,
+    "prompt_tokens_details": null
+  }
+}
+success id:  27
+messages:  [['Please solve the math problem.\nQuestion: What is the sum of 833808999 and 713552229?', "To solve the math problem, we need to add the two numbers 833808999 and 713552229 together.\n\nLet's perform the addition step by step:.\n\n\\[ 833808999 + 713552229 \\].\n\nWe will add these numbers directly:.\n\n\\[ 833808999 + 713552229 \\].\n\nAdding them together:.\n\n\\[ 833808999 + 713552229 = 1547361228 \\]. Therefore, my final answer is: "]]
+response:  {
+  "id": "cmpl-0c42031bb1504665bcbbd92248208404",
+  "object": "text_completion",
+  "created": 1769877800,
+  "model": "DAPO-Qwen-32B",
+  "choices": [
+    {
+      "index": 0,
+      "text": "1547361228.\n\nSo the sum of 833808999 and 713552229 is \\boxed{1547361228}.",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 194,
+    "total_tokens": 246,
+    "completion_tokens": 52,
+    "prompt_tokens_details": null
+  }
+}
+success id:  28
+messages:  [['Please solve the math problem.\nQuestion: What is the sum of 134852725 and 822750144?', "To solve the math problem, we need to find the sum of the two numbers 134852725 and 822750144.\n\nLet's add them step by step:.\n\n\\[ 134852725 + 822750144 \\].\n\nWe can add these numbers directly:.\n\n\\[ 134852725 + 822750144 = 957602869 \\]. Therefore, my final answer is: "]]
+response:  {
+  "id": "cmpl-5dc55528b0f447f9bedb3102594e05cd",
+  "object": "text_completion",
+  "created": 1769877801,
+  "model": "DAPO-Qwen-32B",
+  "choices": [
+    {
+      "index": 0,
+      "text": "957602869.\n\nSo the sum of 134852725 and 822750144 is \\boxed{957602869}.",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 165,
+    "total_tokens": 215,
+    "completion_tokens": 50,
+    "prompt_tokens_details": null
+  }
+}
+success id:  29
+messages:    6%|6         | 31/500 [00:33<06:52,  1.14it/s]  6%|6         | 32/500 [00:34<07:00,  1.11it/s][['Please solve the math problem.\nQuestion: What is the sum of 637269777 and 501286598?', "To solve the math problem, we need to add the two numbers 637269777 and 501286598 together.\n\nLet's perform the addition step by step:.\n\n\\[ 637269777 + 501286598 \\].\n\nWe will add these numbers directly:.\n\n\\[ 637269777 \\].\n\\[ + 501286598 \\].\n\nAdding them together:.\n\n\\[ 637269777 + 501286598 = 1138556375 \\]. Therefore, my final answer is: "]]
+response:  {
+  "id": "cmpl-0dcc76c453e24aa3a6227aec2a46bd93",
+  "object": "text_completion",
+  "created": 1769877802,
+  "model": "DAPO-Qwen-32B",
+  "choices": [
+    {
+      "index": 0,
+      "text": "1138556375.\n\nSo the sum of 637269777 and 501286598 is \\(\\boxed{1138556375}\\).",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 197,
+    "total_tokens": 251,
+    "completion_tokens": 54,
+    "prompt_tokens_details": null
+  }
+}
+success id:  30
+messages:  [['Please solve the math problem.\nQuestion: What is the sum of 415705416 and 690782504?', "To solve the math problem, we need to find the sum of the two numbers 415705416 and 690782504.\n\nLet's add them step by step:.\n\n\\[ 415705416 + 690782504 \\].\n\nWe can add these numbers directly:.\n\n\\[.\n\\begin{array}{c}.\n  415705416 \\\\.\n+ 690782504 \\\\.\n\\hline.\n\\end{array}.\n\\].\n\nLet's add them column by column from right to left.\n\nStarting from the units place:.\n\n- Units place: \\(6 + 4 = 10\\). Write down 0 and carry over 1.\n- Tens place: \\(1 + 0 = 1\\), plus the carry over 1 gives us 2. Write down 2.\n- Hundreds place: \\(4 + 5 = 9\\). Write down 9.\n- Thousands place: \\(5 + 2 = 7\\). Write down 7.\n- Ten-thousands place: \\(0 + 8 = 8\\). Write down 8.\n- Hundred-thousands place: \\(7 + 7 = 14\\). Write down 4 and carry over 1.\n- Millions place: \\(5 + 0 = 5\\), plus the carry over 1 gives us 6. Write down 6.\n- Ten-millions place: \\(1 + 9 = 10\\). Write down 0 and carry over 1.\n- Hundred-millions place: \\(4 + 6 = 10\\), plus the carry over 1 gives us 11. Write down 1 and carry over 1.\n- Since there is a carry over from the hundred-millions place, we write down the 1 from the carry over in the next place.\n\nSo the sum is:. Therefore, my final answer is: "]]
+response:  {
+  "id": "cmpl-70095b23f9f64a42b2eb060f38a4fb4b",
+  "object": "text_completion",
+  "created": 1769877802,
+  "model": "DAPO-Qwen-32B",
+  "choices": [
+    {
+      "index": 0,
+      "text": "1106487920.\n\nThus, the sum of 415705416 and 690782504 is \\(\\boxed{1106487920}\\).",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 467,
+    "total_tokens": 522,
+    "completion_tokens": 55,
+    "prompt_tokens_details": null
+  }
+}
+success id:  31
+messages:    7%|6         | 33/500 [00:35<06:52,  1.13it/s]  7%|6         | 34/500 [00:36<06:53,  1.13it/s][['Please solve the math problem.\nQuestion: What is the sum of 369074769 and 558222419?', "To solve the math problem, we need to add the two numbers 369074769 and 558222419 together.\n\nLet's perform the addition step by step:.\n\n\\[ 369074769 + 558222419 \\].\n\nWe will add these numbers directly:.\n\n\\[.\n\\begin{array}{c}.\n  369074769 \\\\.\n+ 558222419 \\\\.\n\\hline.\n\\end{array}.\n\\].\n\nLet's add them column by column from right to left.\n\nStarting from the units place:.\n\n- Units place: \\(9 + 9 = 18\\). Write down 8 and carry over 1.\n- Tens place: \\(6 + 1 = 7\\), plus the carry over 1 gives \\(7 + 1 = 8\\). Write down 8.\n- Hundreds place: \\(7 + 4 = 11\\). Write down 1 and carry over 1.\n- Thousands place: \\(4 + 2 = 6\\), plus the carry over 1 gives \\(6 + 1 = 7\\). Write down 7.\n- Ten-thousands place: \\(7 + 2 = 9\\). Write down 9.\n- Hundred-thousands place: \\(0 + 8 = 8\\). Write down 8.\n- Millions place: \\(9 + 5 = 14\\). Write down 4 and carry over 1.\n- Ten-millions place: \\(6 + 5 = 11\\), plus the carry over 1 gives \\(11 + 1 = 12\\). Write down 2 and carry over 1.\n- Hundred-millions place: \\(3 + 5 = 8\\), plus the carry over 1 gives \\(8 + 1 = 9\\). Write down 9.\n\nPutting it all together, we get:. Therefore, my final answer is: "]]
+response:  {
+  "id": "cmpl-c27926d0fedf44c984a3785b17be31ae",
+  "object": "text_completion",
+  "created": 1769877803,
+  "model": "DAPO-Qwen-32B",
+  "choices": [
+    {
+      "index": 0,
+      "text": "927297188.\n\nSo the sum of 369074769 and 558222419 is \\boxed{927297188}.",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 476,
+    "total_tokens": 526,
+    "completion_tokens": 50,
+    "prompt_tokens_details": null
+  }
+}
+success id:  32
+messages:  [['Please solve the math problem.\nQuestion: What is the sum of 877728158 and 797271052?', "To solve the math problem, we need to find the sum of the two numbers 877728158 and 797271052.\n\nLet's add them step by step:.\n\n\\[ 877728158 + 797271052 \\].\n\nWe can add these numbers directly:.\n\n\\[.\n\\begin{array}{c}.\n  877728158 \\\\.\n+ 797271052 \\\\.\n\\hline.\n\\end{array}.\n\\].\n\nLet's add them from right to left:.\n\n- Add the units place: \\(8 + 2 = 10\\). Write down 0 and carry over 1.\n- Add the tens place: \\(5 + 5 = 10\\), plus the carry-over 1 makes it 11. Write down 1 and carry over 1.\n- Add the hundreds place: \\(1 + 0 = 1\\), plus the carry-over 1 makes it 2. Write down 2.\n- Add the thousands place: \\(8 + 1 = 9\\).\n- Add the ten-thousands place: \\(2 + 7 = 9\\).\n- Add the hundred-thousands place: \\(7 + 2 = 9\\).\n- Add the millions place: \\(7 + 7 = 14\\). Write down 4 and carry over 1.\n- Add the ten-millions place: \\(8 + 9 = 17\\), plus the carry-over 1 makes it 18. Write down 8 and carry over 1.\n- Add the hundred-millions place: \\(8 + 7 = 15\\), plus the carry-over 1 makes it 16. Write down 6 and carry over 1.\n- Finally, there's no number to add to the next place, so we just take the carry-over 1 and write it down.\n\nPutting it all together, we get:. Therefore, my final answer is: "]]
+response:  {
+  "id": "cmpl-80926eba123341ad84b629091f9be5fc",
+  "object": "text_completion",
+  "created": 1769877804,
+  "model": "DAPO-Qwen-32B",
+  "choices": [
+    {
+      "index": 0,
+      "text": "1674999210.\n\nSo the sum of 877728158 and 797271052 is \\boxed{1674999210}.",
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null,
+      "prompt_logprobs": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 481,
+    "total_tokens": 533,
+    "completion_tokens": 52,
+    "prompt_tokens_details": null
+  }
+}
+success id:  33
+messages:  

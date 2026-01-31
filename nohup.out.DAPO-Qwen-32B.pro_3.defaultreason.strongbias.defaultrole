@@ -1,0 +1,7 @@
+Sun Feb 1 12:43:19 AM CST 2026, Evaluating samples from Product:3 using prompts newdirect with defaultreason and defaultrole and strongbias and mode 0 and api_base_num 1 and seed ...
+/home/fuzhizhang.fzz/CoT_Causal_Analysis/scripts/interfere.py:36: SyntaxWarning: invalid escape sequence '\d'
+  parts = re.split('(\d+)', reason)
+0
+OpenAI API with http://localhost:8080/v1, DAPO-Qwen-32B, ####, 16384
+Loaded 500 items from exp_cot/output/output.Product_3.newdirect.math_teacher.DAPO-Qwen-32B.thinking.json
+  0%|          | 0/500 [00:00<?, ?it/s]
