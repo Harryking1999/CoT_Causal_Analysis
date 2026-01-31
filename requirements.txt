@@ -8,3 +8,5 @@ openai==0.28.0
 statsmodels==0.14.1
 tqdm==4.66.1
 networkx
+pandas==2.2.2
+seaborn==0.13.2
